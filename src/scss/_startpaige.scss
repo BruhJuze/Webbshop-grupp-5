@@ -21,15 +21,78 @@ Header {
 
 #HeaderImg {
 width: 100%;
-height: 569px;
+height: 150vw;   // är osäker om man ska använda viewport widith eller annan typ av storleks typ
+background-color: black;
 background-size: cover;
-background-position: 30%;
-background-image: v.$headerIMG;
+background-position: 50%;
+background-image: v.$headerIMG; 
+display: flex;
+//align-items: center;
+justify-content: center;
 }
 
 #HeaderBtn{
     background-color: v.$ourGrey;
-    border: 1px white;
-    
-    margin: auto;
+    border: 2px solid white;
+    color: white;
+    margin-top: 100%;
+    padding: 15px;
+    width: 160px;
+    height: 55px;
+   // font-size: ;
 }
+
+#CatoContainer{
+    //background-color: black;
+    width: 100%;
+    height: 569px;
+    display: flex;
+    flex-wrap: wrap;
+  //  align-items: center;
+    justify-content: center;
+    flex-basis:calc(100% - 20px);
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.CatoRing{
+    border: 1px solid v.$ourGrey;
+    width: 170px;
+    height: 200px;
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+#CatoBtn{
+    background-color: white;
+    border: 1px solid v.$ourGrey;
+    color: v.$ourGrey;
+   // padding: 10px;
+    width: 120px;
+    height: 30px;
+    margin-top: 90%;
+    
+     
+}
+
+#HaloRing{
+    background-image: v.$sidoRing;
+}
+
+#SidoRing{
+    background-image: v.$sidoRing;
+}
+
+#SoliRing{
+    background-image: v.$sidoRing;
+}
+
+#TreRing{
+    background-image: v.$sidoRing;
+}
+
