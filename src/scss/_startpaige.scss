@@ -2,8 +2,9 @@
 @use 'variables' as v;
 @use "mixins" as m;
 
-Body{
-    margin: 0px;
+*{
+    margin: 0;
+    padding: 0;
 }
 
 #MainDiv {
