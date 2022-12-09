@@ -6,6 +6,6 @@
     } 
 }
 
-@mixin darkbtn {
-    background-color: v.$ourGrey;
+@mixin btn {
+    padding: 1rem;
 }

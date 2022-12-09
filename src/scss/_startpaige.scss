@@ -13,7 +13,7 @@ Body{
     flex-direction: column;
 
     &__nav{
-        height:55px;
+        height: 55px;
         box-shadow: v.$boxshadow;
         z-index: 1;
     }
@@ -25,8 +25,11 @@ Body{
         background-position: 50%;
     }
 
-   // @import m.darkbtn{
-    
-  //  }
+    &__btn{
+        @include m.btn;
+        margin: 2px;
+        color: white;
+        background-color: v.$ourGrey;
+    }
 }
 
