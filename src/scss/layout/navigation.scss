@@ -6,6 +6,7 @@ nav{
     width: 100vw;
     height: abstract.$navbar-height;
     background-color: #fff;
+    box-shadow: 0 8px 4px -4px rgba(0, 0, 0, .2);  
     z-index: 1;
 }
 
@@ -81,7 +82,7 @@ nav{
     }
 
     &.is-active span:nth-child(1){
-        transform: translate(0px, 9px) rotate(45deg);
+        transform: translate(0px, 7px) rotate(45deg);
     }
 
     &.is-active span:nth-child(2){
@@ -89,13 +90,13 @@ nav{
     }
 
     &.is-active span:nth-child(3){
-        transform: translate(0px, -9px) rotate(-45deg);
+        transform: translate(0px, -7px) rotate(-45deg);
     }
 
     span{
         display: block;
-        width: 30px;
-        height: 4px;
+        width: 28px;
+        height: 2px;
         margin-bottom: 5px;
         border-radius: 6px;
         background-color: #000;
@@ -106,11 +107,11 @@ nav{
 .mobile-menu{
     position: fixed;
     top: abstract.$navbar-height;
-    right: 0;
+    left: 0;
     width: abstract.$menu-width;
     height: 100vh;
     display: block;
-    transform: translateX(abstract.$menu-width);
+    transform: translateX(abstract.$menu-width * (-1));
     background-color: abstract.$clr-white-color;
     transition: 300ms ease;
     z-index: 10;
@@ -131,5 +132,81 @@ nav{
             text-decoration: none;
             color: abstract.$text-color;
         }
+    }
+}
+
+.cart-button {
+    cursor: pointer;
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: abstract.$menu-width;
+    height: 100vh;
+    display: block;
+    transform: translateX(abstract.$menu-width);
+    background-color: abstract.$clr-white-color;
+    transition: 300ms ease;
+    z-index: 10;
+
+    &.is-active{
+        transform: translateX(0px);
+    }
+
+    &__container{
+        margin: 50px auto;
+        width: 80%;
+        height: auto;
+    }
+
+
+    &__title{
+        border-bottom: 1px solid rgba(112, 112, 112, 0.5);
+        padding-bottom: 10px;
+    }
+}
+
+.close-button{
+    display: block;
+    position: absolute;
+    top: 20px; 
+    right: 10px;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+
+    i {
+        font-size: 30px;
+    }
+
+}
+
+.checkout-button {
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: rgba(205, 178, 119, 1);
+    color: abstract.$clr-white-color;
+    transition: 250ms ease;
+
+    &:hover{
+        background-color: rgba(205, 178, 119, 0.8);
     }
 }
