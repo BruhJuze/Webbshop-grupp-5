@@ -11,6 +11,7 @@ Body{
     background-color: white;
     display:flex;
     flex-direction: column;
+    justify-content: center;
 
     &__nav{
         height: 55px;
@@ -19,7 +20,7 @@ Body{
     }
 
     &__img{
-        height: 569px;
+        height: 130vw;
         background-image: v.$headerIMG;
         background-size: cover;
         background-position: 50%;
@@ -27,9 +28,67 @@ Body{
 
     &__btn{
         @include m.btn;
-        margin: 2px;
+        margin-top: 95%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 3vw;
         color: white;
+        width: 35vw;
+        height: 12vw;
+        border: 1px solid white;
         background-color: v.$ourGrey;
     }
+}
+
+.sectionprod{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+
+    &__ring{
+        height: 50vw;
+        width: 40vw;
+        border: 1px solid black;
+        background-size: cover;
+        background-position: 50%;
+        justify-content: center;
+        display: flex;
+        border: 1px solid v.$ourGrey;
+    }
+
+      div[alt*="halo"] {
+        background-image: v.$haloRing;
+      }
+      
+      div[alt*="sido"] {
+        background-image: v.$sidoRing;
+      }
+
+      div[alt*="soli"] {
+        background-image: v.$soliRing;
+      }
+
+      div[alt*="tre"] {
+        background-image: v.$treRing;
+      }
+
+    &__btn{
+      
+        background-color: white;
+        border: 1px solid v.$ourGrey;
+        color: v.$ourGrey;
+        position: absolute;
+        @include m.btn; 
+        margin-top: 40%;
+        width: 25vw;
+        padding: 2vw;
+        font-size: 3vw;
+    }
+    
 }
 
