@@ -8,15 +8,22 @@ Body{
 
 .header{
     width: 100%;
-    background-color: white;
+    background-color: black;
     display:flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 
     &__nav{
         height: 55px;
         box-shadow: v.$boxshadow;
-        z-index: 1;
+        z-index: 2;
+        background-color: white;
+        @include m.desktop{
+          height:80px;
+          position: sticky;
+          
+        }
     }
 
     &__img{
@@ -24,11 +31,44 @@ Body{
         background-image: v.$headerIMG;
         background-size: cover;
         background-position: 50%;
+        color: white;
+
+        h1{
+          visibility: hidden;
+        }
+
+        h3{
+          visibility: hidden;
+        }
+
+        @include m.desktop{
+            background-image: v.$headerIMGdesktop;
+            height: 900px;
+            position: relative; 
+            
+            display: flex;
+            //justify-content: cente
+            h1{
+              z-index: 1;
+              visibility: visible;
+            }
+
+            h3{
+              z-index: 1;
+              visibility: visible;
+            }
+
+            p {
+              margin-top:5px;
+              margin-bottom:5px;
+              z-index: 1;
+           }
+        }
     }
 
     &__btn{
         @include m.btn;
-        margin-top: 95%;
+        margin-top: 50%;
         margin-left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
@@ -38,7 +78,28 @@ Body{
         height: 12vw;
         border: 1px solid white;
         background-color: v.$ourGrey;
+        z-index: 1;
+        @include m.desktop{
+          top: 10%;
+          position: relative;
+          top: 10px;
+
+        }
     }
+
+    &__overlay{
+      background-color: black;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      opacity: .6;
+      visibility: hidden;
+      @include m.desktop{
+        visibility: visible;
+      }
+      
+    }
+
 }
 
 .sectionprod{
@@ -49,6 +110,9 @@ Body{
     gap: 10px;
     width: 100%;
     justify-content: center;
+    @include m.desktop{
+      gap: 15px;
+    }
 
     &__ring{
         height: 50vw;
@@ -56,9 +120,31 @@ Body{
         border: 1px solid black;
         background-size: cover;
         background-position: 50%;
-        justify-content: center;
-        display: flex;
         border: 1px solid v.$ourGrey;
+        @include m.desktop {
+          height: 300px;
+          width: 200px; 
+        }
+
+&__btn{
+      
+        background-color: white;
+        border: 1px solid v.$ourGrey;
+        color: v.$ourGrey;
+        position: absolute;
+        @include m.btn; 
+        width: 25vw;
+        padding: 2vw;
+        font-size: 3vw;
+        height: 10px;
+        @include m.desktop{
+          font-size: 1rem;
+          width: 20px;
+          top: 50px;
+          padding: 10px;
+        }
+    }
+
     }
 
       div[alt*="halo"] {
@@ -77,18 +163,7 @@ Body{
         background-image: v.$treRing;
       }
 
-    &__btn{
-      
-        background-color: white;
-        border: 1px solid v.$ourGrey;
-        color: v.$ourGrey;
-        position: absolute;
-        @include m.btn; 
-        margin-top: 40%;
-        width: 25vw;
-        padding: 2vw;
-        font-size: 3vw;
-    }
+    
     
 }
 
