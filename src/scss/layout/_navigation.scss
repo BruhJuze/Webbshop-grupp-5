@@ -54,15 +54,39 @@ nav{
     }
 
     li {
+        position: relative;
         list-style: none;
         margin-left: 20px;
         margin-right: 20px;
+        padding-bottom: 10px;
 
 
         a {
             text-decoration: none;
             color: abstract.$text-color;
+
+            &:after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0%;
+                height: 4px; 
+                background-color: #000;
+                transition: all 250ms ease;
+            }
         }
+
+        &:hover{
+
+            :after{
+                content: "";
+                width: 100%;
+
+            }
+    
+        }
+        
     }
 }
 
@@ -137,6 +161,7 @@ nav{
 
 .cart-button {
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .cart{
