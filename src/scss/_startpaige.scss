@@ -6,6 +6,9 @@ Body{
     margin: 0px;
 }
 
+.mainContainer{
+  text-align: center;
+}
 .header{
     width: 100%;
     background-color: black;
@@ -14,31 +17,38 @@ Body{
     justify-content: center;
     position: relative;
 
-    &__nav{
-        height: 55px;
-        box-shadow: v.$boxshadow;
-        z-index: 2;
-        background-color: white;
-        @include m.desktop{
-          height:80px;
-          position: sticky;
-          
-        }
-    }
-
     &__img{
         height: 130vw;
         background-image: v.$headerIMG;
         background-size: cover;
         background-position: 50%;
         color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       
+       
+        
 
         h1{
-          visibility: hidden;
+          z-index: 1; 
+          margin-bottom: -5px;
+          margin-top: 35%; 
+          font-size: 7.5vw;
+          @include m.desktop{
+            font-size: 4rem;
+            margin-top: 300px;
+            margin-bottom: -20px;
+          }
         }
 
         h3{
-          visibility: hidden;
+          z-index: 1;
+          font-size: 4.5vw; 
+          @include m.desktop{
+            font-size: 2.5rem;
+            white-space: pre-line;
+          }
         }
 
         @include m.desktop{
@@ -48,21 +58,6 @@ Body{
             
             display: flex;
             //justify-content: cente
-            h1{
-              z-index: 1;
-              visibility: visible;
-            }
-
-            h3{
-              z-index: 1;
-              visibility: visible;
-            }
-
-            p {
-              margin-top:5px;
-              margin-bottom:5px;
-              z-index: 1;
-           }
         }
 
 
@@ -81,11 +76,16 @@ Body{
           background-color: v.$ourGrey;
           z-index: 1;
           @include m.desktop{
-            top: 10%;
-            top: 10px;
+            top: 75%;
+            font-size: 1.5rem;
+            width: 275px;
+            height: 75px;
+            
   
           }
       }
+
+      
     }
 
     &__overlay{
@@ -93,37 +93,43 @@ Body{
       height: 100%;
       width: 100%;
       position: absolute;
-      opacity: .6;
-      visibility: hidden;
+      opacity: .3;
+      
       @include m.desktop{
-        visibility: visible;
+        opacity: .3;
       }
       
     }
 
 }
 
+ .prodtitle{   
+  color: v.$ourGrey;
+  font-size: 2rem;
+  margin-top: 20px;
+  font-size: 8vw;
+  flex: 0 0 100%;
+  @include m.desktop{
+    font-size: 3rem;
+    margin-top: 10%;
+  }
+}
+
+
 
 .sectionprod{
-    padding-top: 70px;
+    padding-top: 7vw;
     padding-bottom: 70px;
     display: flex;
     flex-wrap: wrap; 
     gap: 10px;
     width: 100%;
     justify-content: center;
+
     @include m.desktop{
       justify-content: start;
-      gap: 15px;
-    }
-
-    h2{
-      color: v.$ourGrey;
-      font-size: 2rem;
-      display: none;
-      @include m.desktop{
-        display:contents;
-      }
+      gap: 40px;
+      flex-wrap: nowrap;
     }
 
     &__ring{
@@ -140,7 +146,21 @@ Body{
         height: 350px;
         width: 250px; 
         box-shadow: v.$boxshadow;
+        border: 0px;
+        border-radius: 3%;
+        background-size: 90%;
+        background-repeat: no-repeat;
       } 
+
+      h4{
+        position: absolute;
+        margin-top: 50px;
+        display: none;
+        //font-family: Helvetica Neue;
+        @include m.desktop{
+          display: block;
+        }
+      }
 
     button{  
       background-color: white;
@@ -187,9 +207,11 @@ Body{
 }
 
 .mainContainer{
+  @include m.desktop{
   //border: 1px solid black;
   padding-left: 14%;
   padding-right: 14%;
   display: flex;
   flex-direction: column;
+}
 }
