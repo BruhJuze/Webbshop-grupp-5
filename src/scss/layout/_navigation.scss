@@ -58,7 +58,6 @@ nav{
         list-style: none;
         margin-left: 20px;
         margin-right: 20px;
-        padding-bottom: 10px;
 
 
         a {
@@ -69,7 +68,7 @@ nav{
                 content: "";
                 position: absolute;
                 left: 0;
-                bottom: 0;
+                top: 25px;
                 width: 0%;
                 height: 4px; 
                 background-color: #000;
@@ -162,6 +161,11 @@ nav{
 .cart-button {
     cursor: pointer;
     margin-left: 20px;
+
+    i{
+        font-size: 20px;
+    }
+
 }
 
 .cart{
@@ -206,10 +210,9 @@ nav{
     cursor: pointer;
     z-index: 1;
 
-    i {
-        font-size: 30px;
+    i{
+        font-size: 20px;
     }
-
 }
 
 .checkout-button {
