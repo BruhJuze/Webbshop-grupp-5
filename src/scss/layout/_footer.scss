@@ -1,6 +1,7 @@
 @use '../abstract' as a;
 @use '../base' as b;
 
+
 .footer{
     background-color: a.$ourGrey;
     width: 100%;
@@ -17,7 +18,7 @@
         }
 
         @include b.x-large{
-            // flex-direction: row;
+            flex-direction: row;
             justify-content: center;
             gap: 100px;
         }
