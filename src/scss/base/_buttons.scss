@@ -1,0 +1,10 @@
+@mixin general-buttons {
+    position: relative;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+}

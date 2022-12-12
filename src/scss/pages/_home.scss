@@ -1,0 +1,22 @@
+.section{
+    width: 100%;
+    height: 600px;
+
+    &__1{
+        background-color: lightpink;
+        width: 100%;
+        height: 600px;
+    }
+
+    &__2{
+        background-color: lightgreen;
+        width: 100%;
+        height: 600px;
+    }
+
+    &__3{
+        background-color: lightpink;
+        width: 100%;
+        height: 600px;
+    }
+}
