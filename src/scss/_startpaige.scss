@@ -103,6 +103,7 @@ Body{
 
 }
 
+
 .sectionprod{
     padding-top: 70px;
     padding-bottom: 70px;
@@ -112,7 +113,17 @@ Body{
     width: 100%;
     justify-content: center;
     @include m.desktop{
+      justify-content: start;
       gap: 15px;
+    }
+
+    h2{
+      color: v.$ourGrey;
+      font-size: 2rem;
+      display: none;
+      @include m.desktop{
+        display:contents;
+      }
     }
 
     &__ring{
@@ -175,3 +186,10 @@ Body{
     
 }
 
+.mainContainer{
+  //border: 1px solid black;
+  padding-left: 14%;
+  padding-right: 14%;
+  display: flex;
+  flex-direction: column;
+}
