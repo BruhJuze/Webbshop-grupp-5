@@ -1,22 +1,95 @@
-.section{
-    width: 100%;
-    height: 600px;
+@use '../abstract' as a;
+@use '../base' as b;
 
-    &__1{
-        background-color: lightpink;
-        width: 100%;
-        height: 600px;
-    }
-
-    &__2{
-        background-color: lightgreen;
-        width: 100%;
-        height: 600px;
-    }
-
-    &__3{
-        background-color: lightpink;
-        width: 100%;
-        height: 600px;
-    }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Flex', sans-serif;
 }
+
+#MainDiv {
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+}
+
+Header {
+    width: 100%;
+    height: 55px;
+    box-shadow: a.$boxshadow;
+    z-index: 1;
+}
+
+#HeaderImg {
+width: 100%;
+height: 150vw;   // är osäker om man ska använda viewport widith eller annan typ av storleks typ
+background-color: black;
+background-size: cover;
+background-position: 50%;
+background-image: a.$headerIMG; 
+display: flex;
+//align-items: center;
+justify-content: center;
+}
+
+#HeaderBtn{
+    background-color: a.$ourGrey;
+    border: 2px solid white;
+    color: white;
+    margin-top: 100%;
+    padding: 15px;
+    width: 160px;
+    height: 55px;
+   // font-size: ;
+}
+
+#CatoContainer{
+    //background-color: black;
+    width: 100%;
+    height: 569px;
+    display: flex;
+    flex-wrap: wrap;
+  //  align-items: center;
+    justify-content: center;
+    flex-basis:calc(100% - 20px);
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.CatoRing{
+    border: 1px solid a.$ourGrey;
+    width: 170px;
+    height: 200px;
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+#CatoBtn{
+    background-color: white;
+    border: 1px solid a.$ourGrey;
+    color: a.$ourGrey;
+   // padding: 10px;
+    width: 120px;
+    height: 30px;
+    margin-top: 90%;
+}
+
+#HaloRing{
+    background-image: a.$sidoRing;
+}
+
+#SidoRing{
+    background-image: a.$sidoRing;
+}
+
+#SoliRing{
+    background-image: a.$sidoRing;
+}
+
+#TreRing{
+    background-image: a.$sidoRing;
+}
+

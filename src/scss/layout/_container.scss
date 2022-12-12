@@ -1,4 +1,4 @@
-@use '../base';
+@use '../base' as b;
 
 .container{
     max-width: 1440px;
@@ -6,7 +6,7 @@
     height: 100%;
     margin: 0 auto;
 
-    @include base.medium {
+    @include b.medium {
         width: calc(100% - 50px);
     }
 }
