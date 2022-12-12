@@ -16,3 +16,4 @@ cartButton?.addEventListener('click', function(){
 closeButton?.addEventListener('click', function(){
     cart?.classList.remove('is-active');
 });
+
