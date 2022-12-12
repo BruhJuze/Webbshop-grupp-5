@@ -1,0 +1,83 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.footer{
+    background-color: v.$ourGrey;
+    width: 100%;
+    
+    &__container{
+        color: v.$textColor;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        h3{
+            margin-bottom: 23px;
+        }
+
+        @include m.desktop{
+            flex-direction: row;
+            justify-content: center;
+            gap: 100px;
+        }
+    }
+
+    &__description{
+        width: 450px;
+        
+        .footer-logo{
+            background-image: url(./../image/logo-white.png);
+            background-position: center;
+            background-size: cover;
+            width: 150px;
+            height: 75px;
+        }
+
+        p{
+            padding-top: 12px;
+        }
+
+        @include m.desktop{
+            width: 15%; 
+        }
+    }
+
+    &__info{
+        p{
+            padding: 0 0 8px;
+
+            a{
+                text-decoration: none;
+                color: v.$textColor;
+            }
+        }
+    }
+
+    &__contact{
+        p{
+            padding: 0 0 20px;
+
+            i{
+                margin-right: 8px;
+            }
+            a{
+                color: v.$textColor;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__social{
+        div{
+            margin-top: 10px;
+            i{
+                padding-right: 10px;
+                font-size: 20px;
+            }
+            a{
+                color: v.$textColor;
+            }
+        }
+    }
+}
