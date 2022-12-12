@@ -1,11 +1,6 @@
-@use "startpage";
-@use "footer";
-@use 'abstract/colors';
-@use 'abstract/variables';
-@use 'base/base';
-@use 'base/buttons';
-@use 'base/breakpoints';
-@use 'layout/container';
+
 @use 'layout/header';
 @use 'layout/navigation';
+@use 'layout/container';
+@use "layout/footer";
 @use 'pages/home';
