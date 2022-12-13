@@ -10,7 +10,7 @@
         color: a.$white-color;
         padding: 2rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 40px;
 
         h3{
@@ -18,7 +18,11 @@
         }
 
         @include b.x-large{
+<<<<<<< HEAD
+            flex-direction: column;
+=======
             flex-direction: row;
+>>>>>>> cf1e4a53f007a04430b8f776c79647789c31d54a
             justify-content: center;
             gap: 100px;
         }
