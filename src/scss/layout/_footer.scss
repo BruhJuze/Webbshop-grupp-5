@@ -18,11 +18,7 @@
         }
 
         @include b.x-large{
-<<<<<<< HEAD
-            flex-direction: column;
-=======
             flex-direction: row;
->>>>>>> cf1e4a53f007a04430b8f776c79647789c31d54a
             justify-content: center;
             gap: 100px;
         }
