@@ -9,6 +9,7 @@
 }
 .mainContainer{
   text-align: center;
+  align-items: center;
 }
 .header{
     width: 100%;
@@ -111,7 +112,7 @@
   flex: 0 0 100%;
   @include b.x-large{
     font-size: 3rem;
-    margin-top: 10%;
+    margin-top: 110px;
   }
 }
 
@@ -129,6 +130,7 @@
     @include b.x-large{
       gap: 40px;
       flex-wrap: nowrap;
+      padding-top: 130px;
     }
 
     &__ring{
@@ -251,7 +253,7 @@
 
     @include b.x-large{
       font-size: 1rem;
-      width: 70%;
+      width: 60%;
       padding: 10px;
       height: 15%;
     }
@@ -267,6 +269,102 @@
   div[alt*="LabDiamond"] {
     background-image: a.$labDiamond;
   }
+}
+
+.tips{
+  display: flex;
+  background-color: aquamarine;
+  background-image: v.$tips;
+  background-size: cover;
+  background-position: 50%;
+  height: 120vw;
+  width: 100%;
+  margin-top: 15%;
+  flex-direction: column;
+  align-items: center;
+
+  @include b.x-large{
+    width: 1140px;
+    height: 500px;
+    margin-top: 165px;
+
+  }
+
+  
+
+  h2{
+    color:white;
+    margin-top: 30vw;
+    font-size: 5.5vw;
+    z-index: 1;
+
+    @include b.x-large{
+      margin-top: 130px;
+      font-size: 30px;
+    }
+  }
+
+  h4{
+    color:white;
+    font-size: 2.7vw;
+    margin: 8vw;
+    margin-top: 19vw;
+    border-radius: 3%; 
+    z-index: 1;
+  
+
+    @include b.x-large{
+      margin-top: 35px;
+      font-size: 25px;
+      margin: 40px;
+      margin-left: 100px;
+      margin-right: 100px;
+      margin-bottom: -30px;
+      overflow: hidden;
+
+
+    }
+
+  }
+
+  button{  
+    background-color: white;
+    border: 1px solid a.$ourGrey;
+    color: a.$ourGrey;
+
+    width: 40vw;
+    padding: 3vw;
+    font-size: 4vw;
+    //height: 8vw;
+    top: 15%;
+    position: relative;
+    z-index: 1;
+
+    @include b.x-large{
+      font-size: 1rem;
+      width: 180px;
+      padding: 5px;
+      height: 55px;
+    }
+
+
+}
+
+&__overlay{
+  background-color: black;
+  height: 120vw;
+  width: 100%;
+  position: absolute;
+  opacity: .4;
+
+  @include b.x-large{
+    width: 1140px;
+    height: 500px;
+    
+  }
+  
+}
+
 }
 
 
