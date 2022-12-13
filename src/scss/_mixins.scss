@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) { 
+        @content;
+    } 
+}
+
+@mixin btn {
+    padding: 1rem;
+    
+}
