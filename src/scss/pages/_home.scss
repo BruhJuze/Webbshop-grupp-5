@@ -1,5 +1,6 @@
 @use '../abstract' as a;
 @use '../base' as b;
+@use '../abstract/variables' as v;
 
 *{
     margin: 0;
@@ -27,7 +28,7 @@ Header {
 
 #HeaderImg {
 width: 100%;
-height: 150vw;   // är osäker om man ska använda viewport widith eller annan typ av storleks typ
+height: 150vw;  
 background-color: black;
 background-size: cover;
 background-position: 50%;
