@@ -7,7 +7,20 @@ nav{
     height: a.$navbar-height;
     background-color: a.$white-color;
     box-shadow: 0 8px 4px -4px rgba(0, 0, 0, .2);  
-    z-index: 1;
+    z-index: 10;
+    transition: 300ms ease;
+
+    &.is-scrolled{
+        height: 60px;
+    }
+}
+
+.logo-png{
+    transition: 300ms ease;
+
+    &.is-scrolled{
+        width: 70px;
+    }
 }
 
 .navbar{
@@ -17,21 +30,22 @@ nav{
     height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
 
     @include b.medium {
-        justify-content: space-between;
+        justify-content: end;
     }
 }
 
 .logo{
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     @include b.medium {
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0%;
+        transform: translateX(0);
     }
 
     img{
@@ -40,12 +54,14 @@ nav{
 }
 
 .desktop-menu{
-    display: flex;
-    justify-content: space-between;
+    //display: flex;
+    display: none;
     z-index: 10;
 
     @include b.medium {
-        display: none;
+        //display: none;
+        display: flex;
+        justify-content: space-between;
     }
 
 
@@ -78,7 +94,7 @@ nav{
 
         &:hover{
 
-            :after{
+            a:after{
                 content: "";
                 width: 100%;
 
@@ -90,7 +106,8 @@ nav{
 }
 
 .hamburger{
-    display: none;
+    //display: none;
+    display: block;
     position: relative;
     user-select: none;
     appearance: none;
@@ -101,7 +118,8 @@ nav{
     z-index: 1;
 
     @include b.medium {
-        display: block;
+        //display: block;
+        display: none;
     }
 
     &.is-active span:nth-child(1){
@@ -141,19 +159,44 @@ nav{
 
     &.is-active{
         transform: translateX(0px);
+        box-shadow: 8px 0px 7px -7px rgba(0, 0, 0, .2);
+    }
+    &.is-scrolled{
+        top:calc(#{a.$navbar-height} - 20px);
     }
 }
 
 .mobile-menu__ul {
+    padding-top: 50px;
     padding-left: 70px;
 
     .menu__li{
+        position: relative;
         margin-bottom: 20px;
         list-style: none;
+        width: fit-content;
 
         a {
             text-decoration: none;
             color: a.$text-color;
+
+            &:after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 25px;
+                width: 0%;
+                height: 4px; 
+                background-color: #000;
+                transition: all 250ms ease;
+            }
+        }
+        &:hover{
+
+            :after{
+                content: "";
+                width: 100%;
+            }
         }
     }
 }
@@ -182,6 +225,7 @@ nav{
 
     &.is-active{
         transform: translateX(0px);
+        box-shadow: -1px 0px 12px 2px rgba(0, 0, 0, .2);
     }
 
     &__container{
