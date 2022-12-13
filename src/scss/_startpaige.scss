@@ -140,11 +140,13 @@ Body{
       border: 1px solid v.$ourGrey;
       display: flex;
       justify-content: center;
+      box-shadow: v.$boxshadow;
+      border-radius: 3%;
+      border: 0px;
 
       @include m.desktop {
         height: 350px;
         width: 250px; 
-        box-shadow: v.$boxshadow;
         border: 0px;
         border-radius: 3%;
         background-size: 90%;
@@ -153,11 +155,13 @@ Body{
 
       h4{
         position: absolute;
-        margin-top: 50px;
-        display: none;
+        margin-top: 4%;
+        font-size: 3vw;
+        color: v.$ourGrey;
         //font-family: Helvetica Neue;
         @include m.desktop{
-          display: block;
+          margin-top: 45px;
+          font-size: medium;
         }
       }
 
