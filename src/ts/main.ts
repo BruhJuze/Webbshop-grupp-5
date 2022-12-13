@@ -17,3 +17,11 @@ closeButton?.addEventListener('click', function(){
     cart?.classList.remove('is-active');
 });
 
+
+
+// class Social{
+//     constructor(public picture: URL){}
+// }
+
+// let firstPic: Social = new Social(/Users/cassandrabook/Documents/Webbutveckling/Webbshop-grupp-5/src/assets/Startsidan/HALO.jpeg);
+//  let instagram = document.getElementById("social-media");
