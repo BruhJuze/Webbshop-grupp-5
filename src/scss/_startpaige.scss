@@ -127,7 +127,6 @@ Body{
     justify-content: center;
 
     @include m.desktop{
-      justify-content: start;
       gap: 40px;
       flex-wrap: nowrap;
     }
