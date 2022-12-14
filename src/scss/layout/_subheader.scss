@@ -1,9 +1,14 @@
 @use '../abstract' as a;
 @use '../base' as b;
 
-.subheader{
+.subheader {
+    position: relative;
     width: 100vw;
     height: 400px;
+
+    &__title {
+        color: a.$white-color;
+    }
 
     img{
         width: 100%;
@@ -13,8 +18,12 @@
 
 }
 
-
-.image-overlay{
-
+.image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .2);
 }
 
