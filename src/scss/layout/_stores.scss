@@ -36,6 +36,7 @@
     
    &__btn{
     @include btn.clear-btn;
+    margin: 45px auto;
 
     @include b.x-large{
         font-size: 20px;
