@@ -10,6 +10,12 @@
 .mainContainer{
   text-align: center;
   align-items: center;
+  @include b.x-large{ 
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .header{
     width: 100%;
@@ -130,7 +136,7 @@
     @include b.x-large{
       gap: 40px;
       flex-wrap: nowrap;
-      padding-top: 130px;
+      padding-top: 0px;
     }
 
     &__ring{
@@ -213,12 +219,12 @@
 
 .diamonds{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   width: 100%;
   margin-top: 7%;
   align-items: center;
-  gap: 15px;
+  gap: 40px;
   @include b.x-large{
     flex-direction: row;
   }
