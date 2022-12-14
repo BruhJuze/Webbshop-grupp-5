@@ -1,0 +1,13 @@
+@use '../abstract' as a;
+@use '../base' as b;
+
+
+.text-container{
+    margin: 100px auto;
+    text-align: center;
+
+    .text{
+        margin-top: 20px;
+        line-height: 1.6rem;
+    }
+}

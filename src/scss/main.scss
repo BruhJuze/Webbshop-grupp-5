@@ -1,8 +1,10 @@
 
 @use 'layout/header';
+@use 'layout/subheader';
 @use 'layout/navigation';
 @use 'layout/container';
 @use "layout/footer";
 @use 'layout/stores';
 @use 'pages/home';
+@use 'pages/productCategory';
 
