@@ -59,22 +59,24 @@
         
         p{
             padding: 0 0 20px;
-
-            i{
-                margin-right: 8px;
-            }
             a{
                 color: a.$white-color;
                 text-decoration: none;
             }
         }
+        .adress{
+            width: 139px;
+        }
 
-        
+        div{
+            display: flex;
+            flex-direction: row;
+            gap: 7px;
+        }
     }
 
     &__social{
         div{
-            margin-top: 10px;
             i{
                 padding-right: 10px;
                 font-size: 20px;
