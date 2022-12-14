@@ -7,7 +7,6 @@
     &__container{
         display: flex;
         justify-content: center;
-        // margin: 2rem;
         gap: 10px;
         color: a.$white-color;
         width: 80%;
@@ -19,7 +18,7 @@
     }
 
     &__stockholm{
-        background-image: a.$image-bg-color, url(/src/assets/Startsidan/Stockholm.jpeg);
+        background-image: a.$image-bg-color, a.$img-sthlm;
         @include m.store-image;
 
         @include b.x-large{
@@ -28,7 +27,7 @@
         }
     }
     &__malmo{
-        background-image: a.$image-bg-color, url(/src/assets/Startsidan/Malmö.jpeg);
+        background-image: a.$image-bg-color, a.$img-malmo;
         @include m.store-image;
 
         @include b.x-large{
