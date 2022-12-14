@@ -1,5 +1,6 @@
 @use '../abstract' as a;
 @use '../base' as b;
+@use '../base/mixins' as m;
 
 
 .footer{
@@ -25,14 +26,10 @@
     }
 
     &__description{
-        width: 450px;
+        max-width: 450px;
         
         .footer-logo{
-            background-image: url(/src/assets/Logo/logo_white.png);
-            background-position: center;
-            background-size: cover;
-            width: 150px;
-            height: 75px;
+            @include m.footer-logo;
         }
 
         p{

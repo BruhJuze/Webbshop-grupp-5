@@ -1,3 +1,5 @@
+@use '../abstract' as a;
+
 @mixin store-image {
     background-position: center;
     background-size: cover;
@@ -5,4 +7,12 @@
     width: 100%;
     height: 150px;
     border-radius: 7px;
+}
+
+@mixin footer-logo {
+    background-image: a.$white-logo;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 75px;
 }
