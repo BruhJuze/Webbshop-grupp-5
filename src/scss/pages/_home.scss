@@ -220,7 +220,6 @@
   align-items: center;
   gap: 15px;
   @include b.x-large{
-    align-items: baseline;
     flex-direction: row;
   }
 
@@ -320,9 +319,6 @@
       margin-left: 100px;
       margin-right: 100px;
       margin-bottom: -30px;
-      overflow: hidden;
-
-
     }
 
   }
