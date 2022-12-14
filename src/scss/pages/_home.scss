@@ -216,7 +216,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 7%;
   align-items: center;
   gap: 15px;
   @include b.x-large{
@@ -331,7 +331,7 @@
     width: 40vw;
     padding: 3vw;
     font-size: 4vw;
-    top: 15%;
+    top: 4%;
     position: relative;
     z-index: 1;
 
@@ -340,6 +340,7 @@
       width: 180px;
       padding: 5px;
       height: 55px;
+      top: 12.5%;
     }
 
 
