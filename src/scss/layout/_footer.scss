@@ -25,7 +25,7 @@
     }
 
     &__description{
-        width: 450px;
+        max-width: 450px;
         
         .footer-logo{
             background-image: url(/src/assets/Logo/logo_white.png);
