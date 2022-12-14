@@ -7,9 +7,15 @@
     &__container{
         display: flex;
         justify-content: center;
-        margin: 2rem;
+        // margin: 2rem;
         gap: 10px;
-        color: white;
+        color: a.$white-color;
+        width: 80%;
+        margin: 2rem auto;
+
+        @include b.x-large{
+            gap: 40px;
+        }
     }
 
     &__stockholm{
@@ -36,27 +42,27 @@
     
    &__btn{
     @include btn.clear-btn;
-    margin: 45px auto;
 
     @include b.x-large{
         font-size: 20px;
         width: 200px;
         padding: 1em;
-        margin-top: 100px;
     }
    }
 
-   &__btn, &__title{
+   &__content{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
    }
 
    &__title{
-    padding-top: 20px;
     font-size: 15px;
 
     @include b.x-large{
-        padding-top: 40px;
         font-size: 30px;
     }
    }
