@@ -1,3 +1,5 @@
+@use '../abstract' as a;
+
 @mixin general-buttons {
     position: relative;
     user-select: none;
@@ -12,4 +14,12 @@
 @mixin btn {
     padding: 1rem;
     
+}
+
+@mixin clear-btn {
+    border: 1px solid a.$white-color;
+    padding: 0.5rem;
+    color: a.$white-color;
+    background-color: a.$btn-clear-color;
+    cursor: pointer;
 }

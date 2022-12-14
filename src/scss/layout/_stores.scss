@@ -1,0 +1,64 @@
+@use '../base/mixins' as m;
+@use '../abstract' as a;
+@use '../base/buttons' as btn;
+@use '../base' as b;
+
+.stores{
+    &__container{
+        display: flex;
+        justify-content: center;
+        margin: 2rem;
+        gap: 10px;
+        color: white;
+    }
+
+    &__stockholm{
+        background-image: a.$image-bg-color, url(/src/assets/Startsidan/Stockholm.jpeg);
+        @include m.store-image;
+
+        @include b.x-large{
+            width: 100%;
+            height: 400px;
+        }
+    }
+    &__malmo{
+        background-image: a.$image-bg-color, url(/src/assets/Startsidan/Malmö.jpeg);
+        @include m.store-image;
+
+        @include b.x-large{
+            width: 100%;
+            height: 400px;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+    
+   &__btn{
+    @include btn.clear-btn;
+    margin: 45px auto;
+
+    @include b.x-large{
+        font-size: 20px;
+        width: 200px;
+        padding: 1em;
+        margin-top: 100px;
+    }
+   }
+
+   &__btn, &__title{
+    display: flex;
+    justify-content: center;
+   }
+
+   &__title{
+    padding-top: 20px;
+    font-size: 15px;
+
+    @include b.x-large{
+        padding-top: 40px;
+        font-size: 30px;
+    }
+   }
+
+}
