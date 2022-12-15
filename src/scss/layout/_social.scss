@@ -1,5 +1,6 @@
 @use '../base' as b;
 @use '../abstract' as a;
+@use '../base/mixins' as m;
 
 .social{
     display: none;
@@ -33,60 +34,42 @@
         }
     
         &__picture1{
-            background-image: url(/src/assets/Instagram/insta\ 1.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image: a.$insta-img-1;
+            @include m.insta-img;
         }
         &__picture2{
-            background-image: url(/src/assets/Instagram/insta\ 2.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image:  a.$insta-img-2;
+            @include m.insta-img;
         }
     
         &__picture3{
-            background-image: url(/src/assets/Instagram/insta\ 3.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image:  a.$insta-img-3;
+            @include m.insta-img;
         }
     
         &__picture4{
-            background-image: url(/src/assets/Instagram/insta\ 4.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image:  a.$insta-img-4;
+            @include m.insta-img;
         }
     
         &__picture5{
-            background-image: url(/src/assets/Instagram/insta\ 5.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image: a.$insta-img-5;
+            @include m.insta-img;
         }
     
         &__picture6{
-            background-image: url(/src/assets/Instagram/insta\ 6.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image:  a.$insta-img-6;
+            @include m.insta-img;
         }
     
         &__picture7{
-            background-image: url(/src/assets/Instagram/insta\ 7.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image:  a.$insta-img-7;
+            @include m.insta-img;
         }
     
         &__picture8{
-            background-image: url(/src/assets/Instagram/insta\ 8.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image: a.$insta-img-8;
+            @include m.insta-img;
         }
     }
-    
-    
 }

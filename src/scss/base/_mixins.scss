@@ -13,6 +13,12 @@
     background-image: a.$white-logo;
     background-position: center;
     background-size: cover;
-    width: 150px;
+    max-width: 150px;
     height: 75px;
+}
+
+@mixin insta-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
