@@ -1,6 +1,7 @@
 @use '../abstract' as a;
 @use '../base' as b;
 @use '../abstract/variables' as v;
+@use '../base/buttons' as btn; //jag prövade @include b.clear-btn mend et fungerade inte.
 
 *{
     margin: 0;
@@ -13,6 +14,16 @@
 }
 .mainContainer{
   text-align: center;
+  align-items: center;
+  @include b.x-large{ 
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    //background-color: grey;
+  }
 }
 .header{
     width: 100%;
@@ -62,7 +73,7 @@
             position: relative; 
             
             display: flex;
-            //justify-content: cente
+           
         }
 
 
@@ -78,8 +89,10 @@
           width: 35vw;
           height: 12vw;
           border: 1px solid white;
-          background-color: a.$ourGrey;
           z-index: 1;
+          background-color: a.$ourGrey;
+          cursor: pointer;
+
           @include b.x-large{
             top: 75%;
             font-size: 1.5rem;
@@ -110,26 +123,27 @@
 
  .prodtitle{   
   color: a.$ourGrey;
-  font-size: 2rem;
-  margin-top: 20px;
-  font-size: 8vw;
+  margin-top: 60px;
+  margin-bottom: 7vw;
+
+  font-size: 4vw;
   flex: 0 0 100%;
   @include b.x-large{
     font-size: 3rem;
-    margin-top: 10%;
+    margin-top: 85px;
+    margin-bottom: 70px;
   }
 }
 
 
 
 .sectionprod{
-    padding-top: 7vw;
-    padding-bottom: 70px;
     display: flex;
     flex-wrap: wrap; 
     gap: 10px;
     width: 100%;
     justify-content: center;
+    font-size:  5vw;
 
     @include b.x-large{
       gap: 40px;
@@ -142,6 +156,7 @@
       border: 1px solid black;
       background-size: cover;
       background-position: 50%;
+      background-color: white;
       border: 1px solid a.$ourGrey;
       display: flex;
       justify-content: center;
@@ -182,6 +197,7 @@
       height: 8vw;
       top: 75%;
       position: relative;
+      cursor: pointer;
 
       @include b.x-large{
         font-size: 1rem;
@@ -210,16 +226,169 @@
         background-image: a.$treRing;
       }
 
-    
-    
 }
 
-.mainContainer{
-  @include b.x-large{
-  //border: 1px solid black;
-  padding-left: 14%;
-  padding-right: 14%;
+
+
+.diamonds{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  @include b.x-large{
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  &__choose{
+    background-color: white;
+  box-shadow: v.$boxshadow;
+  height: 50vw;
+  width: 40vw;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 3%;
+  @include b.x-large{
+    width: 550px;
+    height: 500px;
+    
+    
+  }
+
+  button{  
+    background-color: white;          
+    border: 1px solid a.$ourGrey;
+    color: a.$ourGrey;
+
+    width: 30vw;
+    padding: 2vw;
+    font-size: 2.5vw;
+    height: 8vw;
+    top: 50%;
+    transform: translatey(-50%);
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @include b.x-large{
+      font-size: 1rem;
+      width: 60%;
+      padding: 10px;
+      height: 15%;
+    }
+
+    }
+
+  }
+  
+  div[alt*="NatDiamond"] {
+    background-image: a.$natDiamond;
+  }
+
+  div[alt*="LabDiamond"] {
+    background-image: a.$labDiamond;
+  }
+}
+
+.tips{
+  display: flex;
+  background-color: aquamarine;
+  background-image: v.$tips;
+  background-size: cover;
+  background-position: 50%;
+  height: 120vw;
+  width: 100%;
+  margin-top: 15%;
   flex-direction: column;
+  align-items: center;
+
+  @include b.x-large{
+    width: 100%;
+    height: 500px;
+    margin-top: 165px;
+    position: relative;
+
+  }
+
+  
+
+  h2{
+    color:white;
+    margin-top: 32vw;
+    font-size: 5.5vw;
+    z-index: 1;
+
+    @include b.x-large{
+      margin-top: 130px;
+      font-size: 30px;
+    }
+  }
+
+  h4{
+    color:white;
+    font-size: 2.7vw;
+    margin: 8vw;
+    margin-top: 16vw;
+    border-radius: 3%; 
+    line-height: 4vw;
+    z-index: 1;
+  
+
+    @include b.x-large{
+      margin-top: 35px;
+      font-size: 23px;
+      margin: 40px;
+      margin-left: 165px;
+      margin-right: 165px;
+      margin-bottom: -30px;
+      line-height: 25px;
+    }
+
+  }
+
+  button{  
+    background-color: white;
+    border: 1px solid a.$ourGrey;
+    color: a.$ourGrey;
+
+    width: 40vw;
+    padding: 3vw;
+    font-size: 4vw;
+    top: 4%;
+    position: relative;
+    z-index: 1;
+    @include btn.clear-btn;
+
+    @include b.x-large{
+      font-size: 1rem;
+      width: 180px;
+      padding: 5px;
+      height: 55px;
+      top: 14%;
+    }
+
+
 }
+
+&__overlay{
+  background-color: black;
+  height: 120vw;
+  width: 100%;
+  position: absolute;
+  opacity: .4;
+
+  @include b.x-large{
+    width: 100%;
+    height: 100%;
+    
+  }
+  
 }
+
+}
+
+
+
+

@@ -11,11 +11,6 @@
     z-index: 1;
 }
 
-@mixin btn {
-    padding: 1rem;
-    
-}
-
 @mixin clear-btn {
     border: 1px solid a.$white-color;
     padding: 0.5rem;
