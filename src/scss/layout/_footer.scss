@@ -1,5 +1,6 @@
 @use '../abstract' as a;
 @use '../base' as b;
+@use '../base/mixins' as m;
 
 
 .footer{
@@ -28,11 +29,7 @@
         max-width: 450px;
         
         .footer-logo{
-            background-image: url(/src/assets/Logo/logo_white.png);
-            background-position: center;
-            background-size: cover;
-            width: 150px;
-            height: 75px;
+            @include m.footer-logo;
         }
 
         p{
@@ -56,25 +53,26 @@
     }
 
     &__contact{
-        
         p{
             padding: 0 0 20px;
-
-            i{
-                margin-right: 8px;
-            }
             a{
                 color: a.$white-color;
                 text-decoration: none;
             }
         }
+        .adress{
+            width: 139px;
+        }
 
-        
+        div{
+            display: flex;
+            flex-direction: row;
+            gap: 7px;
+        }
     }
 
     &__social{
         div{
-            margin-top: 10px;
             i{
                 padding-right: 10px;
                 font-size: 20px;
