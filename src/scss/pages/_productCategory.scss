@@ -2,12 +2,69 @@
 @use '../base' as b;
 
 
-.text-container{
+.text-container {
     margin: 100px auto;
     text-align: center;
 
     .text{
         margin-top: 20px;
         line-height: 1.6rem;
+    }
+}
+
+.product-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.product-container {
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.product-link {
+    width: 23%;
+    text-decoration: none;
+    box-shadow: a.$boxshadowHover;
+    border-radius: 8px;
+    transition: all 300ms ease;
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: a.$boxshadow;
+    }
+}
+
+.product {
+    padding-bottom: 30px;
+    width: auto;
+    height: auto;
+    color: #000;
+
+    &__title{
+        margin-bottom: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+
+    &__image{
+        width: 100%;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    &__price{
+        text-align: center;
+        font-size: 1.2rem;
     }
 }
