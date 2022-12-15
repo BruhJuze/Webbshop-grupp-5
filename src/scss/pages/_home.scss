@@ -16,13 +16,13 @@ button:hover {
   text-align: center;
   align-items: center;
   @include b.x-large{ 
-    max-width: 1120px;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
-    //background-color: red;
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    //background-color: grey;
   }
 }
 .header{
