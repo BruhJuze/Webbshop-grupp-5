@@ -81,7 +81,7 @@ function renderProducts(){
     for (let ring of solitaireRings){
         
         const productLink = document.createElement('a');
-        productLink.setAttribute('href', '#');
+        productLink.setAttribute('href', './productPage.html');
         productLink.classList.add("product-link");
         productContainer?.appendChild(productLink);
 
