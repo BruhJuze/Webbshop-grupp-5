@@ -1,0 +1,41 @@
+@use '../abstract' as a;
+@use '../base' as b;
+@use '../abstract/variables' as v;
+@use '../base/buttons' as btn; //jag prövade @include b.clear-btn mend et fungerade inte.
+
+*{
+    margin: 0;
+    padding: 0;
+    // font-family: 'Poppins', sans-serif;
+    // font-family: 'Roboto Flex', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    // font-family: 'Playfair Display', serif;
+    font-family: 'Lora', serif;
+}
+
+.mainCheckout{
+    text-align: center;
+    align-items: center;
+    position: relative;
+    @include b.x-large{ 
+      max-width: 1350px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      top: 80px;
+      //background-color: grey;
+    }
+
+    .checkoutTitle{
+        flex-basis: 100%
+    }
+
+    .bruh{
+        height: 500px;
+        width: 100%;
+        background-color: grey;
+    }
+
+  }

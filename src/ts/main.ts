@@ -34,3 +34,12 @@ window.addEventListener('scroll', () => {
 
     console.log(hScroll);
 });
+
+let checkoutBtn: HTMLButtonElement = document.getElementById("checkoutBtn") as HTMLButtonElement;
+
+function checkoutLoad() {
+    location.href = "/checkout.html";
+    console.log("load");
+    }
+
+checkoutBtn.addEventListener("click", checkoutLoad);
