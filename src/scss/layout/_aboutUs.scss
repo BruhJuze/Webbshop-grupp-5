@@ -3,14 +3,14 @@
 
 .subheader {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/src/assets/Om/pexels-photo-6263109.jpeg);
+    background-image: a.$image-bg-color, url(/src/assets/Om/pexels-photo-6263109.jpeg);
     background-size: cover;
-   background-position:center;
+    background-position: center;
 
     &__title {
         margin-top: 60px;
@@ -18,7 +18,6 @@
         color: a.$white-color;
         font-size: 48px;
         z-index: 1;
-        
     }
 }
 
@@ -28,72 +27,92 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .2);
 }
 
-// .history{
-//     &__container{
-//         max-width: 400px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         margin: 1rem auto;
-//         gap: 20px;
-//     }
-
-//     &__content{
-//         text-align: center;
-//     }
-
-//     &__img{
-//         background-image: url(/src/assets/Om/2022-lycka-juveler-verkstad-min.jpeg);
-//         background-position: center;
-//         background-size: cover;
-//         max-width: 450px;
-//         height: 300px;
-//     }
-// }
+.about{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
 .history{
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 15px;
+    padding: 2px;
 
-    &__container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 1rem auto;
-        gap: 50px;
-
-        @include b.x-large{
-           max-width: 1100px;
-        }
-    }
-
-    &__story{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        margin-bottom: 15px;
-
-        @include b.x-large{
-            
-        }
+    @include b.x-large{
+        flex-direction: row;
+        gap: 100px;
     }
     
+    &__text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
 
-    &__img{
+        h3{
+            font-size: 25px;
+        }
+
+        @include b.x-large{
+            text-align: start;
+        }
+    }
+    .img{
         background-image: url(/src/assets/Om/2022-lycka-juveler-verkstad-min.jpeg);
         background-position: center;
         background-size: cover;
-        max-width: 500px;
-        height: 300px;
+        width: 500px;
+        height: 350px;
+        display: flex;
+        margin: 0 auto;
     }
+}
 
-    &__pic{
+.story{
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 15px;
+    margin-top: 50px;
+    justify-content: center;
+
+    @include b.x-large{
+        flex-direction: row-reverse;
+        width: 1100px;
+        gap: 100px;
+        
+    }
+    
+    &__text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h3{
+            font-size: 25px;
+        }
+
+        @include b.x-large{
+            text-align: start;
+        }
+    }
+    .img{
         background-image: url(/src/assets/Om/pexels-tima-miroshnichenko-6263111.jpg);
         background-position: center;
         background-size: cover;
-        max-width: 500px;
-        height: 300px;
+        width: 500px;
+        height: 350px;
+        display: flex;
+        margin: 0 auto;
+
+        @include b.x-large{
+            height: 600px;
+        }
     }
 }
