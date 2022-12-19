@@ -28,3 +28,34 @@
     right: 0;
     left: 0;
 }
+
+.sthlm{
+    width: 100%;
+    height: 350px;
+    background-image: a.$image-bg-color, url(/src/assets/Startsidan/Stockholm.jpeg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 50px;
+    color: white;
+
+    &__icons{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 15px;
+    }
+
+    &__title{
+     
+      font-size: 30px;
+    }
+}
