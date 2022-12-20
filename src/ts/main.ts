@@ -39,6 +39,8 @@ window.addEventListener('scroll', () => {
     console.log(hScroll);
 });
 
+//Mikails kodning______________________________________________________________________________________________________________________________________
+
 function checkoutLoad() {
     location.href = "/checkout.html";
     console.log("load");
@@ -46,11 +48,25 @@ function checkoutLoad() {
 
 checkoutBtn.addEventListener("click", checkoutLoad);
 
-let newProduct: HTMLDivElement = document.createElement("div");
+let newProduct: HTMLDivElement = document.createElement("div") as HTMLDivElement;
+let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
+let pTag: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
+let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
 newProduct.className = "mainCheckout__newProduct"
+totalPrice.className = "mainCheckout__totalPrice"
+
+pTag.innerHTML = "Summa artiklar: " + 2000 + " kr";
+pTag.innerHTML += "Fraktavgift: " + 0 + " kr";
+bTag.innerHTML = "Totalt inkl.moms: " + 2000 + 0 + " kr";
 
 prodContainer.appendChild(newProduct);
 prodContainer.appendChild(newProduct.cloneNode(true));
+
+totalPrice.appendChild(pTag);
+totalPrice.appendChild(pTag);
+totalPrice.appendChild(bTag);
+
+
 
 
 

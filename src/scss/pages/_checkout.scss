@@ -15,6 +15,7 @@
 
 .mainCheckout{
     //align-items: center;
+    
     position: relative;
     @include b.x-large{ 
       max-width: 1100px;
@@ -24,7 +25,7 @@
       margin-right: auto;
       top: 80px;
       margin-bottom: 200px;
-      background-color: lightgrey;
+      //background-color: lightgrey;
       height: 500px; 
       overflow:hidden;
     }
@@ -38,12 +39,11 @@
 
     &__steps{
         width: 100%;
-        
         background-color: a.$lightGrey;
         align-items: center;
         display: flex;
-        
-        overflow: hidden;
+        //border: 1px solid black;
+
         @include b.x-large{
           padding-left: 45px;
           font-size: .95em;  
@@ -75,6 +75,26 @@
         background-color: white;
         border-bottom: a.$border;
     }
+
+    &__totalPrice{
+        //background-color: red;
+        height: 300px;
+        width: 400px;
+       // padding-top: 40px;
+    } 
     
 
+  }
+
+  .billingParent{
+    display: flex;
+    gap: 20px;
+    
+
+
+    &__billingInfo{
+        width: 540px;
+       // border: 1px solid black;
+        overflow:hidden;
+    }
   }
