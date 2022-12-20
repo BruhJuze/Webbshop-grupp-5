@@ -6,6 +6,10 @@ const closeButton = document.querySelector('.close-button');
 const navbar = document.querySelector('nav');
 const logo = document.querySelector('.logo-png');
 
+let checkoutBtn: HTMLButtonElement = document.getElementById("checkoutBtn") as HTMLButtonElement;
+let prodContainer: HTMLTableSectionElement = document.getElementById("checkoutProductContainer") as HTMLTableSectionElement;
+
+
 hamburger?.addEventListener('click', () => {
     hamburger?.classList.toggle('is-active');
     mobileMenu?.classList.toggle('is-active');
@@ -35,11 +39,20 @@ window.addEventListener('scroll', () => {
     console.log(hScroll);
 });
 
-let checkoutBtn: HTMLButtonElement = document.getElementById("checkoutBtn") as HTMLButtonElement;
-
 function checkoutLoad() {
     location.href = "/checkout.html";
     console.log("load");
     }
 
 checkoutBtn.addEventListener("click", checkoutLoad);
+
+let newProduct: HTMLDivElement = document.createElement("div");
+newProduct.className = "mainCheckout__newProduct"
+
+prodContainer.appendChild(newProduct);
+prodContainer.appendChild(newProduct.cloneNode(true));
+
+
+
+
+
