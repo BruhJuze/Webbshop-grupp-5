@@ -1,3 +1,5 @@
+/**************  nav-menu js  **************/
+
 const hamburger = document.querySelector('.hamburger');
 const cartButton = document.querySelector('.cart-button');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -34,6 +36,9 @@ window.addEventListener('scroll', () => {
 
 });
 
+/**************  end of nav-menu js  **************/
+
+/**************  productCategory js  **************/
 
 let solitaireRings = [
     {
@@ -110,3 +115,65 @@ function renderProducts(){
 };
 
 renderProducts();
+
+/**************  end of nav-menu js  **************/
+
+/**************  productPage js  **************/
+
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.getElementById('next-button');
+
+
+let productImages = document.querySelector('.product-images');
+const productImagesAll = document.querySelectorAll('.product-images img');
+
+let count = 1;
+const width = productImagesAll[0].clientWidth;
+
+let currentPosition = 0;
+
+if ( window.innerWidth < 600){
+
+(productImages as HTMLInputElement).style.transform = 'translateX(' + (-width * count) + 'px)';
+
+
+prevButton?.addEventListener('click', () => {
+    if (count <= 0) return;
+    currentPosition = -width * count;
+    (productImages as HTMLInputElement).style.transition = 'transform 300ms ease-in-out';
+    count--;
+    (productImages as HTMLInputElement).style.transform = 'translateX(' + (-width * count) + 'px)';
+});
+
+nextButton?.addEventListener('click', ()=> {
+    if (count >= productImagesAll.length -1) return; 
+    currentPosition = -width * count;
+    (productImages as HTMLInputElement).style.transition = 'transform 300ms ease-in-out';
+    count++;
+    (productImages as HTMLInputElement).style.transform = 'translateX(' + (-width * count) + 'px)';
+
+});
+
+};
+
+const navigationDots = document.querySelectorAll('.navigation-dots label');
+
+navigationDots.forEach((dot) => {
+    dot.addEventListener('click', (event)=> {
+        console.log(event.target);
+
+    });
+});
+
+
+//const mainImg = document.querySelector('.main-img img');
+const mainImg = document.getElementById('mainImg') as HTMLImageElement;
+const smallImages = document.querySelectorAll('.small-group__img');
+
+smallImages.forEach((smallImg) => {
+    smallImg.addEventListener('click', (event)=> {
+        let imgTag = event.target as HTMLImageElement;
+        mainImg.src = imgTag.src;
+    });
+});
+
