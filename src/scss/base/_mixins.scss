@@ -24,6 +24,19 @@
     background-repeat: no-repeat;
 }
 
+@mixin contact-bg-img {
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: a.$boxshadow;
+    margin-top: 0;
+    color: a.$white-color;
+    text-align: left;
+}
+
 @mixin about-image-styling {
     background-position: center;
     background-size: cover;
