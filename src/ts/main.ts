@@ -44,7 +44,7 @@ let solitaireRings = [
     {
         id: 1,
         name: "ANDREA",
-        img: "/ANDREA.0f109549.jpeg",
+        img: "/ANDREA.jpeg",
         price: 7200
     },
     {
