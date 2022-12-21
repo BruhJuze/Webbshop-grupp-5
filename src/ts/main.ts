@@ -77,6 +77,18 @@ let solitaireRings = [
         img: "/CAROLINE.ecf621ea.jpeg",
         price: 8500
     },
+    {
+        id: 7,
+        name: "Jeanette",
+        img: "/BLANCHE.3536c89c.jpeg",
+        price: 5500
+    },
+    {
+        id: 8,
+        name: "Filippa",
+        img: "/MAGDALENA.60008d27.jpeg",
+        price: 11500
+    },
 ];
 
 const productContainer = document.getElementById('product-container');
