@@ -234,7 +234,7 @@
   }
 
   &__btn{
-    @include btn.gold-btn;
+    @include btn.clear-btn;
     width: 100px;
     height: 30px;
     display: flex;
@@ -247,17 +247,17 @@
       height: 20%;
     }
     &:hover{
-      background-color: a.$gold-light-rgba;
-      border: a.$gold-light-rgba;
+      background-color: a.$gold-btn-rgba;
+      border: a.$gold-btn-rgba;
     }
   }
   
   div[alt*="NatDiamond"] {
-    background-image: a.$natDiamond;
+    background-image: a.$image-bg-color, a.$natDiamond;
   }
 
   div[alt*="LabDiamond"] {
-    background-image: a.$labDiamond;
+    background-image: a.$image-bg-color, a.$labDiamond;
   }
 }
 
