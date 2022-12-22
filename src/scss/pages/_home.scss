@@ -81,7 +81,7 @@
 }
 
 .prodCategory{
-  max-width: 1100px;
+  max-width: a.$container-width;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -262,7 +262,7 @@
 }
 
 .choose-ring{
-  max-width: 1100px;
+  max-width: a.$container-width;
   margin: 0 auto;
   color: a.$white-color;
   margin-top: a.$top-margin;
