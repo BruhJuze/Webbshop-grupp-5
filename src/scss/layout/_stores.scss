@@ -4,21 +4,30 @@
 @use '../base' as b;
 
 .stores{
+    max-width: a.$container-width;
+    margin: a.$top-margin auto;
+
+    @include b.x-large{
+        margin: a.$container-margin auto;
+    }
+
     &__container{
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: a.$gap-mobile;
         color: a.$white-color;
-        max-width: 1100px;
-        margin: 2rem auto;
-
+        width: 85%;
+        margin: 0 auto;
+        
         @include b.x-large{
-            gap: 40px;
+            gap: a.$gap-desktop;
+            width: 100%;
         }
     }
 
     &__stockholm{
         background-image: a.$image-bg-color, a.$img-sthlm;
+        box-shadow: a.$boxshadow;
         @include m.store-image;
 
         @include b.x-large{
@@ -28,6 +37,7 @@
     }
     &__malmo{
         background-image: a.$image-bg-color, a.$img-malmo;
+        box-shadow: a.$boxshadow;
         @include m.store-image;
 
         @include b.x-large{
@@ -43,10 +53,15 @@
     @include btn.clear-btn;
 
     @include b.x-large{
-        font-size: 20px;
+        font-size: a.$btn-font-desktop;
         width: 200px;
         padding: 1em;
     }
+    
+    &:hover{
+        background-color: a.$gold-btn-rgba;
+        border: a.$gold-btn-rgba;
+      }
    }
 
    &__content{
@@ -54,15 +69,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: a.$gap-mobile;
     height: 100%;
    }
 
    &__title{
-    font-size: 15px;
+    font-size: a.$h3-font-mobile;
+    text-align: center;
 
     @include b.x-large{
-        font-size: 30px;
+        font-size: a.$h3-font-desktop;
     }
    }
 }

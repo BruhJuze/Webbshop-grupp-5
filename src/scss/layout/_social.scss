@@ -7,15 +7,15 @@
 
     @include b.x-large{
         display: block;
+        margin: a.$container-margin;
         
         &__container{
-            max-width: 1100px;
+            max-width: a.$container-width;
             display: flex;
             flex-direction: row;
             justify-content: center;
             margin: 0 auto;
             flex-wrap: wrap;
-            margin-bottom: 50px; 
         }
     
         &__text{
@@ -23,8 +23,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: a.$gap-mobile;
             margin: 1rem;
+            color: a.$ourGrey;
+
+            h2{
+                font-size: a.$h2-font-desktop;
+            }
+
+            p{
+                font-size: a.$p-font-desktop;
+            }
         }
     
         div{

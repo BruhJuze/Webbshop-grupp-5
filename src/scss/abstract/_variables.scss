@@ -1,21 +1,22 @@
 /**   Navigation **/
 $menu-width: 300px;
 $navbar-height: 80px;
+$container-width: 1100px;
 
 //shadow
 $boxshadow: 0px 0px 10px #bbbbbb;
 $image-bg-color: linear-gradient(rgba(61, 61, 77, 0.365),rgba(61, 61, 76, 0.302));
 
 //images
-$headerIMG: url(../assets/Startsidan/header\ 9.jpg);
+$headerIMG: url(/src/assets/Startsidan/förlovning1svartvit.jpg);
 $headerIMGdesktop: url(../assets/Startsidan/header\ 2.jpg);
 $haloRing: url(../assets/Startsidan/HALO.jpeg);
 $sidoRing: url(../assets/Startsidan/SIDOSTEN.jpeg);
 $soliRing: url(../assets/Startsidan/SOLITÄR.jpeg);
 $treRing: url(../assets/Startsidan/TRESTEN.jpeg);
-$natDiamond: url(../assets/Startsidan/natur.jpeg);
-$labDiamond: url(../assets/Startsidan/lab.jpeg);
-$tips: url(../assets/Startsidan/header\ 5.jpg);
+$natDiamond: url(/src/assets/Startsidan/diamant1.jpeg);
+$labDiamond: url(/src/assets/Startsidan/71374142_2715941498440600_4780119543261429760_o-805x452.jpeg);
+$tips: url(/src/assets/Om/angelica.jpeg);
 $white-logo: url(../assets/Logo/logo_white.png);
 $contact-header: url(/src/assets/Om/pexels-photo-261628.jpeg);
 $img-sthlm: url(../assets/Startsidan/Stockholm.jpeg);
@@ -32,4 +33,29 @@ $story-img: url(/src/assets/Om/pexels-tima-miroshnichenko-6263111.jpg);
 $history-img: url(/src/assets/Om/2022-lycka-juveler-verkstad-min.jpeg);
 
 //text size
-$h3-font-size: 28px;
+$h1-font-mobile: 30px;
+$h1-font-desktop: 70px;
+$h2-font-mobile: 28px;
+$h2-font-desktop: 42px;
+$h3-font-mobile: 23px;
+$h3-font-desktop: 35px;
+$h4-font-mobile: 12px;
+$h4-font-desktop: 18px;
+$p-font-mobile-h: 18px;
+$p-font-mobile: 14px;
+$p-font-desktop-h: 25px;
+$p-font-desktop: 20px;
+$btn-font-desktop: 18px;
+$btn-font-header: 23px;
+
+//margins
+$container-margin: 4rem;
+$top-margin: 30px;
+$section-top-margin: 15px;
+
+//gaps
+$gap-mobile: 20px;
+$gap-desktop: 40px;
+
+
+
