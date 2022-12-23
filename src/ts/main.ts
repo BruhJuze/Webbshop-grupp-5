@@ -1,4 +1,6 @@
+import { Ring } from './module/ring';
 import { allRings } from './module/productData';
+import { ringCategories } from './module/productData';
 import { addOrUpdateUrlParam } from './module/urlControl';
 /**************  nav-menu js  **************/
 
@@ -44,46 +46,126 @@ window.addEventListener('scroll', () => {
 
 const productContainer = document.getElementById('product-container');
 
+let getRingType: string = ""; 
 
-function renderProducts(){
+let ringTypeURL = new URL(window.location.href);
+
+const ringLinks = document.querySelectorAll('.ring-links');
+
+ringLinks.forEach( (link)=> {
+    link.addEventListener('click', (event)=> {
+        event.preventDefault();
+
+            let currentItem = event.target as HTMLAnchorElement; 
+            const dataAttributeRingType = currentItem.getAttribute("data-ringtype") || '{}';
+            ringTypeURL.searchParams.set("ringtype", dataAttributeRingType);
+            const newQuery = ringTypeURL.toString();
+            history.pushState(null, "", newQuery); 
+
+            getRingType =  ringTypeURL.searchParams.get("ringtype") || '{}';
+
+            //console.log(getRingType);
+
+            checkCategory(getRingType);
+            return getRingType;
+    });
+});
+
+let filteredItems = new Array<Ring>(); 
+
+function checkCategory(ring: string){
+    for (let category of ringCategories){
+        
+        if(getRingType == category){
+            filteredItems = allRings.filter((item )=> {
+                return item.ringType == getRingType;
+            });
+        };
+    };
+    renderProducts(filteredItems);
+};
+
+function renderProducts(ring: Ring[]){
 
     for (let ring of allRings){
+
+        if (getRingType == ring.ringType){
+            const result = allRings.filter(res=>res.ringType);
+
+            console.log(result);
+
+
+            const productLink = document.createElement('a');
+            productLink.setAttribute('id', String(ring.id));
+            //productLink.setAttribute('href', "/productPage.html");
+            productLink.classList.add("product-link");
+            productContainer?.appendChild(productLink);
+    
+            const product = document.createElement('div');
+            product.classList.add("product");
+            productLink?.appendChild(product);
+    
+            const productImage = document.createElement('div');
+            productImage.classList.add("product__image");
+            product?.appendChild(productImage);
+    
+            const productImg = document.createElement('img');
+            productImg.classList.add(ring.ringType);
+            productImage?.appendChild(productImg);
+            //productImg.src = ring.first_img;
+            productImg.setAttribute('data-productid', ring.ringType);
+            productImg.setAttribute('data-ringname', ring.name);
+            productImg.src = ring.img[0];
+    
+            const productTitle = document.createElement('p');
+            productTitle.classList.add("product__title");
+            productTitle.innerHTML = ring.name;
+            product?.appendChild(productTitle);
+    
+            const productPrice = document.createElement('p');
+            productPrice.classList.add("product__price");
+            productPrice.innerHTML = String(ring.price + " :-");
+            product?.appendChild(productPrice);
+
         
-        const productLink = document.createElement('a');
-        productLink.setAttribute('id', String(ring.id));
-        //productLink.setAttribute('href', "/productPage.html");
-        productLink.classList.add("product-link");
-        productContainer?.appendChild(productLink);
+        // const productLink = document.createElement('a');
+        // productLink.setAttribute('id', String(ring.id));
+        // //productLink.setAttribute('href', "/productPage.html");
+        // productLink.classList.add("product-link");
+        // productContainer?.appendChild(productLink);
 
-        const product = document.createElement('div');
-        product.classList.add("product");
-        productLink?.appendChild(product);
+        // const product = document.createElement('div');
+        // product.classList.add("product");
+        // productLink?.appendChild(product);
 
-        const productImage = document.createElement('div');
-        productImage.classList.add("product__image");
-        product?.appendChild(productImage);
+        // const productImage = document.createElement('div');
+        // productImage.classList.add("product__image");
+        // product?.appendChild(productImage);
 
-        const productImg = document.createElement('img');
-        productImg.classList.add(ring.ringType);
-        productImage?.appendChild(productImg);
-        //productImg.src = ring.first_img;
-        productImg.setAttribute('data-productid', ring.ringType);
-        productImg.setAttribute('data-ringname', ring.name);
-        productImg.src = ring.img[0];
+        // const productImg = document.createElement('img');
+        // productImg.classList.add(ring.ringType);
+        // productImage?.appendChild(productImg);
+        // //productImg.src = ring.first_img;
+        // productImg.setAttribute('data-productid', ring.ringType);
+        // productImg.setAttribute('data-ringname', ring.name);
+        // productImg.src = ring.img[0];
 
-        const productTitle = document.createElement('p');
-        productTitle.classList.add("product__title");
-        productTitle.innerHTML = ring.name;
-        product?.appendChild(productTitle);
+        // const productTitle = document.createElement('p');
+        // productTitle.classList.add("product__title");
+        // productTitle.innerHTML = ring.name;
+        // product?.appendChild(productTitle);
 
-        const productPrice = document.createElement('p');
-        productPrice.classList.add("product__price");
-        productPrice.innerHTML = String(ring.price + " :-");
-        product?.appendChild(productPrice);
+        // const productPrice = document.createElement('p');
+        // productPrice.classList.add("product__price");
+        // productPrice.innerHTML = String(ring.price + " :-");
+        // product?.appendChild(productPrice);
+
+    }
+
     };
 };
 
-renderProducts();
+
 
 /************** URL parameters  **************/
 
@@ -94,9 +176,6 @@ productIdMap.set('solitar__type', '')
 
 let iURL = new URL(window.location.href);
 
-
-
-console.log(iURL);
 
 productLinks.forEach( (link)=> {
     link.addEventListener('click', (event) =>{

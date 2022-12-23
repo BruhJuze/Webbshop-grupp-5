@@ -129,3 +129,4 @@ let grazia = new Ring(  "id_14",
 
 export const allRings = [andrea, daniela, blanche, cleo, pauline, magdalena, sara, diana, ebba, florine, gianna, gloria, grace];
 
+export const ringCategories = ["solitar", "halo", "tresten", "sidosten", "slata", "alians"];
