@@ -1,4 +1,5 @@
-import { solitaireRings } from './module/productData';
+import { allRings } from './module/productData';
+import { addOrUpdateUrlParam } from './module/urlControl';
 /**************  nav-menu js  **************/
 
 const hamburger = document.querySelector('.hamburger');
@@ -43,12 +44,14 @@ window.addEventListener('scroll', () => {
 
 const productContainer = document.getElementById('product-container');
 
+
 function renderProducts(){
 
-    for (let ring of solitaireRings){
+    for (let ring of allRings){
         
         const productLink = document.createElement('a');
-        productLink.setAttribute('id', String("id__"+ring.id));
+        productLink.setAttribute('id', String(ring.id));
+        //productLink.setAttribute('href', "/productPage.html");
         productLink.classList.add("product-link");
         productContainer?.appendChild(productLink);
 
@@ -61,10 +64,12 @@ function renderProducts(){
         product?.appendChild(productImage);
 
         const productImg = document.createElement('img');
+        productImg.classList.add(ring.ringType);
         productImage?.appendChild(productImg);
         //productImg.src = ring.first_img;
-
-        productImg.src = ring.img[1];
+        productImg.setAttribute('data-productid', ring.ringType);
+        productImg.setAttribute('data-ringname', ring.name);
+        productImg.src = ring.img[0];
 
         const productTitle = document.createElement('p');
         productTitle.classList.add("product__title");
@@ -84,29 +89,52 @@ renderProducts();
 
 const productLinks = document.querySelectorAll('.product-link');
 
-const url = 'http://localhost:1234/productPage.html?';
+const productIdMap = new Map();
+productIdMap.set('solitar__type', '')
 
-// const obj = {
-//     v1: "javascript",
-//     v2: "java",
-//     v3: "python",
-// };
+let iURL = new URL(window.location.href);
 
-const product_id_keywords = ['solitärringar', 'haloringar', 'trestensringar', 'sidostensringar', 'slätaringar'];
 
-const searchParams = new URLSearchParams(obj);
-console.log(searchParams);
 
-const queryString = searchParams.toString();
-console.log(queryString);
+console.log(iURL);
 
-productLinks.forEach((link) =>{
-    link.addEventListener('click', (event)=> {
-        console.log(event.target);
-
-        window.location.href = url + queryString;
+productLinks.forEach( (link)=> {
+    link.addEventListener('click', (event) =>{
+     let currentItem = event.target as HTMLImageElement;
+        //addOrUpdateUrlParam("product-type", currentItem.className);
+        // currentItem.closest('.product-link')?.setAttribute("href", "http://localhost:1234/productPage.html?"+currentItem.className);
+        const dataAttributeProductid = currentItem.getAttribute('data-productid') || '{}'; 
+        const dataAttributeRingname = currentItem.getAttribute('data-ringname') || '{}'; 
+        //iURL.searchParams.set("productid", dataAttributeProductid);
+        iURL.searchParams.set("product", dataAttributeRingname);
+        const newQuery = iURL.toString();
+        history.pushState(null, "", newQuery);
     });
 });
+
+// const url = 'http://localhost:1234/productPage.html?';
+
+// // const obj = {
+// //     v1: "javascript",
+// //     v2: "java",
+// //     v3: "python",
+// // };
+
+// const product_id_keywords = ['solitärringar', 'haloringar', 'trestensringar', 'sidostensringar', 'slätaringar'];
+
+// const searchParams = new URLSearchParams(obj);
+// console.log(searchParams);
+
+// const queryString = searchParams.toString();
+// console.log(queryString);
+
+// productLinks.forEach((link) =>{
+//     link.addEventListener('click', (event)=> {
+//         console.log(event.target);
+
+//         window.location.href = url + queryString;
+//     });
+// });
 
 /************** end of URL parameters  **************/
 
@@ -184,84 +212,58 @@ const productInfoText = document.querySelector('.product-info__text');
 const productDescTextInner = document.querySelector('.product-desc__text__inner');
 
 
-// function renderProductContent(){
+function renderProductContent(){
 
-//     for (let ring of solitaireRings){
+    for (let ring of allRings){
 
-//         if(ring.id == 1){
 
-//             //create main img
-//             const productImg = document.createElement('img');
-//             productImg.setAttribute('id', String("main-img"));
-//             mainImage?.appendChild(productImg);
-//             //productImg.src = ring.first_img;
+            //create main img
+            const productImg = document.createElement('img');
+            productImg.setAttribute('id', String("main-img"));
+            mainImage?.appendChild(productImg);
+            for(let i=0; i<1; i++){
+                productImg.src = ring.img[i];
+            }
 
-//             for(let i=0; i< ring.img.length; i++){
-//                 const smallGroupImg = document.createElement('div');
-//                 smallGroupImg.classList.add("small-group__img");
-//                 productImgSmallGroup?.appendChild(smallGroupImg);    
-//             }
+            for(let i=0; i< ring.img.length; i++){
+                const smallGroupImg = document.createElement('div');
+                smallGroupImg.classList.add("small-group__img");
+                productImgSmallGroup?.appendChild(smallGroupImg);    
+            }
 
-//             //create small img
+            //create small img
   
 
-//             const smallImg1 = document.createElement('img');
-//             const smallImg2 = document.createElement('img');
-//             const smallImg3 = document.createElement('img');
-//             const smallImg4 = document.createElement('img');
-//             smallGroupImg1.appendChild(smallImg1);
-//             smallGroupImg2.appendChild(smallImg2);
-//             smallGroupImg3.appendChild(smallImg3);
-//             smallGroupImg4.appendChild(smallImg4);
-//             smallImg1.src = ring.second_img;
-//             smallImg2.src = ring.third_img;
-//             smallImg3.src = ring.second_img;
-//             smallImg4.src = ring.second_img;
+            const smallImg = document.createElement('img');
+            //smallGroupImg.appendChild(smallImg);
 
-//             const largeImage1 = document.createElement('img');
-//             const largeImage2 = document.createElement('img');
-//             const largeImage3 = document.createElement('img');
-//             const largeImage4 = document.createElement('img');
-//             largeImage1.classList.add("large-image");
-//             largeImage2.classList.add("large-image");
-//             largeImage3.classList.add("large-image");
-//             largeImage4.classList.add("large-image");
-//             productImages?.appendChild(largeImage1);
-//             productImages?.appendChild(largeImage2);
-//             productImages?.appendChild(largeImage3);
-//             productImages?.appendChild(largeImage4);
-//             largeImage1.src = ring.first_img;
-//             largeImage2.src = ring.first_img;
-//             largeImage3.src = ring.first_img;
-//             largeImage4.src = ring.first_img;
+            //smallImg.src = ring.second_img;
 
-//             //set title
-//             const productTitle = document.createElement('h3');
-//             productTitle.innerHTML = ring.name;
-//             productInfoTitle?.appendChild(productTitle);
 
-//             //set text
-//             const productText = document.createElement('p');
-//             productText.innerHTML = ring.first_desc;
-//             productInfoText?.appendChild(productText);
+            const largeImage = document.createElement('img');
+            largeImage.classList.add("large-image");
+            productImages?.appendChild(largeImage);
+            //largeImage.src = ring.img;
 
-//             //set description
-//             const productDesc1 = document.createElement('p');
-//             productDesc1.innerHTML = ring.first_desc;
+            //set title
+            const productTitle = document.createElement('h3');
+            productTitle.innerHTML = ring.name;
+            productInfoTitle?.appendChild(productTitle);
 
-//             const productDesc2 = document.createElement('p');
-//             productDesc2.innerHTML = ring.second_desc;
+            //set text
+            const productText = document.createElement('p');
+            productText.innerHTML = ring.first_desc;
+            productInfoText?.appendChild(productText);
 
-//             const productDesc3 = document.createElement('p');
-//             productDesc3.innerHTML = ring.third_desc;
+            //set description
+            const productDesc = document.createElement('p');
+            productDesc.innerHTML = ring.first_desc;
 
-//             productDescTextInner?.appendChild(productDesc1);
-//             productDescTextInner?.appendChild(productDesc2);
-//             productDescTextInner?.appendChild(productDesc3);
-//         }
-//     }
-// }
+            productDescTextInner?.appendChild(productDesc);
 
-// renderProductContent();
+    }
+}
+
+renderProductContent();
 
 /************  end of productPage content js  ***********/
