@@ -50,7 +50,6 @@ checkoutBtn.addEventListener("click", checkoutLoad);
 
 let newProduct: HTMLDivElement = document.createElement("div") as HTMLDivElement;
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
-let pTag: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
 newProduct.className = "mainCheckout__newProduct"
 
@@ -59,9 +58,12 @@ newProduct.className = "mainCheckout__newProduct"
 prodContainer.appendChild(newProduct);
 prodContainer.appendChild(newProduct.cloneNode(true));
 //prodContainer.appendChild(newProduct.cloneNode(true));
-let priceTest: number[] = [2000, 0,];
+let priceTest: number[] = [2000, 10,];
 
 for(let i = 0; i < priceTest.length; i++){
+
+let pTag: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
+
 pTag.innerHTML = priceTest[i] + " kr";
 
 bTag.innerHTML = priceTest[0] + priceTest[1] + " kr";

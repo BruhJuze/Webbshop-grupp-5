@@ -16,23 +16,31 @@
 .mainCheckout{
     //align-items: center;
     position: relative;
-    @include b.x-large{ 
-      max-width: 1100px;
-      display: flex;
+    top: 20vw;
+    max-width: 80vw;
+    display: flex;
       flex-direction: column;
       margin-left: auto ;
       margin-right: auto;
+      overflow:hidden;
+
+    @include b.x-large{ 
+      max-width: 1100px;
       top: 80px;
       margin-bottom: 200px;
       //background-color: lightgrey; 
-      overflow:hidden;
+      
     }
 
     &__title{
         color: a.$ourGrey;
-        margin: 17px;
         margin-left: 0;
-        font-size: 17px;
+        font-size: 3vw;
+        
+        @include b.x-large{
+            font-size: 17px;
+            margin: 17px;
+        }
     }
 
     &__steps{
@@ -40,6 +48,9 @@
         background-color: a.$lightGrey;
         align-items: center;
         display: flex;
+        height: 11vw;
+        padding-left: 9vw;
+
         //border: 1px solid black;
 
         @include b.x-large{
@@ -50,12 +61,15 @@
     }
 
     &__info{
+
+        display: none;
         
         @include b.x-large{
             word-spacing: 170px;
             margin-top: 25px;
             padding-bottom: 11px;
             border-bottom: a.$border;
+            display: block;
 
         a{
             margin-left: 135px;
@@ -67,53 +81,94 @@
 
     }
 
+    &__productContainer{
+        width: 100%;
+        margin-bottom: 6vw;
+       // background-color: aqua;
+       @include b.x-large{
+        margin-bottom: 0;
+       }
+        
+    }
+
     &__newProduct{
-        height: 100px;
+        
         width: 100%;
         background-color: white;
-        border-bottom: a.$border;
+        height: 25vw;
+        border: a.$border;
+        box-sizing: border-box;
+        margin-top: 5vw;
+        
+        
+        @include b.x-large{
+            height: 100px;
+            border: 0;
+            border-bottom: a.$border;
+            margin-top: 0;
+        }
     }
 
     &__priceContainer{
 
         width: 100%;
-        height:200px;
+        
         //background-color: aqua;
         display: flex;
         justify-content: end;
-        padding: 0; box-sizing: border-box;
+        text-align: right;
+        padding: 0; 
+        box-sizing: border-box;
+
+        @include b.x-large{
+            height:200px;
+        }
 
         &__totalPrice{
         //background-color: rgb(240, 240, 240);
         height: 100%;
-        width: 200px;
         display: flex;
         flex-direction: column;
-        padding: 45px;
+        margin-right: 41vw;
         white-space: nowrap;
-        padding-bottom: 0px;
-        gap: 15px;
+        text-align: left;
         box-sizing: border-box;
+        gap: 2vw;
+        @include b.x-large{
+            width: 200px;
+            padding: 45px;
+            padding-bottom: 0px;
+            margin-right: 45px;
+            gap: 15px;
+        }
 
         b{
-            margin-top: 5px;
+            @include b.x-large{
+                 margin-top: 5px;
+            }
+           
         }
 
 
        &__number{
        // background-color: turquoise;
        height: 100%;
-       width: 200px;
        display: flex;
        flex-direction: column;
-       padding: 45px;
        white-space: nowrap;
-       padding-bottom: 0px;
-       gap: 15px;
        box-sizing: border-box;
+       gap: 2vw;
+       @include b.x-large{
+         width: 200px;
+         padding: 45px;
+         padding-bottom: 0px;
+         gap: 15px;
+       }
 
        b{
-           margin-top: 5px;
+        @include b.x-large{
+            margin-top: 5px;
+        }
        }
 
        }
@@ -128,24 +183,38 @@
   
 
   .billingParent{
-    display: flex; 
-    gap: 20px; 
+    display: flex;
+    flex-direction: column;
+    @include b.x-large{
+        gap: 20px; 
+        flex-direction: row;
+    } 
+    
 
 
     &__tbxContainer{
        // background-color: aqua;
         display: flex;
         flex-direction: column;
-        width: 260px;
-        gap: 5px;
+        
+        
+        
         color: a.$ourGrey;
+        @include b.x-large{
+            width: 260px;
+            gap: 5px;
+        }
 
         &__wide{
             width: 100%;
             display: flex;
             flex-direction: column; 
              color: a.$ourGrey;
+             
             //background-color: red; 
+            @include b.x-large{
+
+            }
             
 
         }
@@ -155,25 +224,38 @@
 
 
     &__billingInfo{
-        width: 540px;
-        column-gap: 20px;
-        row-gap: 15px;
+        
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+         @include b.x-large{
+        flex-direction: row;
+         width: 540px;
+         column-gap: 20px; 
+         row-gap: 15px;
+        }
         
 
         &__input{
             //background-color: blue;
             width: 100%;
-            height: 2em;
             box-sizing: border-box;
+            @include b.x-large{
+                height: 2em;
+            }
             
         }
 
     }
 
     .billingParent__billingInfo > .mainCheckout__steps{
-        margin-bottom: 20px;
+
+        margin-bottom: 10vw;
+        
+        
+        @include b.x-large{
+            margin-bottom: 20px;
+        }
     }
 
 }
@@ -182,14 +264,20 @@
     display:flex;
     width: 100%;
     justify-content: center;
-    margin-top: 60px;
+    
+    @include b.x-large{
+        margin-top: 60px;
+    }
     
 
     button{
         background-color: a.$ourGrey;
         color:white;
-        padding: 20px;
-        width: 200px;
+        
+        @include b.x-large{
+         padding: 20px;
+         width: 200px;
+        }
     }
 }
 
