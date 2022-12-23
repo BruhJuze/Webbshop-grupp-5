@@ -73,22 +73,71 @@
   <a>Produkt</a> Pris Antal Summa
 </section>
 <section class="mainCheckout__productContainer" id="checkoutProductContainer"></section>
-<div id="totalPrice" class="totalPrice"></div>
-
+<div class="mainCheckout__priceContainer">
+<div class="mainCheckout__priceContainer__totalPrice">
+  <p>Summa artiklar:</p>
+  <p>Fraktavgift: </p>
+  <b>Total inkl.moms: </b>
+</div>
+<div class="mainCheckout__priceContainer__totalPrice__number" id="totalPrice"> </div>
+</div>
 <article class="billingParent">
 <section class="billingParent__billingInfo">
   <div class="mainCheckout__steps">2. LEVERANSADRESS</div>
-  <label>Förnamn</label>
-  <input class="billingParent__billingInfo__smallInput" </input>
-  <label>Efternamn</label> <input class="billingParent__billingInfo__smallInput" </input>
-  <label>Adress</label> <input class="billingParent__billingInfo__wideInput" </input>
-  <label>Postnummer</label> <input class="billingParent__billingInfo__smallInput" </input>
-  <label>Ort</label> <input class="billingParent__billingInfo__smallInput" </input>
+
+  <div class="billingParent__tbxContainer">
+  <label>Förnamn</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer"> 
+    <label>Efternamn</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer__wide"> 
+  <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer"> 
+  <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer"> 
+  <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  </div>
+
 </section>
 <section class="billingParent__billingInfo">
   <div class="mainCheckout__steps">3. FAKTURAADRESS</div>
+
+  <div class="billingParent__tbxContainer">
+    <label>Förnamn</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+      <label>Efternamn</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer__wide"> 
+    <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+    <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+    <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+
 </section>
  </article>
+
+ <section class="mainCheckout__button">
+  <button>SLUTFÖRA KÖP</button>
+
+ </section>
 
 
   </main>

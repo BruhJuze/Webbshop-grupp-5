@@ -53,18 +53,23 @@ let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDi
 let pTag: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
 newProduct.className = "mainCheckout__newProduct"
-totalPrice.className = "mainCheckout__totalPrice"
 
-pTag.innerHTML = "Summa artiklar: " + 2000 + " kr";
-pTag.innerHTML += "Fraktavgift: " + 0 + " kr";
-bTag.innerHTML = "Totalt inkl.moms: " + 2000 + 0 + " kr";
+
 
 prodContainer.appendChild(newProduct);
 prodContainer.appendChild(newProduct.cloneNode(true));
+//prodContainer.appendChild(newProduct.cloneNode(true));
+let priceTest: number[] = [2000, 0,];
 
+for(let i = 0; i < priceTest.length; i++){
+pTag.innerHTML = priceTest[i] + " kr";
+
+bTag.innerHTML = priceTest[0] + priceTest[1] + " kr";
 totalPrice.appendChild(pTag);
 totalPrice.appendChild(pTag);
 totalPrice.appendChild(bTag);
+
+}
 
 
 

@@ -74,42 +74,124 @@
         border-bottom: a.$border;
     }
 
-    &__totalPrice{
-        //background-color: red;
-        height: 300px;
-        width: 400px;
-       // padding-top: 40px;
+    &__priceContainer{
+
+        width: 100%;
+        height:200px;
+        //background-color: aqua;
+        display: flex;
+        justify-content: end;
+        padding: 0; box-sizing: border-box;
+
+        &__totalPrice{
+        //background-color: rgb(240, 240, 240);
+        height: 100%;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        padding: 45px;
+        white-space: nowrap;
+        padding-bottom: 0px;
+        gap: 15px;
+        box-sizing: border-box;
+
+        b{
+            margin-top: 5px;
+        }
+
+
+       &__number{
+       // background-color: turquoise;
+       height: 100%;
+       width: 200px;
+       display: flex;
+       flex-direction: column;
+       padding: 45px;
+       white-space: nowrap;
+       padding-bottom: 0px;
+       gap: 15px;
+       box-sizing: border-box;
+
+       b{
+           margin-top: 5px;
+       }
+
+       }
        
     } 
+
+    }
+
+    
     
 
-  }
+  
 
   .billingParent{
-    display: flex;
-    gap: 20px;
+    display: flex; 
+    gap: 20px; 
+
+
+    &__tbxContainer{
+       // background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        gap: 5px;
+        color: a.$ourGrey;
+
+        &__wide{
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+             color: a.$ourGrey;
+            //background-color: red; 
+            
+
+        }
+
+    }
     
 
 
     &__billingInfo{
         width: 540px;
-        overflow:hidden;
-        gap: 13.5px;
+        column-gap: 20px;
+        row-gap: 15px;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
         
 
-        &__smallInput{
+        &__input{
             //background-color: blue;
-            width: 260px;
+            width: 100%;
+            height: 2em;
+            box-sizing: border-box;
+            
         }
 
-        &__wideInput{
-            //background-color: red;
-            width: 100%;
-        }
     }
 
+    .billingParent__billingInfo > .mainCheckout__steps{
+        margin-bottom: 20px;
+    }
 
-  }
+}
+
+&__button{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 60px;
+    
+
+    button{
+        background-color: a.$ourGrey;
+        color:white;
+        padding: 20px;
+        width: 200px;
+    }
+}
+
+
+}
