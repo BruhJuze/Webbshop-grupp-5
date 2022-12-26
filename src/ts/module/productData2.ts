@@ -1,7 +1,7 @@
 export const solitaireRings = [
     {
         id: 1,
-        name: "ANDREA",
+        name: "Andrea",
         first_desc: "För den som söker en stilren design i tidlös tappning. Vår förlovningsring Andréa passar den klassiska som uppskattar det simplicitet och elegans. Med en hög infattning står den glamorösa diamanten ständigt i centrum. Diamanter i just smaragdslipning är har varit en stor favorit hos många celebriteter genom tiderna med välkända namn som Grace Kelly, Beyonce och Amal Clooney.",
         second_desc: "Majoriteten av våra solitärringar går att få med en smaragdslipad diamant, för en ring med högre infattning, likt Andréa, vänligen se Alba och Adele.",
         third_desc: "Addera en klassisk alliansring för en gnistrande kombination av ringar. Vi rekommenderar våra vigselringar Sofia eller Louise. För en slät vigselring se Alma eller Olivia.",
@@ -28,7 +28,7 @@ export const solitaireRings = [
         fourth_img: "SOLITÄR.0b72a518.jpeg",
         img: ["HALO.88a089e8.jpeg", "HALO.88a089e8.jpeg", "HALO.88a089e8.jpeg", "HALO.88a089e8.jpeg"],
 
-        price: 5600
+        price: 5600 
     },
     {
         id: 3,
