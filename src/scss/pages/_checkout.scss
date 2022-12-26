@@ -16,18 +16,21 @@
 .mainCheckout{
     //align-items: center;
     position: relative;
-    top: 20vw;
+    top: 23vw;
     max-width: 80vw;
     display: flex;
       flex-direction: column;
       margin-left: auto ;
       margin-right: auto;
       overflow:hidden;
+      padding-bottom: 40vw;
+     
+     // margin-bottom: 20vw;
 
     @include b.x-large{ 
       max-width: 1100px;
       top: 80px;
-      margin-bottom: 200px;
+      padding-bottom: 200px;
       //background-color: lightgrey; 
       
     }
@@ -36,6 +39,7 @@
         color: a.$ourGrey;
         margin-left: 0;
         font-size: 3vw;
+        margin-bottom: 4vw;
         
         @include b.x-large{
             font-size: 17px;
@@ -50,6 +54,7 @@
         display: flex;
         height: 11vw;
         padding-left: 9vw;
+        font-size: 3.7vw;
 
         //border: 1px solid black;
 
@@ -115,13 +120,16 @@
         
         //background-color: aqua;
         display: flex;
-        justify-content: end;
         text-align: right;
         padding: 0; 
         box-sizing: border-box;
+        justify-content: space-between;
+        font-size: 4.5vw; 
 
         @include b.x-large{
             height:200px;
+            font-size: 20px;
+            justify-content: end;
         }
 
         &__totalPrice{
@@ -129,22 +137,24 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        margin-right: 41vw;
         white-space: nowrap;
         text-align: left;
         box-sizing: border-box;
-        gap: 2vw;
+        gap: 3.5vw;
         @include b.x-large{
             width: 200px;
             padding: 45px;
             padding-bottom: 0px;
             margin-right: 45px;
             gap: 15px;
+            
         }
 
         b{
+            font-size: 5vw;
             @include b.x-large{
                  margin-top: 5px;
+                 font-size: 23px;
             }
            
         }
@@ -157,18 +167,22 @@
        flex-direction: column;
        white-space: nowrap;
        box-sizing: border-box;
-       gap: 2vw;
+       gap: 3.5vw;
+       font-size: 4.5vw;
        @include b.x-large{
          width: 200px;
          padding: 45px;
          padding-bottom: 0px;
          gap: 15px;
+         font-size: 20px;
        }
 
        b{
-        @include b.x-large{
-            margin-top: 5px;
-        }
+        font-size: 5vw;
+            @include b.x-large{
+                 margin-top: 5px;
+                 font-size: 23px;
+            }
        }
 
        }
@@ -196,13 +210,14 @@
        // background-color: aqua;
         display: flex;
         flex-direction: column;
-        
-        
-        
+        width: 100%;
+        gap: 1vw;
         color: a.$ourGrey;
+        font-size: 4.7vw;
         @include b.x-large{
             width: 260px;
             gap: 5px;
+            font-size: medium;
         }
 
         &__wide{
@@ -210,9 +225,13 @@
             display: flex;
             flex-direction: column; 
              color: a.$ourGrey;
+             gap: 1vw;
+             font-size: 4.7vw;
              
             //background-color: red; 
             @include b.x-large{
+                gap:5px;
+                font-size: medium;
 
             }
             
@@ -240,8 +259,14 @@
             //background-color: blue;
             width: 100%;
             box-sizing: border-box;
+            height: 10vw;
+            font-size: 5vw;
+            margin-bottom: 4vw;
             @include b.x-large{
                 height: 2em;
+                font-size: large;
+                margin-bottom: 0px;
+
             }
             
         }
@@ -250,11 +275,13 @@
 
     .billingParent__billingInfo > .mainCheckout__steps{
 
-        margin-bottom: 10vw;
+        margin-bottom: 5vw;
+        margin-top: 7.9vw;
         
         
         @include b.x-large{
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+            margin-top: 0px;
         }
     }
 
@@ -264,6 +291,7 @@
     display:flex;
     width: 100%;
     justify-content: center;
+    margin-top: 10vw;
     
     @include b.x-large{
         margin-top: 60px;
@@ -273,10 +301,15 @@
     button{
         background-color: a.$ourGrey;
         color:white;
+        width: 53vw;
+        padding: 5vw;
+        border: 0;
+        font-size: 3.7vw;
         
         @include b.x-large{
          padding: 20px;
          width: 200px;
+         font-size: medium;
         }
     }
 }

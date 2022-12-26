@@ -58,6 +58,9 @@ newProduct.className = "mainCheckout__newProduct"
 prodContainer.appendChild(newProduct);
 prodContainer.appendChild(newProduct.cloneNode(true));
 //prodContainer.appendChild(newProduct.cloneNode(true));
+//prodContainer.appendChild(newProduct.cloneNode(true));
+//prodContainer.appendChild(newProduct.cloneNode(true));
+//prodContainer.appendChild(newProduct.cloneNode(true));
 let priceTest: number[] = [2000, 10,];
 
 for(let i = 0; i < priceTest.length; i++){
