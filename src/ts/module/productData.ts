@@ -426,6 +426,16 @@ let edith = new Ring(  "id_47",
                         ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
                         17200
 );
+//släta vigselringar
+let alma = new Ring(  "id_47",
+                        "slata",
+                        "Edith", 
+                        "", 
+                        "", 
+                        "",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        17200
+);
 
 export const allRings = [andrea, daniela, blanche, cleo, pauline, magdalena, alice, amber, daisy, caroline, belle, astrid, anna, sara, 
     miranda, diana, ebba, florine, gianna, gloria, grace, grazia, 
