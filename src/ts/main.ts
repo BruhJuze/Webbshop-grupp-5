@@ -54,21 +54,37 @@ const productContainer = document.getElementById('product-container');
 
 let getRingType: string = ""; 
 
+
 let ringTypeURL = new URL(window.location.href);
 
 const ringLinks = document.querySelectorAll('.ring-links');
 
 ringLinks.forEach( (link)=> {
     link.addEventListener('click', (event)=> {
-        event.preventDefault();
+        //event.preventDefault();
 
             let currentItem = event.target as HTMLAnchorElement; 
             const dataAttributeRingType = currentItem.getAttribute("data-ringtype") || '{}';
+
+            const dataAttributeHref = currentItem.getAttribute("href");
+
+            //const url = window.location.href;
+
+            //const ringTypeURL = new URL(url).searchParams;
+
+            //const dataAttributeHref = currentItem.getAttribute("href");
             ringTypeURL.searchParams.set("ringtype", dataAttributeRingType);
+            
             const newQuery = ringTypeURL.toString();
+            //const newQuery = ringTypeURL.pathname;
+
+            console.log(newQuery);
+            console.log(dataAttributeHref);
             history.pushState(null, "", newQuery); 
 
             getRingType =  ringTypeURL.searchParams.get("ringtype") || '{}';
+
+            console.log(dataAttributeRingType);
 
             //console.log(getRingType);
 
