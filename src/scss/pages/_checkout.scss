@@ -22,7 +22,6 @@
       flex-direction: column;
       margin-left: auto ;
       margin-right: auto;
-      overflow:hidden;
       padding-bottom: 40vw;
      
      // margin-bottom: 20vw;
@@ -37,7 +36,6 @@
 
     &__title{
         color: a.$ourGrey;
-        margin-left: 0;
         font-size: 3vw;
         margin-bottom: 4vw;
         
@@ -55,6 +53,7 @@
         height: 11vw;
         padding-left: 9vw;
         font-size: 3.7vw;
+        box-sizing: border-box;
 
         //border: 1px solid black;
 
@@ -121,7 +120,6 @@
         //background-color: aqua;
         display: flex;
         text-align: right;
-        padding: 0; 
         box-sizing: border-box;
         justify-content: space-between;
         font-size: 4.5vw; 
@@ -144,7 +142,6 @@
         @include b.x-large{
             width: 200px;
             padding: 45px;
-            padding-bottom: 0px;
             margin-right: 45px;
             gap: 15px;
             
@@ -164,7 +161,7 @@
        // background-color: turquoise;
        height: 100%;
        display: flex;
-       flex-direction: column;
+       flex-direction: column;///////////////////////////////////////////////////////////////////////////
        white-space: nowrap;
        box-sizing: border-box;
        gap: 3.5vw;
