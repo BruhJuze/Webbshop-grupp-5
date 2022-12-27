@@ -6,7 +6,7 @@ let andrea = new Ring(  "id_1",
                         "För den som söker en stilren design i tidlös tappning. Vår förlovningsring Andréa passar den klassiska som uppskattar det simplicitet och elegans. Med en hög infattning står den glamorösa diamanten ständigt i centrum. Diamanter i just smaragdslipning är har varit en stor favorit hos många celebriteter genom tiderna med välkända namn som Grace Kelly, Beyonce och Amal Clooney.", 
                         "Majoriteten av våra solitärringar går att få med en smaragdslipad diamant, för en ring med högre infattning, likt Andréa, vänligen se Alba och Adele.", 
                         "Addera en klassisk alliansring för en gnistrande kombination av ringar. Vi rekommenderar våra vigselringar Sofia eller Louise. För en slät vigselring se Alma eller Olivia",
-                        ["HALO.88a089e8.jpeg", "SOLITÄR.0b72a518.jpeg", "HALO.88a089e8.jpeg"],
+                        ["", "SOLITÄR.0b72a518.jpeg", "HALO.88a089e8.jpeg"],
                         7200
 );
 let daniela = new Ring(  "id_2",
