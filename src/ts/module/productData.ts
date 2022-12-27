@@ -6,7 +6,7 @@ let andrea = new Ring(  "id_1",
                         "För den som söker en stilren design i tidlös tappning. Vår förlovningsring Andréa passar den klassiska som uppskattar det simplicitet och elegans. Med en hög infattning står den glamorösa diamanten ständigt i centrum. Diamanter i just smaragdslipning är har varit en stor favorit hos många celebriteter genom tiderna med välkända namn som Grace Kelly, Beyonce och Amal Clooney.", 
                         "Majoriteten av våra solitärringar går att få med en smaragdslipad diamant, för en ring med högre infattning, likt Andréa, vänligen se Alba och Adele.", 
                         "Addera en klassisk alliansring för en gnistrande kombination av ringar. Vi rekommenderar våra vigselringar Sofia eller Louise. För en slät vigselring se Alma eller Olivia.",
-                        ["HALO.88a089e8.jpeg", "SOLITÄR.0b72a518.jpeg", "HALO.88a089e8.jpeg"],
+                        ["Solitär/Andrea/andrea1.jpeg", "Solitär/Andrea/andrea2.jpeg", "Solitär/Andrea/andrea3.jpeg"],
                         5600
 );
 let daniela = new Ring(  "id_2",
@@ -427,9 +427,172 @@ let edith = new Ring(  "id_47",
                         17200
 );
 //släta vigselringar
-let alma = new Ring(  "id_47",
+let alma = new Ring(  "id_48",
                         "slata",
-                        "Edith", 
+                        "Alma", 
+                        "Den här vigselringen har en klassisk design och gör sig därför utmärkt som vigselring i en kombination.", 
+                        "Bär som vigselring med en av våra klassiska solitärringar, vi rekommenderar Angelica eller Celeste.", 
+                        "Alma påminner mycket om vår ring Milou. Milou har dock en mer rak design och är därför ett modernare val. Almas motsvarighet för herr heter Victor.",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        2900
+);
+let lucy = new Ring(  "49",
+                        "slata",
+                        "Lucy", 
+                        "Lucy är vår mest kantiga släta ring till henne. Ringen har en väldigt modern profil med raka linjer. Den här typen av ring är väldigt populär i Sverige där vi tycks föredra en rak profil framför en rund.", 
+                        "Notera att de flesta av våra solitärringar har samma profil som våra släta ringar Olivia och Marie. Är det viktigt för dig att ringarna ska kunna ligga dikt an, välj därför då Olivia eller Marie framför Lucy. Detta gäller alltså om du tänkt kombinera en slät ring med en solitärring.", 
+                        "Lucy finns att välja med en tjocklek om 1.3 och 1.7 mm samt en bredd mellan 2-4 mm. Motsvarande ring till herr heter Alexander.",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        3400
+);
+let marie = new Ring(  "id_50",
+                        "slata",
+                        "Marie", 
+                        "En slät ring som Marie passar alla, den är modern men samtidigt klassisk i designen. Den mer rundade profilen gör den mer bekväm än Olivia men samtidigt modernare än Naomi. Ringen finns att få i bredder mellan 2 till 4 mm och motsvarande ring till herr heter Charles och går att få upp till 8 mm bredd.", 
+                        "Marie passar med de allra flesta av våra förlovningsringar. Vi rekommenderar att kombinera Marie med någon av de populära ringarna Clara eller Cleo.", 
+                        "Vill ni ha en mer rundad ring föreslår vi ringen Naomi, eller för en mer kantig design, vår ring Olivia.",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        3100
+);
+let naomi = new Ring(  "id_51",
+                        "slata",
+                        "Naomi", 
+                        "Naomi är en av våra mest populära ringar och är perfekt för den eftersöker en klassisk ring som är tidlös utan att vara i vägen. Tack vare sin komfort och nätta profil är den mycket omtyckt bland våra kunder. Rundad ovansida och mjuka linjer, ligger nära fingret och sticker inte upp mycket jämfört med många andra modeller. Motsvarande ring för herr heter Paul som är exakt samma ring. Önskar du en bredare ring än 4 mm så ta en titt på Paul (som finns med bredden 4 - 8 mm).", 
+                        "Vi rekommenderar denna ringen till den som eftersöker en klassisk design på sin ring. Dessvärre passar den inte till så många andra ringar så som solitärringar.", 
+                        "Så om du önskar matcha två ringar perfekta tillsammans så rekommenderar vi ringen Olivia som passar till de flesta av våra ringar infattade med diamanter.",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        3100
+);
+let olivia = new Ring(  "id_52",
+                        "slata",
+                        "Olivia", 
+                        "Olivia är en modern slät ring som faller många av våra kunder i smaken. Den har en något kantigare profil och är enkel att kombinera med andra ringer eller bära själv som den är. Ringen finns i olika höjd och en diamantring som är 1.7 eller 1.8mm hög matchas bäst med en Olivia som är 1.7mm medan de tunnare diamantringarna fungerar bättre med 1.3mm. Är ni det minsta osäkra i detta val så tveka inte att fråga oss.", 
+                        "Detta är ringen som fungerar till störst antal solitärringar, bland dem de omåttligt populära ringarna Angelica och Angelina. Motsvarigheten för herr är Roger för som har exakt samma form men finns i större bredder för att matcha större händer.", 
+                        "Vill ni ha en något mer kupad ring så välj vår ring Marie, för en kantigare modell välj vår ring Lucy. Finns inte det ni söker på vår hemsida, hör med oss, allt är möjligt! Om ni exempelvis vill ha en slät ring som är 5.5 x 2.5 mm, ordnar vi det!",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        3100
+);
+let palermo = new Ring(  "id_53",
+                        "slata",
+                        "Palermo", 
+                        "Palermo är den perfekta tjocka och rundade ringen. Med sin bredd och sitt djup om 3.0 mm är det en härlig blandning mellan elegant och modernt. Perfekt som en statementring att bära med dina vardagliga smycken.", 
+                        "Den är rund och bekväm att bära, vi rekommenderar att bära den på din högra hand som ett smycke.", 
+                        "Vill ni ha en mer rundad ring föreslår vi ringen Naomi, eller för en mer kantig design, vår ring Olivia.",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        7800
+);
+let verona = new Ring(  "id_54",
+                        "slata",
+                        "Verona", 
+                        "Verona är en vacker och nätt ring med runda bubblor runt ringen. Den är perfekt ifall du önskar något enkelt men ändå vackert. Vi rekommenderar verkligen denna ring som ett smycke att bära varje dag på högerhanden.", 
+                        "Den är också otroligt vacker att kombinera med andra ringar om du önskar den som en vigselring.", 
+                        "Kombinera gärna med någon av våra andra ringar som Cleo, Anna och Astrid.",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        7200
+);
+let vanessa = new Ring(  "id_55",
+                        "slata",
+                        "Vanessa", 
+                        "Vanessa är den perfekta släta ringen om du vill ha en enkel och diskret design som har det där extra. Den spetsiga delen gör att en diamantring ligger fint bredvid och tillsammans blir de ett samspelt par.", 
+                        "Vanessa har en svagt kupad profil vilket gör att den passar till de flesta av våra ringar som har ett mindre djup. Vi skulle rekommendera att matcha Vanessa med Ally , Belle samt Bonnie.", 
+                        "Vill du ha en liknande ring fast med diamanter infattade kika då på Veronica!",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        5200
+);
+//Allians vigselringar
+let ilona = new Ring(  "id_56",
+                        "allians",
+                        "Ilona", 
+                        "Ilona är den klassiska alliansringen som gör sig utmärkt till både släta och solitära ringar. Med sina ~31 stycken kloinfattade diamanter i kvaliteten (G/VS) som tillsammans är strax under en Carat är Ilona den perfekta glittriga symbolen för en unik kärlekshistoria. Varje diamant är 0.030 Carat och tillsammans bidrar de med ett vackert sken i alla vinklar.", 
+                        "Ilona passar bra till den släta vigselringen Olivia med ett djup om 1.7 mm samt de flesta solitärringar med ett djup omkring 1.7 mm till exempel Clara.", 
+                        "Om ni söker en bredare ring rekommenderar vi istället Ida. Ida har två diamantrader med samma fattning och design som Ilona. Om ni istället söker en nättare ring kan eventuellt Sofia vara rätt val. Andra modeller som påminner om Ilona är både Louise och Linnéa. Ni väljer själva bredd och Carat på diamanterna på dessa.",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        15700
+);
+let julie = new Ring(  "id_57",
+                        "allians",
+                        "Julie", 
+                        "Julie är en riktig klassiker med sin kupade skena och kanalinfattade diamanter. Julie är en mycket klassisk alliansring som är populär bland våra kunder. Halva ringen är kanalinfattad med ~21 runda diamanter om totalt ~0.21 Carat beroende på ringstorlek. Diamanternas kvalitet är G/VS och varje diamant är 0.01 Carat (1.3 mm i diameter).", 
+                        "Julie passar bra till de flesta av våra solitärringar med ett djup om 1.5 mm. Julie passar även perfekt ihop med den släta ringen Naomi med ett djup om 1.3 mm eftersom de har samma profil. Söker du efter en liknande ring? Kika då på Livia, Liza eller Juliette.", 
+                        "Alla ringar i helallians kommer utan hål. Ringar i halvallians eller mindre kommer i de allra flesta av fallen med hål. Om du önskar mer information eller vill ha det på ett annat vis, vänligen kontakta oss.",
+                        ["", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        7100
+);
+let leoni = new Ring(  "id_58",
+                        "allians",
+                        "Leoni", 
+                        "Leoni är en mycket klassisk alliansring med en tidlös design. Hennes bekanta siluett passar vackert med majoriteten av våra solitära ringar. Leoni går att få i både hel- och halvallians. Ringens infattning gör den dessutom väldigt säker och till ett bra val för den som söker en praktisk design som fungerar till både vardag och fest.", 
+                        "Leoni passar till majoriteten av våra solitära ringar, eftersom bredden på de olika varianterna varierar rekommenderar vi er att söka efter solitära ringar med matchande bredd. Om du är osäker eller behöver rådgivning, tveka inte att kontakta oss, detta gör du enkelt genom att klicka här (länk till kontakta oss sidan).", 
+                        "Söker ni en liknande ring likt Leoni? Vi rekommenderar då diamantringarna Jennie, Jessica eller Juliette.",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        5500
+);
+let lily = new Ring(  "id_59",
+                        "allians",
+                        "Lily", 
+                        "", 
+                        "", 
+                        "",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        17200
+);
+let liza = new Ring(  "id_60",
+                        "allians",
+                        "Liza", 
+                        "", 
+                        "", 
+                        "",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        17200
+);
+let lizette = new Ring(  "id_61",
+                        "allians",
+                        "Lizette", 
+                        "", 
+                        "", 
+                        "",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        17200
+);
+let louise = new Ring(  "id_62",
+                        "allians",
+                        "Louise", 
+                        "", 
+                        "", 
+                        "",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        17200
+);
+let nellie = new Ring(  "id_63",
+                        "allians",
+                        "Nellie", 
+                        "", 
+                        "", 
+                        "",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        17200
+);
+let sofia = new Ring(  "id_64",
+                        "allians",
+                        "Sofia", 
+                        "", 
+                        "", 
+                        "",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        17200
+);
+let vera = new Ring(  "id_65",
+                        "allians",
+                        "Vera", 
+                        "", 
+                        "", 
+                        "",
+                        ["TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg", "TRESTEN.3d525dc1.jpeg"],
+                        17200
+);
+let zoe = new Ring(  "id_66",
+                        "allians",
+                        "Zoe", 
                         "", 
                         "", 
                         "",
@@ -442,4 +605,4 @@ export const allRings = [andrea, daniela, blanche, cleo, pauline, magdalena, ali
     anne, evelina, charlotte, fannie, evelyn, felicia, filippa, fiona, florence, francesca, francine, fredrica, freya, gabrielle, willow, 
     elena, elizabeth, elly, eloise, embla, emilia, emmy, esmeralda, ewa, edith];
 
-export const ringCategories = ["solitar", "halo", "tresten", "sidosten", "slata", "alians"];
+export const ringCategories = ["solitar", "halo", "tresten", "sidosten", "slata", "allians"];
