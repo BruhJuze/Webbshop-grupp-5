@@ -75,8 +75,9 @@ const productImgSmallGroup = document.querySelector('.small-group');
 const productInfoTitle = document.querySelector('.product-info__title');
 const productInfoText = document.querySelector('.product-info__text');
 const productDescTextInner = document.querySelector('.product-desc__text__inner');
+const productImages = document.querySelector('.product-images');
 
-function renderProductContent(product: Ring[]){
+function renderProductContent(){
 
     for (let product of allRings){
 
@@ -84,18 +85,21 @@ function renderProductContent(product: Ring[]){
 
             if(getProduct == product.name){
 
+                    console.log(product.name);
+                    
                 //create main img
                 const productImg = document.createElement('img');
-                productImg.setAttribute('id', String("main-img"));
+                productImg.setAttribute('id', String(".main-img"));
                 mainImage?.appendChild(productImg);
                 for(let i=0; i<1; i++){
                     productImg.src = product.img[i];
                 }
 
-                for(let i=0; i< ring.img.length; i++){
-                    const smallGroupImg = document.createElement('div');
+                for(let i=0; i< product.img.length; i++){
+                    const smallGroupImg = document.createElement('img');
                     smallGroupImg.classList.add("small-group__img");
-                    productImgSmallGroup?.appendChild(smallGroupImg);    
+                    productImgSmallGroup?.appendChild(smallGroupImg); 
+                    smallGroupImg.src = product.img[i];   
                 }
 
                 //create small img
@@ -108,23 +112,44 @@ function renderProductContent(product: Ring[]){
 
                 //set title
                 const productTitle = document.createElement('h3');
-                productTitle.innerHTML = ring.name;
+                productTitle.innerHTML = product.name;
                 productInfoTitle?.appendChild(productTitle);
 
                 //set text
                 const productText = document.createElement('p');
-                productText.innerHTML = ring.first_desc;
+                productText.innerHTML = product.first_desc;
                 productInfoText?.appendChild(productText);
 
                 //set description
                 const productDesc = document.createElement('p');
-                productDesc.innerHTML = ring.first_desc;
+                productDesc.innerHTML = product.first_desc;
 
                 productDescTextInner?.appendChild(productDesc);
+
+                const productDesc2 = document.createElement('p');
+                productDesc2.innerHTML = product.second_desc;
+
+                productDescTextInner?.appendChild(productDesc2);
+
+                const productDesc3 = document.createElement('p');
+                productDesc3.innerHTML = product.third_desc;
+
+                productDescTextInner?.appendChild(productDesc3);
+
+               
+               
+
+                //set price
+                let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
+                let totalprice = document.querySelector('.total-sum');
+                
+                productPrice.innerHTML = product.price.toString() + " " + "kr";
+                totalprice?.appendChild(productPrice);
+                console.log(productPrice);
 
             };
 
     }
 }
 
-//renderProductContent();
+renderProductContent();
