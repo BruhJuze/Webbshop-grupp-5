@@ -62,7 +62,7 @@ function renderPageTitle(ringType: string) {
                 contentType = "Solitärringar";
     }
 
-    const subheaderTitle = document.querySelector('.subheader__title');
+    const subheaderTitle = document.querySelector('.subheader__title') as HTMLHeadElement;
 
     subheaderTitle.innerHTML = contentType;
 
