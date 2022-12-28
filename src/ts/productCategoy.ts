@@ -19,8 +19,6 @@ checkCategory(getRing);
 
 function checkCategory(ring: string){
 
-    console.log(presentURL);
-
     for (let category of ringCategories){
         
         if(getRing == category){
@@ -65,8 +63,7 @@ function renderPageTitle(ringType: string) {
     const subheaderTitle = document.querySelector('.subheader__title') as HTMLHeadElement;
 
     subheaderTitle.innerHTML = contentType;
-
-
+    
 }
 
 function renderProducts(ring: Ring[]){

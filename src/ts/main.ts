@@ -176,62 +176,8 @@ smallImages.forEach((smallImg) => {
 
 // /**************  productPage content js  **************/
 
-const productImageContainer = document.querySelector('.product-image-container');
-const mainImage = document.querySelector('.main-img');
-const productImgSmallGroup = document.querySelector('.small-group');
-const productInfoTitle = document.querySelector('.product-info__title');
-const productInfoText = document.querySelector('.product-info__text');
-const productDescTextInner = document.querySelector('.product-desc__text__inner');
 
-
-function renderProductContent(){
-
-    for (let ring of allRings){
-
-
-            //create main img
-            const productImg = document.createElement('img');
-            productImg.setAttribute('id', String("main-img"));
-            mainImage?.appendChild(productImg);
-            for(let i=0; i<1; i++){
-                productImg.src = ring.img[i];
-            }
-
-            for(let i=0; i< ring.img.length; i++){
-                const smallGroupImg = document.createElement('div');
-                smallGroupImg.classList.add("small-group__img");
-                productImgSmallGroup?.appendChild(smallGroupImg);    
-            }
-
-            //create small img
-            const smallImg = document.createElement('img');
-
-            const largeImage = document.createElement('img');
-            largeImage.classList.add("large-image");
-            productImages?.appendChild(largeImage);
-            //largeImage.src = ring.img;
-
-            //set title
-            const productTitle = document.createElement('h3');
-            productTitle.innerHTML = ring.name;
-            productInfoTitle?.appendChild(productTitle);
-
-            //set text
-            const productText = document.createElement('p');
-            productText.innerHTML = ring.first_desc;
-            productInfoText?.appendChild(productText);
-
-            //set description
-            const productDesc = document.createElement('p');
-            productDesc.innerHTML = ring.first_desc;
-
-            productDescTextInner?.appendChild(productDesc);
-
-    }
-}
 
 /************  end of productPage content js  ***********/
 
-/*********function to convert ring objects to json */
 
-renderProductContent();

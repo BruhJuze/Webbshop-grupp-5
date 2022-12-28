@@ -64,53 +64,67 @@ function renderPageTitle(ringType: string) {
 
     const subheaderTitle = document.querySelector('.subheader__title') as HTMLHeadElement;
 
-    subheaderTitle.innerHTML = contentType;
+    //subheaderTitle.innerHTML = contentType;
 
 
 }
 
-function renderProducts(ring: Ring[]){
+const productImageContainer = document.querySelector('.product-image-container');
+const mainImage = document.querySelector('.main-img');
+const productImgSmallGroup = document.querySelector('.small-group');
+const productInfoTitle = document.querySelector('.product-info__title');
+const productInfoText = document.querySelector('.product-info__text');
+const productDescTextInner = document.querySelector('.product-desc__text__inner');
 
-    for (let ring of allRings){
+function renderProductContent(product: Ring[]){
 
-        if (getRing == ring.ringType){
-            const result = allRings.filter(res=>res.ringType);
+    for (let product of allRings){
 
-            const productLink = document.createElement('a');
-            productLink.setAttribute('id', String(ring.id));
-            productLink.classList.add("product-link");
-            productContainer?.appendChild(productLink);
-    
-            const product = document.createElement('div');
-            product.classList.add("product");
-            productLink?.appendChild(product);
-    
-            const productImage = document.createElement('div');
-            productImage.classList.add("product__image");
-            product?.appendChild(productImage);
-    
-            const productImg = document.createElement('img');
-            productImg.classList.add(ring.ringType);
-            productImage?.appendChild(productImg);
-            productImg.setAttribute('data-productid', ring.ringType);
-            productImg.setAttribute('data-ringname', ring.name);
-            productImg.src = ring.img[0];
-    
-            const productTitle = document.createElement('p');
-            productTitle.classList.add("product__title");
-            productTitle.innerHTML = ring.name;
-            product?.appendChild(productTitle);
-    
-            const productPrice = document.createElement('p');
-            productPrice.classList.add("product__price");
-            productPrice.innerHTML = String(ring.price + " :-");
-            product?.appendChild(productPrice);
+        const getProduct = "Miranda";
+
+            if(getProduct == product.name){
+
+                //create main img
+                const productImg = document.createElement('img');
+                productImg.setAttribute('id', String("main-img"));
+                mainImage?.appendChild(productImg);
+                for(let i=0; i<1; i++){
+                    productImg.src = product.img[i];
+                }
+
+                for(let i=0; i< ring.img.length; i++){
+                    const smallGroupImg = document.createElement('div');
+                    smallGroupImg.classList.add("small-group__img");
+                    productImgSmallGroup?.appendChild(smallGroupImg);    
+                }
+
+                //create small img
+                const smallImg = document.createElement('img');
+
+                const largeImage = document.createElement('img');
+                largeImage.classList.add("large-image");
+                productImages?.appendChild(largeImage);
+                //largeImage.src = ring.img;
+
+                //set title
+                const productTitle = document.createElement('h3');
+                productTitle.innerHTML = ring.name;
+                productInfoTitle?.appendChild(productTitle);
+
+                //set text
+                const productText = document.createElement('p');
+                productText.innerHTML = ring.first_desc;
+                productInfoText?.appendChild(productText);
+
+                //set description
+                const productDesc = document.createElement('p');
+                productDesc.innerHTML = ring.first_desc;
+
+                productDescTextInner?.appendChild(productDesc);
+
+            };
 
     }
+}
 
-    };
-};
-
-renderProducts(filteredItems);
-
-renderPageTitle(getRing);
+//renderProductContent();
