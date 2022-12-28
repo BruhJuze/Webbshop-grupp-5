@@ -1,7 +1,6 @@
 import { Ring } from './module/ring';
 import { allRings } from './module/productData';
 import { ringCategories } from './module/productData';
-import { addOrUpdateUrlParam } from './module/urlControl';
 /**************  nav-menu js  **************/
 
 const hamburger = document.querySelector('.hamburger');
@@ -48,12 +47,31 @@ window.addEventListener('scroll', () => {
 
 /**************  end of nav-menu js  **************/
 
+const checkoutButton = document.querySelector('.checkout-button');
+
+declare let require: any;
+
+const fs = require('fs');
+
+function convertToJson(){
+    fs.writeFile('./productData.json', JSON.stringify(allRings), (err: any, result? : undefined | null): void => {
+        if(err){
+            console.log(err);
+        } else {
+            console.log("JSON fil har lyckats skrivas!");
+        }
+    });
+}
+
+checkoutButton?.addEventListener('click', ()=> {
+    convertToJson();
+});
+
 /**************  productCategory js  **************/
 
 const productContainer = document.getElementById('product-container');
 
 let getRingType: string = ""; 
-
 
 let ringTypeURL = new URL(window.location.href);
 
@@ -61,32 +79,25 @@ const ringLinks = document.querySelectorAll('.ring-links');
 
 ringLinks.forEach( (link)=> {
     link.addEventListener('click', (event)=> {
-        //event.preventDefault();
+        event.preventDefault();
 
             let currentItem = event.target as HTMLAnchorElement; 
-            const dataAttributeRingType = currentItem.getAttribute("data-ringtype") || '{}';
+             const dataAttributeRingType = currentItem.getAttribute("data-ringtype") || '{}';
 
-            const dataAttributeHref = currentItem.getAttribute("href");
+            const dataAttributeHref = currentItem.getAttribute("href") + "?";
 
-            //const url = window.location.href;
-
-            //const ringTypeURL = new URL(url).searchParams;
-
-            //const dataAttributeHref = currentItem.getAttribute("href");
             ringTypeURL.searchParams.set("ringtype", dataAttributeRingType);
             
             const newQuery = ringTypeURL.toString();
-            //const newQuery = ringTypeURL.pathname;
 
-            console.log(newQuery);
-            console.log(dataAttributeHref);
             history.pushState(null, "", newQuery); 
 
-            getRingType =  ringTypeURL.searchParams.get("ringtype") || '{}';
+             getRingType =  ringTypeURL.searchParams.get("ringtype") || '{}';
+             const getRingEntries =  ringTypeURL.searchParams.entries();
 
-            console.log(dataAttributeRingType);
-
-            //console.log(getRingType);
+             console.log(getRingType);
+    
+            window.location.href = <string> dataAttributeHref + "ringtype=" +getRingType;
 
             checkCategory(getRingType);
             return getRingType;
@@ -106,6 +117,16 @@ function checkCategory(ring: string){
     };
     renderProducts(filteredItems);
 };
+
+
+    document.addEventListener("DOMContentLoaded", ()=>{
+
+        checkCategory(getRingType);
+    });
+
+
+
+
 
 function renderProducts(ring: Ring[]){
 
@@ -148,39 +169,6 @@ function renderProducts(ring: Ring[]){
             productPrice.classList.add("product__price");
             productPrice.innerHTML = String(ring.price + " :-");
             product?.appendChild(productPrice);
-
-        
-        // const productLink = document.createElement('a');
-        // productLink.setAttribute('id', String(ring.id));
-        // //productLink.setAttribute('href', "/productPage.html");
-        // productLink.classList.add("product-link");
-        // productContainer?.appendChild(productLink);
-
-        // const product = document.createElement('div');
-        // product.classList.add("product");
-        // productLink?.appendChild(product);
-
-        // const productImage = document.createElement('div');
-        // productImage.classList.add("product__image");
-        // product?.appendChild(productImage);
-
-        // const productImg = document.createElement('img');
-        // productImg.classList.add(ring.ringType);
-        // productImage?.appendChild(productImg);
-        // //productImg.src = ring.first_img;
-        // productImg.setAttribute('data-productid', ring.ringType);
-        // productImg.setAttribute('data-ringname', ring.name);
-        // productImg.src = ring.img[0];
-
-        // const productTitle = document.createElement('p');
-        // productTitle.classList.add("product__title");
-        // productTitle.innerHTML = ring.name;
-        // product?.appendChild(productTitle);
-
-        // const productPrice = document.createElement('p');
-        // productPrice.classList.add("product__price");
-        // productPrice.innerHTML = String(ring.price + " :-");
-        // product?.appendChild(productPrice);
 
     }
 
@@ -365,6 +353,8 @@ function renderProductContent(){
     }
 }
 
-renderProductContent();
-
 /************  end of productPage content js  ***********/
+
+/*********function to convert ring objects to json */
+
+renderProductContent();
