@@ -603,6 +603,8 @@ let zoe = new Ring(  "id_66",
 export const allRings = [andrea, daniela, blanche, cleo, pauline, magdalena, alice, amber, daisy, caroline, belle, astrid, anna, sara, 
     miranda, diana, ebba, florine, gianna, gloria, grace, grazia, 
     anne, evelina, charlotte, fannie, evelyn, felicia, filippa, fiona, florence, francesca, francine, fredrica, freya, gabrielle, willow, 
-    elena, elizabeth, elly, eloise, embla, emilia, emmy, esmeralda, ewa, edith];
+    elena, elizabeth, elly, eloise, embla, emilia, emmy, esmeralda, ewa, edith, 
+    alma, lucy, marie, naomi, olivia, palermo, verona, vanessa, 
+    ilona, julie, leoni, lily, liza, lizette, louise, nellie, sofia, vera, zoe];
 
 export const ringCategories = ["solitar", "halo", "tresten", "sidosten", "slata", "allians"];
