@@ -81,7 +81,7 @@ function renderProductContent(){
 
     for (let product of allRings){
 
-        const getProduct = "Miranda";
+        const getProduct = "Andrea";
 
             if(getProduct == product.name){
 
@@ -136,17 +136,12 @@ function renderProductContent(){
 
                 productDescTextInner?.appendChild(productDesc3);
 
-               
-               
-
                 //set price
                 let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
                 let totalprice = document.querySelector('.total-sum');
                 
                 productPrice.innerHTML = product.price.toString() + " " + "kr";
                 totalprice?.appendChild(productPrice);
-                console.log(productPrice);
-
             };
 
     }
