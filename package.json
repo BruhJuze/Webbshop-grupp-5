@@ -11,6 +11,9 @@
     "parcel-reporter-static-files-copy": "^1.4.0",
     "transformers": "^1.8.3"
   },
+  "staticFiles": {
+    "staticPath": "src/assets"
+  },
   "type":"module",
     "staticFiles": {
       "staticPath": "src/assets"
@@ -18,4 +21,3 @@
     }
 
 }
-

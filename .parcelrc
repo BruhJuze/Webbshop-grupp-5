@@ -3,5 +3,7 @@
     "validators": {
       "*.{ts,tsx}": ["@parcel/validator-typescript"]
     },
+    "reporters": ["...", "parcel-reporter-static-files-copy"],
     "reporters":  ["...", "parcel-reporter-static-files-copy"]
   }
+  
