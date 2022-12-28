@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="scss/main.scss" rel="stylesheet" />
     <script src="ts/main.ts" defer type="module"></script>
+    <script src="./ts/productCategoy.ts" defer type="module"></script>
     <title>Diamonds for U | Products</title>
     <link
       rel="stylesheet"
@@ -26,10 +27,24 @@
             </a>
             <div class="desktop-menu">
               <ul class="menu__ul">  
-                <li><a href="productPage.html">Förlovningsringar</a></li>
-                <li><a href="productPage.html">Vigselringar</a></li>
-                <li><a href="productCategory.html" class="ring-links" id="solitar-link" data-ringtype="solitar">Om oss</a></li>
-                <li><a href="productCategory.html" class="ring-links" id="halo-link" data-ringtype="halo">Kontakt</a></li> 
+                <li class="menu__li">
+                  <a href="#" class=" menu__a no-link">Förlovningsringar</a>
+                  <ul class="dropdown">
+                    <li><a href="./productCategory.html" class="ring-links" id="solitar-link" data-ringtype="solitar">Solitärringar</a></li>
+                    <li><a href="./productCategory.html" class="ring-links" id="halo-link" data-ringtype="halo">Haloringar</a></li>
+                    <li><a href="./productCategory.html" class="ring-links" id="tresten-link" data-ringtype="tresten">Trestensringar</a></li>
+                    <li><a href="./productCategory.html" class="ring-links" id="sidosten-link" data-ringtype="sidosten">Sidostensringar</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="menu__a no-link">Vigselringar</a>
+                  <ul class="dropdown dropdown2">
+                    <li><a href="./productCategory.html" class="ring-links" id="slata-link" data-ringtype="slata">Släta ringar</a></li>
+                    <li><a href="./productCategory.html" class="ring-links" id="allians-link" data-ringtype="allians">Alliansringar</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class=" menu__a">Om oss</a></li>
+                <li><a href="#" class=" menu__a">Kontakt</a></li> 
               </ul>
             </div>
             <button class="hamburger">
@@ -70,96 +85,19 @@
       <!--<img src="./assets/Startsidan/header 7.jpg" alt="">-->
     </section>
 
-    <section class="text-container container">
+    <!-- <section class="text-container container">
       <p class="text">En solitärring är en diamantring som ofta används som förlovningsring eller vigselring. 
         Vårt flexibla sortiment tillåter möjligheten att infatta majoriteten av våra diamantringar 
         med alla olika former av diamant. Välj en förvald diamant som handplockats av en expert, 
         eller sök efter diamanter i vår unika databas.
       </p>
-      <p class="text">
-        Välj diamant direkt i vallistan på respektive ringskena eller sök efter en diamant själv.
-  
-      </p>
-      <p class="text">
-        De flesta ringarna går att få med alla typer av stenar, alltså prinsesslipade, runda eller 
-        varför inte smaragdslipade diamanter. Hittar ni mot förmodan inte vad ni letar efter här så 
-        kan vi tillsammans med er arbeta fram en helt unik design. Våra solitärringar går att få i 
-        de flesta vanliga ädelmetaller och mot beställning exempelvis i 14k vitguld. 
-      </p>
-    </section>
+    </section> -->
   
     <section class="product-wrapper container">
       <div class="product-container" id="product-container">
-      <!--  
-        <a class ="product-link" href="#">
-          <div class="product">
-            <div class="product__image">
-              <img src="assets/Kategorisidan/Solitärringar/ANDREA.jpeg" alt="">
-            </div>
-            <div class="product__title">
-              Andrea
-            </div>
-            <p class="product__price">
-              12 300 kr
-            </p>
-          </div>
-        </a>
 
-          <a class ="product-link" href="#">
-          <div class="product">
-            <div class="product__image">
-              <img src="assets/Kategorisidan/Solitärringar/BLANCHE.jpeg" alt="">
-            </div>
-            <div class="product__title">
-              Andrea
-            </div>
-            <p class="product__price">
-              12 300 kr
-            </p>
-          </div>
-        </a>
+        <!--Dynamic Product cards are created in ts -->
 
-        <a class ="product-link" href="#">
-          <div class="product">
-            <div class="product__image">
-              <img src="assets/Kategorisidan/Solitärringar/MAGDALENA.jpeg" alt="">
-            </div>
-            <div class="product__title">
-              Andrea
-            </div>
-            <p class="product__price">
-              12 300 kr
-            </p>
-          </div>
-        </a>
-
-        <a class ="product-link" href="#">
-          <div class="product">
-            <div class="product__image">
-              <img src="assets/Kategorisidan/Solitärringar/CAROLINE.jpeg" alt="">
-            </div>
-            <div class="product__title">
-              Andrea
-            </div>
-            <p class="product__price">
-              12 300 kr
-            </p>
-          </div>
-        </a>
-
-        <a class ="product-link" href="#">
-          <div class="product">
-            <div class="product__image">
-              <img src="assets/Kategorisidan/Solitärringar/DANIELA.jpeg" alt="">
-            </div>
-            <div class="product__title">
-              Andrea
-            </div>
-            <p class="product__price">
-              12 300 kr
-            </p>
-          </div>
-        </a> -->
       </div>
     </section> 
 

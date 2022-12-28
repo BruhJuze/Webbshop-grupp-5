@@ -1,6 +1,7 @@
 import { Ring } from './module/ring';
 import { allRings } from './module/productData';
 import { ringCategories } from './module/productData';
+
 /**************  nav-menu js  **************/
 
 const hamburger = document.querySelector('.hamburger');
@@ -47,29 +48,8 @@ window.addEventListener('scroll', () => {
 
 /**************  end of nav-menu js  **************/
 
-const checkoutButton = document.querySelector('.checkout-button');
-
-declare let require: any;
-
-const fs = require('fs');
-
-function convertToJson(){
-    fs.writeFile('./productData.json', JSON.stringify(allRings), (err: any, result? : undefined | null): void => {
-        if(err){
-            console.log(err);
-        } else {
-            console.log("JSON fil har lyckats skrivas!");
-        }
-    });
-}
-
-checkoutButton?.addEventListener('click', ()=> {
-    convertToJson();
-});
 
 /**************  productCategory js  **************/
-
-const productContainer = document.getElementById('product-container');
 
 let getRingType: string = ""; 
 
@@ -95,85 +75,17 @@ ringLinks.forEach( (link)=> {
              getRingType =  ringTypeURL.searchParams.get("ringtype") || '{}';
              const getRingEntries =  ringTypeURL.searchParams.entries();
 
-             console.log(getRingType);
-    
-            window.location.href = <string> dataAttributeHref + "ringtype=" +getRingType;
+             let ringTypeKey: string = "";
 
-            checkCategory(getRingType);
-            return getRingType;
+             for (const key of ringTypeURL.searchParams.keys()){
+                ringTypeKey = key; 
+             }
+
+             console.log(ringTypeKey);
+
+             window.location.href = dataAttributeHref + ringTypeKey +"=" +getRingType;
     });
 });
-
-let filteredItems = new Array<Ring>(); 
-
-function checkCategory(ring: string){
-    for (let category of ringCategories){
-        
-        if(getRingType == category){
-            filteredItems = allRings.filter((item )=> {
-                return item.ringType == getRingType;
-            });
-        };
-    };
-    renderProducts(filteredItems);
-};
-
-
-    document.addEventListener("DOMContentLoaded", ()=>{
-
-        checkCategory(getRingType);
-    });
-
-
-
-
-
-function renderProducts(ring: Ring[]){
-
-    for (let ring of allRings){
-
-        if (getRingType == ring.ringType){
-            const result = allRings.filter(res=>res.ringType);
-
-            console.log(result);
-
-
-            const productLink = document.createElement('a');
-            productLink.setAttribute('id', String(ring.id));
-            //productLink.setAttribute('href', "/productPage.html");
-            productLink.classList.add("product-link");
-            productContainer?.appendChild(productLink);
-    
-            const product = document.createElement('div');
-            product.classList.add("product");
-            productLink?.appendChild(product);
-    
-            const productImage = document.createElement('div');
-            productImage.classList.add("product__image");
-            product?.appendChild(productImage);
-    
-            const productImg = document.createElement('img');
-            productImg.classList.add(ring.ringType);
-            productImage?.appendChild(productImg);
-            //productImg.src = ring.first_img;
-            productImg.setAttribute('data-productid', ring.ringType);
-            productImg.setAttribute('data-ringname', ring.name);
-            productImg.src = ring.img[0];
-    
-            const productTitle = document.createElement('p');
-            productTitle.classList.add("product__title");
-            productTitle.innerHTML = ring.name;
-            product?.appendChild(productTitle);
-    
-            const productPrice = document.createElement('p');
-            productPrice.classList.add("product__price");
-            productPrice.innerHTML = String(ring.price + " :-");
-            product?.appendChild(productPrice);
-
-    }
-
-    };
-};
 
 
 
@@ -190,40 +102,13 @@ let iURL = new URL(window.location.href);
 productLinks.forEach( (link)=> {
     link.addEventListener('click', (event) =>{
      let currentItem = event.target as HTMLImageElement;
-        //addOrUpdateUrlParam("product-type", currentItem.className);
-        // currentItem.closest('.product-link')?.setAttribute("href", "http://localhost:1234/productPage.html?"+currentItem.className);
         const dataAttributeProductid = currentItem.getAttribute('data-productid') || '{}'; 
         const dataAttributeRingname = currentItem.getAttribute('data-ringname') || '{}'; 
-        //iURL.searchParams.set("productid", dataAttributeProductid);
         iURL.searchParams.set("product", dataAttributeRingname);
         const newQuery = iURL.toString();
         history.pushState(null, "", newQuery);
     });
 });
-
-// const url = 'http://localhost:1234/productPage.html?';
-
-// // const obj = {
-// //     v1: "javascript",
-// //     v2: "java",
-// //     v3: "python",
-// // };
-
-// const product_id_keywords = ['solitärringar', 'haloringar', 'trestensringar', 'sidostensringar', 'slätaringar'];
-
-// const searchParams = new URLSearchParams(obj);
-// console.log(searchParams);
-
-// const queryString = searchParams.toString();
-// console.log(queryString);
-
-// productLinks.forEach((link) =>{
-//     link.addEventListener('click', (event)=> {
-//         console.log(event.target);
-
-//         window.location.href = url + queryString;
-//     });
-// });
 
 /************** end of URL parameters  **************/
 
@@ -276,8 +161,6 @@ navigationDots.forEach((dot) => {
     });
 });
 
-
-//const mainImg = document.querySelector('.main-img img');
 const mainImg = document.getElementById('mainImg') as HTMLImageElement;
 const smallImages = document.querySelectorAll('.small-group__img');
 
@@ -321,13 +204,7 @@ function renderProductContent(){
             }
 
             //create small img
-  
-
             const smallImg = document.createElement('img');
-            //smallGroupImg.appendChild(smallImg);
-
-            //smallImg.src = ring.second_img;
-
 
             const largeImage = document.createElement('img');
             largeImage.classList.add("large-image");
