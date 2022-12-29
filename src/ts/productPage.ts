@@ -1,4 +1,4 @@
-import { allRings, ringCategories } from "./module/productData";
+import { allRings } from "./module/productData";
 import { Ring } from "./module/ring";
 
 let filteredItems = new Array<Ring>(); 
@@ -15,59 +15,8 @@ for (const key of ringURL.keys()){
 
 const getRing: string = ringURL.get(ringTypeKey)|| '{}';
 
-checkCategory(getRing);
-
-function checkCategory(ring: string){
-
-    console.log(presentURL);
-
-    for (let category of ringCategories){
-        
-        if(getRing == category){
-            filteredItems = allRings.filter((item )=> {
-                return item.ringType == getRing;
-            });
-        };
-    };
-
-};
-
 const productContainer = document.getElementById('product-container');
 
-function renderPageTitle(ringType: string) {
-
-    let contentType; 
-    
-    switch (ringType) {
-        case 'solitar' : 
-            contentType = "Solitärringar";
-            break;
-        case 'halo' : 
-            contentType = "Halorringar";
-            break;
-        case 'tresten' : 
-            contentType = "Trestensringar";
-            break;
-        case 'sidosten' : 
-            contentType = "Sidostensringar";
-            break;
-        case 'slata' : 
-            contentType = "Släta ringar";
-            break;
-        case 'allians' : 
-            contentType = "Alliansringar";
-            break;
-
-            default: 
-                contentType = "Solitärringar";
-    }
-
-    const subheaderTitle = document.querySelector('.subheader__title') as HTMLHeadElement;
-
-    //subheaderTitle.innerHTML = contentType;
-
-
-}
 
 const productImageContainer = document.querySelector('.product-image-container');
 const mainImage = document.querySelector('.main-img');
@@ -78,17 +27,16 @@ const productDescTextInner = document.querySelector('.product-desc__text__inner'
 const productImages = document.querySelector('.product-images');
 let selectDiamond = document.getElementById('diamond') as HTMLSelectElement;
 let selectCarat = document.getElementById('carat') as HTMLSelectElement;
-let thisProductPrice:number; 
 
-function renderProductContent(){
+let thisProductPrice: number; 
+
+function renderProductContent(product: string){
 
     for (let product of allRings){
 
-        const getProduct = "Andrea";
+        //const getProduct = ring;
 
-            if(getProduct == product.name){
-
-                    console.log(product.name);
+            if(getRing == product.name){
                     
                 //create main img
                 const productImg = document.createElement('img');
@@ -187,7 +135,7 @@ function totalsum(totalsum:number, totalprice:number){
 
 
 
-renderProductContent();
+renderProductContent(getRing);
 
 
 // class Carat{
