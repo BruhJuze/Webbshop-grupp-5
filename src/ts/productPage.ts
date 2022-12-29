@@ -76,6 +76,7 @@ const productInfoTitle = document.querySelector('.product-info__title');
 const productInfoText = document.querySelector('.product-info__text');
 const productDescTextInner = document.querySelector('.product-desc__text__inner');
 const productImages = document.querySelector('.product-images');
+let thisProductPrice:number; 
 
 function renderProductContent(){
 
@@ -91,6 +92,7 @@ function renderProductContent(){
                 const productImg = document.createElement('img');
                 productImg.setAttribute('id', String(".main-img"));
                 mainImage?.appendChild(productImg);
+                
                 for(let i=0; i<1; i++){
                     productImg.src = product.img[i];
                 }
@@ -140,11 +142,80 @@ function renderProductContent(){
                 let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
                 let totalprice = document.querySelector('.total-sum');
                 
+                thisProductPrice = product.price;
+
                 productPrice.innerHTML = product.price.toString() + " " + "kr";
                 totalprice?.appendChild(productPrice);
-            };
 
+                selectDiamond.addEventListener('change', ()=> {
+
+                    let valueDiamond = selectDiamond.value;
+                
+                    let newValueDiamond: number = +valueDiamond;
+                
+                    let totalSumDiamond = newValueDiamond * thisProductPrice;
+                
+                    let sumDiamond = totalSumDiamond;
+
+                    productPrice.innerHTML = sumDiamond + " " + "kr";
+                    console.log(totalSumDiamond);
+                    
+
+                    
+                });
+                selectCarat.addEventListener('change', ()=> {
+
+                    let valueCarat = selectCarat.value;
+                
+                    let newValueCarat: number = +valueCarat;
+                
+                    let totalSumCarat = newValueCarat * thisProductPrice;
+
+                    let sumCarat = totalSumCarat;
+                    productPrice.innerHTML = sumCarat + " " + "kr";
+                
+                    console.log(totalSumCarat);
+                    return totalSumCarat;
+                
+                });
+            };
     }
+
 }
 
+let selectDiamond = document.getElementById('diamond') as HTMLSelectElement;
+
+
+
+let selectCarat = document.getElementById('carat') as HTMLSelectElement;
+
+
+
+function totalsum(totalsum:number, totalprice:number){
+   let ringPrice = totalsum + totalprice;
+
+   console.log(ringPrice);
+   
+}
+
+
+
 renderProductContent();
+
+
+// class Carat{
+//     constructor(public size:string, public price: number){};
+// }
+
+// let carat0 = new Carat("0", 0);
+// let carat1 = new Carat("0.25", 2000);
+// let carat2 = new Carat("0.30", 4000);
+// let carat3 = new Carat("0.40", 6000);
+// let carat4 = new Carat("0.50", 8000);
+// let carat5 = new Carat("0.60", 10000);
+// let carat6 = new Carat("0.70", 12000);
+// let carat7 = new Carat("0.80", 14000);
+// let carat8 = new Carat("0.90", 16000);
+// let carat9 = new Carat("1.00", 18000);
+
+// let allCarats = [carat0, carat1, carat2, carat3, carat4, carat5, carat6, carat7, carat8, carat9]
