@@ -189,34 +189,8 @@ smallImages.forEach((smallImg) => {
 
 //Mikails kodning______________________________________________________________________________________________________________________________________
 
-let purchaseBtn:HTMLButtonElement = document.getElementById("purchaseBtn") as HTMLButtonElement;
-
-function checkoutLoad() {
-    location.href = "/checkout.html";
-    console.log("load");
-    }
-
-checkoutBtn.addEventListener("click", checkoutLoad);
-
-/*function completeLoad() {
-    location.href = "/order-done.html";
-    console.log("load");
-    }
- 
-purchaseBtn.addEventListener("click", completeLoad);
-*/
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
-
-
-
-
-
-
-//prodContainer.appendChild(newProduct.cloneNode(true));
-//prodContainer.appendChild(newProduct.cloneNode(true));
-//prodContainer.appendChild(newProduct.cloneNode(true));
-//prodContainer.appendChild(newProduct.cloneNode(true));
 
 for(let i=0; i < 5; i++){
     let newProduct: HTMLDivElement = document.createElement("div") as HTMLDivElement;
