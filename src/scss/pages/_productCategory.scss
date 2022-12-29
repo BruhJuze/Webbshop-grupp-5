@@ -1,0 +1,142 @@
+@use '../abstract' as a;
+@use '../base' as b;
+
+
+.text-container {
+    margin: 70px auto;
+    text-align: left;
+    width: 90%;
+
+    @include b.medium {
+        text-align: center;
+        max-width: 1100px;
+    }
+
+    .text{
+        margin-top: 20px;
+        line-height: 1.6rem;
+    }
+}
+
+.product-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+
+    @include b.medium {
+
+    }
+}
+
+.product-container {
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @include b.medium {
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+    @include b.large {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
+
+.product-link {
+    flex-basis: 47%;
+    text-decoration: none;
+    box-shadow: a.$boxshadowHover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    @include b.medium {
+        flex-basis: 23%;
+    }
+
+    @include b.large {
+        flex-basis: 31%;
+    }
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: a.$boxshadow;
+    }
+}
+
+.product {
+    padding-top: 10%;
+    padding-bottom: 20%;
+    //width: auto;
+    flex-basis: 25%;
+    height: auto;
+    color: #000;
+
+    @include b.medium {
+        padding-bottom: 30px;
+    }
+
+    &__title{
+        font-size: 0.75rem;
+
+        @include b.medium {
+            font-size: 1.2rem;
+        }
+        margin-bottom: 5px;
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    &__image{
+        width: 100%;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    &__price{
+        text-align: center;
+        font-size: 1rem;
+
+        @include b.medium {
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+.load-more-btn{
+    margin: 40px auto 100px;
+    padding: 10px 35px;
+    display: block;
+    position: relative;
+    user-select: none;
+    appearance: none;
+    border: 1px solid #000;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: 300ms ease;
+
+    &:hover{
+        background: #000;
+        color: a.$white-color;
+    }
+}
+
+.product-link-test{
+    width: 100px; 
+    height: 100px; 
+    background: lightpink;
+    cursor: pointer;
+}

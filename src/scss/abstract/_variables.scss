@@ -4,7 +4,8 @@ $navbar-height: 80px;
 $container-width: 1100px;
 
 //styles
-$boxshadow: 0px 0px 10px #bbbbbb;
+$boxshadow: 0px 0px 10px rgb(187, 187, 187);
+$boxshadowHover: 0px 0px 2px rgb(187, 187, 187);; 
 $image-bg-color: linear-gradient(rgba(61, 61, 77, 0.365),rgba(61, 61, 76, 0.302));
 $border: 1px solid rgba(112, 112, 112, 0.5);
 
@@ -45,9 +46,12 @@ $h4-font-desktop: 18px;
 $p-font-mobile-h: 18px;
 $p-font-mobile: 14px;
 $p-font-desktop-h: 25px;
-$p-font-desktop: 20px;
+$p-font-desktop: 19px;
+$p-font-desc: 16px;
 $btn-font-desktop: 18px;
 $btn-font-header: 23px;
+
+$text-liner: 1.5rem;
 
 //margins
 $container-margin: 4rem;

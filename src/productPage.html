@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="scss/main.scss" rel="stylesheet" />
+    <script src="ts/main.ts" defer type="module"></script>
+    <script src="ts/productPage.ts" defer type="module"></script>
+    <script src="ts/addToCart.ts" defer type="module"></script>
+    
+    <title>Diamonds for U | Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+  </head>
+  <body>
+    
+    <aside class="nav-menu">
+      <nav>
+        <div class="container">
+          <div class="navbar">
+            <a href="index.html" class="logo">
+              <img class="logo-png" src="assets/Logo/logo.png" alt="logo"> 
+            </a>
+            <div class="desktop-menu">
+              <ul class="menu__ul">  
+                <li><a href="productCategory.html" id="solitar">Förlovningsringar</a></li>
+                <li><a href="productPage.html">Vigselringar</a></li>
+                <li><a href="productCategory.html">Om oss</a></li>
+                <li><a href="productCategory.html" id="halo">Kontakt</a></li> 
+              </ul>
+            </div>
+            <button class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="cart-button">
+              <i class="bi bi-cart4"></i>
+            </div>
+          </div><!--end navbar -->
+        </div> <!-- end container -->
+      </nav>
+      <div class="mobile-menu">
+        <ul class="mobile-menu__ul">
+            <li class="menu__li"><a href="#">Förlovningsringar</a></li>
+            <li class="menu__li"><a href="#">Vigselringar</a></li>
+            <li class="menu__li"><a href="#">Om oss</a></li>
+            <li class="menu__li"><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="cart">
+        <button class="close-button">
+            <i class="bi bi-x"></i>
+        </button>
+        <div class="cart__container">
+          <div class="cart__title">Din kundvagn</div>
+
+          <div class="cart-product">
+            <img src="./assets/Solitär/Alice/alice1.jpeg" alt="" class="cart-product__img">
+            <div class="cart-product__content cart-content">
+              <div class="cart-content__left">
+                <div class="cart-content__title">
+                  Alice
+                </div>
+                <div class="cart-content__left__addRemove">
+                  <i class="bi bi-dash-square"></i>
+                  <div class="quantity">0</div>
+                  <i class="bi bi-plus-square"></i>
+                </div>
+              </div>
+              <div class="cart-content__right">
+                <div class="delete-product-btn">
+                  <i class="bi bi-x"></i>
+                </div>
+                <div class="cart-content__price">950 kr</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-product">
+            <img src="./assets/Solitär/Alice/alice1.jpeg" alt="" class="cart-product__img">
+            <div class="cart-product__content cart-content">
+              <div class="cart-content__left">
+                <div class="cart-content__title">
+                  Alice
+                </div>
+                <div class="cart-content__left__addRemove">
+                  <i class="bi bi-dash-square"></i>
+                  <div class="quantity">0</div>
+                  <i class="bi bi-plus-square"></i>
+                </div>
+              </div>
+              <div class="cart-content__right">
+                <div class="delete-product-btn">
+                  <i class="bi bi-x"></i>
+                </div>
+                <div class="cart-content__price">950 kr</div>
+              </div>
+            </div>
+          </div>
+          <button class="checkout-button">
+              Gå till kassan
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="nav-menu-spacer"></div>    
+  
+   <section class="product-container">
+      <div class="product-image-container">
+        <div class="product-image-mobile-container">
+          <div class="navigation-container">
+            <div class="navigation-button" id="prev-button">
+              <i class="bi bi-arrow-left-circle"></i>
+            </div>
+            <div class="navigation-button" id="next-button">
+              <i class="bi bi-arrow-right-circle"></i>
+            </div>
+          </div>
+          <div class="navigation-radio-dots">
+            <input type="radio" name="radio-button" id="slide__1">
+            <input type="radio" name="radio-button" id="slide__2">
+            <input type="radio" name="radio-button" id="slide__3">
+            <input type="radio" name="radio-button" id="slide__4">
+          </div>
+          <div class="navigation-dots">
+            <label for="slide__1" class="navigation-dots__button"></label>
+            <label for="slide__2" class="navigation-dots__button"></label>
+            <label for="slide__3" class="navigation-dots__button"></label>
+            <label for="slide__4" class="navigation-dots__button"></label>
+          </div>
+          <div class="product-images">
+            <img  class="large-image" src="../dist/HALO.88a089e8.jpeg" alt="">
+            <img  class="large-image" src="../dist/SOLITÄR.0b72a518.jpeg" alt="">
+            <img  class="large-image" src="../dist/TRESTEN.3d525dc1.jpeg" alt="">
+            <img  class="large-image" src="../dist/SIDOSTEN.9cd6fa07.jpeg" alt="">
+          </div>
+        </div>
+        <div class="product-image-desktop-container">
+           <div class="main-img">
+           </div>
+           <div class="small-group">
+
+           </div>
+        </div>
+
+        </div>
+      </div>
+      <div class="product-info-container">
+        <div class="product-info">
+          <div class="product-info__title">
+          </div>
+          <div class="product-info__text">
+          </div>
+          <a href="#product-description">
+            <button class="product-info__readMore">
+              Läs mer
+            </button>
+          </a>
+        </div>
+        <div class="product-options">
+          <div class="product-options__type">
+            <p>Välj metall</p>
+            <div class="select">
+              <select name="">
+                <option value="" disable seleced>Välj vilken metall</option>
+                <option value="">Platina</option>
+                <option value="">Vitguld</option>
+                <option value="">Gulguld</option>
+                <option value="">Roséguld</option>
+              </select>
+            </div>
+          </div>
+          <div class="product-options__type">
+            <p>Välj diamant</p>
+            <div class="select">
+              <select name="" id="diamond">
+                <option value="1" disable seleced>Välj vilken diamant</option>
+                <option value="1.5">Naturlig</option>
+                <option value="1" id="labb">Labbodlad</option>
+              </select>
+            </div>
+          </div>
+          <div class="product-options__type">
+            <p>Välj carat</p>
+            <div class="select">
+              <select name="" id="carat">
+                <option value="1" disable seleced>Välj storlek på diamant</option>
+                <option value="1.5">0.25 carat [+2 800 kr]</option>
+                <option value="2">0.30 carat [+5 600 kr]</option>
+                <option value="2.5">0.40 carat [+8 400 kr]</option>
+                <option value="3">0.50 carat [+11 200 kr]</option>
+                <option value="3.5">0.60 carat [+14 000 kr]</option>
+                <option value="4">0.70 carat [+16 800 kr]</option>
+                <option value="4.5">0.80 carat [+19 600 kr]</option>
+                <option value="5">0.90 carat [+22 400 kr]</option>
+                <option value="5.5">1.0 carat [+25 200 kr]</option>
+              </select>
+          </div>
+          </div>
+          <div class="product-options__type">
+            <p>Välj ringstorlek</p>
+            <div class="select">
+              <select name="" id="">
+                <option value="1" disable seleced>Välj storlek på ring</option>
+                <option value="">45mm</option>
+                <option value="">46mm</option>
+                <option value="">47mm</option>
+                <option value="">48mm</option>
+                <option value="">49mm</option>
+                <option value="">50mm</option>
+                <option value="">51mm</option>
+                <option value="">52mm</option>
+                <option value="">53mm</option>
+                <option value="">54mm</option>
+                <option value="">55mm</option>
+              </select>
+            </div>
+          </div>
+          <div class="product-options__type">
+            <p>Gravyrtext</p>
+            <input type="text" placeholder="Ange gravyrtext" />
+          </div>
+        </div>
+        <div class="total-sum-container">
+          <div class="total-sum">
+            <p>Summa:</p>
+            <p class="total-sum-price"></p>
+          </div>
+        </div>
+        <div class="addToCart-container">
+          <button class="addToCart-btn">Lägg i varukorg</button>
+        </div>
+      </div>
+   </section>
+
+   <div id="product-description"></div>
+   <section class="product-desc-container">
+    <div class="product-desc">
+      <div class="product-desc__title">
+        <div class="product-desc__title__inner">
+          Beskrivning
+        </div>
+      </div>
+      <div class="product-desc__divider"></div>
+      <div class="product-desc__text">
+        <div class="product-desc__text__inner">
+
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <div class="feature-container">
+    <div class="features">
+      <div class="features__title">
+        Andra produkter i samma kategori
+      </div>
+      <div class="features__products">
+        <div class="features__products__img">
+          <img src="../dist/HALO.88a089e8.jpeg" alt="">
+        </div>
+        <div class="features__products__img">
+          <img src="../dist/SOLITÄR.0b72a518.jpeg" alt="">
+        </div>
+        <div class="features__products__img">
+          <img src="../dist/TRESTEN.3d525dc1.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+   </div>
+
+  <footer class="footer">
+    <section class="footer__container">
+        <span class="footer__description">
+            <a href="#"><div class="footer-logo"></div></a>
+            <p>Vår stora passion är smycken av gediget hantverk och service med stort utbud för förlovning & vigsel. Hos oss går kvalitet hand i hand med ansvar för hållbarhet och vi erbjuder diamantexpertis samt kvalificerad service och reparationer.</p>
+        </span>
+        <span class="footer__info">
+            <h3>Information</h3>
+            <p><a href="#">Förlovningsringar</a></p>
+            <p><a href="#">Vigselringar</a></p>
+            <p><a href="#">Om oss</a></p>
+            <p><a href="#">Frakt & Retur</a></p>
+            <p><a href="#">Garanti</a></p>
+            <p><a href="#">Betalning</a></p>
+        </span>
+        <span class="footer__contact">
+            <h3>Kontakt</h3>
+            <div class="footer__cont">
+              <i class="bi bi-geo-alt"></i>
+              <p class="adress">Diamonds For You
+                  Ankeborgssgatan 55
+                  123 45 Stockholm</p>
+            </div>
+            <div>
+              <i class="bi bi-geo-alt"></i>
+              <p class="adress">Diamonds For You
+                  Stora Nygatan 53
+                  123 45 Malmö</p>
+            </div>
+            <div>
+              <i class="bi bi-telephone"></i>
+              <p>010-10 10 10</p>
+          </div>
+          <div>
+            <i class="bi bi-envelope"></i>
+            <p><a href="https://www.google.com/intl/sv/gmail/about/">info@diamondsofyou.se</a></p>
+          </div>
+            <p>Org nr: 551010-2010</p>
+        </span>
+        <span class="footer__social">
+            <h3>Följ oss</h3>
+            <div>
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://se.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://se.linkedin.com/"><i class="bi bi-tiktok"></i></a>
+            </div>
+        </span>
+    </section>
+  </footer>
+</body>
+</html>
