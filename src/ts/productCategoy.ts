@@ -79,7 +79,7 @@ function renderProducts(ring: Ring[]){
             productLink.setAttribute('data-ringname', ring.name);
             productLink.classList.add("product-link");
             productContainer?.appendChild(productLink);
-    
+            
             const product = document.createElement('div');
             product.classList.add("product");
             productLink?.appendChild(product);
@@ -115,13 +115,14 @@ let getRingName: string = "";
 
 let ringNameURL = new URL(window.location.href);
 
-const productLink = document.querySelector('product-link');
+const productLink = document.querySelector('.product-link');
 
 productLink?.addEventListener("click", ()=> {
     console.log("funka");
 })
 
-const productLinks = document.querySelectorAll('.product-links');
+
+const productLinks = document.querySelectorAll('.li-product');
 
 productLinks.forEach( (link)=> {
     link.addEventListener('click', (event)=> {
