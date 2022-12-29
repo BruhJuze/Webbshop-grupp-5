@@ -8,7 +8,7 @@
     text-align: left;
     width: 90%;
 
-    @include b.medium {
+    @include b.x-large {
         text-align: center;
         max-width: 1100px;
     }
@@ -24,7 +24,7 @@
     justify-content: center;
     width: 90%;
 
-    @include b.medium {
+    @include b.x-large {
 
     }
 }
@@ -38,12 +38,12 @@
     flex-wrap: wrap;
     gap: 15px;
 
-    @include b.medium {
+    @include b.x-large {
         justify-content: flex-start;
         gap: 25px;
     }
 
-    @include b.large {
+    @include b.x-large {
         justify-content: flex-start;
         gap: 20px;
     }
@@ -61,7 +61,7 @@
         flex-basis: 23%;
     }
 
-    @include b.large {
+    @include b.x-large {
         flex-basis: 31%;
     }
 
@@ -79,15 +79,15 @@
     height: auto;
     color: a.$text-color;
 
-    @include b.medium {
+    @include b.x-large {
         padding-bottom: 30px;
     }
 
     &__title{
-        font-size: 0.75rem;
+        font-size: a.$p-font-mobile;
 
-        @include b.medium {
-            font-size: 1.2rem;
+        @include b.x-large {
+            font-size: a.$p-font-desktop;
         }
         margin-bottom: 5px;
         text-align: center;
@@ -107,18 +107,15 @@
 
     &__price{
         text-align: center;
-        font-size: 1rem;
+        font-size: a.$p-font-mobile;
 
-        @include b.medium {
-            font-size: 1.2rem;
+        @include b.x-large {
+            font-size: a.$p-font-desktop;
         }
     }
-
 }
 
 .load-more-btn{
-    // margin: 40px auto 100px;
-    // padding: 10px 35px;
     position: relative;
     display: flex;
     margin: a.$container-margin auto;

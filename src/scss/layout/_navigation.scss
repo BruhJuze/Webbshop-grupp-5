@@ -3,7 +3,7 @@
 
 nav{
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: a.$navbar-height;
     background-color: a.$white-color;
     box-shadow: a.$navboxshadow;  
@@ -33,7 +33,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 
-    @include b.medium {
+    @include b.x-large {
         justify-content: end;
     }
 }
@@ -43,7 +43,7 @@ nav{
     left: 50%;
     transform: translateX(-50%);
 
-    @include b.medium {
+    @include b.x-large {
         left: 0%;
         transform: translateX(0);
     }
@@ -58,7 +58,7 @@ nav{
     display: none;
     z-index: 10;
 
-    @include b.medium {
+    @include b.x-large {
         //display: none;
         display: flex;
         justify-content: space-between;
@@ -166,7 +166,7 @@ nav{
     cursor: pointer;
     z-index: 1;
 
-    @include b.medium {
+    @include b.x-large {
         //display: block;
         display: none;
     }
@@ -208,7 +208,7 @@ nav{
 
     &.is-active{
         transform: translateX(0px);
-        box-shadow: 8px 0px 7px -7px rgba(0, 0, 0, .2);
+        box-shadow: a.$mobileboxshadow;
     }
     &.is-scrolled{
         top:calc(#{a.$navbar-height} - 20px);
@@ -255,7 +255,7 @@ nav{
     margin-left: 20px;
 
     i{
-        font-size: 20px;
+        font-size: a.$icon-font;
     }
 
 }
@@ -285,7 +285,7 @@ nav{
 
 
     &__title{
-        border-bottom: 1px solid rgba(112, 112, 112, 0.5);
+        border-bottom: a.$border;
         padding-bottom: 10px;
         margin-bottom: 30px;
     }
@@ -305,7 +305,7 @@ nav{
     z-index: 1;
 
     i{
-        font-size: 25px;
+        font-size: a.$icon-font-nav;
     }
 }
 

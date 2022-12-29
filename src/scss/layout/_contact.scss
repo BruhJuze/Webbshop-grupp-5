@@ -17,8 +17,12 @@
         margin-top: 60px;
         width: 80%; 
         color: a.$white-color;
-        font-size: 48px;
+        font-size: a.$h1-font-mobile;
         z-index: 1;
+
+        @include b.x-large{
+            font-size: a.$h1-font-desktop;
+        }
     }
 }
 
@@ -57,14 +61,14 @@
 
         i{
             padding-right: 5px;
-            font-size: 20px;
+            font-size: a.$icon-font;
         }
         h4{
-            font-size: 18px;
+            font-size: a.$h4-font-desktop;
         }
         p{
             padding-left: 25px;
-            font-size: 16px;
+            font-size: a.$p-font-desc;
         }
     }
 
@@ -72,7 +76,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 28px;
+        font-size: a.$h3-font-mobile;
 
         h3{
             padding-left: 20px;
@@ -82,7 +86,7 @@
 
             @include b.x-large{
                 padding-left: 70px;
-                font-size: 43px;
+                font-size: a.$h3-font-desktop;
                 border: none;
             }
         }

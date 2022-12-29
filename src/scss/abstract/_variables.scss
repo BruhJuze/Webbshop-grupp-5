@@ -8,9 +8,12 @@ $boxshadow: 0px 0px 10px rgb(187, 187, 187);
 $boxshadowHover: 0px 0px 2px rgb(187, 187, 187);
 $navboxshadow: 0 8px 4px -4px rgba(0, 0, 0, .2);
 $cartboxshadow: -1px 0px 12px 2px rgba(0, 0, 0, .2);
+$mobileboxshadow: 8px 0px 7px -7px rgba(0, 0, 0, .2);
+
 $image-bg-color: linear-gradient(rgba(61, 61, 77, 0.365),rgba(61, 61, 76, 0.302));
 $border: 1px solid rgba(112, 112, 112, 0.5);
 $border2px: 2px solid black;
+$border-1px: 1px solid black;
 
 //images
 $headerIMG: url(../assets/Startsidan/förlovning1svartvit.jpg);
@@ -43,7 +46,8 @@ $diamond-header: url(/src/assets/Startsidan/diamondHeader.jpeg);
 $diamond-both: url(/src/assets/Startsidan/both.jpeg);
 
 //text size
-$h1-font-mobile: 30px;
+$h1-font-mobile: 50px;
+$h1-font-mobile-h: 30px;
 $h1-font-desktop: 70px;
 $h2-font-mobile: 28px;
 $h2-font-desktop: 42px;
@@ -58,6 +62,8 @@ $p-font-desktop: 19px;
 $p-font-desc: 16px;
 $btn-font-desktop: 18px;
 $btn-font-header: 23px;
+$icon-font: 20px;
+$icon-font-nav: 25px;
 
 $text-liner: 1.5rem;
 

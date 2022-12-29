@@ -17,7 +17,7 @@
     //align-items: center;
     position: relative;
     top: 23vw;
-    max-width: 80vw;
+    max-width: a.$container-width;
     display: flex;
       flex-direction: column;
       margin-left: auto ;
@@ -27,7 +27,6 @@
      // margin-bottom: 20vw;
 
     @include b.x-large{ 
-      max-width: 1100px;
       top: 80px;
       padding-bottom: 200px;
     }
@@ -52,8 +51,6 @@
         padding-left: 9vw;
         font-size: 3.7vw;
         box-sizing: border-box;
-
-        //border: 1px solid black;
 
         @include b.x-large{
           padding-left: 45px;

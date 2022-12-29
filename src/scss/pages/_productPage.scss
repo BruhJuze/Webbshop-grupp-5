@@ -120,10 +120,6 @@
 
 .product-images-desktop {
     display: none;
-
-    // @include b.medium {
-    //     display: flex;
-    // }
 }
 
 .navigation-radio-dots {
@@ -146,7 +142,7 @@
     gap: 10px;
 
     &__button {
-        border: 2px solid #000;
+        border: a.$border2px;
         padding: 5px;
         border-radius: 10px;
         cursor: pointer;
@@ -229,7 +225,6 @@
             &:after {
                 content: '\25bc';
                 position: absolute;
-                // top: 0;
                 right: 0;
                 height: 100%;
                 width: 25px;
@@ -239,7 +234,7 @@
                 background-color: a.$gold-btn-rgba;
                 color: a.$white-color;
                 border-radius: 0px 3px 3px 0px;
-                font-size: 0.7rem;
+                font-size: a.$h4-font-mobile;
                 cursor: pointer;
                 pointer-events: none;
 
@@ -264,7 +259,7 @@
         }
     }
 
-    @include b.medium {
+    @include b.x-large {
         width: 100%;
 
         // &__type {
@@ -324,7 +319,7 @@
     display: flex;
     justify-content: end;
 
-    @include b.medium { 
+    @include b.x-large { 
         width: 100%;
     }
 
@@ -349,7 +344,7 @@
         margin: 0 auto;
         @include btn.gold-btn;
 
-        @include b.medium{
+        @include b.x-large{
             width: 100%;
             font-size: a.$btn-font-desktop;
         }
@@ -463,7 +458,7 @@
         }
     }
 
-    @include b.medium { 
+    @include b.x-large { 
         margin: 100px 70px;
         max-width: 800px;
         width: 88%; 

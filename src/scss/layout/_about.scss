@@ -17,8 +17,12 @@
         margin-top: 60px;
         width: 80%; 
         color: a.$white-color;
-        font-size: 48px;
+        font-size: a.$h1-font-mobile;
         z-index: 1;
+
+        @include b.x-large{
+            font-size: a.$h1-font-desktop;
+        }
     }
 }
 
@@ -58,7 +62,7 @@
 
         @include b.x-large{
             flex-direction: row-reverse;
-            width: 1100px;
+            width: a.$container-width;
             gap: 100px;
         }
         

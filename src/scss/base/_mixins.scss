@@ -64,6 +64,10 @@
 
     h3{
         font-size: a.$h3-font-mobile;
+
+        @include b.x-large{
+            font-size: a.$h3-font-desktop;
+        }
     }
 
     @include b.x-large{
