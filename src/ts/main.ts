@@ -192,7 +192,7 @@ smallImages.forEach((smallImg) => {
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
 
-for(let i=0; i < 5; i++){
+for(let i=0; i < 4; i++){
     let newProduct: HTMLDivElement = document.createElement("div") as HTMLDivElement;
     let title:HTMLElement = document.createElement("section") as HTMLElement;
     let image:HTMLImageElement = document.createElement("img") as HTMLImageElement;

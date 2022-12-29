@@ -28,11 +28,73 @@
               <img class="logo-png" src="assets/Logo/logo.png" alt="logo"> 
             </a>
             <div class="desktop-menu">
-              <ul class="menu__ul">  
-                <li><a href="productCategory.html" id="solitar">Förlovningsringar</a></li>
-                <li><a href="productPage.html">Vigselringar</a></li>
-                <li><a href="productCategory.html">Om oss</a></li>
-                <li><a href="productCategory.html" id="halo">Kontakt</a></li> 
+              <ul class="menu__ul">
+                <li class="menu__li">
+                  <a href="#" class="menu__a no-link">Förlovningsringar</a>
+                  <ul class="dropdown">
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="solitar-link"
+                        data-ringtype="solitar"
+                        >Solitärringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="halo-link"
+                        data-ringtype="halo"
+                        >Haloringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="tresten-link"
+                        data-ringtype="tresten"
+                        >Trestensringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="sidosten-link"
+                        data-ringtype="sidosten"
+                        >Sidostensringar</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="menu__a no-link">Vigselringar</a>
+                  <ul class="dropdown dropdown2">
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="slata-link"
+                        data-ringtype="slata"
+                        >Släta ringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productPage.html"
+                        class="ring-links"
+                        id="allians-link"
+                        data-ringtype="allians"
+                        >Alliansringar</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html" class="menu__a">Om oss</a></li>
+                <li><a href="contact.html" class="menu__a">Kontakt</a></li>
               </ul>
             </div>
             <button class="hamburger">
@@ -43,70 +105,34 @@
             <div class="cart-button">
               <i class="bi bi-cart4"></i>
             </div>
-          </div><!--end navbar -->
-        </div> <!-- end container -->
+          </div>
+          <!--end navbar -->
+        </div>
+        <!-- end container -->
       </nav>
       <div class="mobile-menu">
         <ul class="mobile-menu__ul">
-            <li class="menu__li"><a href="#">Förlovningsringar</a></li>
-            <li class="menu__li"><a href="#">Vigselringar</a></li>
-            <li class="menu__li"><a href="#">Om oss</a></li>
-            <li class="menu__li"><a href="#">Kontakt</a></li>
+          <li class="menu__li">
+            <a href="./productCategory.html">Förlovningsringar</a>
+          </li>
+          <li class="menu__li">
+            <a href="./productPage.html">Vigselringar</a>
+          </li>
+          <li class="menu__li"><a href="about.html">Om oss</a></li>
+          <li class="menu__li"><a href="contact.html">Kontakt</a></li>
         </ul>
       </div>
       <div class="cart">
         <button class="close-button">
-            <i class="bi bi-x"></i>
+          <i class="bi bi-x"></i>
         </button>
         <div class="cart__container">
           <div class="cart__title">Din kundvagn</div>
-
-          <div class="cart-product">
-            <img src="./assets/Solitär/Alice/alice1.jpeg" alt="" class="cart-product__img">
-            <div class="cart-product__content cart-content">
-              <div class="cart-content__left">
-                <div class="cart-content__title">
-                  Alice
-                </div>
-                <div class="cart-content__left__addRemove">
-                  <i class="bi bi-dash-square"></i>
-                  <div class="quantity">0</div>
-                  <i class="bi bi-plus-square"></i>
-                </div>
-              </div>
-              <div class="cart-content__right">
-                <div class="delete-product-btn">
-                  <i class="bi bi-x"></i>
-                </div>
-                <div class="cart-content__price">950 kr</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="cart-product">
-            <img src="./assets/Solitär/Alice/alice1.jpeg" alt="" class="cart-product__img">
-            <div class="cart-product__content cart-content">
-              <div class="cart-content__left">
-                <div class="cart-content__title">
-                  Alice
-                </div>
-                <div class="cart-content__left__addRemove">
-                  <i class="bi bi-dash-square"></i>
-                  <div class="quantity">0</div>
-                  <i class="bi bi-plus-square"></i>
-                </div>
-              </div>
-              <div class="cart-content__right">
-                <div class="delete-product-btn">
-                  <i class="bi bi-x"></i>
-                </div>
-                <div class="cart-content__price">950 kr</div>
-              </div>
-            </div>
-          </div>
-          <button class="checkout-button">
+          <a href="./checkout.html"
+            ><button class="checkout-button" id="checkoutBtn">
               Gå till kassan
-          </button>
+            </button>
+          </a>
         </div>
       </div>
     </aside>
