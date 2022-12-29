@@ -68,6 +68,10 @@ function renderPageTitle(ringType: string) {
 
 function renderProducts(ring: Ring[]){
 
+    let getRingName: string = ""; 
+
+    let ringNameURL = new URL(window.location.href);
+
     for (let ring of allRings){
 
         if (getRing == ring.ringType){
@@ -75,11 +79,47 @@ function renderProducts(ring: Ring[]){
 
             const productLink = document.createElement('a');
             productLink.setAttribute('id', String(ring.id));
-            productLink.setAttribute('href', String('#'));
+            productLink.setAttribute('href', String("/productPage.html"));
             productLink.setAttribute('data-ringname', ring.name);
             productLink.classList.add("product-link");
+            productLink.addEventListener('click', (event)=> {
+                event.preventDefault();
+
+                let currentItem = event.target as HTMLAnchorElement; 
+                let currentHref= productLink.getAttribute('href') || "";
+
+                console.log(currentHref);
+
+                const dataAttributeRingName = currentItem.getAttribute("data-ringname") || '{}';
+
+                console.log(dataAttributeRingName);
+                const dataAttributeHref = currentHref + "?";
+
+                console.log(dataAttributeHref);
+
+                ringNameURL.searchParams.set("name", dataAttributeRingName);
+                
+                const newQuery = ringNameURL.toString();
+
+                history.pushState(null, "", newQuery); 
+
+                getRingName =  ringNameURL.searchParams.get("name") || '{}';
+                const getRingEntries =  ringNameURL.searchParams.entries();
+
+                let ringNameKey: string = "";
+
+                for (const key of ringNameURL.searchParams.keys()){
+                    ringNameKey = key; 
+                }
+
+                console.log(ringNameKey);
+
+                //window.location.href = dataAttributeHref; + ringTypeKey +"=" +ringNameKey;
+                window.location.href = dataAttributeHref + ringNameKey +"=" +dataAttributeRingName;
+            });
+
             productContainer?.appendChild(productLink);
-            
+
             const product = document.createElement('div');
             product.classList.add("product");
             productLink?.appendChild(product);
@@ -111,52 +151,62 @@ function renderProducts(ring: Ring[]){
     };
 };
 
+
 let getRingName: string = ""; 
 
 let ringNameURL = new URL(window.location.href);
 
-const productLink = document.querySelector('.product-link');
+//const productLink = document.querySelector('.product-link');
 
-productLink?.addEventListener("click", ()=> {
-    console.log("funka");
-})
+// productLink?.addEventListener("click", ()=> {
+//     console.log("funka");
+// })
 
 
-const productLinks = document.querySelectorAll('.li-product');
+//let subheaderTitle = document.querySelectorAll('.product-link-test');
 
-productLinks.forEach( (link)=> {
-    link.addEventListener('click', (event)=> {
-        event.preventDefault();
+//console.log(subheaderTitle);
 
-        console.log("funka");
+// subheaderTitle?.addEventListener('click', ()=>{
+//     console.log("funka");
+// })
 
-            // let currentItem = event.target as HTMLAnchorElement; 
-            //  const dataAttributeRingName = currentItem.getAttribute("data-ringname") || '{}';
+let productLinks = document.querySelectorAll('.product__title');
 
-            //  console.log(dataAttributeRingName);
-            // const dataAttributeHref = currentItem.getAttribute("href") + "?";
+// subheaderTitle.forEach( (link)=> {
+//     link.addEventListener('click', (event)=> {
+//         //console.log(event);
+//         //event.preventDefault();
 
-            // ringNameURL.searchParams.set("name", dataAttributeRingName);
-            // ringNameURL.searchParams.set("name", dataAttributeRingName);
+//         console.log("funka");
+
+//             // let currentItem = event.target as HTMLAnchorElement; 
+//             //  const dataAttributeRingName = currentItem.getAttribute("data-ringname") || '{}';
+
+//             //  console.log(dataAttributeRingName);
+//             // const dataAttributeHref = currentItem.getAttribute("href") + "?";
+
+//             // ringNameURL.searchParams.set("name", dataAttributeRingName);
+//             // ringNameURL.searchParams.set("name", dataAttributeRingName);
             
-            // const newQuery = ringNameURL.toString();
+//             // const newQuery = ringNameURL.toString();
 
-            // history.pushState(null, "", newQuery); 
+//             // history.pushState(null, "", newQuery); 
 
-            //  getRingName =  ringNameURL.searchParams.get("name") || '{}';
-            //  const getRingEntries =  ringNameURL.searchParams.entries();
+//             //  getRingName =  ringNameURL.searchParams.get("name") || '{}';
+//             //  const getRingEntries =  ringNameURL.searchParams.entries();
 
-            //  let ringNameKey: string = "";
+//             //  let ringNameKey: string = "";
 
-            //  for (const key of ringNameURL.searchParams.keys()){
-            //     ringNameKey = key; 
-            //  }
+//             //  for (const key of ringNameURL.searchParams.keys()){
+//             //     ringNameKey = key; 
+//             //  }
 
-            //  console.log(ringNameKey);
+//             //  console.log(ringNameKey);
 
-            //  //window.location.href = dataAttributeHref + ringTypeKey +"=" +getRingType;
-    });
-});
+//             //  //window.location.href = dataAttributeHref + ringTypeKey +"=" +getRingType;
+//     });
+// });
 
 renderProducts(filteredItems);
 

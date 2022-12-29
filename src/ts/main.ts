@@ -124,7 +124,7 @@ const productImages = document.querySelector('.product-images');
 const productImagesAll = document.querySelectorAll('.product-images img');
 
 let count = 1;
-const width: number = productImagesAll[0].clientWidth;
+const width: number = productImagesAll[0]?.clientWidth;
 
 let currentPosition = 0;
 

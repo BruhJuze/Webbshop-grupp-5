@@ -1,4 +1,4 @@
-import { allRings, ringCategories } from "./module/productData";
+import { allRings } from "./module/productData";
 import { Ring } from "./module/ring";
 
 let filteredItems = new Array<Ring>(); 
@@ -15,59 +15,29 @@ for (const key of ringURL.keys()){
 
 const getRing: string = ringURL.get(ringTypeKey)|| '{}';
 
-checkCategory(getRing);
+//console.log(getRing);
 
-function checkCategory(ring: string){
+// checkCategory(getRing);
 
-    console.log(presentURL);
+// function checkCategory(ring: string){
 
-    for (let category of ringCategories){
+//     console.log(presentURL);
+
+//     for (let category of allRings){
         
-        if(getRing == category){
-            filteredItems = allRings.filter((item )=> {
-                return item.ringType == getRing;
-            });
-        };
-    };
+//         if(getRing == category.name){
+//             filteredItems = allRings.filter((item )=> {
+//                 return item.name == getRing;
+//             });
+//         };
+//     };
 
-};
+// };
+
+
 
 const productContainer = document.getElementById('product-container');
 
-function renderPageTitle(ringType: string) {
-
-    let contentType; 
-    
-    switch (ringType) {
-        case 'solitar' : 
-            contentType = "Solitärringar";
-            break;
-        case 'halo' : 
-            contentType = "Halorringar";
-            break;
-        case 'tresten' : 
-            contentType = "Trestensringar";
-            break;
-        case 'sidosten' : 
-            contentType = "Sidostensringar";
-            break;
-        case 'slata' : 
-            contentType = "Släta ringar";
-            break;
-        case 'allians' : 
-            contentType = "Alliansringar";
-            break;
-
-            default: 
-                contentType = "Solitärringar";
-    }
-
-    const subheaderTitle = document.querySelector('.subheader__title') as HTMLHeadElement;
-
-    //subheaderTitle.innerHTML = contentType;
-
-
-}
 
 const productImageContainer = document.querySelector('.product-image-container');
 const mainImage = document.querySelector('.main-img');
@@ -77,15 +47,13 @@ const productInfoText = document.querySelector('.product-info__text');
 const productDescTextInner = document.querySelector('.product-desc__text__inner');
 const productImages = document.querySelector('.product-images');
 
-function renderProductContent(){
+function renderProductContent(product: string){
 
     for (let product of allRings){
 
-        const getProduct = "Andrea";
+        //const getProduct = ring;
 
-            if(getProduct == product.name){
-
-                    console.log(product.name);
+            if(getRing == product.name){
                     
                 //create main img
                 const productImg = document.createElement('img');
@@ -147,4 +115,4 @@ function renderProductContent(){
     }
 }
 
-renderProductContent();
+renderProductContent(getRing);
