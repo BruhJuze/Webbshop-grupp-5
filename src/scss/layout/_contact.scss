@@ -22,14 +22,6 @@
     }
 }
 
-.image-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
 .contact{
     margin: 2rem;
 
@@ -44,7 +36,7 @@
     }
 
     &__containerMalmo{
-        color: black;
+        color: a.$text-color;
         text-align: center;
         margin-top: 20px;
 

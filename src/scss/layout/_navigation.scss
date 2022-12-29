@@ -6,7 +6,7 @@ nav{
     width: 100vw;
     height: a.$navbar-height;
     background-color: a.$white-color;
-    box-shadow: 0 8px 4px -4px rgba(0, 0, 0, .2);  
+    box-shadow: a.$navboxshadow;  
     z-index: 10;
     transition: 300ms ease;
 
@@ -94,7 +94,7 @@ nav{
                 top: calc(100% - 3px);
                 width: 0%;
                 height: 3px; 
-                background-color: #CDB277;
+                background-color: a.$gold-btn-rgba;
                 transition: width 250ms ease;
             }
         }
@@ -138,11 +138,11 @@ nav{
                 transition-property: color, background-color;
 
                 &:hover {
-                    background-color: #CDB277;
+                    background-color: a.$gold-btn-rgba;
                 }
 
                 &:hover > a{
-                    color: #fff;
+                    color: a.$white-color;
                 }
                 
                 a {
@@ -189,7 +189,7 @@ nav{
         height: 2px;
         margin-bottom: 5px;
         border-radius: 6px;
-        background-color: #000;
+        background-color: a.$text-color;
         transition: 300ms ease;
     }
 }
@@ -236,7 +236,7 @@ nav{
                 top: 25px;
                 width: 0%;
                 height: 4px; 
-                background-color: #000;
+                background-color: a.$text-color;
                 transition: all 250ms ease;
             }
         }
@@ -274,7 +274,7 @@ nav{
 
     &.is-active{
         transform: translateX(0px);
-        box-shadow: -1px 0px 12px 2px rgba(0, 0, 0, .2);
+        box-shadow: a.$cartboxshadow;
     }
 
     &__container{
@@ -324,11 +324,11 @@ nav{
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    background-color: rgba(205, 178, 119, 1);
+    background-color: a.$gold-btn-rgba;
     color: a.$white-color;
     transition: 250ms ease;
 
     &:hover{
-        background-color: rgba(205, 178, 119, 0.8);
+        background-color: a.$gold-light-rgba;
     }
 }
