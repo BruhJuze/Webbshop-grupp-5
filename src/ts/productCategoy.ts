@@ -172,41 +172,6 @@ let ringNameURL = new URL(window.location.href);
 
 let productLinks = document.querySelectorAll('.product__title');
 
-// subheaderTitle.forEach( (link)=> {
-//     link.addEventListener('click', (event)=> {
-//         //console.log(event);
-//         //event.preventDefault();
-
-//         console.log("funka");
-
-//             // let currentItem = event.target as HTMLAnchorElement; 
-//             //  const dataAttributeRingName = currentItem.getAttribute("data-ringname") || '{}';
-
-//             //  console.log(dataAttributeRingName);
-//             // const dataAttributeHref = currentItem.getAttribute("href") + "?";
-
-//             // ringNameURL.searchParams.set("name", dataAttributeRingName);
-//             // ringNameURL.searchParams.set("name", dataAttributeRingName);
-            
-//             // const newQuery = ringNameURL.toString();
-
-//             // history.pushState(null, "", newQuery); 
-
-//             //  getRingName =  ringNameURL.searchParams.get("name") || '{}';
-//             //  const getRingEntries =  ringNameURL.searchParams.entries();
-
-//             //  let ringNameKey: string = "";
-
-//             //  for (const key of ringNameURL.searchParams.keys()){
-//             //     ringNameKey = key; 
-//             //  }
-
-//             //  console.log(ringNameKey);
-
-//             //  //window.location.href = dataAttributeHref + ringTypeKey +"=" +getRingType;
-//     });
-// });
-
 renderProducts(filteredItems);
 
 renderPageTitle(getRing);

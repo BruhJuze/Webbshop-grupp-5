@@ -4,40 +4,30 @@ import { Ring } from "./module/ring";
 
 const addToCartButton = document.querySelector('.addToCart-btn');
 
+const presentURL = new URL(window.location.href);
 
 function getRingId() {
-    const presentURL = window.location.href;
 
-    const ringURL = new URLSearchParams(presentURL);
+    const getRingId = presentURL.searchParams.get("name");
 
-    //console.log(ringURL);
-
-    // for (let ring of allRings){
-
-    // }
+    return getRingId;
 }
-
-const getRing: string = "Miranda";
 
 const productInfoReadMoore = document.querySelector('.product-info__readMore');
 
-//let cart:{id: string, item: number} [];
-
-let cart: Array<{ id: string, item: number}> = [
-
-  ]
-
-//let cart: Array<string | number>
+let cart: Array<{ id: string, item: number}> = JSON.parse(localStorage.getItem("data")!) || [];
 
 let searchItem: number;  
 
 
-function addToCart(getRing: string){    
+function addToCart(getRingId: string){    
 
-    let ring = getRing; 
+    //console.log(getRingId);
 
+    let ring = getRingId; 
+ 
     for (let ring of allRings) {
-        if(getRing == ring.name) {
+        if(getRingId == ring.name) {
             //console.log(ring.name);
 
             let search = cart.find( (x) => x.id === ring.name);
@@ -49,23 +39,26 @@ function addToCart(getRing: string){
                 });
             } else {
                 search.item += 1;
-                console.log(searchItem);
             }
         };
     }
-    console.log(cart);
-    //update();
+    localStorage.setItem("data", JSON.stringify(cart));
+    update(getRingId);
 }
+
+const ringID = getRingId() as string;
+
+//console.log(ringID);
 
 addToCartButton?.addEventListener('click', () => {
 
-    addToCart(getRing);
-    //getRingId();
+    addToCart(ringID);
 
+    //console.log(ringID);
 });
 
 productInfoReadMoore?.addEventListener('click', () => {
-    removeFromCart(getRing);
+   // removeFromCart(getRingId);
 })
 
 function  removeFromCart(getRing: string) {
@@ -82,12 +75,22 @@ function  removeFromCart(getRing: string) {
             }
         };
     }
-    console.log(cart);
-    //update();
+    localStorage.setItem("data", JSON.stringify(cart));
+    //update(getRingId);
 }
 
+function update(id: string){
+    let search = cart.find((x)=> x.id === id) !;
+    addAllGoods();
+}
 
+function addAllGoods() {
+    let cartQuantity = document.getElementById('cart-quantity');
+    cartQuantity = 0 || null;
+    //cartQuantity.innerHTML = cart.map((x)=>x.item).reduce((x,y) => x + y , 0).toString();  //look why cartQuantity is possible null
+    //onsole.log(cart.map((x)=>x.item).reduce((x,y) => x + y , 0));
+}
 
-function update(){
-    console.log(searchItem);
+function renderCartItems(){
+    
 }

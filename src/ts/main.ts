@@ -48,6 +48,9 @@ window.addEventListener('scroll', () => {
 
 /**************  end of nav-menu js  **************/
 
+/************* Local Storage  *****************/
+
+//let cart: Array<{ id: string, item: number}> = JSON.parse(localStorage.getItem("data")!) || [];
 
 /**************  productCategory js  **************/
 
