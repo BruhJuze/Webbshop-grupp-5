@@ -230,6 +230,10 @@
     }
   }
 
+  a{
+    text-decoration: none;
+  }
+  
   &__btn{
     @include btn.clear-btn;
     width: 100px;
@@ -240,8 +244,8 @@
 
     @include b.x-large{
       font-size: a.$btn-font-desktop;
-      width: 40%;
-      height: 20%;
+      width: 200px;
+      height: 50px;
     }
     &:hover{
       background-color: a.$gold-btn-rgba;
