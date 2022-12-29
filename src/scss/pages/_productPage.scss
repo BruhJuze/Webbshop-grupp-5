@@ -1,9 +1,10 @@
 @use '../abstract' as a;
 @use '../base' as b;
+@use '../base/buttons' as btn;
 
 .nav-menu-spacer {
     height: a.$navbar-height;
-    width: 100vw;
+    width: 100%;
 }
 
 .product-container {
@@ -11,7 +12,7 @@
     max-width: 1100px;
     width: 100%;
 
-    @include b.medium {
+    @include b.x-large {
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
@@ -24,7 +25,7 @@
     width: 100%;
     overflow: hidden;
 
-    @include b.medium {
+    @include b.x-large {
         width: 45%;
     }
 }
@@ -32,7 +33,7 @@
 .product-image-mobile-container{
     display: block;
 
-    @include b.medium {
+    @include b.x-large {
         display: none;
     }
 }
@@ -79,7 +80,7 @@
         }
     }
 
-    @include b.medium {
+    @include b.x-large {
         display: block;
     }
 
@@ -156,14 +157,14 @@
         }
     }
 
-    @include b.medium {
+    @include b.x-large {
         display: none;
     }
 }
 
 .product-info-container{
 
-    @include b.medium {
+    @include b.x-large {
         margin-top: 10px;
         width: 45%;
         display: flex;
@@ -175,34 +176,35 @@
 .product-info {
     width: 90%;
     margin: 0 auto;
+    
 
     &__title {
         margin-bottom: 10px;
-        font-size: 1.1rem;
-        font-weight: 600;
+        font-size: a.$h3-font-mobile;
+        // font-weight: 600;
     }
 
     &__text {
-        line-height: 1.5rem;
+        line-height: a.$text-liner;;
+        font-size: a.$p-font-desc;
     }
 
     &__readMore {
-        padding: 10px 35px;
-        background-color: #fff;
-        border: 1px solid #000;
-        width: fit-content;
+        width: 30%;
         margin-top: 20px;
         margin-bottom: 40px;
-        cursor: pointer;
-        transition: 300ms ease;
+        @include btn.gold-btn;
 
         &:hover {
-            background-color: #000;
-            color: #fff;
+            background-color: a.$gold-light-rgba;
+        }
+
+        @include b.x-large{
+            font-size: a.$btn-font-desktop;
         }
     }
 
-    @include  b.medium {
+    @include  b.x-large {
         width: 100%;
     }
 }
@@ -216,27 +218,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+        font-size: a.$p-font-desc;
 
         .select{
             position: relative;
             display: flex;
             justify-content: center;
             cursor: pointer;
-            
 
             &:after {
                 content: '\25bc';
                 position: absolute;
-                top: 0;
+                // top: 0;
                 right: 0;
                 height: 100%;
                 width: 25px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: rgba(0, 0, 0, 1);
-                color: #fff;
+                background-color: a.$gold-btn-rgba;
+                color: a.$white-color;
                 border-radius: 0px 3px 3px 0px;
                 font-size: 0.7rem;
                 cursor: pointer;
@@ -260,7 +261,6 @@
         input {
             width: 167px;
             padding: 5px 15px;
-            
         }
     }
 
@@ -332,9 +332,8 @@
         display: flex;
         flex-direction: row;
         
-
         p {
-            font-size: 18px;
+            font-size: a.$p-font-desktop;
             margin-left: 10px;
         }
     }
@@ -346,18 +345,13 @@
     margin-top: 1rem;
 
     .addToCart-btn{
-        border: 1px solid rgba(205, 178, 119, 1);
-        padding: 0.7rem 1rem;
-        color: a.$white-color;
-        background-color: rgba(205, 178, 119, 1);
-        font-size: 22px;
-        cursor: pointer;
-        transition: all 0.5s ease;
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
+        @include btn.gold-btn;
 
         @include b.medium{
             width: 100%;
+            font-size: a.$btn-font-desktop;
         }
     }
 }
@@ -367,7 +361,7 @@
     height: auto;
     display: flex;
     justify-content: center;
-    background-color: #E0E0E0;
+    background-color: a.$desc-container-color;
 }
 
 #product-description {
@@ -385,6 +379,7 @@
         max-width: 1100px;
         width: 88%;
         margin: 0 auto;
+        font-size: a.$h4-font-desktop;
 
         &__inner{
             position: relative;
@@ -414,14 +409,14 @@
         max-width: 1100px;
         width: 88%;
         margin: 0 auto;
+        font-size: a.$p-font-desc;
 
         &__inner {
             max-width: 600px;
-            //width: 70%;
 
             p{
                 margin-bottom: 15px;
-                line-height: 1.5rem;
+                line-height: a.$text-liner;
             }
         }
     }
