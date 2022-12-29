@@ -113,8 +113,7 @@ function renderProducts(ring: Ring[]){
                 }
 
                 console.log(ringNameKey);
-
-                //window.location.href = dataAttributeHref; + ringTypeKey +"=" +ringNameKey;
+                
                 window.location.href = dataAttributeHref + ringNameKey +"=" +dataAttributeRingName;
             });
 

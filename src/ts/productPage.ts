@@ -15,27 +15,6 @@ for (const key of ringURL.keys()){
 
 const getRing: string = ringURL.get(ringTypeKey)|| '{}';
 
-//console.log(getRing);
-
-// checkCategory(getRing);
-
-// function checkCategory(ring: string){
-
-//     console.log(presentURL);
-
-//     for (let category of allRings){
-        
-//         if(getRing == category.name){
-//             filteredItems = allRings.filter((item )=> {
-//                 return item.name == getRing;
-//             });
-//         };
-//     };
-
-// };
-
-
-
 const productContainer = document.getElementById('product-container');
 
 
@@ -46,6 +25,8 @@ const productInfoTitle = document.querySelector('.product-info__title');
 const productInfoText = document.querySelector('.product-info__text');
 const productDescTextInner = document.querySelector('.product-desc__text__inner');
 const productImages = document.querySelector('.product-images');
+
+let thisProductPrice: number; 
 
 function renderProductContent(product: string){
 
@@ -107,12 +88,15 @@ function renderProductContent(product: string){
                 //set price
                 let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
                 let totalprice = document.querySelector('.total-sum');
-                
+
+                thisProductPrice = product.price;
+
                 productPrice.innerHTML = product.price.toString() + " " + "kr";
                 totalprice?.appendChild(productPrice);
             };
 
     }
 }
+
 
 renderProductContent(getRing);

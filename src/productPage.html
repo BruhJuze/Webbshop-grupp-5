@@ -60,6 +60,50 @@
         </button>
         <div class="cart__container">
           <div class="cart__title">Din kundvagn</div>
+
+          <div class="cart-product">
+            <img src="./assets/Solitär/Alice/alice1.jpeg" alt="" class="cart-product__img">
+            <div class="cart-product__content cart-content">
+              <div class="cart-content__left">
+                <div class="cart-content__title">
+                  Alice
+                </div>
+                <div class="cart-content__left__addRemove">
+                  <i class="bi bi-dash-square"></i>
+                  <div class="quantity">0</div>
+                  <i class="bi bi-plus-square"></i>
+                </div>
+              </div>
+              <div class="cart-content__right">
+                <div class="delete-product-btn">
+                  <i class="bi bi-x"></i>
+                </div>
+                <div class="cart-content__price">950 kr</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-product">
+            <img src="./assets/Solitär/Alice/alice1.jpeg" alt="" class="cart-product__img">
+            <div class="cart-product__content cart-content">
+              <div class="cart-content__left">
+                <div class="cart-content__title">
+                  Alice
+                </div>
+                <div class="cart-content__left__addRemove">
+                  <i class="bi bi-dash-square"></i>
+                  <div class="quantity">0</div>
+                  <i class="bi bi-plus-square"></i>
+                </div>
+              </div>
+              <div class="cart-content__right">
+                <div class="delete-product-btn">
+                  <i class="bi bi-x"></i>
+                </div>
+                <div class="cart-content__price">950 kr</div>
+              </div>
+            </div>
+          </div>
           <button class="checkout-button">
               Gå till kassan
           </button>
@@ -125,25 +169,22 @@
           <div class="product-options__type">
             <p>Välj diamant</p>
             <div class="select">
-              <select name="" id="">
-                <option value="">Naturlig</option>
-                <option value="">Labbodlad</option>
+              <select name="" id="select-diamond">
+                <option value="" disable seleced>Välj diamant alternativ</option>
+                <option value="1.5">Naturlig</option>
+                <option value="1">Labbodlad</option>
               </select>
             </div>
           </div>
           <div class="product-options__type">
             <p>Välj carat</p>
-            <div class="select">
-              <select name="" id="">
-                <option value="">0.25 carat</option>
-                <option value="">0.30 carat</option>
-                <option value="">0.40 carat</option>
-                <option value="">0.50 carat</option>
-                <option value="">0.60 carat</option>
-                <option value="">0.70 carat</option>
-                <option value="">0.80 carat</option>
-                <option value="">0.90 carat</option>
-                <option value="">1.0 carat</option>
+            <div class="select" id="">
+              <select name="" id="select-carat">
+                <option value="" disable seleced>Välj carat</option>
+                <option value="0.25">0.25 carat</option>
+                <option value="0.5">0.50 carat</option>
+                <option value="1">0.75 carat</option>
+                <option value="1.25">1.0 carat</option>
               </select>
           </div>
           </div>
@@ -151,17 +192,12 @@
             <p>Välj ringstorlek</p>
             <div class="select">
               <select name="" id="">
-                <option value="">45mm</option>
-                <option value="">46mm</option>
-                <option value="">47mm</option>
-                <option value="">48mm</option>
-                <option value="">49mm</option>
-                <option value="">50mm</option>
-                <option value="">51mm</option>
-                <option value="">52mm</option>
-                <option value="">53mm</option>
-                <option value="">54mm</option>
-                <option value="">55mm</option>
+                <option value="1">45mm</option>
+                <option value="1.5">46mm</option>
+                <option value="2">47mm</option>
+                <option value="2.5">48mm</option>
+                <option value="3">49mm</option>
+                <option value="3.5">50mm</option>
               </select>
             </div>
           </div>
@@ -173,7 +209,7 @@
         <div class="total-sum-container">
           <div class="total-sum">
             <p>Summa: </p>
-            <p class="total-sum-price"></p>
+            <p class="total-sum-price" id="total-sum-price"></p>
           </div>
         </div>
         <div class="addToCart-container">
