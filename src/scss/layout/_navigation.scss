@@ -301,6 +301,10 @@ nav{
     }
 }
 
+.checkout-button-link{
+    text-decoration: none;
+}
+
 .checkout-button {
     user-select: none;
     appearance: none;
@@ -308,9 +312,8 @@ nav{
     outline: none;
     background: none;
     cursor: pointer;
-
-
-    width: 100%;
+    margin: auto;
+    width: 80%;
     height: 40px;
     display: flex;
     justify-content: center;
