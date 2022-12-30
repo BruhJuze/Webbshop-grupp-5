@@ -7,6 +7,7 @@ export class Ring {
         public second_desc: string, 
         public third_desc: string, 
         public img: Array<string> = [], 
-        public price: number
+        public price: number,
+        public totalPrice: number
         ){}
 }
