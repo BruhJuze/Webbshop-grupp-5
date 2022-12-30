@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="scss/main.scss" rel="stylesheet" />
     <script src="ts/main.ts" defer type="module"></script>
- 
+
     <title>Diamonds for U</title>
     <link
       rel="stylesheet"
@@ -26,23 +26,71 @@
             <div class="desktop-menu">
               <ul class="menu__ul">
                 <li class="menu__li">
-                  <a href="#" class=" menu__a no-link">Förlovningsringar</a>
+                  <a href="#" class="menu__a no-link">Förlovningsringar</a>
                   <ul class="dropdown">
-                    <li><a href="./productCategory.html" class="ring-links" id="solitar-link" data-ringtype="solitar">Solitärringar</a></li>
-                    <li><a href="./productCategory.html" class="ring-links" id="halo-link" data-ringtype="halo">Haloringar</a></li>
-                    <li><a href="./productCategory.html" class="ring-links" id="tresten-link" data-ringtype="tresten">Trestensringar</a></li>
-                    <li><a href="./productCategory.html" class="ring-links" id="sidosten-link" data-ringtype="sidosten">Sidostensringar</a></li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="solitar-link"
+                        data-ringtype="solitar"
+                        >Solitärringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="halo-link"
+                        data-ringtype="halo"
+                        >Haloringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="tresten-link"
+                        data-ringtype="tresten"
+                        >Trestensringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="sidosten-link"
+                        data-ringtype="sidosten"
+                        >Sidostensringar</a
+                      >
+                    </li>
                   </ul>
                 </li>
                 <li>
                   <a href="#" class="menu__a no-link">Vigselringar</a>
                   <ul class="dropdown dropdown2">
-                    <li><a href="./productCategory.html" class="ring-links" id="slata-link" data-ringtype="slata">Släta ringar</a></li>
-                    <li><a href="./productPage.html" class="ring-links" id="allians-link" data-ringtype="allians">Alliansringar</a></li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="slata-link"
+                        data-ringtype="slata"
+                        >Släta ringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productPage.html"
+                        class="ring-links"
+                        id="allians-link"
+                        data-ringtype="allians"
+                        >Alliansringar</a
+                      >
+                    </li>
                   </ul>
                 </li>
-                <li><a href="about.html" class=" menu__a">Om oss</a></li>
-                <li><a href="contact.html" class=" menu__a">Kontakt</a></li>
+                <li><a href="about.html" class="menu__a">Om oss</a></li>
+                <li><a href="contact.html" class="menu__a">Kontakt</a></li>
               </ul>
             </div>
             <button class="hamburger">
@@ -60,8 +108,12 @@
       </nav>
       <div class="mobile-menu">
         <ul class="mobile-menu__ul">
-          <li class="menu__li"><a href="./productCategory.html">Förlovningsringar</a></li>
-          <li class="menu__li"><a href="./productPage.html">Vigselringar</a></li>
+          <li class="menu__li">
+            <a href="./productCategory.html">Förlovningsringar</a>
+          </li>
+          <li class="menu__li">
+            <a href="./productPage.html">Vigselringar</a>
+          </li>
           <li class="menu__li"><a href="about.html">Om oss</a></li>
           <li class="menu__li"><a href="contact.html">Kontakt</a></li>
         </ul>
@@ -72,13 +124,11 @@
         </button>
         <div class="cart__container">
           <div class="cart__title">Din kundvagn</div>
-          <button
-            class="checkout-button"
-            id="checkoutBtn"
-            href="/checkout.html"
-          >
-            Gå till kassan
-          </button>
+          <a href="./checkout.html"
+            ><button class="checkout-button" id="checkoutBtn">
+              Gå till kassan
+            </button>
+          </a>
         </div>
       </div>
     </aside>
@@ -91,7 +141,6 @@
           perfeckta ringen idag!
         </p>
         <button class="header__btn">Se våra ringar</button>
-        <div class="header__overlay"></div>
       </div>
     </header>
 
@@ -122,11 +171,11 @@
         <h2 class="diamonds__title">Våra olika diamanter</h2>
         <section class="diamonds__container">
           <div class="diamonds__choose" alt="NatDiamond">
-            <button class="diamonds__btn">Naturliga</button>
+            <a href="diamond.html"><button class="diamonds__btn">Naturliga</button></a>
           </div>
 
           <div class="diamonds__choose" alt="LabDiamond">
-            <button class="diamonds__btn">Labbodlade</button>
+            <a href="diamond.html"><button class="diamonds__btn">Labbodlade</button></a>
           </div>
         </section>
       </section>
@@ -140,7 +189,7 @@
             till vigseln med antingen en alliansring eller en slät. Vi guidar
             dig genom dina val så tveka inte att ta kontakt med oss.
           </p>
-          <button class="choose-ring__btn">Kontakta oss</button>
+          <a href="contact.html"><button class="choose-ring__btn">Kontakta oss</button></a>
         </div>
       </section>
 
@@ -149,17 +198,13 @@
           <div class="stores__stockholm">
             <div class="stores__content">
               <h3 class="stores__title">Vår butik i Stockholm</h3>
-              <a href="contact.html"
-                ><button class="stores__btn">Besök oss</button></a
-              >
+              <a href="contact.html"><button class="stores__btn">Besök oss</button></a>
             </div>
           </div>
           <div class="stores__malmo">
             <div class="stores__content">
               <h3 class="stores__title">Vår butik i Malmö</h3>
-              <a href="contact.html"
-                ><button class="stores__btn">Besök oss</button></a
-              >
+              <a href="contact.html"><button class="stores__btn">Besök oss</button></a>
             </div>
           </div>
         </section>

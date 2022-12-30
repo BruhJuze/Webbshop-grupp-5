@@ -5,7 +5,7 @@
 
 .stores{
     max-width: a.$container-width;
-    margin: a.$top-margin auto;
+    margin: a.$margin-30 auto;
 
     @include b.x-large{
         margin: a.$container-margin auto;
@@ -50,35 +50,35 @@
     }
     
    &__btn{
-    @include btn.clear-btn;
+        @include btn.clear-btn;
 
-    @include b.x-large{
-        font-size: a.$btn-font-desktop;
-        width: 200px;
-        padding: 1em;
+        @include b.x-large{
+            font-size: a.$btn-font-desktop;
+            width: 200px;
+            padding: 1em;
+        }
+        
+        &:hover{
+            background-color: a.$gold-btn-rgba;
+            border: a.$gold-btn-rgba;
+        }
     }
-    
-    &:hover{
-        background-color: a.$gold-btn-rgba;
-        border: a.$gold-btn-rgba;
-      }
-   }
 
-   &__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: a.$gap-mobile;
-    height: 100%;
-   }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: a.$gap-mobile;
+        height: 100%;
+    }
 
    &__title{
     font-size: a.$h3-font-mobile;
     text-align: center;
 
-    @include b.x-large{
-        font-size: a.$h3-font-desktop;
-    }
+        @include b.x-large{
+            font-size: a.$h3-font-desktop;
+        }
    }
 }

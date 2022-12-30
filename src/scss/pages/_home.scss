@@ -34,7 +34,7 @@
        
         h1{
           z-index: 1; 
-          margin-top: 140px; 
+          margin-top: 120px; 
           font-size: a.$h1-font-mobile;
 
           @include b.x-large{
@@ -57,7 +57,7 @@
     }
 
     &__btn{
-      top: 70%;
+      top: 80%;
       margin-left: 50%;
       transform: translateX(-50%);
       position: absolute;
@@ -71,8 +71,8 @@
         height: 75px;
       }
       &:hover{
-        background-color: #CDB277;
-        border: #CDB277;
+        background-color: a.$gold-btn-rgba;
+        border: a.$gold-btn-rgba;
       }
     }
 }
@@ -82,7 +82,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: a.$top-margin;
+  margin-top: a.$margin-30;
   color: a.$ourGrey;
 
   @include b.x-large{
@@ -109,7 +109,7 @@
     @include b.x-large{
       gap: a.$gap-desktop;
       flex-wrap: nowrap;
-      margin-top: a.$top-margin;
+      margin-top: a.$margin-30;
     }
 
     &__ring{
@@ -179,10 +179,9 @@
       }   
 }
 
-
 .diamonds{
   max-width: a.$container-width;
-  margin-top: a.$top-margin;
+  margin-top: a.$margin-30;
   color: a.$ourGrey;
 
   @include b.x-large{
@@ -204,19 +203,22 @@
     flex-direction: row;
     justify-content: center;
     gap: a.$gap-mobile;
-    margin-top: a.$section-top-margin;
+    padding-top: a.$section-top-margin;
+    width: 85%;
+    margin: 0 auto;
 
     @include b.x-large{
       flex-direction: row;
       gap: a.$gap-desktop;
-      margin-top: a.$top-margin;
+      margin-top: a.$margin-30;
+      width: 100%;
     }
   }
 
   &__choose{
     box-shadow: a.$boxshadow;
-    height: 120px;
-    width: 150px;
+    height: 150px;
+    width: 85%;
     background-size: cover;
     background-position: center;
     border-radius: 5px;
@@ -225,11 +227,15 @@
     align-items: center;
 
     @include b.x-large{
-      width: 550px;
-      height: 300px;
+      width: 100%;
+      height: 350px;
     }
   }
 
+  a{
+    text-decoration: none;
+  }
+  
   &__btn{
     @include btn.clear-btn;
     width: 100px;
@@ -240,8 +246,8 @@
 
     @include b.x-large{
       font-size: a.$btn-font-desktop;
-      width: 40%;
-      height: 20%;
+      width: 200px;
+      height: 50px;
     }
     &:hover{
       background-color: a.$gold-btn-rgba;
@@ -262,7 +268,7 @@
   max-width: a.$container-width;
   margin: 0 auto;
   color: a.$white-color;
-  margin-top: a.$top-margin;
+  margin-top: a.$margin-30;
   display: flex;
   justify-content: center;
 

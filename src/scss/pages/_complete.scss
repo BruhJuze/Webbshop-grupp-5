@@ -4,7 +4,6 @@
 
 .mainComplete{
     background-image: a.$headerIMG;
-    ;
     background-size: cover;
     width: 100%;
     height: 230vw;
@@ -14,12 +13,9 @@
     @include b.x-large{
         height: 1000px;
     }
-    
-    
-
 
     &__thanks{
-        color: white;
+        color: a.$white-color;
         text-align: center;
         overflow-wrap: break-word;
         font-size: 13vw;
@@ -30,7 +26,6 @@
             margin-top: 360px;
             width: 700px;
             line-height: 100px;
-            
         }
     }
 
@@ -47,7 +42,6 @@
         height: 90px;
         margin-top: 60px;
         font-size: 25px;
-        }
-        
+        }    
     }
 }
