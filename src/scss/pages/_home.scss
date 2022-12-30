@@ -34,7 +34,7 @@
        
         h1{
           z-index: 1; 
-          margin-top: 140px; 
+          margin-top: 120px; 
           font-size: a.$h1-font-mobile;
 
           @include b.x-large{
@@ -57,7 +57,7 @@
     }
 
     &__btn{
-      top: 85%;
+      top: 80%;
       margin-left: 50%;
       transform: translateX(-50%);
       position: absolute;
