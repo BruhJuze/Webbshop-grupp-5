@@ -1,5 +1,5 @@
-import { allRings } from "./module/productData";
-import { Ring } from "./module/ring";
+import { allRings } from "./module/productDataTest";
+import { Ring } from "./module/ringTest";
 
 let filteredItems = new Array<Ring>(); 
 
@@ -16,7 +16,7 @@ for (const key of ringURL.keys()){
 const getRing: string = ringURL.get(ringTypeKey)|| '{}';
 
 const productContainer = document.getElementById('product-container');
-
+let testValue: number; 
 
 const productImageContainer = document.querySelector('.product-image-container');
 const mainImage = document.querySelector('.main-img');
@@ -29,6 +29,8 @@ let selectDiamond = document.getElementById('diamond') as HTMLSelectElement;
 let selectCarat = document.getElementById('carat') as HTMLSelectElement;
 
 let thisProductPrice: number; 
+
+let sumCarat; 
 
 function renderProductContent(product: string){
 
@@ -97,19 +99,21 @@ function renderProductContent(product: string){
                 productPrice.innerHTML = thisProductPrice.toString() + " " + "kr";
                 totalprice?.appendChild(productPrice);
 
-                //diamond price
-                selectDiamond.addEventListener('change', ()=> {
+                // //diamond price
+                // selectDiamond.addEventListener('change', ()=> {
 
-                    let valueDiamond = selectDiamond.value;
-                    let newValueDiamond: number = +valueDiamond;
-                    let totalSumDiamond = newValueDiamond * thisProductPrice;
-                    let sumDiamond = totalSumDiamond;
+                //     let valueDiamond = selectDiamond.value;
+                //     let newValueDiamond: number = +valueDiamond;
+                //     let totalSumDiamond = newValueDiamond * thisProductPrice;
+                //     let sumDiamond = totalSumDiamond;
 
-                    productPrice.innerHTML = sumDiamond + " " + "kr";
-                    console.log(totalSumDiamond);
-                    return totalSumDiamond;
-                });
+                //     productPrice.innerHTML = sumDiamond + " " + "kr";
+                //     console.log(totalSumDiamond);
+                //     return totalSumDiamond;
+                // });
                 //carat price
+
+
                 selectCarat.addEventListener('change', ()=> {
 
                     let valueCarat = selectCarat.value;
@@ -118,24 +122,26 @@ function renderProductContent(product: string){
                     let sumCarat = totalSumCarat;
 
                     productPrice.innerHTML = sumCarat + " " + "kr";                
-                    console.log(totalSumCarat);
-                    return totalSumCarat;
+                    console.log(sumCarat);
+                    testValue = sumCarat;
+
+                    return sumCarat;
                 });
+    
             }
     }
 }
 
+// function totalsum(totalsum:number, totalprice:number){
+//     ringPrice = totalsum + totalprice;
 
-function totalsum(totalsum:number, totalprice:number){
-   let ringPrice = totalsum + totalprice;
-
-   console.log(ringPrice);
+//    return ringPrice; 
    
-}
+// }
 
 
 
-renderProductContent(getRing);
+export const totalPrice = renderProductContent(getRing);
 
 
 // class Carat{

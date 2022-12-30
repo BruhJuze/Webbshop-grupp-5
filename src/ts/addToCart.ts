@@ -1,5 +1,6 @@
-import { allRings, ringCategories } from "./module/productData";
-import { Ring } from "./module/ring";
+import { allRings, ringCategories } from "./module/productDataTest";
+import { Ring } from "./module/ringTest";
+import { totalPrice } from "./productPage";
 
 
 const addToCartButton = document.querySelector('.addToCart-btn');
@@ -95,6 +96,11 @@ function addAllGoods() {
 
 const cartContainer = document.getElementById('cart-container') as HTMLElement;
 
+let sumCarat: number;
+
+
+const cartButton = document.querySelector('.cart-button');
+
 function renderCartItems(){
 
     if(cart.length !==0){
@@ -104,18 +110,20 @@ function renderCartItems(){
         for (let product of cart){
             //console.log(product.id);
 
-            for(let ring of allRings){
+            //for(let ring of allRings){
+                for(let ring = 0; ring < allRings.length; ring++){
 
-                if(product.id === ring.name){
+                if(product.id === allRings[ring].name){
                 
                     const cartProduct = document.createElement('div');
                     cartProduct.classList.add("cart-product");
+                    cartProduct.setAttribute('id', String(allRings[ring].name));
                     cartContainer?.appendChild(cartProduct);
 
                     const cartProductImg = document.createElement('img');
                     cartProductImg.classList.add("cart-product__img");
                     cartProduct.appendChild(cartProductImg);
-                    cartProductImg.src = ring.img[0];
+                    cartProductImg.src = allRings[ring].img[0];
 
                     const cartContent = document.createElement('div');
                     cartContent.classList.add("cart-content");
@@ -129,7 +137,7 @@ function renderCartItems(){
                     cartContentTitle.classList.add("cart-content-title");
                     cartContentLeft.appendChild(cartContentTitle);
                     const cartParagraph = document.createElement('p');
-                    cartParagraph.innerHTML = ring.name;
+                    cartParagraph.innerHTML = allRings[ring].name;
                     cartContentTitle.appendChild(cartParagraph);
 
                     const cartContentLeftAddRemove = document.createElement('div');
@@ -165,8 +173,55 @@ function renderCartItems(){
 
                     const cartContentPrice = document.createElement('div');
                     cartContentPrice.classList.add("cart-content__price");
-                    cartContentPrice.innerHTML = String(ring.price +" kr");
-                    cartContentRight.appendChild(cartContentPrice);
+
+                    let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
+                    let selectCarat = document.getElementById('carat') as HTMLSelectElement;
+                    //let sumCarat: number;
+
+                    let thisCaratPrice: number; 
+
+                    selectCarat.addEventListener('change', ()=> {
+
+                        let valueCarat = selectCarat.value;
+                        let newValueCarat: number = +valueCarat;  
+                        thisCaratPrice = allRings[ring].price;
+                        
+                    let totalSumCarat = newValueCarat * thisCaratPrice;
+
+                    console.log(totalSumCarat +"new totalPrice");
+
+                    allRings[ring].totalPrice = totalSumCarat;
+
+                    console.log(allRings[ring].totalPrice  +"new ring price");              
+                    cartContentPrice.innerHTML = thisCaratPrice.toString() + " " + "kr";
+                    cartContentPrice.innerHTML = allRings[ring].totalPrice.toString() + " " + "kr";
+                    cartContentRight.appendChild(cartContentPrice);              
+
+
+                    });
+
+                cartButton?.addEventListener('click', ()=>{
+
+                    selectCarat.addEventListener('change', ()=> {
+
+                        let valueCarat = selectCarat.value;
+                        let newValueCarat: number = +valueCarat;  
+                        thisCaratPrice = allRings[ring].price;
+                        
+                    let totalSumCarat = newValueCarat * thisCaratPrice;
+
+                    console.log(totalSumCarat +"new totalPrice");
+
+                    allRings[ring].totalPrice = totalSumCarat;
+
+                    console.log(allRings[ring].totalPrice  +"new ring price");              
+                    cartContentPrice.innerHTML = thisCaratPrice.toString() + " " + "kr";
+                    cartContentPrice.innerHTML = allRings[ring].totalPrice.toString() + " " + "kr";
+                    cartContentRight.appendChild(cartContentPrice);              
+
+                    });
+
+                });
 
                 }
             }
@@ -207,3 +262,22 @@ function addToCart(getRingId: string){
 }
 
 renderCartItems();
+
+
+//set price
+// let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
+// let selectCarat = document.getElementById('carat') as HTMLSelectElement;
+
+// let thisProductPrice: number; 
+
+// selectCarat.addEventListener('change', ()=> {
+
+//     let valueCarat = selectCarat.value;
+//     let newValueCarat: number = +valueCarat;                
+//     let totalSumCarat = newValueCarat * thisProductPrice;
+//     let sumCarat = totalSumCarat;
+
+//     productPrice.innerHTML = sumCarat + " " + "kr";                
+//     console.log(sumCarat);
+//     return sumCarat;
+// });
