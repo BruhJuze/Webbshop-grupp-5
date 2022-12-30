@@ -8,15 +8,14 @@
 }
 
 .product-container {
-    margin: 0px auto;
+    margin: a.$margin-20 auto;
     max-width: 1100px;
-    width: 100%;
-
+    
     @include b.x-large {
         margin-top: 50px;
         display: flex;
-        justify-content: space-between;
-        width: 90%;
+        gap: 30px;
+        width: 100%;
     }
 }
 
@@ -83,7 +82,6 @@
     @include b.x-large {
         display: block;
     }
-
 }
 
 .navigation-container {
@@ -166,14 +164,12 @@
         display: flex;
         flex-direction: column;
     }
-
 }
 
 .product-info {
     width: 90%;
     margin: 0 auto;
     
-
     &__title {
         margin-bottom: 10px;
         font-size: a.$h3-font-mobile;
@@ -187,7 +183,7 @@
 
     &__readMore {
         width: 30%;
-        margin-top: 20px;
+        margin-top: a.$margin-20;
         margin-bottom: 40px;
         @include btn.gold-btn;
 
@@ -262,55 +258,14 @@
     @include b.x-large {
         width: 100%;
 
-        // &__type {
-        //     margin-bottom: 20px;
-        //     display: flex;
-        //     justify-content: space-between;
-        //     align-items: center;
-               
-            // .select{
-            //     position: relative;
-            //     display: flex;
-            //     justify-content: center;
-            //     cursor: pointer;
-                
-            //     &:after {
-            //         content: '\25bc';
-            //         position: absolute;
-            //         top: 0;
-            //         right: 0;
-            //         height: 100%;
-            //         width: 25px;
-            //         display: flex;
-            //         align-items: center;
-            //         justify-content: center;
-            //         background-color: rgba(0, 0, 0, 1);
-            //         color: #fff;
-            //         border-radius: 0px 3px 3px 0px;
-            //         font-size: 0.7rem;
-            //         cursor: pointer;
-            //         pointer-events: none;
-
-            //         &:hover{
-            //             background-color: rgba(0, 0, 0, 0.7);
-            //         }
-            //     }
-            // }
-
             select {
-                // appearance: none;
-                // outline: none;
                 width: 250px;
-                // padding: 5px 15px;
-                // border-radius: 3px;
-                // cursor: pointer;
             }
 
             input {
                 width: 215px;
                 padding: 5px 15px;
             }
-
     }
 }
 
@@ -417,7 +372,6 @@
     }
 }
 
-
 .feature-container {
     width: 100vw;
     height: auto;
@@ -468,24 +422,3 @@
         }
     }
 }
-
-// .small-group {
-//     margin: 10px;
-//     display: flex;
-//     justify-content: space-between;
-
-//     &__img {
-//         flex-basis: 23%;
-//         height: 130px;
-//         display: flex;
-//         align-items: center;
-//         box-shadow: a.$boxshadowHover;
-//         border-radius: 8px;
-//         cursor: pointer;
-
-//         img {
-//             width: 100%;
-//             object-fit: cover;
-//         }
-//     }
-// }

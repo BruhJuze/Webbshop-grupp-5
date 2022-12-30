@@ -47,11 +47,11 @@
 }
 
 @mixin about-container-styling {
-    max-width: 1100px;
+    max-width: a.$container-width;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    gap: 20px;
+    gap: a.$gap-mobile;
 }
 
 @mixin about-text-styling {

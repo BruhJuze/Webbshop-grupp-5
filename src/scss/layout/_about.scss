@@ -27,8 +27,8 @@
 }
 
 .about{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: a.$margin-30;
+    margin-bottom: a.$margin-30;
 
     @include b.x-large{
         margin: 4rem;
@@ -39,7 +39,7 @@
 
         @include b.x-large{
             flex-direction: row;
-            gap: 100px;
+            gap: a.$gap-100;
         }
         
         &__text{
@@ -58,12 +58,12 @@
 
     .story{
         @include m.about-container-styling;
-        margin-top: 30px;
+        margin-top: a.$margin-30;
 
         @include b.x-large{
             flex-direction: row-reverse;
             width: a.$container-width;
-            gap: 100px;
+            gap: a.$gap-100;
         }
         
         &__text{

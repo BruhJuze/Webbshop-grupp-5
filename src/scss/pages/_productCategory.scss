@@ -14,7 +14,7 @@
     }
 
     .text{
-        margin-top: 20px;
+        margin-top: a.$margin-20;
         line-height: 1.6rem;
     }
 }
@@ -23,10 +23,6 @@
     display: flex;
     justify-content: center;
     width: 90%;
-
-    @include b.x-large {
-
-    }
 }
 
 .product-container {
@@ -40,12 +36,7 @@
 
     @include b.x-large {
         justify-content: flex-start;
-        gap: 25px;
-    }
-
-    @include b.x-large {
-        justify-content: flex-start;
-        gap: 20px;
+        gap: a.$gap-mobile;
     }
 }
 
@@ -92,7 +83,6 @@
         margin-bottom: 5px;
         text-align: center;
         text-transform: uppercase;
-
     }
 
     &__image{
@@ -118,10 +108,11 @@
 .load-more-btn{
     position: relative;
     display: flex;
-    margin: a.$container-margin auto;
+    margin: 2rem auto;
     user-select: none;
     appearance: none;
     outline: none;
+    text-transform: uppercase;
     @include btn.gold-btn;
 
     &:hover{
@@ -133,10 +124,3 @@
         padding: 0.7rem 2.5rem;
     }
 }
-
-// .product-link-test{
-//     width: 100px; 
-//     height: 100px; 
-//     background: lightpink;
-//     cursor: pointer;
-// }

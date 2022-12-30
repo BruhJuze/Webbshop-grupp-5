@@ -71,8 +71,8 @@
         height: 75px;
       }
       &:hover{
-        background-color: a.$gold-light-rgba;
-        border: a.$gold-light-rgba;
+        background-color: a.$gold-btn-rgba;
+        border: a.$gold-btn-rgba;
       }
     }
 }
@@ -82,7 +82,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: a.$top-margin;
+  margin-top: a.$margin-30;
   color: a.$ourGrey;
 
   @include b.x-large{
@@ -109,7 +109,7 @@
     @include b.x-large{
       gap: a.$gap-desktop;
       flex-wrap: nowrap;
-      margin-top: a.$top-margin;
+      margin-top: a.$margin-30;
     }
 
     &__ring{
@@ -179,10 +179,9 @@
       }   
 }
 
-
 .diamonds{
   max-width: a.$container-width;
-  margin-top: a.$top-margin;
+  margin-top: a.$margin-30;
   color: a.$ourGrey;
 
   @include b.x-large{
@@ -211,7 +210,7 @@
     @include b.x-large{
       flex-direction: row;
       gap: a.$gap-desktop;
-      margin-top: a.$top-margin;
+      margin-top: a.$margin-30;
       width: 100%;
     }
   }
@@ -269,7 +268,7 @@
   max-width: a.$container-width;
   margin: 0 auto;
   color: a.$white-color;
-  margin-top: a.$top-margin;
+  margin-top: a.$margin-30;
   display: flex;
   justify-content: center;
 
