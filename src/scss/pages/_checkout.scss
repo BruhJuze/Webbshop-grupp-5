@@ -1,7 +1,5 @@
 @use '../abstract' as a;
 @use '../base' as b;
-@use '../abstract/variables' as v;
-@use '../base/buttons' as btn; //jag prövade @include b.clear-btn mend et fungerade inte.
 
 *{
     margin: 0;
