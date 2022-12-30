@@ -1,5 +1,5 @@
-import { allRings } from "./module/productDataTest";
-import { Ring } from "./module/ringTest";
+import { allRings } from "./module/productData";
+import { Ring } from "./module/ring";
 
 let filteredItems = new Array<Ring>(); 
 

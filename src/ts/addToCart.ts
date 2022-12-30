@@ -1,5 +1,5 @@
-import { allRings, ringCategories } from "./module/productDataTest";
-import { Ring } from "./module/ringTest";
+import { allRings, ringCategories } from "./module/productData";
+import { Ring } from "./module/ring";
 import { totalPrice } from "./productPage";
 
 
