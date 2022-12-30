@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="scss/main.scss" rel="stylesheet" />
+    <script src="ts/main.ts" defer type="module"></script>
+    <title>Diamonds for U</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+  </head>
+  <body>
+    
+    <aside class="nav-menu">
+      <nav>
+        <div class="container">
+          <div class="navbar">
+            <a href="index.html" class="logo">
+              <img class="logo-png" src="assets/Logo/logo.png" alt="logo"> 
+            </a>
+            <div class="desktop-menu">
+              <ul class="menu__ul">  
+                <li><a href="#">Förlovningsringar</a></li>
+                <li><a href="#">Vigselringar</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Kontakt</a></li> 
+              </ul>
+            </div>
+            <button class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="cart-button">
+              <i class="bi bi-cart4"></i>
+            </div>
+          </div><!--end navbar -->
+        </div> <!-- end container -->
+      </nav>
+      <div class="mobile-menu">
+        <ul class="mobile-menu__ul">
+            <li class="menu__li"><a href="#">Förlovningsringar</a></li>
+            <li class="menu__li"><a href="#">Vigselringar</a></li>
+            <li class="menu__li"><a href="#">Om oss</a></li>
+            <li class="menu__li"><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="cart">
+        <button class="close-button">
+            <i class="bi bi-x"></i>
+        </button>
+        <div class="cart__container">
+          <div class="cart__title">Din kundvagn</div>
+          <button class="checkout-button" id="checkoutBtn" href="/checkout.html">
+              Gå till kassan
+          </button>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <main class="mainCheckout">
+<section class="mainCheckout__title"><h2>Kassa</h2></section>
+<div class="mainCheckout__steps">1. DIN KUNDVAGN</div>
+<section class="mainCheckout__info">
+  <a>Produkt</a> Pris Antal Summa
+</section>
+<section class="mainCheckout__productContainer" id="checkoutProductContainer"></section>
+<div class="mainCheckout__priceContainer">
+<div class="mainCheckout__priceContainer__totalPrice">
+  <p>Summa artiklar:</p>
+  <p>Fraktavgift: </p>
+  <b>Total inkl.moms: </b>
+</div>
+<div class="mainCheckout__priceContainer__totalPrice__number" id="totalPrice"> </div>
+</div>
+<article class="billingParent">
+<section class="billingParent__billingInfo">
+  <div class="mainCheckout__steps">2. LEVERANSADRESS</div>
+
+  <div class="billingParent__tbxContainer">
+  <label>Förnamn</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer"> 
+    <label>Efternamn</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer__wide"> 
+  <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer"> 
+  <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer"> 
+  <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  </div>
+
+</section>
+<section class="billingParent__billingInfo">
+  <div class="mainCheckout__steps">3. FAKTURAADRESS</div>
+
+  <div class="billingParent__tbxContainer">
+    <label>Förnamn</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+      <label>Efternamn</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer__wide"> 
+    <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+    <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+    <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+
+</section>
+ </article>
+
+ <section class="mainCheckout__button">
+  <a href="./orderdone.html"><button id="purchaseBtn">SLUTFÖRA KÖP</button></a>
+
+ </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <section class="footer__container">
+        <span class="footer__description">
+            <a href="#"><div class="footer-logo"></div></a>
+            <p>Vår stora passion är smycken av gediget hantverk och service med stort utbud för förlovning & vigsel. Hos oss går kvalitet hand i hand med ansvar för hållbarhet och vi erbjuder diamantexpertis samt kvalificerad service och reparationer.</p>
+        </span>
+        <span class="footer__info">
+            <h3>Information</h3>
+            <p><a href="#">Förlovningsringar</a></p>
+            <p><a href="#">Vigselringar</a></p>
+            <p><a href="#">Om oss</a></p>
+            <p><a href="#">Frakt & Retur</a></p>
+            <p><a href="#">Garanti</a></p>
+            <p><a href="#">Betalning</a></p>
+        </span>
+        <span class="footer__contact">
+            <h3>Kontakt</h3>
+            <div class="footer__cont">
+              <i class="bi bi-geo-alt"></i>
+              <p class="adress">Diamonds For You
+                  Ankeborgssgatan 55
+                  123 45 Stockholm</p>
+            </div>
+            <div>
+              <i class="bi bi-geo-alt"></i>
+              <p class="adress">Diamonds For You
+                  Stora Nygatan 53
+                  123 45 Malmö</p>
+            </div>
+            <div>
+              <i class="bi bi-telephone"></i>
+              <p>010-10 10 10</p>
+          </div>
+          <div>
+            <i class="bi bi-envelope"></i>
+            <p><a href="https://www.google.com/intl/sv/gmail/about/">info@diamondsofyou.se</a></p>
+          </div>
+            <p>Org nr: 551010-2010</p>
+        </span>
+        <span class="footer__social">
+            <h3>Följ oss</h3>
+            <div>
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://se.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://se.linkedin.com/"><i class="bi bi-tiktok"></i></a>
+            </div>
+        </span>
+    </section>
+  </footer>
+</body>
+</html>

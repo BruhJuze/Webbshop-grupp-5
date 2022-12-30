@@ -1,0 +1,40 @@
+@use '../abstract' as a;
+@use '../base' as b;
+
+.subheader {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: a.$RingCategory-img;
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        margin-top: 60px;
+        width: 80%; 
+        color: a.$white-color;
+        font-size: 48px;
+        z-index: 1;
+        
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .2);
+}
+

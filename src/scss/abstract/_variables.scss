@@ -3,24 +3,26 @@ $menu-width: 300px;
 $navbar-height: 80px;
 $container-width: 1100px;
 
-//shadow
-$boxshadow: 0px 0px 10px #bbbbbb;
+//styles
+$boxshadow: 0px 0px 10px rgb(187, 187, 187);
+$boxshadowHover: 0px 0px 2px rgb(187, 187, 187);; 
 $image-bg-color: linear-gradient(rgba(61, 61, 77, 0.365),rgba(61, 61, 76, 0.302));
+$border: 1px solid rgba(112, 112, 112, 0.5);
 
 //images
-$headerIMG: url(/src/assets/Startsidan/förlovning1svartvit.jpg);
-$headerIMGdesktop: url(../assets/Startsidan/header\ 2.jpg);
+$headerIMG: url(../assets/Startsidan/förlovning1svartvit.jpg);
+$headerIMGdesktop: url(../assets/Startsidan/förlovning1svartvit.jpg);
 $haloRing: url(../assets/Startsidan/HALO.jpeg);
 $sidoRing: url(../assets/Startsidan/SIDOSTEN.jpeg);
 $soliRing: url(../assets/Startsidan/SOLITÄR.jpeg);
 $treRing: url(../assets/Startsidan/TRESTEN.jpeg);
-$natDiamond: url(/src/assets/Startsidan/diamant1.jpeg);
+$natDiamond: url(../assets/Startsidan/diamant1.jpeg);
 $labDiamond: url(/src/assets/Startsidan/71374142_2715941498440600_4780119543261429760_o-805x452.jpeg);
 $tips: url(/src/assets/Om/angelica.jpeg);
 $white-logo: url(../assets/Logo/logo_white.png);
 $contact-header: url(/src/assets/Om/pexels-photo-261628.jpeg);
 $img-sthlm: url(../assets/Startsidan/Stockholm.jpeg);
-$img-malmo: url(/src/assets/Startsidan/Malmö.jpeg);
+$img-malmo: url(../assets/Startsidan/Malmö.jpeg);
 $insta-img-1: url(/src/assets/Instagram/insta\ 1.jpg);
 $insta-img-2: url(/src/assets/Instagram/insta\ 2.jpg);
 $insta-img-3: url(/src/assets/Instagram/insta\ 3.jpg);
@@ -31,6 +33,7 @@ $insta-img-7: url(/src/assets/Instagram/insta\ 7.jpg);
 $insta-img-8: url(/src/assets/Instagram/insta\ 8.jpg);
 $story-img: url(/src/assets/Om/pexels-tima-miroshnichenko-6263111.jpg);
 $history-img: url(/src/assets/Om/2022-lycka-juveler-verkstad-min.jpeg);
+$RingCategory-img: url(../assets/Startsidan/header7.jpg);
 
 //text size
 $h1-font-mobile: 30px;
@@ -44,9 +47,12 @@ $h4-font-desktop: 18px;
 $p-font-mobile-h: 18px;
 $p-font-mobile: 14px;
 $p-font-desktop-h: 25px;
-$p-font-desktop: 20px;
+$p-font-desktop: 19px;
+$p-font-desc: 16px;
 $btn-font-desktop: 18px;
 $btn-font-header: 23px;
+
+$text-liner: 1.5rem;
 
 //margins
 $container-margin: 4rem;
