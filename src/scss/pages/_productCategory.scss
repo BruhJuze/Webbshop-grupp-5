@@ -1,5 +1,6 @@
 @use '../abstract' as a;
 @use '../base' as b;
+@use '../base/buttons' as btn;
 
 
 .text-container {
@@ -7,13 +8,13 @@
     text-align: left;
     width: 90%;
 
-    @include b.medium {
+    @include b.x-large {
         text-align: center;
         max-width: 1100px;
     }
 
     .text{
-        margin-top: 20px;
+        margin-top: a.$margin-20;
         line-height: 1.6rem;
     }
 }
@@ -22,10 +23,6 @@
     display: flex;
     justify-content: center;
     width: 90%;
-
-    @include b.medium {
-
-    }
 }
 
 .product-container {
@@ -37,14 +34,9 @@
     flex-wrap: wrap;
     gap: 15px;
 
-    @include b.medium {
+    @include b.x-large {
         justify-content: flex-start;
-        gap: 25px;
-    }
-
-    @include b.large {
-        justify-content: flex-start;
-        gap: 20px;
+        gap: a.$gap-mobile;
     }
 }
 
@@ -60,7 +52,7 @@
         flex-basis: 23%;
     }
 
-    @include b.large {
+    @include b.x-large {
         flex-basis: 31%;
     }
 
@@ -76,22 +68,21 @@
     //width: auto;
     flex-basis: 25%;
     height: auto;
-    color: #000;
+    color: a.$text-color;
 
-    @include b.medium {
+    @include b.x-large {
         padding-bottom: 30px;
     }
 
     &__title{
-        font-size: 0.75rem;
+        font-size: a.$p-font-mobile;
 
-        @include b.medium {
-            font-size: 1.2rem;
+        @include b.x-large {
+            font-size: a.$p-font-desktop;
         }
         margin-bottom: 5px;
         text-align: center;
         text-transform: uppercase;
-
     }
 
     &__image{
@@ -106,37 +97,30 @@
 
     &__price{
         text-align: center;
-        font-size: 1rem;
+        font-size: a.$p-font-mobile;
 
-        @include b.medium {
-            font-size: 1.2rem;
+        @include b.x-large {
+            font-size: a.$p-font-desktop;
         }
     }
-
 }
 
 .load-more-btn{
-    margin: 40px auto 100px;
-    padding: 10px 35px;
-    display: block;
     position: relative;
+    display: flex;
+    margin: 2rem auto;
     user-select: none;
     appearance: none;
-    border: 1px solid #000;
     outline: none;
-    background: none;
-    cursor: pointer;
-    transition: 300ms ease;
+    text-transform: uppercase;
+    @include btn.gold-btn;
 
     &:hover{
-        background: #000;
-        color: a.$white-color;
+        background: a.$gold-light-rgba;
     }
-}
 
-.product-link-test{
-    width: 100px; 
-    height: 100px; 
-    background: lightpink;
-    cursor: pointer;
+    @include b.x-large{
+        font-size: a.$btn-font-desktop;
+        padding: 0.7rem 2.5rem;
+    }
 }

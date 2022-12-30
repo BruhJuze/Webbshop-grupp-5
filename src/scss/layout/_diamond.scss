@@ -2,14 +2,14 @@
 @use '../base' as b;
 @use '../base/mixins' as m;
 
-.aboutHeader {
+.diamondHeader {
     position: relative;
     width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: a.$image-bg-color, url(/src/assets/Om/pexels-photo-6263109.jpeg);
+    background-image: a.$image-bg-color, a.$diamond-header;
     background-size: cover;
     background-position: center;
 
@@ -26,7 +26,7 @@
     }
 }
 
-.about{
+.diamond{
     margin-top: a.$margin-30;
     margin-bottom: a.$margin-30;
 
@@ -34,7 +34,7 @@
         margin: 4rem;
     }
 
-    .history{
+    .natural{
         @include m.about-container-styling;
 
         @include b.x-large{
@@ -47,16 +47,17 @@
         }
         
         .img{
-            background-image: a.$history-img;
+            background-image: a.$diamond-natural;
             @include m.about-image-styling;
 
             @include b.x-large{
+                height: 650px;
                 width: 500px;
             }
         }
     }
 
-    .story{
+    .labgrown{
         @include m.about-container-styling;
         margin-top: a.$margin-30;
 
@@ -71,7 +72,31 @@
         }
 
         .img{
-            background-image: a.$story-img;
+            background-image: a.$diamond-labgrown;
+            @include m.about-image-styling;
+
+            @include b.x-large{
+                height: 650px;
+                width: 500px;
+            }
+        }
+    }
+
+    .bothDiamonds{
+        @include m.about-container-styling;
+        margin-top: a.$margin-30;
+
+        @include b.x-large{
+            flex-direction: row;
+            gap: a.$gap-100;
+        }
+        
+        &__text{
+            @include m.about-text-styling;
+        }
+        
+        .img{
+            background-image: a.$diamond-both;
             @include m.about-image-styling;
 
             @include b.x-large{

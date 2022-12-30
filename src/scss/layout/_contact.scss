@@ -17,17 +17,13 @@
         margin-top: 60px;
         width: 80%; 
         color: a.$white-color;
-        font-size: 48px;
+        font-size: a.$h1-font-mobile;
         z-index: 1;
-    }
-}
 
-.image-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+        @include b.x-large{
+            font-size: a.$h1-font-desktop;
+        }
+    }
 }
 
 .contact{
@@ -44,9 +40,9 @@
     }
 
     &__containerMalmo{
-        color: black;
+        color: a.$text-color;
         text-align: center;
-        margin-top: 20px;
+        margin-top: a.$margin-20;
 
         @include b.x-large{
             margin-top: 0;
@@ -59,20 +55,20 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 30px;
+        gap: a.$gap-desktop;
         margin-left: auto;
         padding: 20px;
 
         i{
             padding-right: 5px;
-            font-size: 20px;
+            font-size: a.$icon-font;
         }
         h4{
-            font-size: 18px;
+            font-size: a.$h4-font-desktop;
         }
         p{
             padding-left: 25px;
-            font-size: 16px;
+            font-size: a.$p-font-desc;
         }
     }
 
@@ -80,7 +76,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 28px;
+        font-size: a.$h3-font-mobile;
 
         h3{
             padding-left: 20px;
@@ -90,7 +86,7 @@
 
             @include b.x-large{
                 padding-left: 70px;
-                font-size: 43px;
+                font-size: a.$h3-font-desktop;
                 border: none;
             }
         }
@@ -101,6 +97,6 @@
         justify-content: center;
         margin: 4rem auto;
         max-width: a.$container-width;
-        gap: 30px;   
+        gap: a.$gap-desktop;   
     }
 }

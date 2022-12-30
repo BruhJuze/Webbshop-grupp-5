@@ -3,12 +3,12 @@
 
 .subheader {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: a.$RingCategory-img;
+    background-image: a.$image-bg-color, a.$RingCategory-img;
     background-size: cover;
     background-position: center;
 
@@ -16,9 +16,12 @@
         margin-top: 60px;
         width: 80%; 
         color: a.$white-color;
-        font-size: 48px;
-        z-index: 1;
-        
+        font-size: a.$h1-font-mobile;
+        z-index: 1;  
+
+        @include b.x-large{
+            font-size: a.$h1-font-desktop;
+        }
     }
 
     img{
@@ -26,15 +29,5 @@
         height: auto;
         object-fit: cover;
     }
-
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, .2);
 }
 

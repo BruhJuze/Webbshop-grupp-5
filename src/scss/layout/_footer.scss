@@ -12,7 +12,7 @@
         padding: 2rem;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: a.$gap-desktop;
 
         h3{
             margin-bottom: 23px;
@@ -75,7 +75,7 @@
         div{
             i{
                 padding-right: 10px;
-                font-size: 20px;
+                font-size: a.$icon-font;
             }
             a{
                 color: a.$white-color;
