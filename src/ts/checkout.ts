@@ -1,3 +1,7 @@
+import { allRings } from "./module/productData";
+import { Ring } from "./module/ring";
+import { Cart } from "./module/cart";
+
 let prodContainer: HTMLTableSectionElement = document.getElementById("checkoutProductContainer") as HTMLTableSectionElement;
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
@@ -79,4 +83,7 @@ totalPrice.appendChild(bTag);
 
 }
 
+let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || []; 
 
+
+console.log(cart);
