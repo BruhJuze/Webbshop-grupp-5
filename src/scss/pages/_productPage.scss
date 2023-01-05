@@ -29,13 +29,13 @@
     }
 }
 
-.large-image-mob{
-    width: 100%;
+// .large-image-mob{
+//     width: 100%;
 
-    @include b.medium{
-        display: none;
-    }
-}
+//     @include b.medium{
+//         display: none;
+//     }
+// }
 
 .product-image-mobile-container{
     display: block;
@@ -47,7 +47,7 @@
 
 .product-image-desktop-container {
     width: 100%;
-    display: none;
+    // display: none;
 
     .main-img{
         margin: 10px;

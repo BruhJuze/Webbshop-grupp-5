@@ -123,8 +123,8 @@ const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 
 
-const productImages = document.querySelector('.product-image-container');
-const productImagesAll = document.querySelectorAll('.large-image-mob');
+const productImages = document.querySelector('.product-images');
+const productImagesAll = document.querySelectorAll('.product-images img');
 
 let count = 1;
 const width: number = productImagesAll[0]?.clientWidth;

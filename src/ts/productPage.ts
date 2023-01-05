@@ -57,21 +57,21 @@ function renderProductContent(product: string){
                 }
 
                 //create small img mobile
-                const largeImage = document.createElement('img');
-                largeImage.setAttribute('id', String("large-image"));
-                largeImage.classList.add("large-image-mob");
-                productImageContainer?.appendChild(largeImage);
+                // const largeImage = document.createElement('img');
+                // largeImage.setAttribute('id', String("large-image"));
+                // largeImage.classList.add("large-image-mob");
+                // productImageContainer?.appendChild(largeImage);
 
-                for(let i=0; i<1; i++){
-                    largeImage.src = product.img[i];
-                }
+                // for(let i=0; i<1; i++){
+                //     largeImage.src = product.img[i];
+                // }
 
-                for(let i=0; i< product.img.length; i++){
-                    const smallMobImg = document.createElement('img');
-                    smallMobImg.classList.add("large-image-mob");
-                    productImageContainer?.appendChild(largeImage); 
-                    smallMobImg.src = product.img[i];   
-                }
+                // for(let i=0; i< product.img.length; i++){
+                //     const smallMobImg = document.createElement('img');
+                //     smallMobImg.classList.add("large-image-mob");
+                //     productImageContainer?.appendChild(largeImage); 
+                //     smallMobImg.src = product.img[i];   
+                // }
 
 
                 //set title
