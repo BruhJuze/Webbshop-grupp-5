@@ -144,6 +144,7 @@ addToCartButton?.addEventListener('click', ()=> {
             };
 
             renderCartItems();
+            addItemToCartIcon();
     };
 
 });
@@ -299,4 +300,27 @@ export function renderCartItems(){
         localStorage.setItem("data", JSON.stringify(cart));
         renderCartItems();
     };
+
+//const addItemToCart = document.getElementById('added-item-to-cart');
+
+
+function addItemToCartIcon(){
+
+    const addedItemToCart = document.createElement('div');
+    addedItemToCart.setAttribute('id', 'added-item-to-cart');
+    addedItemToCart.innerHTML = "+1";
+    cartButton?.appendChild(addedItemToCart);
+
+    setTimeout(addAnimation, 400);
+
+    function addAnimation(){
+        addedItemToCart.classList.add('item-added');
+    }
+
+    setTimeout(removeElement, 1200);
+    
+    function removeElement(){
+        addedItemToCart.remove()
+    }
+}
 
