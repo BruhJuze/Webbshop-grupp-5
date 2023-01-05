@@ -15,9 +15,9 @@ for (const key of ringURL.keys()){
    ringTypeKey = key; 
 }
 
-const getRing: string = ringURL.get(ringTypeKey)|| '{}';
+export const getRing: string = ringURL.get(ringTypeKey)|| '{}';
 
-let getRingId: number;
+export let getRingId: number;
 
 const productContainer = document.getElementById('product-container');
 let testValue: number; 
@@ -160,7 +160,7 @@ const cartButton = document.querySelector('.cart-button');
 
 cartButton?.addEventListener('click', renderCartItems);
 
-function renderCartItems(){
+export function renderCartItems(){
 
     if(cart.length !==0){
 
@@ -299,3 +299,4 @@ function renderCartItems(){
         localStorage.setItem("data", JSON.stringify(cart));
         renderCartItems();
     };
+
