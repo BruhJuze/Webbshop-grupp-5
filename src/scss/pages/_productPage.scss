@@ -29,6 +29,14 @@
     }
 }
 
+.large-image-mob{
+    width: 100%;
+
+    @include b.medium{
+        display: none;
+    }
+}
+
 .product-image-mobile-container{
     display: block;
 
@@ -185,14 +193,11 @@
         width: 30%;
         margin-top: a.$margin-20;
         margin-bottom: 40px;
+        font-size: a.$btn-font-desktop;
         @include btn.gold-btn;
 
         &:hover {
             background-color: a.$gold-light-rgba;
-        }
-
-        @include b.x-large{
-            font-size: a.$btn-font-desktop;
         }
     }
 
@@ -297,11 +302,11 @@
     .addToCart-btn{
         width: 90%;
         margin: 0 auto;
+        font-size: a.$btn-font-desktop;
         @include btn.gold-btn;
 
         @include b.x-large{
             width: 100%;
-            font-size: a.$btn-font-desktop;
         }
     }
 }

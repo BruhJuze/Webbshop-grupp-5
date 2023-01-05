@@ -319,6 +319,7 @@ nav{
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    font-size: a.$btn-font-mobile;
     @include btn.gold-btn;
 
     &:hover{
