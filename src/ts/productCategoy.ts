@@ -175,3 +175,10 @@ let productLinks = document.querySelectorAll('.product__title');
 renderProducts(filteredItems);
 
 renderPageTitle(getRing);
+
+// Alert för visa mer knapp
+
+const loadMore = document.getElementById("load-btn");
+loadMore?.addEventListener("click", ()=> {
+        alert("Det finns inte några fler produkter att visa!")
+    });
