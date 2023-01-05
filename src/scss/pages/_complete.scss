@@ -33,6 +33,7 @@
     &__thanksBtn{
         width: 45vw;
         height: 15vw;
+        margin-top: a.$margin-30;
         @include btn.clear-btn;
  
         @include b.x-large{

@@ -374,19 +374,20 @@
     } 
 
     button{ 
-        background-color: a.$ourGrey; 
-        color:white; 
         width: 53vw; 
-        padding: 5vw; 
-        border: 0; 
-        font-size: 3.7vw; 
-        cursor: pointer; 
+        font-size: a.$btn-font-mobile;
+        @include btn.gold-btn;
 
         @include b.x-large{ 
          padding: 20px; 
          width: 200px; 
-         font-size: medium; 
+         font-size: a.$btn-font-desktop; 
         } 
+
+        &:hover{
+            background-color: a.$gold-light-rgba;
+            border: a.$gold-light-rgba;
+        }
     } 
 } 
 } 
