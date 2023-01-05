@@ -184,4 +184,3 @@ smallImages.forEach((smallImg) => {
 /************  end of productPage content js  ***********/
 
 
-
