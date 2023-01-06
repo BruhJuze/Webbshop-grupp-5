@@ -1,6 +1,7 @@
 import { allRings } from "./module/productData";
 import { Ring } from "./module/ring";
 
+
 let filteredItems = new Array<Ring>(); 
 
 const presentURL = window.location.href;
@@ -170,3 +171,18 @@ export const totalPrice = renderProductContent(getRing);
 // let carat9 = new Carat("1.00", 18000);
 
 // let allCarats = [carat0, carat1, carat2, carat3, carat4, carat5, carat6, carat7, carat8, carat9]
+
+function renderCarouselImages(id: string){
+    for(let ring of allRings){
+        if(id === ring.name){
+            for(let i = 0; i < ring.img.length; i++){
+                const largeMobile = document.createElement("img");
+                largeMobile.classList.add("large-image");
+                largeMobile.src = ring.img[i];
+                productImages?.appendChild(largeMobile);
+            }
+        }
+    }
+}
+
+renderCarouselImages(getRing);

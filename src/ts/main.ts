@@ -124,10 +124,10 @@ const nextButton = document.getElementById('next-button');
 
 
 const productImages = document.querySelector('.product-images');
-const productImagesAll = document.querySelectorAll('.product-images img');
+const productImagesAll = document.getElementsByClassName('large-image');
 
-let count = 1;
-const width: number = productImagesAll[0]?.clientWidth;
+let count = 0;
+const width: number = productImages?.clientWidth || 0;
 
 let currentPosition = 0;
 
