@@ -1,3 +1,6 @@
+import { allRings, ringCategories } from "./module/productData";
+import { Ring } from "./module/ring";
+
 let prodContainer: HTMLTableSectionElement = document.getElementById("checkoutProductContainer") as HTMLTableSectionElement;
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
