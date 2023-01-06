@@ -16,6 +16,7 @@ function renderCheckoutContent(){
         prodContainer.innerHTML = "";
 
          for  (let checkoutItem of cart) {
+            console.log(JSON.stringify(cart));
 
             let newProduct: HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let title:HTMLElement = document.createElement("section") as HTMLElement;
@@ -32,6 +33,7 @@ function renderCheckoutContent(){
             let amountNumber: HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let plusIcon:HTMLElement = document.createElement("i") as HTMLElement;
             let minusIcon:HTMLElement = document.createElement("i") as HTMLElement;
+            let pTag: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
             
 
             newProduct.className = "mainCheckout__newProduct";
@@ -57,9 +59,11 @@ function renderCheckoutContent(){
 
             title.innerHTML =checkoutItem.name;
             image.src = checkoutItem.img;
-            pricePerThing.innerHTML = checkoutItem.price.toString() + " " + "kr";
+            pricePerThing.innerHTML = checkoutItem.price.toString() + " " + "kr/st";
             sum.innerHTML = checkoutItem.price.toString() + " " + "kr";
-            // amountNumber.innerHTML = "1";
+            amountNumber.innerHTML = JSON.stringify(checkoutItem.item);
+            pTag.innerHTML = checkoutItem.item + " kr";
+            bTag.innerHTML = checkoutItem.item + checkoutItem.item + " kr";
 
             newProduct.appendChild(leftContainer);
             newProduct.appendChild(rightContainer);
@@ -75,6 +79,9 @@ function renderCheckoutContent(){
             amountSub.append(minusIcon);
             rightContainer.appendChild(removeBtn);
             rightContainer.appendChild(sum);
+            totalPrice.appendChild(pTag);
+            totalPrice.appendChild(pTag);
+            totalPrice.appendChild(bTag);
             
             prodContainer.appendChild(newProduct);
 
@@ -82,6 +89,8 @@ function renderCheckoutContent(){
 
      }
  }
+
+    
 
 renderCheckoutContent();
 
