@@ -142,7 +142,7 @@
 
       button{  
         width: 100px;
-        height: 30px;
+        height: 35px;
         top: 80%;
         font-size: a.$btn-font-mobile;
         position: relative;
@@ -156,6 +156,12 @@
           width: 70%;
           height: 15%;
         }
+
+        a{
+          text-decoration: none;
+          color: a.$white-color;
+        }
+
         &:hover{
           background-color: a.$gold-light-rgba;
           border: a.$gold-light-rgba;
@@ -240,7 +246,7 @@
   &__btn{
     @include btn.clear-btn;
     width: 100px;
-    height: 30px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

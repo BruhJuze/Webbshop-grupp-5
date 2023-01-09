@@ -11,7 +11,7 @@
     margin: a.$margin-20 auto;
     max-width: 1100px;
     
-    @include b.x-large {
+    @include b.medium {
         margin-top: 50px;
         display: flex;
         gap: 30px;
@@ -24,23 +24,15 @@
     width: 100%;
     overflow: hidden;
 
-    @include b.x-large {
+    @include b.medium {
         width: 45%;
     }
 }
 
-// .large-image-mob{
-//     width: 100%;
-
-//     @include b.medium{
-//         display: none;
-//     }
-// }
-
 .product-image-mobile-container{
     display: block;
 
-    @include b.x-large {
+    @include b.medium {
         display: none;
     }
 }
@@ -87,7 +79,7 @@
         }
     }
 
-    @include b.x-large {
+    @include b.medium {
         display: block;
     }
 }
@@ -138,7 +130,7 @@
 
 .navigation-dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
@@ -159,14 +151,14 @@
         }
     }
 
-    @include b.x-large {
+    @include b.medium{
         display: none;
     }
 }
 
 .product-info-container{
 
-    @include b.x-large {
+    @include b.medium {
         margin-top: 10px;
         width: 45%;
         display: flex;
@@ -180,8 +172,6 @@
     
     &__title {
         margin-bottom: 10px;
-        font-size: a.$h3-font-mobile;
-        // font-weight: 600;
     }
 
     &__text {
@@ -201,7 +191,7 @@
         }
     }
 
-    @include  b.x-large {
+    @include  b.medium {
         width: 100%;
     }
 }
@@ -260,7 +250,7 @@
         }
     }
 
-    @include b.x-large {
+    @include b.medium {
         width: 100%;
 
             select {
@@ -279,7 +269,7 @@
     display: flex;
     justify-content: end;
 
-    @include b.x-large { 
+    @include b.medium { 
         width: 100%;
     }
 
@@ -305,7 +295,7 @@
         font-size: a.$btn-font-desktop;
         @include btn.gold-btn;
 
-        @include b.x-large{
+        @include b.medium{
             width: 100%;
         }
     }
@@ -417,7 +407,7 @@
         }
     }
 
-    @include b.x-large { 
+    @include b.medium { 
         margin: 100px 70px;
         max-width: 800px;
         width: 88%; 
