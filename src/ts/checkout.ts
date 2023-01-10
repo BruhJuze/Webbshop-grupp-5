@@ -8,8 +8,9 @@ let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || [];
 let prodContainer: HTMLTableSectionElement = document.getElementById("checkoutProductContainer") as HTMLTableSectionElement;
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
+let totalSum: number = 0;
 
-function renderCheckoutContent(){
+export function renderCheckoutContent(){
 
     if(cart.length !==0) {
 
@@ -58,7 +59,8 @@ function renderCheckoutContent(){
             title.innerHTML =checkoutItem.name;
             image.src = checkoutItem.img;
             pricePerThing.innerHTML = checkoutItem.price.toString() + " " + "kr";
-            sum.innerHTML = checkoutItem.price.toString() + " " + "kr";
+            sum.innerHTML = checkoutItem.price * checkoutItem.item + " " + "kr";
+
             // amountNumber.innerHTML = "1";
 
             newProduct.appendChild(leftContainer);

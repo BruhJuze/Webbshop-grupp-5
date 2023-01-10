@@ -124,14 +124,16 @@ const nextButton = document.getElementById('next-button');
 
 
 const productImages = document.querySelector('.product-images');
-const productImagesAll = document.querySelectorAll('.product-images img');
+const productImagesAll = document.getElementsByClassName('large-image');
+
+console.log(productImages?.clientWidth);
 
 let count = 1;
-const width: number = productImagesAll[0]?.clientWidth;
+const width: number = productImages?.clientWidth || 0;
 
 let currentPosition = 0;
 
-if ( window.innerWidth < 600){
+if ( window.innerWidth < 600){ // set max width of image carousel
 
 (productImages as HTMLInputElement).style.transform = 'translateX(' + (-width * count) + 'px)';
 
@@ -145,12 +147,12 @@ prevButton?.addEventListener('click', () => {
 });
 
 nextButton?.addEventListener('click', ()=> {
-    if (count >= productImagesAll.length -1) return; 
+    if (count >= (productImagesAll.length -2))
+    return; 
     currentPosition = -width * count;
     (productImages as HTMLInputElement).style.transition = 'transform 300ms ease-in-out';
     count++;
     (productImages as HTMLInputElement).style.transform = 'translateX(' + (-width * count) + 'px)';
-
 });
 
 };
@@ -169,6 +171,7 @@ const smallImages = document.querySelectorAll('.small-group__img');
 
 smallImages.forEach((smallImg) => {
     smallImg.addEventListener('click', (event)=> {
+        console.log("funka");
         let imgTag = event.target as HTMLImageElement;
         mainImg.src = imgTag.src;
     });

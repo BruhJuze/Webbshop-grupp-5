@@ -204,6 +204,7 @@
 .product-options {
     width: 90%;
     margin: 0 auto;
+    display: none;
 
     &__type {
         margin-bottom: 20px;
@@ -350,7 +351,7 @@
     &__divider {
         width: 100vw;
         height: 1px; 
-        background-color: a.$text-color;
+        background-color: rgba(0, 0, 0, 0.5);
         margin-top: 10px;
         margin-bottom: 20px;
     }

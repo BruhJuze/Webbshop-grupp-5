@@ -327,24 +327,26 @@ function addItemToCartIcon(){
 //const productImages
 
 
-// function renderCarouselImages(id: string){
+function renderCarouselImages(id: string){
 
-//     for (let ring of allRings ) {
+    for (let ring of allRings ) {
 
-//         if( id === ring.name) {
-//             console.log("hittat korrekt ring");
-//             const largeMobileImage = document.createElement('img');
-//             largeMobileImage.classList.add('large-mobile-image');
-//             largeMobileImage.src = ring.img[i];
-//                 smallGroupImg.src = product.img[i];   
-//             productImages?.appendChild(largeMobileImage);
+        if( id === ring.name) {
+            console.log("hittat korrekt ring");
+            for(let i=0; i<ring.img.length; i++){
+                
+                const largeMobileImage = document.createElement('img');
+                largeMobileImage.classList.add('large-image');
+                largeMobileImage.src = ring.img[i];
+                productImages?.appendChild(largeMobileImage);
+            }
 
+            return; 
+        } else{
+            console.log("ringen vi letar efter är inkorrekt");
+        }
+    }
+}
 
-//             return; 
-//         } else{
-//             console.log("ringen vi letar efter är inkorrekt");
-//         }
-//     }
-// }
+renderCarouselImages(getRing);
 
-// renderCarouselImages(getRing);
