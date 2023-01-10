@@ -200,21 +200,6 @@ let getRingName: string = "";
 
 let ringNameURL = new URL(window.location.href);
 
-//const productLink = document.querySelector('.product-link');
-
-// productLink?.addEventListener("click", ()=> {
-//     console.log("funka");
-// })
-
-
-//let subheaderTitle = document.querySelectorAll('.product-link-test');
-
-//console.log(subheaderTitle);
-
-// subheaderTitle?.addEventListener('click', ()=>{
-//     console.log("funka");
-// })
-
 let productLinks = document.querySelectorAll('.product__title');
 
 renderProducts(filteredItems);

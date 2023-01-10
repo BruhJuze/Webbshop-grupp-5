@@ -1,5 +1,6 @@
 import { allRings } from "./module/productData";
 import { Ring } from "./module/ring";
+import { Cart } from "./module/cart";
 
 
 let filteredItems = new Array<Ring>(); 
@@ -14,7 +15,9 @@ for (const key of ringURL.keys()){
    ringTypeKey = key; 
 }
 
-const getRing: string = ringURL.get(ringTypeKey)|| '{}';
+export const getRing: string = ringURL.get(ringTypeKey)|| '{}';
+
+export let getRingId: number;
 
 const productContainer = document.getElementById('product-container');
 let testValue: number; 
@@ -22,6 +25,7 @@ let testValue: number;
 const productImageContainer = document.querySelector('.product-image-container');
 const mainImage = document.querySelector('.main-img');
 const productImgSmallGroup = document.querySelector('.small-group');
+const productInfo = document.querySelector('.product-info');
 const productInfoTitle = document.querySelector('.product-info__title');
 const productInfoText = document.querySelector('.product-info__text');
 const productDescTextInner = document.querySelector('.product-desc__text__inner');
@@ -43,7 +47,7 @@ function renderProductContent(product: string){
                     
                 //create main img
                 const productImg = document.createElement('img');
-                productImg.setAttribute('id', String(".main-img"));
+                productImg.setAttribute('id', String("main-img"));
                 mainImage?.appendChild(productImg);
 
                 for(let i=0; i<1; i++){
@@ -57,23 +61,12 @@ function renderProductContent(product: string){
                     smallGroupImg.src = product.img[i];   
                 }
 
-                //create small img mobile
-                // const largeImage = document.createElement('img');
-                // largeImage.setAttribute('id', String("large-image"));
-                // largeImage.classList.add("large-image-mob");
-                // productImageContainer?.appendChild(largeImage);
+                const largeImage = document.createElement('img');
+                largeImage.classList.add("large-image");
+                productImages?.appendChild(largeImage);
+                //largeImage.src = ring.img;
 
-                // for(let i=0; i<1; i++){
-                //     largeImage.src = product.img[i];
-                // }
-
-                // for(let i=0; i< product.img.length; i++){
-                //     const smallMobImg = document.createElement('img');
-                //     smallMobImg.classList.add("large-image-mob");
-                //     productImageContainer?.appendChild(largeImage); 
-                //     smallMobImg.src = product.img[i];   
-                // }
-
+                productInfo?.setAttribute('id', String(product.id));
 
                 //set title
                 const productTitle = document.createElement('h3');
@@ -110,67 +103,221 @@ function renderProductContent(product: string){
                 productPrice.innerHTML = thisProductPrice.toString() + " " + "kr";
                 totalprice?.appendChild(productPrice);
 
-                // //diamond price
-                // selectDiamond.addEventListener('change', ()=> {
-
-                //     let valueDiamond = selectDiamond.value;
-                //     let newValueDiamond: number = +valueDiamond;
-                //     let totalSumDiamond = newValueDiamond * thisProductPrice;
-                //     let sumDiamond = totalSumDiamond;
-
-                //     productPrice.innerHTML = sumDiamond + " " + "kr";
-                //     console.log(totalSumDiamond);
-                //     return totalSumDiamond;
-                // });
-                //carat price
-
-
-                selectCarat.addEventListener('change', ()=> {
-
-                    let valueCarat = selectCarat.value;
-                    let newValueCarat: number = +valueCarat;                
-                    let totalSumCarat = newValueCarat * thisProductPrice;
-                    let sumCarat = totalSumCarat;
-
-                    productPrice.innerHTML = sumCarat + " " + "kr";                
-                    console.log(sumCarat);
-                    testValue = sumCarat;
-
-                    return sumCarat;
-                });
+                getRingId = product.id;
     
             }
     }
 }
 
-// function totalsum(totalsum:number, totalprice:number){
-//     ringPrice = totalsum + totalprice;
 
-//    return ringPrice; 
-   
-// }
+renderProductContent(getRing);
+
+const addToCartButton = document.querySelector('.addToCart-btn');
+
+let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || []; 
+
+let cartItemCounter: number;
+
+addToCartButton?.addEventListener('click', ()=> {
+
+    for (let product of allRings){
+
+            if(getRingId == product.id){
+
+                let cartItem = new Cart(product.id, product.name, product.price, "carat", product.img[0], 1);
+
+                let search = cart.find( (x) => x.id === product.id);
+
+                if(search === undefined) {
+                    cart.push(cartItem); 
+                }
+                else {
+                    search.item +=1; 
+                }
+
+                localStorage.setItem("data", JSON.stringify(cart));
+                console.log(cart);
+
+            };
+
+            renderCartItems();
+            addItemToCartIcon();
+    };
+
+});
+
+const productInfoReadMe = document.querySelector('.product-info__readMore');
+
+productInfoReadMe?.addEventListener('click', ()=> {
+    console.log(cart);
+});
+
+const cartContainer = document.getElementById('cart-container') as HTMLElement;
+
+const cartButton = document.querySelector('.cart-button');
+
+cartButton?.addEventListener('click', renderCartItems);
+
+export function renderCartItems(){
+
+    if(cart.length !==0){
+
+        cartContainer.innerHTML = "";
+
+        for (let cartItem of cart){
+                
+                    const cartProduct = document.createElement('div');
+                    cartProduct.classList.add("cart-product");
+                    cartProduct.setAttribute('id', (cartItem.name));
+                    cartContainer?.appendChild(cartProduct);
+
+                    const cartProductImg = document.createElement('img');
+                    cartProductImg.classList.add("cart-product__img");
+                    cartProduct.appendChild(cartProductImg);
+                    cartProductImg.src = cartItem.img;
+
+                    const cartContent = document.createElement('div');
+                    cartContent.classList.add("cart-content");
+                    cartProduct.appendChild(cartContent);
+
+                    const cartContentLeft = document.createElement('div');
+                    cartContentLeft.classList.add("cart-content__left");
+                    cartContent.appendChild(cartContentLeft);
+
+                    const cartContentTitle = document.createElement('div');
+                    cartContentTitle.classList.add("cart-content-title");
+                    cartContentLeft.appendChild(cartContentTitle);
+                    const cartParagraph = document.createElement('p');
+                    cartParagraph.innerHTML = cartItem.name;
+                    cartContentTitle.appendChild(cartParagraph);
+
+                    const cartContentLeftAddRemove = document.createElement('div');
+                    cartContentLeftAddRemove.classList.add("cart-content__left__addRemove");
+                    cartContentLeft.appendChild(cartContentLeftAddRemove);
+                    const dashIconContainer = document.createElement('div');
+                    dashIconContainer.classList.add("dash-icon-container");
+                    dashIconContainer.innerHTML = `<i class="bi bi-dash-square"></i>`;
+                    dashIconContainer.addEventListener('click', ()=> {
+                        let search = cart.find( (x) => x.id === cartItem.id);
+
+                        let searchItem = search?.item;
+
+                        //searchItem = searchItem++ || 0;
+                    });
+                    cartContentLeftAddRemove.appendChild(dashIconContainer);
+                    const cartQuantity = document.createElement('div');
+                    cartQuantity.classList.add("cart-quantity");
+                    cartQuantity.innerHTML = String(cartItem.item);
+                    cartContentLeftAddRemove.appendChild(cartQuantity);
+                    const plusIconContainer = document.createElement('div');
+                    plusIconContainer.classList.add("plus-icon-container");
+                    plusIconContainer.innerHTML = `<i class="bi bi-plus-square"></i>`;
+                    plusIconContainer.addEventListener('click', ()=> {
+                        //incrementCartItem(cartItem.id);
+                    });
+    
+                    cartContentLeftAddRemove.appendChild(plusIconContainer);
+
+                    const cartContentRight = document.createElement('div');
+                    cartContentRight.classList.add("cart-content__right");
+                    cartContent.appendChild(cartContentRight);
+
+                    const deleteProductBtn = document.createElement('div');
+                    deleteProductBtn.classList.add("delete-product-btn");
+                    deleteProductBtn.innerHTML = ` <i class="bi bi-x"></i>`;
+                    deleteProductBtn.addEventListener('click', ()=> {
+                        removeItem(cartItem.id);
+                    });
+
+                    cartContentRight.appendChild(deleteProductBtn);
+
+                    const cartContentPrice = document.createElement('div');
+                    cartContentPrice.classList.add("cart-content__price");
+
+                    let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
+                    let selectCarat = document.getElementById('carat') as HTMLSelectElement;
+                    //let sumCarat: number;
+
+               // };
+
+               }
+            //}
+        }
+
+    } 
+
+    // function incrementCartItem(id: number){
+
+    //     let selectedItem = id;
+
+    //     let search = cart.find( (x) => x.id === selectedItem);
+
+    //     //search.item++;
+    //     // for (let product of allRings){
+
+    //     //     if(getRingId == product.id){
+
+    //     //         let cartItem = new Cart(product.id, product.name, product.price, "carat", product.img[0], 1);
+
+    //     //         let search = cart.find( (x) => x.id === product.id);
+
+    //     //         if(search === undefined) {
+    //     //             cart.push(cartItem); 
+    //     //         }
+    //     //         else {
+    //     //             search.item +=1; 
+    //     //         }
+
+    //     //         localStorage.setItem("data", JSON.stringify(cart));
+    //     //         console.log(cart);
+
+    //     //     };
+
+    //     //     renderCartItems();
+    //     // };
+
+    //     console.log(id);
+        
+    // }
+
+    function decrementCartItem(id: number){
+        console.log(id + "decrement");
+    }
+
+    function removeItem(id: number){
+        let selectedItem = id;
+        //console.log(selectedItem);
+        cart = cart.filter( (x) =>  x.id != selectedItem);
+        localStorage.setItem("data", JSON.stringify(cart));
+        renderCartItems();
+    };
+
+//const addItemToCart = document.getElementById('added-item-to-cart');
 
 
+function addItemToCartIcon(){
 
-export const totalPrice = renderProductContent(getRing);
+    const addedItemToCart = document.createElement('div');
+    addedItemToCart.setAttribute('id', 'added-item-to-cart');
+    addedItemToCart.innerHTML = "+1";
+    cartButton?.appendChild(addedItemToCart);
+
+    setTimeout(addAnimation, 400);
+
+    function addAnimation(){
+        addedItemToCart.classList.add('item-added');
+    }
+
+    setTimeout(removeElement, 1200);
+    
+    function removeElement(){
+        addedItemToCart.remove()
+    }
+}
 
 
-// class Carat{
-//     constructor(public size:string, public price: number){};
-// }
+renderCarouselImages(getRing);
 
-// let carat0 = new Carat("0", 0);
-// let carat1 = new Carat("0.25", 2000);
-// let carat2 = new Carat("0.30", 4000);
-// let carat3 = new Carat("0.40", 6000);
-// let carat4 = new Carat("0.50", 8000);
-// let carat5 = new Carat("0.60", 10000);
-// let carat6 = new Carat("0.70", 12000);
-// let carat7 = new Carat("0.80", 14000);
-// let carat8 = new Carat("0.90", 16000);
-// let carat9 = new Carat("1.00", 18000);
-
-// let allCarats = [carat0, carat1, carat2, carat3, carat4, carat5, carat6, carat7, carat8, carat9]
 
 function renderCarouselImages(id: string){
     for(let ring of allRings){

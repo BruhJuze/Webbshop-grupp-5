@@ -1,10 +1,11 @@
 export class Cart {
-    id: string;
-    price: number;
-
-    constructor (id: string, price: number ){
-        this.id = id;
-        this.price = price;
-    }
+    constructor (
+        public id: number,
+        public name: string,
+        public price: number,
+        public carat: string,
+        public img: string,
+        public item: number = 0
+        ) {}
 
 }

@@ -279,8 +279,36 @@ nav{
 }
 
 .cart-button {
+    position: relative;
     cursor: pointer;
     margin-left: 20px;
+
+    #added-item-to-cart {
+        position: absolute;
+        left: 50%;
+        width: 37px;
+        height: 37px;
+        padding: 5px;
+        opacity: 0;
+        transform: translate(-50%, -25px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(60, 179, 113);
+        font-size: 23px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: 5px;
+        border: 2px solid rgb(60, 179, 113);
+        border-radius: 50%;
+        box-shadow: 0 0 7px rgb(60, 179, 113);
+        transition:  opacity 300ms ease-in-out, transform 350ms ease;
+
+        &.item-added {
+            opacity: 1;
+            transform: translate(-50%, 20px);
+        }
+    }
 
     i{
         font-size: a.$icon-font;
