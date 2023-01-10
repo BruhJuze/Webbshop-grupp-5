@@ -8,13 +8,22 @@
 }
 
 .product-container {
-    margin: 0 auto;
+    margin: 0px auto;
     max-width: 1100px;
-    
-    @include b.medium {
+    width: 100%;
+
+    @include b.x-large {
         display: flex;
-        gap: 30px;
-        width: 100%;
+        justify-content: space-between;
+        width: 90%;
+    }
+}
+
+.product-page-fix{
+    margin-top: a.$margin-20;
+
+    @include b.x-large{
+        margin-top: 50px;
     }
 }
 
@@ -23,7 +32,7 @@
     width: 100%;
     overflow: hidden;
 
-    @include b.medium {
+    @include b.x-large {
         width: 45%;
     }
 }
@@ -31,7 +40,7 @@
 .product-image-mobile-container{
     display: block;
 
-    @include b.medium {
+    @include b.x-large {
         display: none;
     }
 }
@@ -78,9 +87,10 @@
         }
     }
 
-    @include b.medium {
+    @include b.x-large {
         display: block;
     }
+
 }
 
 .navigation-container {
@@ -117,6 +127,10 @@
 
 .product-images-desktop {
     display: none;
+
+    // @include b.medium {
+    //     display: flex;
+    // }
 }
 
 .navigation-radio-dots {
@@ -129,7 +143,7 @@
 
 .navigation-dots {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
@@ -139,38 +153,42 @@
     gap: 10px;
 
     &__button {
-        border: a.$border2px;
+        border: 2px solid #000;
         padding: 5px;
         border-radius: 10px;
         cursor: pointer;
         transition: 300ms ease;
 
         &:hover {
-            background-color: a.$text-color;
+            background-color: #000;
         }
     }
 
-    @include b.medium{
+    @include b.x-large {
         display: none;
     }
 }
 
 .product-info-container{
 
-    @include b.medium {
+    @include b.x-large {
         margin-top: 10px;
         width: 45%;
         display: flex;
         flex-direction: column;
     }
+
 }
 
 .product-info {
     width: 90%;
     margin: 0 auto;
     
+
     &__title {
         margin-bottom: 10px;
+        font-size: a.$h3-font-mobile;
+        // font-weight: 600;
     }
 
     &__text {
@@ -180,17 +198,20 @@
 
     &__readMore {
         width: 30%;
-        margin-top: a.$margin-20;
+        margin-top: 20px;
         margin-bottom: 40px;
-        font-size: a.$btn-font-desktop;
         @include btn.gold-btn;
 
         &:hover {
             background-color: a.$gold-light-rgba;
         }
+
+        @include b.x-large{
+            font-size: a.$btn-font-desktop;
+        }
     }
 
-    @include  b.medium {
+    @include  b.x-large {
         width: 100%;
     }
 }
@@ -198,7 +219,6 @@
 .product-options {
     width: 90%;
     margin: 0 auto;
-    display: none;
 
     &__type {
         margin-bottom: 20px;
@@ -216,6 +236,7 @@
             &:after {
                 content: '\25bc';
                 position: absolute;
+                // top: 0;
                 right: 0;
                 height: 100%;
                 width: 25px;
@@ -225,12 +246,12 @@
                 background-color: a.$gold-btn-rgba;
                 color: a.$white-color;
                 border-radius: 0px 3px 3px 0px;
-                font-size: a.$h4-font-mobile;
+                font-size: 0.7rem;
                 cursor: pointer;
                 pointer-events: none;
 
                 &:hover{
-                    background-color: a.$text-color;
+                    background-color: rgba(0, 0, 0, 0.7);
                 }
             }
         }
@@ -253,14 +274,55 @@
     @include b.medium {
         width: 100%;
 
+        // &__type {
+        //     margin-bottom: 20px;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+               
+            // .select{
+            //     position: relative;
+            //     display: flex;
+            //     justify-content: center;
+            //     cursor: pointer;
+                
+            //     &:after {
+            //         content: '\25bc';
+            //         position: absolute;
+            //         top: 0;
+            //         right: 0;
+            //         height: 100%;
+            //         width: 25px;
+            //         display: flex;
+            //         align-items: center;
+            //         justify-content: center;
+            //         background-color: rgba(0, 0, 0, 1);
+            //         color: #fff;
+            //         border-radius: 0px 3px 3px 0px;
+            //         font-size: 0.7rem;
+            //         cursor: pointer;
+            //         pointer-events: none;
+
+            //         &:hover{
+            //             background-color: rgba(0, 0, 0, 0.7);
+            //         }
+            //     }
+            // }
+
             select {
+                // appearance: none;
+                // outline: none;
                 width: 250px;
+                // padding: 5px 15px;
+                // border-radius: 3px;
+                // cursor: pointer;
             }
 
             input {
                 width: 215px;
                 padding: 5px 15px;
             }
+
     }
 }
 
@@ -292,11 +354,11 @@
     .addToCart-btn{
         width: 90%;
         margin: 0 auto;
-        font-size: a.$btn-font-desktop;
         @include btn.gold-btn;
 
         @include b.medium{
             width: 100%;
+            font-size: a.$btn-font-desktop;
         }
     }
 }
@@ -345,7 +407,7 @@
     &__divider {
         width: 100vw;
         height: 1px; 
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.2);
         margin-top: 10px;
         margin-bottom: 20px;
     }
@@ -366,6 +428,7 @@
         }
     }
 }
+
 
 .feature-container {
     width: 100vw;
@@ -417,3 +480,24 @@
         }
     }
 }
+
+// .small-group {
+//     margin: 10px;
+//     display: flex;
+//     justify-content: space-between;
+
+//     &__img {
+//         flex-basis: 23%;
+//         height: 130px;
+//         display: flex;
+//         align-items: center;
+//         box-shadow: a.$boxshadowHover;
+//         border-radius: 8px;
+//         cursor: pointer;
+
+//         img {
+//             width: 100%;
+//             object-fit: cover;
+//         }
+//     }
+// }
