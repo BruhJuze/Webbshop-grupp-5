@@ -26,13 +26,12 @@
 }
 
 .product-container {
-    margin-bottom: 100px;
-    width: 100%;
+    
     height: auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: a.$gap-mobile;
 
     @include b.medium {
         justify-content: flex-start;
@@ -75,7 +74,6 @@
 
     @include b.medium {
         flex-basis: 23%;
-        
     }
 
     @include b.x-large {
