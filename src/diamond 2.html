@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="scss/main.scss" rel="stylesheet" />
+    <script src="ts/main.ts" defer type="module"></script>
+    <title>Diamonds for U</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+  </head>
+  <body>
+    <aside class="nav-menu">
+      <nav>
+        <div class="container">
+          <div class="navbar">
+            <a href="index.html" class="logo">
+              <img class="logo-png" src="assets/Logo/logo.png" alt="logo" />
+            </a>
+            <div class="desktop-menu">
+              <ul class="menu__ul">
+                <li class="menu__li">
+                  <a href="#" class="menu__a no-link">Förlovningsringar</a>
+                  <ul class="dropdown">
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="solitar-link"
+                        data-ringtype="solitar"
+                        >Solitärringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="halo-link"
+                        data-ringtype="halo"
+                        >Haloringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="tresten-link"
+                        data-ringtype="tresten"
+                        >Trestensringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="sidosten-link"
+                        data-ringtype="sidosten"
+                        >Sidostensringar</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="menu__a no-link">Vigselringar</a>
+                  <ul class="dropdown dropdown2">
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="slata-link"
+                        data-ringtype="slata"
+                        >Släta ringar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./productCategory.html"
+                        class="ring-links"
+                        id="allians-link"
+                        data-ringtype="allians"
+                        >Alliansringar</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html" class="menu__a">Om oss</a></li>
+                <li><a href="contact.html" class="menu__a">Kontakt</a></li>
+              </ul>
+            </div>
+            <button class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="cart-button">
+              <i class="bi bi-cart4"></i>
+            </div>
+          </div>
+          <!--end navbar -->
+        </div>
+        <!-- end container -->
+      </nav>
+        <div class="mobile-menu">
+          <ul class="mobile-menu__ul">
+            <li class="menu__li">
+              <a href="#" class="menu__a no-link">Förlovningsringar</a>
+              <ul class="dropdown">
+                <li>
+                  <a
+                    href="./productCategory.html"
+                    class="ring-links"
+                    id="solitar-link"
+                    data-ringtype="solitar"
+                    >Solitärringar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./productCategory.html"
+                    class="ring-links"
+                    id="halo-link"
+                    data-ringtype="halo"
+                    >Haloringar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./productCategory.html"
+                    class="ring-links"
+                    id="tresten-link"
+                    data-ringtype="tresten"
+                    >Trestensringar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./productCategory.html"
+                    class="ring-links"
+                    id="sidosten-link"
+                    data-ringtype="sidosten"
+                    >Sidostensringar</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="menu__a no-link">Vigselringar</a>
+              <ul class="dropdown dropdown2">
+                <li>
+                  <a
+                    href="./productCategory.html"
+                    class="ring-links"
+                    id="slata-link"
+                    data-ringtype="slata"
+                    >Släta ringar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./productCategory.html"
+                    class="ring-links"
+                    id="allians-link"
+                    data-ringtype="allians"
+                    >Alliansringar</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="about.html" class="menu__a">Om oss</a></li>
+            <li><a href="contact.html" class="menu__a">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="cart">
+          <button class="close-button">
+            <i class="bi bi-x"></i>
+          </button>
+          <div class="cart__container">
+            <div class="cart__title">Din kundvagn</div>
+            <button
+              class="checkout-button"
+              id="checkoutBtn"
+              href="/checkout.html"
+            >
+              Gå till kassan
+            </button>
+          </div>
+        </div>
+      </aside>
+
+    <header>
+        <section class="diamondHeader">
+            <h1 class="diamondHeader__title">Våra olika diamanter</h1>
+        </section>
+    </header>
+
+    <main class="diamond">
+        <section class="natural">
+            <span class="natural__text">
+                <h3>Naturliga diamanter</h3>
+                <p>En diamant består av grundämnet kol som kristalliserats under högt tryck, den är hårdare än alla andra naturliga material och varje diamant är unik i sina egenskaper. Med rätt slipning reflekterar den ljuset på ett oslagbart sätt och den har för många blivit en given symbol för kärlek och förlovning. Vi anser att den allra viktigaste egenskapen hos en diamant är slipningen, denna avgör hur mycket ljus diamanten reflekterar och därmed också hur mycket den gnistrar. Med rätt slipning upplevs diamanten också större än en sten med samma caratvikt som har en sämre slipning. Detta är nog den egenskap som de flesta tänker på först och känner sig mest bekanta med. Carat är ett mått på diamantens vikt, där 1.00 Carat motsvarar 0,2 gram, och alltså inte nödvändigtvis dess storlek. Beroende på hur diamanten slipats kan den upplevas som olika stor trots att den har samma caratvikt.</p>
+                <p>Våra naturliga diamanter certifieras av GIA (Gemological Intitute of America) som är det högst ansedda institutet på marknaden och ett certifikat från dem intygar att diamanten har kontrollerats av en internationell oberoende part. Certifikatet innehåller en fullständig analys av diamantens mått, proportioner, färg, slipning och övriga egenskaper vilket innebär en trygghet för dig som köpare. Det finns en mängd olika institut på marknaden som utfärdar certifikat och det är inte alltid de bedömer diamanterna lika, vi har valt att arbeta med GIA eftersom de anses ställa högst krav och vara mest konsekventa i sina bedömningar. Våra labodlade diamanter kommer med ett certifikat från IGI (International Gemological Institute) som är det certifieringsorgan som har störst erfarenhet när det kommer till att certifiera labodlade stenar.</p>
+            </span>
+            <div class="natural__picture">
+                <div class="img"></div>
+            </div>
+        </section>
+        <section class="labgrown">
+            <span class="labgrown__text">
+                <h3>Labbodlade diamanter</h3>
+                <p>Labbodlade diamanter har exakt samma utseende, kemiska sammansättning och egenskaper som diamanter som bryts ur jordskorpan. Tillverkningen sker i kontrollerade laboratoriemiljöer genom att man återskapar den process som sker i naturen när en diamant bildas. Genom att använda hög värme och högt tryck odlas diamanterna från ett frö, bestående av en kolatom från en befintlig diamant, som får växa till önskad storlek. Denna process som i naturen tar många miljoner år sker i laboratoriets växthus på ungefär tre till fyra veckor.</p>
+                <p>Det är mycket svårt att skilja en labbodlad diamant från en naturlig diamant och för detta krävs speciell utrustning och expertis, med en vanlig lupp (10xförstoring) är det i stort sett omöjligt att se skillnad. Labbodlade diamanter bedöms och certifieras enligt samma kriterier som naturliga diamanter men det framgår alltid tydligt av certifikatet att diamanten är labbodlad. Alla våra labbodlade runda diamanter med en storlek från 0.30 Carat och uppåt kommer med ett certifikat från IGI, för andra former än rund gäller att diamanterna kommer med ett certifikat från 0.50 Carat och uppåt. (International Gemological Institute) som är det certifieringsorgan som har störst erfarenhet och högst anseende när det kommer till att certifiera labbodlade stenar.</p>
+                <p>Det är viktigt att poängtera skillnaden på labbodlade diamanter och diamantimitationer som tex Cubic Zirkonia. Dessa tillverkade imitationer har inte samma kemiska uppbyggnad som en diamant och de har heller inte samma hållbarhet eller lyster. Diamantimitationer kan oftast särskiljas från naturliga eller labbodlade diamanter med blotta ögat.</p>
+            </span>
+            <div class="labgrown__picture">
+                <div class="img"></div>
+            </div>
+        </section>
+        <section class="bothDiamonds">
+            <span class="bothDiamonds__text">
+                <h3>Naturlig eller labbodlad?</h3>
+                <p>Om man föredrar naturliga eller labbodlade diamanter är väldigt individuellt, många upplever att tjusningen med en diamant är just att den bildats under jordskorpan för miljoner år sedan medan andra istället fascineras av ny teknik och den perfektion som kan åstadkommas i ett modernt labb. För allt fler är det allra viktigast att göra ett så hållbart val som möjligt, vilket gör den labbodlade diamanten till ett intressant alternativ med sitt låga koldioxidavtryck och garanterat konfliktfria bakgrund.</p>
+                <p>Våra labbodlade diamanter produceras i noga utvalda anläggningar och tillverkningen använder endast en bråkdel av den energi som krävs för att bryta diamanter ur jordskorpan. En labbodlad diamant bidrar inte heller till de ingrepp i naturens ekosystem som gruvindustrin trots allt medför och sparar på så vis på jordens resurser till förmån för kommande generationer. Dessutom är priset för en labbodlad diamant ungefär 20-50% lägre jämfört med en naturlig diamant av motsvarande kvalitet.</p>
+                <p>Om du vill att vi hjälper dig att hitta en diamant som uppfyller just dina kriterier så är du välkommen att använda vårt formulär. Vi svarar alltid inom 48 h med förslag och prisuppgifter.</p>
+            </span>
+            <div class="bothDiamonds__picture">
+                <div class="img"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <section class="footer__container">
+            <span class="footer__description">
+                <a href="#"><div class="footer-logo"></div></a>
+                <p>Vår stora passion är smycken av gediget hantverk och service med stort utbud för förlovning & vigsel. Hos oss går kvalitet hand i hand med ansvar för hållbarhet och vi erbjuder diamantexpertis samt kvalificerad service och reparationer.</p>
+            </span>
+            <span class="footer__info">
+                <h3>Information</h3>
+                <p><a href="#">Förlovningsringar</a></p>
+                <p><a href="#">Vigselringar</a></p>
+                <p><a href="about.html">Om oss</a></p>
+                <p><a href="contact.html">Kontakta oss</a></p>
+                <p><a href="#">Frakt & Retur</a></p>
+                <p><a href="#">Garanti</a></p>
+                <p><a href="#">Betalning</a></p>
+            </span>
+            <span class="footer__contact">
+                <h3>Kontakt</h3>
+                <div class="footer__cont">
+                <i class="bi bi-geo-alt"></i>
+                <p class="adress">Diamonds For You
+                    Ankeborgssgatan 55
+                    123 45 Stockholm</p>
+                </div>
+                <div>
+                <i class="bi bi-geo-alt"></i>
+                <p class="adress">Diamonds For You
+                    Stora Nygatan 53
+                    123 45 Malmö</p>
+                </div>
+                <div>
+                <i class="bi bi-telephone"></i>
+                <p>010-10 10 10</p>
+            </div>
+            <div>
+                <i class="bi bi-envelope"></i>
+                <p><a href="https://www.google.com/intl/sv/gmail/about/">info@diamondsofyou.se</a></p>
+            </div>
+                <p>Org nr: 551010-2010</p>
+            </span>
+            <span class="footer__social">
+                <h3>Följ oss</h3>
+                <div>
+                    <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://se.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://se.linkedin.com/"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </span>
+        </section>
+    </footer>
+</body>
+</html>
