@@ -1,4 +1,5 @@
 @use '../abstract' as a;
+@use '../base' as b;
 
 @mixin store-image {
     background-position: center;
@@ -13,6 +14,63 @@
     background-image: a.$white-logo;
     background-position: center;
     background-size: cover;
-    width: 150px;
+    max-width: 150px;
     height: 75px;
+}
+
+@mixin insta-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin contact-bg-img {
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: a.$boxshadow;
+    margin-top: 0;
+    color: a.$white-color;
+    text-align: left;
+}
+
+@mixin about-image-styling {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    margin: 0 auto;
+}
+
+@mixin about-container-styling {
+    max-width: a.$container-width;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: a.$gap-mobile;
+}
+
+@mixin about-text-styling {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    line-height: a.$text-liner;
+
+    h3{
+        font-size: a.$h3-font-mobile;
+
+        @include b.x-large{
+            font-size: a.$h3-font-desktop;
+        }
+    }
+
+    @include b.x-large{
+        text-align: start;
+    }
 }

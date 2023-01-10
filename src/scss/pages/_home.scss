@@ -1,197 +1,172 @@
 @use '../abstract' as a;
 @use '../base' as b;
+@use '../base/buttons' as btn;
 
 *{
     margin: 0;
     padding: 0;
-    // font-family: 'Poppins', sans-serif;
-    // font-family: 'Roboto Flex', sans-serif;
-    // font-family: 'Montserrat', sans-serif;
-    // font-family: 'Playfair Display', serif;
     font-family: 'Lora', serif;
     scroll-behavior: smooth;
 }
-.mainContainer{
-  text-align: center;
-}
+
 .header{
     width: 100%;
-    background-color: black;
     display:flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
 
     &__img{
-        height: 130vw;
-        background-image: a.$headerIMG;
+        height: 400px;
+        background-image: a.$image-bg-color, a.$headerIMG;
         background-size: cover;
-        background-position: 50%;
-        color: white;
+        background-position: center;
+        color: a.$white-color;
         display: flex;
         flex-direction: column;
         text-align: center;
-       
-       
-        
-
-        h1{
-          z-index: 1; 
-          margin-bottom: -5px;
-          margin-top: 35%; 
-          font-size: 7.5vw;
-          @include b.x-large{
-            font-size: 4rem;
-            margin-top: 300px;
-            margin-bottom: -20px;
-          }
-        }
-
-        h3{
-          z-index: 1;
-          font-size: 4.5vw; 
-          @include b.x-large{
-            font-size: 2.5rem;
-            white-space: pre-line;
-          }
-        }
 
         @include b.x-large{
-            background-image: a.$headerIMGdesktop;
-            height: 900px;
-            position: relative; 
-            
-            display: flex;
-            //justify-content: cente
+          height: 850px;
+          position: relative; 
+          display: flex;
+      }
+       
+        h1{
+          z-index: 1; 
+          margin-top: 120px; 
+          font-size: a.$h1-font-mobile;
+
+          @include b.x-large{
+            font-size: a.$h1-font-desktop;
+            margin-top: 250px;
+          }
         }
 
-
-        button{
-          padding: 1rem;
-          top: 70%;
-          margin-left: 50%;
-          transform: translateX(-50%);
-          white-space: nowrap;
-          position: absolute;
-          font-size: 3vw;
-          color: white;
-          width: 35vw;
-          height: 12vw;
-          border: 1px solid white;
-          background-color: a.$ourGrey;
+        p{
           z-index: 1;
+          font-size: a.$p-font-mobile-h; 
+          margin: 1rem;
+
           @include b.x-large{
-            top: 75%;
-            font-size: 1.5rem;
-            width: 275px;
-            height: 75px;
-            
-  
+            font-size: a.$p-font-desktop-h;
+            white-space: pre-line;
+            margin: 3rem;
           }
-      }
-
-      
+        }
     }
 
-    &__overlay{
-      background-color: black;
-      height: 100%;
-      width: 100%;
+    &__btn{
+      top: 80%;
+      margin-left: 50%;
+      transform: translateX(-50%);
       position: absolute;
-      opacity: .3;
-      
-      @include b.x-large{
-        opacity: .3;
-      }
-      
-    }
+      z-index: 1;
+      @include btn.clear-btn;
 
+      @include b.x-large{
+        top: 75%;
+        font-size: a.$btn-font-header;
+        width: 275px;
+        height: 75px;
+      }
+      &:hover{
+        background-color: a.$gold-btn-rgba;
+        border: a.$gold-btn-rgba;
+      }
+    }
 }
 
- .prodtitle{   
+.prodCategory{
+  max-width: a.$container-width;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: a.$margin-30;
   color: a.$ourGrey;
-  font-size: 2rem;
-  margin-top: 20px;
-  font-size: 8vw;
-  flex: 0 0 100%;
+
   @include b.x-large{
-    font-size: 3rem;
-    margin-top: 10%;
+    margin: a.$container-margin auto;
+  }
+
+  &__title{   
+    font-size: a.$h2-font-mobile;
+
+    @include b.x-large{
+      font-size: a.$h2-font-desktop;
+    }
   }
 }
 
-
-
 .sectionprod{
-    padding-top: 7vw;
-    padding-bottom: 70px;
+    margin-top: a.$section-top-margin;
     display: flex;
     flex-wrap: wrap; 
-    gap: 10px;
+    gap: a.$gap-mobile;
     width: 100%;
     justify-content: center;
 
     @include b.x-large{
-      gap: 40px;
+      gap: a.$gap-desktop;
       flex-wrap: nowrap;
+      margin-top: a.$margin-30;
     }
 
     &__ring{
       height: 50vw;
       width: 40vw;
-      border: 1px solid black;
       background-size: cover;
-      background-position: 50%;
-      border: 1px solid a.$ourGrey;
+      background-position: center;
       display: flex;
       justify-content: center;
       box-shadow: a.$boxshadow;
-      border-radius: 3%;
-      border: 0px;
+      border-radius: 5px;
 
       @include b.x-large {
         height: 350px;
-        width: 250px; 
-        border: 0px;
-        border-radius: 3%;
+        width: 250px; ;
         background-size: 90%;
         background-repeat: no-repeat;
       } 
 
       h4{
         position: absolute;
-        margin-top: 4%;
-        font-size: 3vw;
-        color: a.$ourGrey;
-        //font-family: Helvetica Neue;
+        margin-top: 10px;
+        font-size: a.$h4-font-mobile;
+  
         @include b.x-large{
-          margin-top: 45px;
-          font-size: medium;
+          margin-top: 40px;
+          font-size: a.$h4-font-desktop;
         }
-      }
+      } 
 
-    button{  
-      background-color: white;
-      border: 1px solid a.$ourGrey;
-      color: a.$ourGrey;
+      button{  
+        width: 100px;
+        height: 35px;
+        top: 80%;
+        font-size: a.$btn-font-mobile;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include btn.gold-btn;
 
-      padding: 1rem;
-      width: 29vw;
-      padding: 2vw;
-      font-size: 3vw;
-      height: 8vw;
-      top: 75%;
-      position: relative;
+        @include b.x-large{
+          font-size: a.$btn-font-desktop;
+          width: 70%;
+          height: 15%;
+        }
 
-      @include b.x-large{
-        font-size: 1rem;
-        width: 70%;
-        padding: 10px;
-        height: 15%;
-      }
+        a{
+          text-decoration: none;
+          color: a.$white-color;
+        }
 
-      }
-
+        &:hover{
+          background-color: a.$gold-light-rgba;
+          border: a.$gold-light-rgba;
+        }
+      }  
     }
 
       div[alt*="halo"] {
@@ -208,18 +183,161 @@
 
       div[alt*="tre"] {
         background-image: a.$treRing;
-      }
-
-    
-    
+      }   
 }
 
-.mainContainer{
+.diamonds{
+  max-width: a.$container-width;
+  margin-top: a.$margin-30;
+  color: a.$ourGrey;
+
   @include b.x-large{
-  //border: 1px solid black;
-  padding-left: 14%;
-  padding-right: 14%;
-  display: flex;
-  flex-direction: column;
+    margin: a.$container-margin auto;
+  }
+
+  &__title{
+    display: flex;
+    justify-content: center;
+    font-size: a.$h2-font-mobile;
+
+    @include b.x-large{
+      font-size: a.$h2-font-desktop;
+    }
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: a.$gap-mobile;
+    padding-top: a.$section-top-margin;
+    width: 85%;
+    margin: 0 auto;
+
+    @include b.x-large{
+      flex-direction: row;
+      gap: a.$gap-desktop;
+      margin-top: a.$margin-30;
+      width: 100%;
+    }
+  }
+
+  &__choose{
+    box-shadow: a.$boxshadow;
+    height: 150px;
+    width: 85%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include b.x-large{
+      width: 100%;
+      height: 350px;
+    }
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  &__btn{
+    @include btn.clear-btn;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include b.x-large{
+      font-size: a.$btn-font-desktop;
+      width: 200px;
+      height: 50px;
+    }
+    &:hover{
+      background-color: a.$gold-btn-rgba;
+      border: a.$gold-btn-rgba;
+    }
+  }
+  
+  div[alt*="NatDiamond"] {
+    background-image: a.$image-bg-color, a.$natDiamond;
+  }
+
+  div[alt*="LabDiamond"] {
+    background-image: a.$image-bg-color, a.$labDiamond;
+  }
 }
+
+.choose-ring{
+  max-width: a.$container-width;
+  margin: 0 auto;
+  color: a.$white-color;
+  margin-top: a.$margin-30;
+  display: flex;
+  justify-content: center;
+
+  @include b.x-large{
+    margin: a.$container-margin auto;
+  }
+
+  &__container{
+    background-image: a.$image-bg-color, a.$tips;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: a.$gap-mobile;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: a.$boxshadow;
+    
+    @include b.x-large{
+      height: 450px;
+      width: 100%;
+      gap: 60px;
+    }
+
+    h3{
+      margin-top: a.$section-top-margin;
+      font-size: a.$h3-font-mobile;
+
+      @include b.x-large{
+        font-size: a.$h3-font-desktop;
+      }
+    }
+
+    p{
+      font-size: a.$p-font-mobile;
+      width: 80%;
+
+      @include b.x-large{
+        width: 50%;
+        font-size: a.$p-font-desktop;
+      }
+    }
+  }
+
+  &__btn{
+    @include btn.clear-btn;
+    width: 130px;
+    height: 40px;
+    
+    &:hover{
+      background-color: a.$gold-btn-rgba;
+      border: a.$gold-btn-rgba;
+    }
+
+    @include b.x-large{
+      width: 250px;
+      height: 60px;
+      font-size: a.$btn-font-desktop;
+    }
+  }
 }

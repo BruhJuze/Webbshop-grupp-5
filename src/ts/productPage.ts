@@ -1,6 +1,7 @@
 import { allRings } from "./module/productData";
 import { Ring } from "./module/ring";
 
+
 let filteredItems = new Array<Ring>(); 
 
 const presentURL = window.location.href;
@@ -56,13 +57,23 @@ function renderProductContent(product: string){
                     smallGroupImg.src = product.img[i];   
                 }
 
-                //create small img
-                const smallImg = document.createElement('img');
+                //create small img mobile
+                // const largeImage = document.createElement('img');
+                // largeImage.setAttribute('id', String("large-image"));
+                // largeImage.classList.add("large-image-mob");
+                // productImageContainer?.appendChild(largeImage);
 
-                const largeImage = document.createElement('img');
-                largeImage.classList.add("large-image");
-                productImages?.appendChild(largeImage);
-                //largeImage.src = ring.img;
+                // for(let i=0; i<1; i++){
+                //     largeImage.src = product.img[i];
+                // }
+
+                // for(let i=0; i< product.img.length; i++){
+                //     const smallMobImg = document.createElement('img');
+                //     smallMobImg.classList.add("large-image-mob");
+                //     productImageContainer?.appendChild(largeImage); 
+                //     smallMobImg.src = product.img[i];   
+                // }
+
 
                 //set title
                 const productTitle = document.createElement('h3');
@@ -160,3 +171,18 @@ export const totalPrice = renderProductContent(getRing);
 // let carat9 = new Carat("1.00", 18000);
 
 // let allCarats = [carat0, carat1, carat2, carat3, carat4, carat5, carat6, carat7, carat8, carat9]
+
+function renderCarouselImages(id: string){
+    for(let ring of allRings){
+        if(id === ring.name){
+            for(let i = 0; i < ring.img.length; i++){
+                const largeMobile = document.createElement("img");
+                largeMobile.classList.add("large-image");
+                largeMobile.src = ring.img[i];
+                productImages?.appendChild(largeMobile);
+            }
+        }
+    }
+}
+
+renderCarouselImages(getRing);

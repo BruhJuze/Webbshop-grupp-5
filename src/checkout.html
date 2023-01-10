@@ -6,26 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="scss/main.scss" rel="stylesheet" />
     <script src="ts/main.ts" defer type="module"></script>
-    <script src="ts/productPage.ts" defer type="module"></script>
-    <script src="ts/addToCart.ts" defer type="module"></script>
-    
-    <title>Diamonds for U | Products</title>
+    <script src="ts/checkout.ts" defer type="module"></script>
+
+    <title>Diamonds for U</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
   </head>
   <body>
-    
     <aside class="nav-menu">
       <nav>
         <div class="container">
           <div class="navbar">
             <a href="index.html" class="logo">
-              <img class="logo-png" src="assets/Logo/logo.png" alt="logo"> 
+              <img class="logo-png" src="assets/Logo/logo.png" alt="logo" />
             </a>
             <div class="desktop-menu">
               <ul class="menu__ul">
@@ -103,7 +100,6 @@
               <span></span>
             </button>
             <div class="cart-button">
-              <!--<div id="cart-quantity">0</div>-->
               <i class="bi bi-cart4"></i>
             </div>
           </div>
@@ -185,155 +181,93 @@
         <button class="close-button">
           <i class="bi bi-x"></i>
         </button>
-        <div class="cart__title">Din kundvagn</div>
-        <div class="cart__container" id="cart-container">
-
-        </div>
-        <a href="./checkout.html" class="checkout-button-link">
-          <button class="checkout-button">
-            Gå till kassan
-          </button>
-        </a>
-      </div>
-        <!-- <div class="cart__container">
-><button class="checkout-button" id="checkoutBtn">
+        <div class="cart__container">
+          <div class="cart__title">Din kundvagn</div>
+          <a href="./checkout.html"
+            ><button class="checkout-button" id="checkoutBtn">
               Gå till kassan
-            </button>
-          </a>
-        </div> -->
+            </button></a
+          >
+        </div>
       </div>
     </aside>
 
-    <div class="nav-menu-spacer"></div>    
-  
-   <section class="product-container">
-      <div class="product-image-container">
-        <div class="product-image-mobile-container">
-          <div class="navigation-container">
-            <div class="navigation-button" id="prev-button">
-              <i class="bi bi-arrow-left-circle"></i>
-            </div>
-            <div class="navigation-button" id="next-button">
-              <i class="bi bi-arrow-right-circle"></i>
-            </div>
-          </div>
-          <div class="navigation-radio-dots">
-            <input type="radio" name="radio-button" id="slide__1">
-            <input type="radio" name="radio-button" id="slide__2">
-            <input type="radio" name="radio-button" id="slide__3">
-            <input type="radio" name="radio-button" id="slide__4">
-          </div>
-          <div class="navigation-dots">
-            <label for="slide__1" class="navigation-dots__button"></label>
-            <label for="slide__2" class="navigation-dots__button"></label>
-            <label for="slide__3" class="navigation-dots__button"></label>
-          </div>
-          <div class="product-images">
-          </div>
-        </div>
-        <div class="product-image-desktop-container">
-           <div class="main-img"></div>
-           <div class="small-group"></div>
-        </div>
+  <main class="mainCheckout">
+<section class="mainCheckout__title"><h2>Kassa</h2></section>
+<div class="mainCheckout__steps">1. DIN KUNDVAGN</div>
+<section class="mainCheckout__info">
+  <a>Produkt</a> Pris Antal Summa
+</section>
+<section class="mainCheckout__productContainer" id="checkoutProductContainer"></section>
+<div class="mainCheckout__priceContainer">
+<div class="mainCheckout__priceContainer__totalPrice">
+  <p>Summa artiklar:</p>
+  <p>Fraktavgift: </p>
+  <b>Total inkl.moms: </b>
+</div>
+<div class="mainCheckout__priceContainer__totalPrice__number" id="totalPrice"> </div>
+</div>
+<article class="billingParent">
+<section class="billingParent__billingInfo">
+  <div class="mainCheckout__steps">2. LEVERANSADRESS</div>
 
-        </div>
-      </div>
-      <div class="product-info-container">
-        <div class="product-info">
-          <div class="product-info__title">
-          </div>
-          <div class="product-info__text">
-          </div>
-          <a href="#product-description">
-            <button class="product-info__readMore">
-              Läs mer
-            </button>
-          </a>
-        </div>
-        <div class="product-options">
-          <div class="product-options__type">
-            <p>Välj metall</p>
-            <div class="select">
-              <select name="">
-                <option value="" disable seleced>Välj vilken metall</option>
-                <option value="">Platina</option>
-                <option value="">Vitguld</option>
-                <option value="">Gulguld</option>
-                <option value="">Roséguld</option>
-              </select>
-            </div>
-          </div>
-          <div class="product-options__type">
-            <p>Välj carat</p>
-            <div class="select">
-              <select name="" id="carat">
-                <option value="1" disable seleced>Välj storlek på diamant</option>
-                <option value="1.5">0.25 carat [+2 800 kr]</option>
-                <option value="2">0.30 carat [+5 600 kr]</option>
-                <option value="2.5">0.40 carat [+8 400 kr]</option>
-                <option value="3">0.50 carat [+11 200 kr]</option>
-                <option value="3.5">0.60 carat [+14 000 kr]</option>
-                <option value="4">0.70 carat [+16 800 kr]</option>
-                <option value="4.5">0.80 carat [+19 600 kr]</option>
-                <option value="5">0.90 carat [+22 400 kr]</option>
-                <option value="5.5">1.0 carat [+25 200 kr]</option>
-              </select>
-          </div>
-          </div>
-          <div class="product-options__type">
-            <p>Välj ringstorlek</p>
-            <div class="select">
-              <select name="" id="">
-                <option value="1" disable seleced>Välj storlek på ring</option>
-                <option value="">45mm</option>
-                <option value="">46mm</option>
-                <option value="">47mm</option>
-                <option value="">48mm</option>
-                <option value="">49mm</option>
-                <option value="">50mm</option>
-                <option value="">51mm</option>
-                <option value="">52mm</option>
-                <option value="">53mm</option>
-                <option value="">54mm</option>
-                <option value="">55mm</option>
-              </select>
-            </div>
-          </div>
-          <div class="product-options__type">
-            <p>Gravyrtext</p>
-            <input type="text" placeholder="Ange gravyrtext" />
-          </div>
-        </div>
-        <div class="total-sum-container">
-          <div class="total-sum">
-            <p>Summa:</p>
-            <p class="total-sum-price"></p>
-          </div>
-        </div>
-        <div class="addToCart-container">
-          <button class="addToCart-btn">Lägg i varukorg</button>
-        </div>
-      </div>
-   </section>
+  <div class="billingParent__tbxContainer">
+  <label>Förnamn</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
 
-   <div id="product-description"></div>
-   <section class="product-desc-container">
-    <div class="product-desc">
-      <div class="product-desc__title">
-        <div class="product-desc__title__inner">
-          Beskrivning
-        </div>
-      </div>
-      <div class="product-desc__divider"></div>
-      <div class="product-desc__text">
-        <div class="product-desc__text__inner">
+  <div class="billingParent__tbxContainer"> 
+    <label>Efternamn</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
 
-        </div>
-      </div>
+  <div class="billingParent__tbxContainer__wide"> 
+  <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer"> 
+  <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  <div class="billingParent__tbxContainer"> 
+  <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  </div>
+
+</section>
+<section class="billingParent__billingInfo">
+  <div class="mainCheckout__steps">3. FAKTURAADRESS</div>
+
+  <div class="billingParent__tbxContainer">
+    <label>Förnamn</label> <input class="billingParent__billingInfo__input"> </input>
     </div>
-   </section>
+  
+    <div class="billingParent__tbxContainer"> 
+      <label>Efternamn</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer__wide"> 
+    <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+    <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+    <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
 
-   <div class="feature-container">
+</section>
+ </article>
+
+ <section class="mainCheckout__button">
+  <a href="./orderdone.html"><button id="purchaseBtn">SLUTFÖR KÖP</button></a>
+
+ </section>
+
+
+  </main>
+
   <footer class="footer">
     <section class="footer__container">
         <span class="footer__description">

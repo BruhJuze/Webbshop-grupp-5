@@ -1,0 +1,83 @@
+@use '../abstract' as a;
+@use '../base' as b;
+@use '../base/mixins' as m;
+
+.aboutHeader {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: a.$image-bg-color, url(/src/assets/Om/pexels-photo-6263109.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        margin-top: 60px;
+        width: 80%; 
+        color: a.$white-color;
+        font-size: a.$h1-font-mobile;
+        z-index: 1;
+
+        @include b.x-large{
+            font-size: a.$h1-font-desktop;
+        }
+    }
+}
+
+.about{
+    margin-top: a.$margin-30;
+    margin-bottom: a.$margin-30;
+
+    @include b.x-large{
+        margin: 4rem;
+    }
+
+    .history{
+        @include m.about-container-styling;
+
+        @include b.x-large{
+            flex-direction: row;
+            gap: a.$gap-100;
+        }
+        
+        &__text{
+            @include m.about-text-styling;
+        }
+        
+        .img{
+            background-image: a.$history-img;
+            @include m.about-image-styling;
+
+            @include b.x-large{
+                width: 500px;
+            }
+        }
+    }
+
+    .story{
+        @include m.about-container-styling;
+        margin-top: a.$margin-30;
+
+        @include b.x-large{
+            flex-direction: row-reverse;
+            width: a.$container-width;
+            gap: a.$gap-100;
+        }
+        
+        &__text{
+            @include m.about-text-styling;
+        }
+
+        .img{
+            background-image: a.$story-img;
+            @include m.about-image-styling;
+
+            @include b.x-large{
+                height: 600px;
+                width: 500px;
+            }
+        }
+    }
+}

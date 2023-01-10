@@ -1,12 +1,13 @@
 @use '../abstract' as a;
 @use '../base' as b;
+@use '../base/buttons' as btn;
 
 nav{
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: a.$navbar-height;
     background-color: a.$white-color;
-    box-shadow: 0 8px 4px -4px rgba(0, 0, 0, .2);  
+    box-shadow: a.$navboxshadow;  
     z-index: 10;
     transition: 300ms ease;
 
@@ -33,7 +34,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 
-    @include b.medium {
+    @include b.x-large {
         justify-content: end;
     }
 }
@@ -43,7 +44,7 @@ nav{
     left: 50%;
     transform: translateX(-50%);
 
-    @include b.medium {
+    @include b.x-large {
         left: 0%;
         transform: translateX(0);
     }
@@ -58,12 +59,10 @@ nav{
     display: none;
     z-index: 10;
 
-    @include b.medium {
-        //display: none;
+    @include b.x-large {
         display: flex;
         justify-content: space-between;
     }
-
 
     .menu__ul{
         display: flex;
@@ -94,7 +93,7 @@ nav{
                 top: calc(100% - 3px);
                 width: 0%;
                 height: 3px; 
-                background-color: #CDB277;
+                background-color: a.$gold-btn-rgba;
                 transition: width 250ms ease;
             }
         }
@@ -104,9 +103,7 @@ nav{
             .menu__a:after {
                 content: "";
                 width: 100%;
-
-            }
-    
+            }    
         }
 
         &:hover > .dropdown{
@@ -122,10 +119,6 @@ nav{
             transform: translateX(-50%);
             transition: 300ms ease;
             display: none;
-
-            &.is-scrolled{
-
-            }
             
             li {
                 width: auto;
@@ -138,24 +131,22 @@ nav{
                 transition-property: color, background-color;
 
                 &:hover {
-                    background-color: #CDB277;
+                    background-color: a.$gold-btn-rgba;
                 }
 
                 &:hover > a{
-                    color: #fff;
+                    color: a.$white-color;
                 }
                 
                 a {
                     line-height: 1.7rem;      
                 }
             }
-        }
-        
+        }    
     }
 }
 
 .hamburger{
-    //display: none;
     display: block;
     position: relative;
     user-select: none;
@@ -166,8 +157,7 @@ nav{
     cursor: pointer;
     z-index: 1;
 
-    @include b.medium {
-        //display: block;
+    @include b.x-large {
         display: none;
     }
 
@@ -189,7 +179,7 @@ nav{
         height: 2px;
         margin-bottom: 5px;
         border-radius: 6px;
-        background-color: #000;
+        background-color: a.$text-color;
         transition: 300ms ease;
     }
 }
@@ -205,48 +195,86 @@ nav{
     background-color: a.$white-color;
     transition: 300ms ease;
     z-index: 10;
-
+    
     &.is-active{
         transform: translateX(0px);
-        box-shadow: 8px 0px 7px -7px rgba(0, 0, 0, .2);
+        box-shadow: a.$mobileboxshadow;
     }
     &.is-scrolled{
         top:calc(#{a.$navbar-height} - 20px);
     }
-}
 
-.mobile-menu__ul {
-    padding-top: 50px;
-    padding-left: 70px;
+    .mobile-menu__ul{
+        padding-top: 50px;
+        padding-left: 70px;
+    }
 
-    .menu__li{
+    li {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: a.$margin-20;
         list-style: none;
-        width: fit-content;
+        width: 100%;
+
+        .no-link{
+            pointer-events: none;
+            cursor: pointer;
+        }
 
         a {
             text-decoration: none;
             color: a.$text-color;
-
+            
             &:after{
                 content: "";
                 position: absolute;
                 left: 0;
                 top: 25px;
-                width: 0%;
-                height: 4px; 
-                background-color: #000;
+                width: 60%;
+                height: 2px; 
+                background-color: a.$text-color;
                 transition: all 250ms ease;
             }
         }
         &:hover{
-
             :after{
                 content: "";
-                width: 100%;
+                width: 65%;
+                background-color: a.$gold-btn-rgba;
             }
         }
+        &:hover > .dropdown{
+            display: block;
+        }
+
+        .dropdown {
+            width: 160px;
+            background-color: a.$white-color;
+            position: relative;
+            top: 20px;
+            left: 90px;
+            padding-bottom: 5px;
+            transform: translateX(-50%);
+            transition: 300ms ease;
+            display: none;
+            
+            li {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                padding: 0;
+                display: block;
+                transition: all 150ms ease-in-out;
+                transition-property: color, background-color;
+
+                &:hover > a{
+                    color: a.$gold-btn-rgba;
+                }
+                
+                a {
+                    line-height: a.$text-liner;      
+                }
+            }
+        }    
     }
 }
 
@@ -255,9 +283,8 @@ nav{
     margin-left: 20px;
 
     i{
-        font-size: 20px;
+        font-size: a.$icon-font;
     }
-
 }
 
 .cart{
@@ -274,15 +301,17 @@ nav{
 
     &.is-active{
         transform: translateX(0px);
-        box-shadow: -1px 0px 12px 2px rgba(0, 0, 0, .2);
+        box-shadow: a.$cartboxshadow;
     }
 
     &__container{
         margin: 40px auto;
         width: 80%;
         height: auto;
-    }
 
+        a
+        {text-decoration: none};
+    }
 
     &__title{
         margin: 60px auto 0;
@@ -306,8 +335,12 @@ nav{
     z-index: 1;
 
     i{
-        font-size: 25px;
+        font-size: a.$icon-font-nav;
     }
+}
+
+.checkout-button-link{
+    text-decoration: none;
 }
 
 .checkout-button {
@@ -317,20 +350,17 @@ nav{
     outline: none;
     background: none;
     cursor: pointer;
-
-    //margin-top: 30px;
-    margin: 30px auto 0;
+    margin: auto;
     width: 80%;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    background-color: rgba(205, 178, 119, 1);
-    color: a.$white-color;
-    transition: 250ms ease;
+    font-size: a.$btn-font-mobile;
+    @include btn.gold-btn;
 
     &:hover{
-        background-color: rgba(205, 178, 119, 0.8);
+        background-color: a.$gold-light-rgba;
     }
 }

@@ -1,16 +1,5 @@
 @use '../abstract' as a;
 
-@mixin general-buttons {
-    position: relative;
-    user-select: none;
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
-    z-index: 1;
-}
-
 @mixin clear-btn {
     border: 1px solid a.$white-color;
     padding: 0.7rem 1rem;
@@ -27,7 +16,6 @@
     padding: 0.7rem 1rem;
     color: a.$white-color;
     background-color: a.$gold-btn-rgba;
-    font-size: 13px;
     cursor: pointer;
     transition: all 0.5s ease;
 }

@@ -1,7 +1,4 @@
-
-@use 'layout/header';
 @use 'layout/subheader';
-@use 'layout/navigation';
 @use 'layout/basket';
 @use 'layout/container';
 @use "layout/footer";
@@ -9,4 +6,11 @@
 @use 'pages/home';
 @use 'pages/productCategory';
 @use 'pages/productPage';
+@use 'pages/checkout';
+@use 'layout/social';
+@use 'pages/complete';
+@use 'layout/contact';
+@use 'layout/about';
+@use 'layout/diamond';
+@use 'layout/navigation';
 
