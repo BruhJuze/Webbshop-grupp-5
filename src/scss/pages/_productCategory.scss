@@ -34,7 +34,7 @@
     flex-wrap: wrap;
     gap: 15px;
 
-    @include b.x-large {
+    @include b.medium {
         justify-content: flex-start;
         gap: a.$gap-mobile;
     }
@@ -75,10 +75,11 @@
 
     @include b.medium {
         flex-basis: 23%;
+        
     }
 
     @include b.x-large {
-        flex-basis: 31%;
+        flex-basis: 23%;
     }
 
     &:hover{
@@ -90,7 +91,6 @@
 .product {
     padding-top: 10%;
     padding-bottom: 20%;
-    //width: auto;
     flex-basis: 25%;
     height: auto;
     color: a.$text-color;
