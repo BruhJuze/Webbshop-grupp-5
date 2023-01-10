@@ -9,6 +9,7 @@ let prodContainer: HTMLTableSectionElement = document.getElementById("checkoutPr
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
 let sumPrice: number = 0;
+let sumofRing: number = 0;
 let psuedoI: number = 0;
 
 function renderCheckoutContent(){
@@ -83,13 +84,16 @@ function renderCheckoutContent(){
             amountSub.style.filter = "brightness(85%)";
         }
 
+
+
             console.log(checkoutItem.price);
             sumPrice += checkoutItem.price * checkoutItem.item;
+            sumofRing = checkoutItem.price * checkoutItem.item;
 
             title.innerHTML =checkoutItem.name;
             image.src = checkoutItem.img;
             pricePerThing.innerHTML = checkoutItem.price.toString() + " " + "kr/st";
-            sum.innerHTML = checkoutItem.price.toString() + " " + "kr";
+            sum.innerHTML = sumofRing.toString() + " " + "kr";
             amountNumber.innerHTML = JSON.stringify(checkoutItem.item);
             
             if(cart.length>=psuedoI){
@@ -112,15 +116,12 @@ function renderCheckoutContent(){
             amountSub.append(minusIcon);
             rightContainer.appendChild(removeBtn);
             rightContainer.appendChild(sum);
-            priceContainer.appendChild(totalPrice);
-            
 
             if(cart.length==psuedoI){
-            totalPrice.remove();
+            
             totalPrice.appendChild(pTag);
             totalPrice.appendChild(pTag2);
             totalPrice.appendChild(bTag);
-
             }
             
             prodContainer.appendChild(newProduct);
