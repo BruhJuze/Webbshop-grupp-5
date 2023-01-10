@@ -29,6 +29,7 @@ function renderCheckoutContent(){
             let leftContainer:HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let leftChildContainer:HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let pricePerThing:HTMLElement = document.createElement("section") as HTMLElement;
+            let priceContainer:HTMLDivElement = document.getElementById("mainCheckout__priceContainer") as HTMLDivElement;
             let amountContainer:HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let sum:HTMLElement = document.createElement("section") as HTMLElement;
             let removeBtn:HTMLElement = document.createElement("i") as HTMLElement;
@@ -38,6 +39,7 @@ function renderCheckoutContent(){
             let plusIcon:HTMLElement = document.createElement("i") as HTMLElement;
             let minusIcon:HTMLElement = document.createElement("i") as HTMLElement;
             let pTag: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
+            let pTag2: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
 
             newProduct.className = "mainCheckout__newProduct";
             title.className = "mainCheckout__newProduct__leftContainer__leftChildContainer__title";
@@ -63,8 +65,9 @@ function renderCheckoutContent(){
             amountAdd.addEventListener('click', () => {
                 checkoutItem.item += 1;
                 localStorage.setItem("data", JSON.stringify(cart));
-                psuedoI + 0;
+                psuedoI = 0;
             })
+            
 
             amountAdd.addEventListener('click', renderCheckoutContent);
 
@@ -72,15 +75,13 @@ function renderCheckoutContent(){
             amountSub.addEventListener('click', () => {
                 checkoutItem.item -= 1;
                 localStorage.setItem("data", JSON.stringify(cart));
-                psuedoI + 0;
+                psuedoI = 0;
             })
             amountSub.addEventListener('click', renderCheckoutContent);
         }
         else{
             amountSub.style.filter = "brightness(85%)";
         }
-
-        let priceArray: number[] = [150, sumPrice];
 
             console.log(checkoutItem.price);
             sumPrice += checkoutItem.price * checkoutItem.item;
@@ -92,7 +93,8 @@ function renderCheckoutContent(){
             amountNumber.innerHTML = JSON.stringify(checkoutItem.item);
             
             if(cart.length>=psuedoI){
-                pTag.innerHTML = priceArray[psuedoI] + " kr"; ///nytt class eller barn
+                pTag.innerHTML = sumPrice + " kr"; ///nytt class eller barn
+                pTag2.innerHTML = 150 + " kr";
                 bTag.innerHTML = sumPrice + 150 + " kr";
             }
 
@@ -110,11 +112,13 @@ function renderCheckoutContent(){
             amountSub.append(minusIcon);
             rightContainer.appendChild(removeBtn);
             rightContainer.appendChild(sum);
+            priceContainer.appendChild(totalPrice);
             
 
-            if(cart.length>=psuedoI){
+            if(cart.length==psuedoI){
+            totalPrice.remove();
             totalPrice.appendChild(pTag);
-            totalPrice.appendChild(pTag);
+            totalPrice.appendChild(pTag2);
             totalPrice.appendChild(bTag);
 
             }
