@@ -1,0 +1,102 @@
+@use '../abstract' as a;
+@use '../base' as b;
+@use '../base/mixins' as m;
+
+.contactHeader {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: a.$image-bg-color, a.$contact-header;
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        margin-top: 60px;
+        width: 80%; 
+        color: a.$white-color;
+        font-size: a.$h1-font-mobile;
+        z-index: 1;
+
+        @include b.x-large{
+            font-size: a.$h1-font-desktop;
+        }
+    }
+}
+
+.contact{
+    margin: 2rem;
+
+    &__containerSthlm{
+        color: a.$text-color;
+        text-align: center;
+        
+        @include b.x-large{
+            background-image: a.$image-bg-color, a.$img-sthlm;
+            @include m.contact-bg-img;
+        }
+    }
+
+    &__containerMalmo{
+        color: a.$text-color;
+        text-align: center;
+        margin-top: a.$margin-20;
+
+        @include b.x-large{
+            margin-top: 0;
+            background-image: a.$image-bg-color, a.$img-malmo;
+            @include m.contact-bg-img;
+        }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: a.$gap-desktop;
+        margin-left: auto;
+        padding: 20px;
+
+        i{
+            padding-right: 5px;
+            font-size: a.$icon-font;
+        }
+        h4{
+            font-size: a.$h4-font-desktop;
+        }
+        p{
+            padding-left: 25px;
+            font-size: a.$p-font-desc;
+        }
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: a.$h3-font-mobile;
+
+        h3{
+            padding-left: 20px;
+            border-bottom: a.$border-1px;
+            border-top: a.$border-1px;
+            padding: 10px;
+
+            @include b.x-large{
+                padding-left: 70px;
+                font-size: a.$h3-font-desktop;
+                border: none;
+            }
+        }
+    }
+    
+    @include b.x-large{
+        display: flex;
+        justify-content: center;
+        margin: 4rem auto;
+        max-width: a.$container-width;
+        gap: a.$gap-desktop;   
+    }
+}

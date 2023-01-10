@@ -1,6 +1,6 @@
 import { Ring } from "./ring";
 
-let andrea = new Ring(  "id_1",
+let andrea = new Ring(  1,
                         "solitar",
                         "Andrea", 
                         "För den som söker en stilren design i tidlös tappning. Vår förlovningsring Andréa passar den klassiska som uppskattar det simplicitet och elegans. Med en hög infattning står den glamorösa diamanten ständigt i centrum. Diamanter i just smaragdslipning är har varit en stor favorit hos många celebriteter genom tiderna med välkända namn som Grace Kelly, Beyonce och Amal Clooney.", 
@@ -10,7 +10,7 @@ let andrea = new Ring(  "id_1",
                         5600,
                         5600
 );
-let daniela = new Ring(  "id_2",
+let daniela = new Ring(  2,
                         "solitar",
                         "Daniela", 
                         "Daniela är en speciell ring som verkligen sticker ut ur mängden. Att diamanten är placerad horisontellt gör den mer praktiskt och mindre utsatt i vardagen. Ringen är perfekt för den som önskar en annan diamantform än den klassiska runda.", 
@@ -20,7 +20,7 @@ let daniela = new Ring(  "id_2",
                         7200,
                         7200
 );
-let blanche = new Ring(  "id_3",
+let blanche = new Ring(  3,
                         "solitar",
                         "Blanche", 
                         "Unik i all enkelhet. Blanche är en fantastiskt vacker och stilren förlovningsring som precis perfekt kramar om diamanten. Hennes enkla siluett är mjuk och feminin och passar utmärkt till vardags som till fest. Solitärringen är enkel i sin form utan att bli tråkig, och går tack vare detta att kombinera med andra smycken eller ringar för önskad look.", 
@@ -30,7 +30,7 @@ let blanche = new Ring(  "id_3",
                         6000,
                         6000
 );
-let cleo = new Ring(  "id_4",
+let cleo = new Ring(  4,
                         "solitar",
                         "Cleo", 
                         "Vår vackra ring Cleo är en solitärring infattad med en diamant uppburen av sex stycken tvistade klor. Hennes små öppningar nedtill släpper in ljus samtidigt som de ger ett sofistikerat intryck. Cleo och hennes klassiska look har en modern twist och passar därför de flesta stilar och sammanhang - med en twist.", 
@@ -40,7 +40,7 @@ let cleo = new Ring(  "id_4",
                         7200,
                         7200
 );
-let pauline = new Ring(  "id_5",
+let pauline = new Ring( 5,
                         "solitar",
                         "Pauline", 
                         "Pauline bär vackert upp en päronslipad diamant, denna är till formen en slags kombination av en rund och en marquise-slipad diamant. Vanligtvis bär man ringen med den spetsiga sidan mot sig. Fördelen med denna form på diamant är att fingrarna vanligtvis upplevs längre och smalare.", 
@@ -50,7 +50,7 @@ let pauline = new Ring(  "id_5",
                         7200,
                         7200
 );
-let magdalena = new Ring(  "id_6",
+let magdalena = new Ring(6,
                         "solitar",
                         "Magdalena", 
                         "Originell och unik beskriver Magdalena perfekt. Denna solitärring är infattade med en navett- eller päronslipad diamant. Dessa diamanter ser ofta större ut än dess faktiska storlek tack vare sin respektive form. Dessa former får ofta fingrarna att upplevas längre och smalare, vilket många eftersträvar. Även ovala diamanter har denna effekt.", 
@@ -60,7 +60,7 @@ let magdalena = new Ring(  "id_6",
                         5600,
                         5600
 );
-let alice = new Ring(  "id_7",
+let alice = new Ring(   7,
                         "solitar",
                         "Alice", 
                         "Vår diamantring Alice är något alldeles unikt. Med dubbla klor är sitter diamanten säkert, och ringen får en unik design där klassisk design möter modern formgivning.", 
@@ -70,7 +70,7 @@ let alice = new Ring(  "id_7",
                         9250,
                         9250
 );
-let amber = new Ring(  "id_8",
+let amber = new Ring(   8,
                         "solitar",
                         "Amber", 
                         "Amber och hennes låga infattning är mycket smakfull och bär både mindre och större diamanter väldigt vackert. Amber har en delikat design som, via sina öppna sidor, släpper in mycket ljus. Detta ger diamanten en vacker lyster och framhäver det glittriga som ofta förknippas med en diamantring.", 
@@ -80,7 +80,7 @@ let amber = new Ring(  "id_8",
                         8200,
                         8200
 );
-let daisy = new Ring(  "id_9",
+let daisy = new Ring(   9,
                         "solitar",
                         "Daisy", 
                         "Daisys eleganta klor smalnar av vackert runt centerdiamanten och är delikatare än flera av våra andra ringars klor. Tack vare Daisys höjd kombineras hon enkelt med majoriteten av våra alliansringar.", 
@@ -90,7 +90,7 @@ let daisy = new Ring(  "id_9",
                         7200,
                         7200
 );
-let caroline = new Ring(  "id_10",
+let caroline = new Ring(10,
                         "solitar",
                         "Caroline", 
                         "Caroline andas tidlöshet och låter diamant stå i centrum tack vare sin klassiska och enkla design. Att ringen är infattad med en fyrkantig diamant ger både karaktär och skapar symmetri. På bilden visas ringen med en fyrkantig diamant om 0.75 Carat.", 
@@ -100,7 +100,7 @@ let caroline = new Ring(  "id_10",
                         7200,
                         7200
 );
-let belle = new Ring(  "id_11",
+let belle = new Ring(   11,
                         "solitar",
                         "Belle", 
                         "Belle är en väldigt klassisk solitärring med fyra runda klor och en nätt platå undertill. Belle är likt prinsessan i sagan, en riktig skönhet. Hennes silhouette är sagolikt vacker utan att kompromissa med det praktiska. Belle är den optimala ringen för dig som önskar en ovalslipade diamant, då ringens smala skena lyfter fram diamanten otroligt elegant.", 
@@ -110,7 +110,7 @@ let belle = new Ring(  "id_11",
                         6000,
                         6000
 );
-let astrid = new Ring(  "id_12",
+let astrid = new Ring(  12,
                         "solitar",
                         "Astrid", 
                         "Astrid är en riktig skönhet. Med sin tunna skena och sex nätta klor gör det ringen väldigt populär. Modellen har en relativt hög fattning och kronan påminner lite om en “korg” i sitt utseende. På bilden visas ringen med en 0.50 Carats diamant.", 
@@ -120,7 +120,7 @@ let astrid = new Ring(  "id_12",
                         5600,
                         5600
 );
-let anna = new Ring(  "id_13",
+let anna = new Ring(    13,
                         "solitar",
                         "Anna", 
                         "Anna är en solitärring med sex klor och nätt ringskena. Det är en klassisk förlovningsring med en tidlös design som passar fint med många ringar i vårt sortiment. Anna har en rak ringskena som får många alliansringar att ligga helt dikt an till ringen, och skapar i sin tur inte ett mellanrum mellan ringarna på samma sätt som solitärringar med en midja gör. Den nätta bredden och detaljerna i kronan på ringen får diamanten att poppa på ett smakfullt sätt.", 
@@ -130,7 +130,7 @@ let anna = new Ring(  "id_13",
                         7200,
                         7200
 );
-let sara = new Ring(  "id_14",
+let sara = new Ring(    14,
                         "solitar",
                         "Sara", 
                         "Det som gör Sara unik i sin design är dess hennes unika skena. Den är något kupad/rundad upptill vilket ger den en mer lekfull look än de ringar med helt rak skena. Sara är en av våra tunnaste ringar med en bredd om 1.8 mm. Ringen har sex stycken mycket nätta klor med små öppningar nedtill för att släppa in ljus samtidigt som det ger ett sofistikerat utseende på ringen.", 
@@ -141,7 +141,7 @@ let sara = new Ring(  "id_14",
                         5600
 );
 //halo
-let miranda = new Ring(  "id_15",
+let miranda = new Ring( 15,
                         "halo",
                         "Miranda", 
                         "Extra allt, och lite till beskriver vår vackra ring Miranda. Hennes gnistrande diamanter och dubbla halo är garanterat en iögonfallande ring som drar blickar till sig. Miranda är en haloring med dubbelhalo. Detta innebär att centerdiamanten omges av 34 mindre diamanter som bildar ett halo, plus 10 stycken diamanter på ringskenan. Diamanternas kvalitet är G/VS. De små diamanterna i halot och på sidorna är inkluderade i priset.", 
@@ -151,7 +151,7 @@ let miranda = new Ring(  "id_15",
                         22400,
                         22400
 );
-let diana = new Ring(  "id_16",
+let diana = new Ring(   16,
                         "halo",
                         "Diana", 
                         "Extravagans i form av en ring. Diana är en av våra pampigaste ringar och därför ett perfekt val för den som älskar kombinationen av glitter och elegans. Diana har ett halo och är designad för att infattas med en smaragdslipad centerdiamant, hennes halo består av cirka 12-18 diamanter om 1.3 mm (0.010 Carat styck). Kvalitet G /VS, detta varierar beroende på storleken av centerdiamanten.", 
@@ -161,7 +161,7 @@ let diana = new Ring(  "id_16",
                         12000,
                         12000
 );
-let ebba = new Ring(  "id_17",
+let ebba = new Ring(    17,
                         "halo",
                         "Ebba", 
                         "Ebba är en riktigt skönhet. Med sitt halo och släta skena är hon ett avskalat men glittrande val, perfekt till både vardags som till fest. En haloring innebär att centerdiamanten (på bilden 0.5 Carat) är omgiven av mindre diamanter i en cirkel vilket bildar en halo. Att välja en ring med en krans av mindre diamanter runt om den större ger en illusion av att centerdiamanten är större än vad den faktiskt är. Ebba har dessutom ett väldigt tight halo vilket innebär att det inte är något mellanrum mellan centerdiamanten och halot. De 10 runda mindre diamanterna har kvaliteten G/VS och är inkluderade i priset.", 
@@ -171,7 +171,7 @@ let ebba = new Ring(  "id_17",
                         14600,
                         14600
 );
-let florine = new Ring(  "id_18",
+let florine = new Ring( 18,
                         "halo",
                         "Florine", 
                         "Vänd huvuden med förlovningsringen Florine. Med ett gömt halo, så kallat hidden halo, och sidostensdiamanter gnistrar Florine i varje vinkel - vilket resulterar i att ringen är en superb blickfångare. Diamanterna infattade i ringens halo och skena har en caratvikt om 0.01 carat av kvalitet G/VS.", 
@@ -181,7 +181,7 @@ let florine = new Ring(  "id_18",
                         16800,
                         16800
 );
-let gianna = new Ring(  "id_19",
+let gianna = new Ring(  19,
                         "halo",
                         "Gianna", 
                         "Gianna har ett hidden halo och är något för dig som inte vill ha en lika pampig ring som våra andra haloringar men med det lilla extra som omfamnar kronan på ett smickrande sätt. Vi har valt att visa ringen med en rund diamant om 0.50 Carat på bilden. Namnet hidden halo kommer ifrån att halot endast syns i profil och göms ovanifrån. Halot är infattat med runda briljantslipade diamanter om 0.15 Carat totalt, (0.0125 Carat styck), dess kvalitet är G / VS. Centerdiamanten har kvaliteten H / SI1 och handplockas av oss, för runda diamanter över 0.30 Carat tillkommer ett certifikat från GIA. Giannas halo gör att den kombineras bäst till lägre alliansringar så att ringarna lägger sig dikt an till varandra.", 
@@ -191,7 +191,7 @@ let gianna = new Ring(  "id_19",
                         13700,
                         13700
 );
-let gloria = new Ring(  "id_20",
+let gloria = new Ring(  20,
                         "halo",
                         "Gloria", 
                         "Gloria är en fantastiskt vacker ring. Denna oemotståndliga ring har samma profil på skenan som ringen Fredrica med ett djup om 1.6 mm samt en bredd om 1.7 mm. Diamanterna på skenan och i halot är 1.25 mm i diameter (0.008 Carat styck). Totalt har ringen 16 diamanter på skenan och 18 diamanter i halot, lite beroende på centerdiamantens storlek. Glorias halo är ett så kallat tight halo vilket betyder att mellanrummet mellan halot och centerdiamanten är så litet som möjligt. Detta ger en illusion av att centerdiamanten är större än vad den faktiskt är. Gloria är skapad för att infattas med en kuddformad diamant men kan även väljas med andra former. Oavsett vilken form ni väljer så tillverkar vi halot utefter er valda diamant.", 
@@ -201,7 +201,7 @@ let gloria = new Ring(  "id_20",
                         18600,
                         18600
 );
-let grace = new Ring(  "id_21",
+let grace = new Ring(   21,
                         "halo",
                         "Grace", 
                         "Grace lever verkligen upp till sitt namn - en otroligt vacker och elegant ring med finess. En haloring innebär att centerdiamanten är omgiven av mindre diamanter i en cirkel vilket bildar en halo. Att välja en ring med en krans av mindre diamanter runt om den större ger en illusion av att centerdiamanten är större än vad den faktiskt är. De 16-20 runda mindre diamanterna har kvaliteten G/VS och är inkluderade i priset.", 
@@ -211,7 +211,7 @@ let grace = new Ring(  "id_21",
                         12000,
                         12000
 );
-let grazia = new Ring(  "id_22",
+let grazia = new Ring(  22,
                         "halo",
                         "Grazia", 
                         "Grazia översätts ungefär till “favör, eller en tjänst” från latin, en översättning vi tycker passar extra bra in på den här ringen. Med sitt gnistrande halo och höga infattning passar diamantringen Grazia extra bra till personen som söker en glamorös och lyxig förlovningsring. De diamanter som är infattade i halot ingår i priset som visas. Antalet diamanter varierar beroende på centerstenens Caratvikt.", 
@@ -222,7 +222,7 @@ let grazia = new Ring(  "id_22",
                         13400
 );
 //sidosten
-let anne = new Ring(  "id_23",
+let anne = new Ring(    23,
                         "sidosten",
                         "Anne", 
                         "Med sin kanalinfattning och diamantinfattade skena är Anne den självklara sidostensringen för den moderna men smakfulla. Denna diamantring är infattad med en princesslipad diamant, som med sina raka linjer adderar en unik och fashionabel touch till den annars klassiska förlovningsringen. Sidodiamanterna är väger tillsammans 0.10 Carat och är sju till antalet per axel. De små diamanternas kvalitet är G/VS.", 
@@ -232,7 +232,7 @@ let anne = new Ring(  "id_23",
                         11700,
                         11700
 );
-let evelina = new Ring(  "id_24",
+let evelina = new Ring( 24,
                         "sidosten",
                         "Evelina", 
                         "Denna förlovningsring illustrerar en perfekt kombination av gediget hantverk, och vintagekänsla. Evelina passar den som söker en lekfull diamantring som inte kompromissar på kvalitet och unikitet. Evelina är infattad med fyra stycken diamanter om 1.5 mm (0.015 Carat styck) samt åtta stycken diamanter om 1.3 mm (0.010 Carat styck).", 
@@ -242,7 +242,7 @@ let evelina = new Ring(  "id_24",
                         12500,
                         12500
 );
-let charlotte = new Ring(  "id_25",
+let charlotte = new Ring(25,
                         "sidosten",
                         "Charlotte", 
                         "Vår Charlotte är en modern tolkning av den klassiska sidostensringen. Denna förlovningsring är kanalinfattad, vilket gör Charlotte till en diamantring som utstrålar okomplicerad skönhet. Charlotte kan infattas med en rund eller princesslipad centerdiamant. Sidodiamanterna är om totalt 0.14 Carat och är sju till antalet per axel. De små diamanternas kvalitet är G/VS.", 
@@ -252,7 +252,7 @@ let charlotte = new Ring(  "id_25",
                         12800,
                         12800
 );
-let fannie = new Ring(  "id_26",
+let fannie = new Ring(  26,
                         "sidosten",
                         "Fannie", 
                         "Fannie är en riktig skönhet med prinsesslipade diamanter, både på skenan och i mitten. Ringen är kanalinfattad med fem diamanter på varje sida, dessa diamanter har kvalitet G/VS. De prinsesslipade diamanterna tillför en modern look till ringen.", 
@@ -262,7 +262,7 @@ let fannie = new Ring(  "id_26",
                         12700,
                         12700
 );
-let evelyn = new Ring(  "id_27",
+let evelyn = new Ring(  27,
                         "sidosten",
                         "Evelyn", 
                         "Med sin upphöjda och tvistade katedralform är Evelyn den perfekta diamantringen för den klassiska och moderna. Evelyn och hennes unika design bär med fyra stycken klor upp diamanten på ett mycket vackert och ståtligt vis. Längst skenan löper det sju stycken runda diamanter per axel, vilket totalt utgör 0.10 Carat, utöver centerdiamanten. De små diamanternas kvalitet är G/VS.", 
@@ -272,7 +272,7 @@ let evelyn = new Ring(  "id_27",
                         10600,
                         10600
 );
-let felicia = new Ring(  "id_28",
+let felicia = new Ring( 28,
                         "sidosten",
                         "Felicia", 
                         "Med sin moderna profil och kloinfattning låter denna sidostensring diamanterna stå i centrum. Felicia skimrar vackert då hon lyfter sin diamant och släpper in ljus från sidorna. Felicia har totalt 16 stycken sidodiamanter om totalt 0.35 Carat. Diamanternas kvalitet är G/VS. Precis som många av våra andra diamantringar kan Felicia infattas med olika form på centerdiamanten - rund, kudde, prinsess, oval, smaragd och asscher. Ett personligt val som gör denna strålande ring anpassad efter just er smak och stil. Oavsett vilken form på centerdiamanten ni väljer kommer resultatet att vara en ring som verkligen drar ögonen till sig. Centerdiamanten har kvalitet H/SI1 och handplockas av oss för bästa kvalitet.", 
@@ -282,7 +282,7 @@ let felicia = new Ring(  "id_28",
                         19000,
                         19000
 );
-let filippa = new Ring(  "id_29",
+let filippa = new Ring( 29,
                         "sidosten",
                         "Filippa", 
                         "Filippa är en modern sidostensring med kloinfattning. Detta tillåter mycket ljus in till diamanterna vilket gör att Filippa skimrar extra fint. Filippa är nätt, samtidigt som hon inte kompromissar med glitter. Ringen har totalt 16 stycken sidodiamanter om totalt 0.35 Carat. Diamanternas kvalitet är G/VS. Filippa kan väljas med rund centerdiamant. Om ni önskar en annan form på diamanten rekommenderar vi istället att välja en ring med fyra klor, exempelvis Felicia.", 
@@ -292,7 +292,7 @@ let filippa = new Ring(  "id_29",
                         19000,
                         19000
 );
-let fiona = new Ring(  "id_30",
+let fiona = new Ring(   30,
                         "sidosten",
                         "Fiona", 
                         "Glitter och glamour är ledorden för vår diamantring Fiona. Med sina tre rader av infattade diamanter är hon en av våra mest pampiga ringar. Hon är infattade med ~79 stycken små diamanter om ~0.005 Carat styck, diamanternas kvalitet är G/VS. Skenan är ~3.3 mm bred och 1.5 mm tjock.", 
@@ -302,7 +302,7 @@ let fiona = new Ring(  "id_30",
                         16600,
                         16600
 );
-let florence = new Ring(  "id_31",
+let florence = new Ring(31,
                         "sidosten",
                         "Florence", 
                         "Vår förlovningsring Florence har inte bara en skimrande skena av diamanter. Ringens centersten omfamnas av dubbla klor, vilket skapar en illusion av en kuddformad diamant. De dubbla klorna kramar även diamanten extra säkert.", 
@@ -312,7 +312,7 @@ let florence = new Ring(  "id_31",
                         14200,
                         14200
 );
-let francesca = new Ring(  "id_32",
+let francesca = new Ring(32,
                         "sidosten",
                         "Francesca", 
                         "Vår förlovningsring Francesca är en elegant sidostensring i klassisk design. Skenan är infattad med briljantslipade diamanter som smalnar av mot centerstenen. I mitten infattas en diamant av valfri form och Carat. Det diamantklädda bandet skapar en feminin siluett som glittrar i alla vinklar.", 
@@ -322,7 +322,7 @@ let francesca = new Ring(  "id_32",
                         13700,
                         13700
 );
-let francine = new Ring(  "id_33",
+let francine = new Ring(33,
                         "sidosten",
                         "Francine", 
                         "Francine är en elegant klassiker. Hennes sex stycken klor omfamnar en centerdiamant som vilar vackert på en nätt skena. Tack vare detta upplevs diamanten på Francine extra stor. Francine är infattad med 16 stycken runda diamanter om totalt 0.14 Carat, (0.008 Carat styck), dess kvalitet är G/VS. Francine gör sig bäst till runda diamanter och inte med diamanter med fancy cuts då rekommenderar vi istället systern Fredrica. Centerdiamanten har kvaliteten H / SI1 och handplockas av oss och för runda naturliga diamanter över 0.30 Carat tillkommer ett certifikat från GIA.", 
@@ -332,7 +332,7 @@ let francine = new Ring(  "id_33",
                         14000,
                         14000
 );
-let fredrica = new Ring(  "id_34",
+let fredrica = new Ring(34,
                         "sidosten",
                         "Fredrica", 
                         "Fredrica är en av våra mest populära ringar, med sin moderna kloinfattning och smala ringskena upplevs centerdiamanten större, något som de flesta uppskattar. Fredrica är infattad med 16 stycken runda diamanter om totalt 0.14 Carat, dess kvalitet är G/VS. Fredrica kan väljas med alla våra olika former på centerdiamanten. Välj helt själv efter just din personliga smak. Oavsett vilken form på centerdiamanten ni väljer kommer resultatet bli en ring som verkligen drar ögonen till sig. Centerdiamanten har kvalitet H/SI1 och handplockas av våra experter.", 
@@ -342,7 +342,7 @@ let fredrica = new Ring(  "id_34",
                         14000,
                         14000
 );
-let freya = new Ring(  "id_35",
+let freya = new Ring(   35,
                         "sidosten",
                         "Freya", 
                         "Freya är en förlovningsring för den glamorösa. Den här iögonfallande och extravaganta sidostensringen är inspirerade av en kunds önskan att bära en ring som är showens stjärna. Resultatet av den egendesignade ringen inspirerade vårt designteam att skapa en egen stjärna, en ring som verkligen fångar blickar.", 
@@ -352,7 +352,7 @@ let freya = new Ring(  "id_35",
                         29000,
                         29000
 );
-let gabrielle = new Ring(  "id_36",
+let gabrielle = new Ring(36,
                         "sidosten",
                         "Gabrielle", 
                         "Gabrielle är en av våra mest populära sidostensringar. Med sin moderna kloinfattning ger ringen ett mer trendigt men tidlöst intryck och framhäver diamanterna på ett smakfullt sätt. Gabrielle är en riktig skönhet med sina kloinfattade sidodiamanter och vackra V-fattning. Ringen kan infattas med en rund- eller kuddslipad diamant och har totalt 12 stycken små diamanter om totalt 0.45 Carat med kvaliteten G/VS.", 
@@ -362,7 +362,7 @@ let gabrielle = new Ring(  "id_36",
                         15600,
                         15600
 );
-let willow = new Ring(  "id_37",
+let willow = new Ring(  37,
                         "sidosten",
                         "Willow", 
                         "Willow är en pampig sidostensring som skiljer sig åt från våra andra modeller. Denna ring har dubbla rader med fadeninfattade diamanter på vardera sida om centerdiamanten. Oavsett vilken Carat du väljer på centerdiamanten är detta en anmärkningsvärd ring som väcker uppmärksamhet! Sidodiamanterna ingår i skenans pris. De är av kvaliteten G/VS och den totala Caratvikten för dessa är 0.30 Carat totalt.", 
@@ -373,7 +373,7 @@ let willow = new Ring(  "id_37",
                         17200
 );
 // tresten
-let elena = new Ring(  "id_38",
+let elena = new Ring(   38,
                         "tresten",
                         "Elena", 
                         "Med en unik design där infattningen, likt grenarna på ett träd, sträcker sig för att säkert hålla fast sina tre stycken diamanter. Elena är en trestensring som är infattad med runda diamanter. Sidostenarna är inkluderade i skenans pris och är graderade H/SI1. Deras caratvikt varierar beroende på centerdiamantens caratvikt.", 
@@ -383,7 +383,7 @@ let elena = new Ring(  "id_38",
                         16100,
                         16100
 );
-let elizabeth = new Ring(  "id_39",
+let elizabeth = new Ring(39,
                         "tresten",
                         "Elizabeth", 
                         "En trestensring bär på en fin symbolik som följer med dess bärare och påminner om budskapet genom livets alla stunder. De tre infattade diamanterna representerar, enligt sägnen, “The past, The present and The future”. Formerna kombinerade skapar ett kraftfullt intryck, med en mjuk eftersmak. Elizabeth finns i sex olika storlekar per standard där sidodiamanterna skiljer sig i caratvikt beroende på centerdiamanten, från totalt 0.45 Carat till 1.80 Carat. Sidodiamanterna ingår i skenans pris.", 
@@ -393,7 +393,7 @@ let elizabeth = new Ring(  "id_39",
                         15900,
                         15900
 );
-let elly = new Ring(  "id_40",
+let elly = new Ring(    40,
                         "tresten",
                         "Elly", 
                         "En trestensring bär på en fin symbolik som följer med dess bärare och påminner om budskapet genom livets alla stunder. De tre infattade diamanterna representerar, enligt sägnen, “The past, The present and The future”. Elly har en otroligt klassisk design som aldrig går ur tiden. Du väljer form och storlek på centerdiamanten, du kan antingen välja en rund eller smaragdslipad diamant. Sidodiamanterna är baguetteformade och har kvalitet H/SI1. De är antingen 3.25 x 2.00 x 1.25 mm styck (0.05 Carat) eller 4.00 x 2.00 x 1.50 mm styck (0.10 Carat). Storleken på baguetterna styrs av Carat på centerdiamanten. Sidodiamanterna ingår i skenans pris. På bilden visas Elly med en centerdiamant om 0.50 Carat och två stycken sidodiamanter om 0.10 Carat styck.", 
@@ -403,7 +403,7 @@ let elly = new Ring(  "id_40",
                         11400,
                         11400
 );
-let eloise = new Ring(  "id_41",
+let eloise = new Ring(  41,
                         "tresten",
                         "Eloise", 
                         "Dubbla klor, kryssad infattning och tre gnistrande diamanter. Vår förlovningsring Eloise strålar av unika detaljer som reflekterar fint hantverk och kreativ design. Den lekfulla ringen utgör en perfekt förlovningsring för den som uppskattar det lilla extra och söker en lyxig gnistra. Sidostenarna är om 0.10 carat styck och oberoende av centerstenens caratvikt. Sidodiamanterna är graderade H/SI1.", 
@@ -413,7 +413,7 @@ let eloise = new Ring(  "id_41",
                         13200,
                         13200
 );
-let embla = new Ring(  "id_42",
+let embla = new Ring(   42,
                         "tresten",
                         "Embla", 
                         "En trestensring bär på en fin symbolik som följer med dess bärare och påminner om budskapet genom livets alla stunder. De tre infattade diamanterna representerar, enligt sägnen, “The past, The present and The future”. Embla har tre runda diamanter vilka samtliga är graderade till H/SI1. På bilden visas Embla med en centerdiamant om 0.50 Carat och två sidodiamanter om 0.15 Carat styck. Embla finns i fem olika utföranden med olika storlek på centerdiamanten och sidodiamanterna dock går det fint att välja en centerdiamant med en annan caratvikt än de som presenteras här.", 
@@ -423,7 +423,7 @@ let embla = new Ring(  "id_42",
                         14500,
                         14500
 );
-let emilia = new Ring(  "id_43",
+let emilia = new Ring(  43,
                         "tresten",
                         "Emilia", 
                         "En trestensring bär på en fin symbolik som följer med dess bärare och påminner om budskapet genom livets alla stunder. De tre infattade diamanterna representerar, enligt sägnen, “The past, The present and The future”. Emilia har två päronslipade diamanter på vardera sida av centerdiamanten, dessa ser ofta större ut än dess faktiska storlek tack vare dess form. Denna form får ofta fingrarna att upplevas längre och smalare, vilket många eftersträvar. Även navettslipade och ovala diamanter har denna effekt. Smaragdslipade diamanter gnistrar inte likt runda diamanter utan reflekterar ljus som i en “spegel-hall” istället. Kombinerat skapar diamanterna en effektfull och dramatisk ring.", 
@@ -433,7 +433,7 @@ let emilia = new Ring(  "id_43",
                         13900,
                         13900
 );
-let emmy = new Ring(  "id_44",
+let emmy = new Ring(    44,
                         "tresten",
                         "Emmy", 
                         "Elegans i modern tappning. Vår trestensring Emmy har en skena där infattningen sträcker sig och påmminner om ett kryss. Designen bär en klassisks känsla med en modern twist. Vi har valt att visa ringen med en oval centersten, men ringen kan infattas med alla diamantformer. Sidostenarnas caratvikt varierar beroende på storleken av centerstenen, se specifikationer nedan. Sidostenarna är graderade H/SI1.", 
@@ -443,7 +443,7 @@ let emmy = new Ring(  "id_44",
                         12500,
                         12500
 );
-let esmeralda = new Ring(  "id_45",
+let esmeralda = new Ring(45,
                         "tresten",
                         "Esmeralda", 
                         "Esmeralda är en riktigt pampig ring! Med sina tre smaragdformade diamanter skiljer den sig från mängden och är verkligen en wow-ring. Detta är ringen för dig som vill ha något orginellt. En trestensring har en symbolisk mening och står för “Dåtiden, nutiden och framtiden”, en väldigt vacker symbolik tycker vi. Esmeralda är 1.7 mm djup och 2.2 mm bred. Ringen passar perfekt med den släta ringen Olivia med ett djup om 1.7 mm alternativt en alliansring runt 1.5 mm djup.", 
@@ -453,7 +453,7 @@ let esmeralda = new Ring(  "id_45",
                         8500,
                         8500
 );
-let ewa = new Ring(  "id_46",
+let ewa = new Ring(     46,
                         "tresten",
                         "Ewa", 
                         "En tidlös och elegant förlovningsring. Vår förlovningsring Ewa är en trestensring som perfekt balanserar elegans och finesse. Med tre stycken ovala diamanter stålar ringen i en avskalad och klassisk design. De ovala sidostenarna har en förutbestämd caratvikt om 0.25 carat styck och är graderade H/SI1. Välj centerdiamant själv, vi rekommenderar en oval diamant men ringen kan infattas med alla former av diamant.", 
@@ -463,7 +463,7 @@ let ewa = new Ring(  "id_46",
                         14500,
                         14500
 );
-let edith = new Ring(  "id_47",
+let edith = new Ring(   47,
                         "tresten",
                         "Edith", 
                         "En trestensring bär på en fin symbolik som följer med dess bärare och påminner om budskapet genom livets alla stunder. De tre infattade diamanterna representerar, enligt sägnen, “The past, The present and The future”. Edith består av en centerdiamant som kan anpassas efter önskad diamantform. Sidodiamanterna är päronformade och deras storlek styrs av centerdiamantens. Sidodiamanterna ingår i skenans pris.", 
@@ -474,7 +474,7 @@ let edith = new Ring(  "id_47",
                         17200
 );
 //släta vigselringar
-let alma = new Ring(  "id_48",
+let alma = new Ring(    48,
                         "slata",
                         "Alma", 
                         "Den här vigselringen har en klassisk design och gör sig därför utmärkt som vigselring i en kombination.", 
@@ -484,7 +484,7 @@ let alma = new Ring(  "id_48",
                         2900,
                         2900
 );
-let lucy = new Ring(  "49",
+let lucy = new Ring(    49,
                         "slata",
                         "Lucy", 
                         "Lucy är vår mest kantiga släta ring till henne. Ringen har en väldigt modern profil med raka linjer. Den här typen av ring är väldigt populär i Sverige där vi tycks föredra en rak profil framför en rund.", 
@@ -494,7 +494,7 @@ let lucy = new Ring(  "49",
                         3400,
                         3400
 );
-let marie = new Ring(  "id_50",
+let marie = new Ring(   50,
                         "slata",
                         "Marie", 
                         "En slät ring som Marie passar alla, den är modern men samtidigt klassisk i designen. Den mer rundade profilen gör den mer bekväm än Olivia men samtidigt modernare än Naomi. Ringen finns att få i bredder mellan 2 till 4 mm och motsvarande ring till herr heter Charles och går att få upp till 8 mm bredd.", 
@@ -504,7 +504,7 @@ let marie = new Ring(  "id_50",
                         3100,
                         3100
 );
-let naomi = new Ring(  "id_51",
+let naomi = new Ring(   51,
                         "slata",
                         "Naomi", 
                         "Naomi är en av våra mest populära ringar och är perfekt för den eftersöker en klassisk ring som är tidlös utan att vara i vägen. Tack vare sin komfort och nätta profil är den mycket omtyckt bland våra kunder. Rundad ovansida och mjuka linjer, ligger nära fingret och sticker inte upp mycket jämfört med många andra modeller. Motsvarande ring för herr heter Paul som är exakt samma ring. Önskar du en bredare ring än 4 mm så ta en titt på Paul (som finns med bredden 4 - 8 mm).", 
@@ -514,7 +514,7 @@ let naomi = new Ring(  "id_51",
                         3100,
                         3100
 );
-let olivia = new Ring(  "id_52",
+let olivia = new Ring(  52,
                         "slata",
                         "Olivia", 
                         "Olivia är en modern slät ring som faller många av våra kunder i smaken. Den har en något kantigare profil och är enkel att kombinera med andra ringer eller bära själv som den är. Ringen finns i olika höjd och en diamantring som är 1.7 eller 1.8mm hög matchas bäst med en Olivia som är 1.7mm medan de tunnare diamantringarna fungerar bättre med 1.3mm. Är ni det minsta osäkra i detta val så tveka inte att fråga oss.", 
@@ -524,7 +524,7 @@ let olivia = new Ring(  "id_52",
                         3100,
                         3100
 );
-let palermo = new Ring(  "id_53",
+let palermo = new Ring( 53,
                         "slata",
                         "Palermo", 
                         "Palermo är den perfekta tjocka och rundade ringen. Med sin bredd och sitt djup om 3.0 mm är det en härlig blandning mellan elegant och modernt. Perfekt som en statementring att bära med dina vardagliga smycken.", 
@@ -534,7 +534,7 @@ let palermo = new Ring(  "id_53",
                         7800,
                         7800
 );
-let verona = new Ring(  "id_54",
+let verona = new Ring(  54,
                         "slata",
                         "Verona", 
                         "Verona är en vacker och nätt ring med runda bubblor runt ringen. Den är perfekt ifall du önskar något enkelt men ändå vackert. Vi rekommenderar verkligen denna ring som ett smycke att bära varje dag på högerhanden.", 
@@ -544,7 +544,7 @@ let verona = new Ring(  "id_54",
                         7200,
                         7200
 );
-let vanessa = new Ring(  "id_55",
+let vanessa = new Ring( 55,
                         "slata",
                         "Vanessa", 
                         "Vanessa är den perfekta släta ringen om du vill ha en enkel och diskret design som har det där extra. Den spetsiga delen gör att en diamantring ligger fint bredvid och tillsammans blir de ett samspelt par.", 
@@ -555,7 +555,7 @@ let vanessa = new Ring(  "id_55",
                         5200
 );
 //Allians vigselringar
-let ilona = new Ring(  "id_56",
+let ilona = new Ring(   56,
                         "allians",
                         "Ilona", 
                         "Ilona är den klassiska alliansringen som gör sig utmärkt till både släta och solitära ringar. Med sina ~31 stycken kloinfattade diamanter i kvaliteten (G/VS) som tillsammans är strax under en Carat är Ilona den perfekta glittriga symbolen för en unik kärlekshistoria. Varje diamant är 0.030 Carat och tillsammans bidrar de med ett vackert sken i alla vinklar.", 
@@ -565,7 +565,7 @@ let ilona = new Ring(  "id_56",
                         15700,
                         15700
 );
-let julie = new Ring(  "id_57",
+let julie = new Ring(   57,
                         "allians",
                         "Julie", 
                         "Julie är en riktig klassiker med sin kupade skena och kanalinfattade diamanter. Julie är en mycket klassisk alliansring som är populär bland våra kunder. Halva ringen är kanalinfattad med ~21 runda diamanter om totalt ~0.21 Carat beroende på ringstorlek. Diamanternas kvalitet är G/VS och varje diamant är 0.01 Carat (1.3 mm i diameter).", 
@@ -575,7 +575,7 @@ let julie = new Ring(  "id_57",
                         7100,
                         7100
 );
-let leoni = new Ring(  "id_58",
+let leoni = new Ring(   58,
                         "allians",
                         "Leoni", 
                         "Leoni är en mycket klassisk alliansring med en tidlös design. Hennes bekanta siluett passar vackert med majoriteten av våra solitära ringar. Leoni går att få i både hel- och halvallians. Ringens infattning gör den dessutom väldigt säker och till ett bra val för den som söker en praktisk design som fungerar till både vardag och fest.", 
@@ -585,7 +585,7 @@ let leoni = new Ring(  "id_58",
                         5500,
                         5500
 );
-let lily = new Ring(  "id_59",
+let lily = new Ring(    59,
                         "allians",
                         "Lily", 
                         "Allt började med en kunds dröm om en elegant alliansring som glittrade lite extra. Vårt designteam började skissa, och den fantastiska ringen Lily blev resultatet. Lily är en perfekt alliansring för den glamorösa själen. Med sina synligt infattade diamanter skapar Lily ett vackert skimmer. Bär henne i en kombination, eller som ett statement smycke.", 
@@ -595,7 +595,7 @@ let lily = new Ring(  "id_59",
                         16500,
                         16500
 );
-let liza = new Ring(  "id_60",
+let liza = new Ring(    60,
                         "allians",
                         "Liza", 
                         "Liza är en alliansring som står ut ur mängden med sina prinsesslipade diamanter som sitter tätt i rad. Perfekt om du vill ha något annorlunda. Den här en alliansringen som går att få i både halv- och helallians. Ringen är infattad med prinsesslipade diamanter. Detta är den perfekta ringen för dig om du önskar något speciellt och fördelen med Liza är att det är väldigt lite metall runt om så diamanterna får verkligen stå i centrum.", 
@@ -605,7 +605,7 @@ let liza = new Ring(  "id_60",
                         8100,
                         8100
 );
-let lizette = new Ring(  "id_61",
+let lizette = new Ring( 61,
                         "allians",
                         "Lizette", 
                         "Lizette och hennes navettslipade diamanter adderar en elegant touch till likväl vardag som fest. Hon har en nätt design och är därför tacksam att kombinera med andra ringar och smycken.", 
@@ -615,7 +615,7 @@ let lizette = new Ring(  "id_61",
                         13600,
                         13600
 );
-let louise = new Ring(  "id_62",
+let louise = new Ring(  62,
                         "allians",
                         "Louise", 
                         "Louise är en alliansring som går att få i både halv- och helallians. Ringen är infattad med två klor per diamant vilket verkligen gör att diamanterna syns ordentligt.", 
@@ -625,7 +625,7 @@ let louise = new Ring(  "id_62",
                         7600,
                         7600
 );
-let nellie = new Ring(  "id_63",
+let nellie = new Ring(  63,
                         "allians",
                         "Nellie", 
                         "Nellie är alliansringen som passar perfekt tillsammans med vår sidostensring Fannie. Ringen är infattad med 13 stycken princesslipade diamanter som har kvaliteten G/VS. Den finns i två olika storlekar på diamanterna vilket också förändrar bredden på ringen.", 
@@ -635,7 +635,7 @@ let nellie = new Ring(  "id_63",
                         13500,
                         13500
 );
-let sofia = new Ring(  "id_64",
+let sofia = new Ring(   64,
                         "allians",
                         "Sofia", 
                         "Sofia är en modern vigselring och diamantring som låter sina diamanter stå i centrum utan att omringas av mycket metall. Sofia är en halvalliansring, vilket innebär att diamanter är infattade runt halva ringen. Hennes diamanter är kloinfattade och väger tillsammans totalt ~ 0.25 carat. Varje diamant är ~ 0.015 carat med en kvalitet om G/VS.", 
@@ -645,7 +645,7 @@ let sofia = new Ring(  "id_64",
                         8100,
                         8100
 );
-let vera = new Ring(  "id_65",
+let vera = new Ring(    65,
                         "allians",
                         "Vera", 
                         "Vera är en modern alliansring med en V-formad design. Med sitt unika utseende och briljantslipade diamanter gör den sig fantastiskt fin tillsammans med någon utav våra förlovnings- eller alliansringar. Vera gör sig också väldigt bra som en statement ring för sig själv.", 
@@ -655,7 +655,7 @@ let vera = new Ring(  "id_65",
                         11400,
                         11400
 );
-let zoe = new Ring(  "id_66",
+let zoe = new Ring(     66,
                         "allians",
                         "Zoe", 
                         "Zoe är en alliansring som är gjord för att passa perfekt till sidostensringen Willow. Då de båda har en speciell form på skenan blir de tillsammans ett perfekt par som skapar en fantastisk kombination!", 

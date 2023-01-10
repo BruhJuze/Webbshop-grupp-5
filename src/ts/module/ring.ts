@@ -1,6 +1,6 @@
 export class Ring {
     constructor (
-        public id: string, 
+        public id: number, 
         public ringType:string, 
         public name: string, 
         public first_desc: string, 

@@ -110,7 +110,7 @@ function renderCartItems(){
             //console.log(product.id);
 
             //for(let ring of allRings){
-                for(let ring = 0; ring < allRings.length; ring++){
+            for(let ring = 0; ring < allRings.length; ring++){
 
                 if(product.id === allRings[ring].name){
                 
