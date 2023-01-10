@@ -8,6 +8,8 @@ let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || [];
 let prodContainer: HTMLTableSectionElement = document.getElementById("checkoutProductContainer") as HTMLTableSectionElement;
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
 let bTag: HTMLBaseElement = document.createElement("b") as HTMLBaseElement;
+let pTag: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
+let pTag2: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
 let sumPrice: number = 0;
 let sumofRing: number = 0;
 let psuedoI: number = 0;
@@ -22,6 +24,10 @@ function renderCheckoutContent(){
          for  (let checkoutItem of cart) {
             console.log(JSON.stringify(cart));
             psuedoI +=1;
+            if(cart.length > psuedoI){
+                sumPrice = 0;
+            }
+            
 
             let newProduct: HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let title:HTMLElement = document.createElement("section") as HTMLElement;
@@ -39,8 +45,6 @@ function renderCheckoutContent(){
             let amountNumber: HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let plusIcon:HTMLElement = document.createElement("i") as HTMLElement;
             let minusIcon:HTMLElement = document.createElement("i") as HTMLElement;
-            let pTag: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
-            let pTag2: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
 
             newProduct.className = "mainCheckout__newProduct";
             title.className = "mainCheckout__newProduct__leftContainer__leftChildContainer__title";
@@ -85,8 +89,6 @@ function renderCheckoutContent(){
         }
 
 
-
-            console.log(checkoutItem.price);
             sumPrice += checkoutItem.price * checkoutItem.item;
             sumofRing = checkoutItem.price * checkoutItem.item;
 
@@ -96,11 +98,9 @@ function renderCheckoutContent(){
             sum.innerHTML = sumofRing.toString() + " " + "kr";
             amountNumber.innerHTML = JSON.stringify(checkoutItem.item);
             
-            if(cart.length>=psuedoI){
-                pTag.innerHTML = sumPrice + " kr"; ///nytt class eller barn
-                pTag2.innerHTML = 150 + " kr";
-                bTag.innerHTML = sumPrice + 150 + " kr";
-            }
+            pTag.innerHTML = sumPrice + " kr";
+            pTag2.innerHTML = 150 + " kr";
+            bTag.innerHTML = sumPrice + 150 + " kr";
 
             newProduct.appendChild(leftContainer);
             newProduct.appendChild(rightContainer);
@@ -116,12 +116,14 @@ function renderCheckoutContent(){
             amountSub.append(minusIcon);
             rightContainer.appendChild(removeBtn);
             rightContainer.appendChild(sum);
+            
 
-            if(cart.length==psuedoI){
+            if(cart.length==psuedoI ){
             
             totalPrice.appendChild(pTag);
             totalPrice.appendChild(pTag2);
             totalPrice.appendChild(bTag);
+
             }
             
             prodContainer.appendChild(newProduct);
@@ -140,6 +142,7 @@ function removeCheckoutItem(id: number){
     //console.log(selectedItem);
     cart = cart.filter( (x) =>  x.id != selectedItem);
     localStorage.setItem("data", JSON.stringify(cart));
+    sumPrice = 0;
     renderCheckoutContent();
 }
 
