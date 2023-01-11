@@ -123,8 +123,11 @@
 
             &__title{ 
                 font-size: 5vw; 
+                width: 40vw;
                 @include b.x-large{ 
                     font-size: 25px; 
+                    width: 230px;
+                    margin-right: -210px;
                 } 
         }  
 
