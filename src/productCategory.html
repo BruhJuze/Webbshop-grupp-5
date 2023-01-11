@@ -7,6 +7,7 @@
     <link href="scss/main.scss" rel="stylesheet" />
     <script src="ts/main.ts" defer type="module"></script>
     <script src="./ts/productCategoy.ts" defer type="module"></script>
+    <script src="./ts/productPage.ts" defer type="module"></script>
     <title>Diamonds for U | Products</title>
     <link
       rel="stylesheet"
@@ -80,7 +81,7 @@
                     </li>
                     <li>
                       <a
-                        href="./productPage.html"
+                        href="./productCategory.html"
                         class="ring-links"
                         id="allians-link"
                         data-ringtype="allians"
@@ -109,32 +110,96 @@
       <div class="mobile-menu">
         <ul class="mobile-menu__ul">
           <li class="menu__li">
-            <a href="./productCategory.html">Förlovningsringar</a>
+            <a href="#" class="menu__a no-link">Förlovningsringar</a>
+            <ul class="dropdown">
+              <li>
+                <a
+                  href="./productCategory.html"
+                  class="ring-links"
+                  id="solitar-link"
+                  data-ringtype="solitar"
+                  >Solitärringar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./productCategory.html"
+                  class="ring-links"
+                  id="halo-link"
+                  data-ringtype="halo"
+                  >Haloringar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./productCategory.html"
+                  class="ring-links"
+                  id="tresten-link"
+                  data-ringtype="tresten"
+                  >Trestensringar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./productCategory.html"
+                  class="ring-links"
+                  id="sidosten-link"
+                  data-ringtype="sidosten"
+                  >Sidostensringar</a
+                >
+              </li>
+            </ul>
           </li>
-          <li class="menu__li">
-            <a href="./productPage.html">Vigselringar</a>
+          <li>
+            <a href="#" class="menu__a no-link">Vigselringar</a>
+            <ul class="dropdown dropdown2">
+              <li>
+                <a
+                  href="./productCategory.html"
+                  class="ring-links"
+                  id="slata-link"
+                  data-ringtype="slata"
+                  >Släta ringar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./productCategory.html"
+                  class="ring-links"
+                  id="allians-link"
+                  data-ringtype="allians"
+                  >Alliansringar</a
+                >
+              </li>
+            </ul>
           </li>
-          <li class="menu__li"><a href="about.html">Om oss</a></li>
-          <li class="menu__li"><a href="contact.html">Kontakt</a></li>
+          <li><a href="about.html" class="menu__a">Om oss</a></li>
+          <li><a href="contact.html" class="menu__a">Kontakt</a></li>
         </ul>
       </div>
       <div class="cart">
         <button class="close-button">
           <i class="bi bi-x"></i>
         </button>
-        <div class="cart__container">
-          <div class="cart__title">Din kundvagn</div>
-          <a href="./checkout.html"
-            ><button class="checkout-button" id="checkoutBtn">
-              Gå till kassan
-            </button>
-          </a>
+        <div class="cart__title">Din kundvagn</div>
+        <div class="cart__container" id="cart-container">
+
         </div>
+        <a href="./checkout.html" class="checkout-button-link">
+          <button class="checkout-button">
+            Gå till kassan
+          </button>
+        </a>
       </div>
     </aside>
 
     <section class="subheader">
       <h1 class="subheader__title">Solitärringar</h1>
+    </section>
+
+    <section class="categoryInfo">
+      <h3 class="categoryInfo__text" id="category-text-1"></h3>
+      <p class="categoryInfo__text" id="category-text-2"></p>
     </section>
 
     <!-- <section class="text-container container">
@@ -151,7 +216,7 @@
       </div>
     </section>
 
-    <button class="load-more-btn">
+    <button class="load-more-btn" id="load-btn">
       Visa mer
     </button>
 
