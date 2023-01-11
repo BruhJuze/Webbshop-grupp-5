@@ -22,9 +22,9 @@ export function renderCheckoutContent(){
         prodContainer.innerHTML = "";
 
          for  (let checkoutItem of cart) {
-            console.log(JSON.stringify(cart));
+            console.log(cart.length);
             psuedoI +=1;
-            if(cart.length > psuedoI){
+            if(2 > psuedoI){
                 sumPrice = 0;
             }
             
@@ -92,7 +92,7 @@ export function renderCheckoutContent(){
             sumPrice += checkoutItem.price * checkoutItem.item;
             sumofRing = checkoutItem.price * checkoutItem.item;
 
-            title.innerHTML =checkoutItem.name;
+            title.innerHTML = checkoutItem.name;
             image.src = checkoutItem.img;
             pricePerThing.innerHTML = checkoutItem.price.toString() + " " + "kr/st";
             sum.innerHTML = sumofRing.toString() + " " + "kr";
@@ -116,15 +116,9 @@ export function renderCheckoutContent(){
             amountSub.append(minusIcon);
             rightContainer.appendChild(removeBtn);
             rightContainer.appendChild(sum);
-            
-
-            if(cart.length==psuedoI ){
-            
             totalPrice.appendChild(pTag);
             totalPrice.appendChild(pTag2);
             totalPrice.appendChild(bTag);
-
-            }
             
             prodContainer.appendChild(newProduct);
 
