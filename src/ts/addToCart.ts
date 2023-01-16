@@ -19,34 +19,6 @@ let cart: Array<{ id: string, item: number, price: number, totalPrice: number}> 
 
 let searchItem: number;  
 
-
-// function addToCart(getRingId: string){    
-
-//     //console.log(getRingId);
-
-//     let ring = getRingId; 
- 
-//     for (let ring of allRings) {
-//         if(getRingId == ring.name) {
-//             //console.log(ring.name);
-
-//             let search = cart.find( (x) => x.id === ring.name);
-       
-//             if(search === undefined){
-//                 cart.push({
-//                     id: ring.name,
-//                     item: 1
-//                 });
-//             } else {
-//                 search.item += 1;
-//             }
-//         };
-//     }
-//     localStorage.setItem("data", JSON.stringify(cart));
-//     update(getRingId);
-//     renderCartItems();
-// }
-
 const ringID = getRingId() as string;
 
 //console.log(ringID);
@@ -145,9 +117,6 @@ function renderCartItems(){
                     const dashIconContainer = document.createElement('div');
                     dashIconContainer.classList.add("dash-icon-container");
                     dashIconContainer.innerHTML = `<i class="bi bi-dash-square"></i>`;
-                    dashIconContainer.addEventListener('click', ()=> {
-                        console.log("funka minus");
-                    });
                     cartContentLeftAddRemove.appendChild(dashIconContainer);
                     const cartQuantity = document.createElement('div');
                     cartQuantity.classList.add("cart-quantity");
@@ -156,9 +125,7 @@ function renderCartItems(){
                     const plusIconContainer = document.createElement('div');
                     plusIconContainer.classList.add("plus-icon-container");
                     plusIconContainer.innerHTML = `<i class="bi bi-plus-square"></i>`;
-                    plusIconContainer.addEventListener('click', () => {
-                        addToCart(ringID);
-                    });
+
                     cartContentLeftAddRemove.appendChild(plusIconContainer);
 
                     const cartContentRight = document.createElement('div');
@@ -186,26 +153,9 @@ function renderCartItems(){
 
                     if(allRings[ring].name == currentCartProduct.id){
 
-                    selectCarat.addEventListener('change', ()=> {
-
-                        let valueCarat = selectCarat.value;
-                        let newValueCarat: number = +valueCarat;  
-                        thisCaratPrice = allRings[ring].price;
-                            
-                        let totalSumCarat = newValueCarat * thisCaratPrice;
-
-                        console.log(totalSumCarat +"new totalPrice");
-
-                        allRings[ring].totalPrice = totalSumCarat;
-
-                        console.log(allRings[ring].totalPrice  +"new ring price");              
-                        //cartContentPrice.innerHTML = thisCaratPrice.toString() + " " + "kr";
-                        cartContentPrice.innerHTML = allRings[ring].totalPrice.toString() + " " + "kr";     
-                        localStorage.setItem("data", JSON.stringify(cart));        
-
-
-                    });
-
+                        plusIconContainer.addEventListener('click', () => {
+                            addToCart(ringID);
+                        });
                 };
 
                 // cartButton?.addEventListener('click', ()=>{
