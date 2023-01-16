@@ -1,31 +1,24 @@
 import { allRings, ringCategories } from "./module/productData";
 import { Ring } from "./module/ring";
+import { Cart } from "./module/cart";
+import { getRingId } from "./productPage";
 
+let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || [];
 
 const addToCartButton = document.querySelector('.addToCart-btn');
-
 const presentURL = new URL(window.location.href);
-
-function getRingId() {
-
-    const getRingId = presentURL.searchParams.get("name");
-
-    return getRingId;
-}
-
 const dashIconContainer = document.querySelector('.dash-icon-container');
 
-let cart: Array<{ id: string, item: number, price: number, totalPrice: number}> = JSON.parse(localStorage.getItem("data")!) || [];
+//let cart: Array<{ id: string, item: number, price: number, totalPrice: number}> = JSON.parse(localStorage.getItem("data")!) || [];
+//let searchItem: number;  
 
-let searchItem: number;  
-
-const ringID = getRingId() as string;
+const ringID = getRingId;
 
 //console.log(ringID);
 
 addToCartButton?.addEventListener('click', () => {
 
-    addToCart(ringID);
+    //addToCart(ringID);
 
     //console.log(ringID);
 });
@@ -35,28 +28,16 @@ dashIconContainer?.addEventListener('click', () => {
    console.log("funkar minus");
 })
 
-function  removeFromCart(getRing: string) {
-
-    for (let ring of allRings) {
-        if(getRing == ring.name) {
-            console.log(ring.name);
-
-            let search = cart.find( (x) => x.id === ring.name);
-       
-            if(search?.item ===  undefined || 0) return; //Få hjälp med negativt värde
-            else {
-                search.item -= 1;
-            }
-        };
-    }
-    localStorage.setItem("data", JSON.stringify(cart));
-    //update(getRingId);
+function  removeFromCart(id: number) {
+        let selectedItem = id;
+        cart = cart.filter( (x) => x.id != selectedItem);
+        localStorage.setItem("data", JSON.stringify(cart));
 }
 
-function update(id: string){
-    let search = cart.find((x)=> x.id === id) !;
-    addAllGoods();
-}
+// function update(id: string){
+//     let search = cart.find((x)=> x.id === id) !;
+//     addAllGoods();
+// }
 
 function addAllGoods() {
     let cartQuantity = document.getElementById('cart-quantity');
@@ -84,7 +65,7 @@ function renderCartItems(){
             //for(let ring of allRings){
             for(let ring = 0; ring < allRings.length; ring++){
 
-                if(product.id === allRings[ring].name){
+                if(product.name === allRings[ring].name){
                 
                     const cartProduct = document.createElement('div');
                     cartProduct.classList.add("cart-product");
@@ -153,9 +134,10 @@ function renderCartItems(){
 
                     if(allRings[ring].name == currentCartProduct.id){
 
-                        plusIconContainer.addEventListener('click', () => {
-                            addToCart(ringID);
-                        });
+                    plusIconContainer.addEventListener('click', () => {
+                        //addToCart(ringID);
+                        console.log("addera");
+                    });
                 };
 
                 // cartButton?.addEventListener('click', ()=>{
@@ -194,21 +176,18 @@ function renderCartItems(){
 
 function addToCart(getRingId: string){    
 
-    //console.log(getRingId);
-
     let ring = getRingId; 
  
     for (let ring of allRings) {
         if(getRingId == ring.name) {
-            //console.log(ring.name);
 
-            let search = cart.find( (x) => x.id === ring.name);
+            let search = cart.find( (x) => x.name === ring.name);
        
             if(search === undefined){
                 cart.push({
-                    id: ring.name,
+                    name: ring.name,
                     price: ring.price,
-                    totalPrice: ring.totalPrice,
+                    carat: ring.name,
                     item: 1
                 });
             } else {
@@ -224,7 +203,7 @@ function addToCart(getRingId: string){
 renderCartItems();
 
 
-//set price
+//set price 
 // let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
 // let selectCarat = document.getElementById('carat') as HTMLSelectElement;
 
