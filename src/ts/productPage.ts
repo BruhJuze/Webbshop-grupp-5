@@ -316,9 +316,6 @@ function addItemToCartIcon(){
 }
 
 
-renderCarouselImages(getRing);
-
-
 function renderCarouselImages(id: string){
     for(let ring of allRings){
         if(id === ring.name){
