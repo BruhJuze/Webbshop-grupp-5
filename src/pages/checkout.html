@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="scss/main.scss" rel="stylesheet" />
-    <script src="ts/main.ts" defer type="module"></script>
-    <script src="./ts/productCategoy.ts" defer type="module"></script>
-    <script src="./ts/productPage.ts" defer type="module"></script>
-    <title>Diamonds for U | Products</title>
+    <link href="./../scss/main.scss" rel="stylesheet" />
+    <script src="./../ts/main.ts" defer type="module"></script>
+    <script src="./../ts/productPage.ts" defer type="module"></script>
+    <script src="./../ts/checkout.ts" defer type="module"></script>
+
+    <title>Diamonds for U</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -21,8 +22,8 @@
       <nav>
         <div class="container">
           <div class="navbar">
-            <a href="index.html" class="logo">
-              <img class="logo-png" src="assets/Logo/logo.png" alt="logo" />
+            <a href="../index.html" class="logo">
+              <img class="logo-png" src="../assets/Logo/logo.png" alt="logo" />
             </a>
             <div class="desktop-menu">
               <ul class="menu__ul">
@@ -193,95 +194,131 @@
       </div>
     </aside>
 
-    <section class="subheader">
-      <h1 class="subheader__title">Solitärringar</h1>
-    </section>
+  <main class="mainCheckout">
+<section class="mainCheckout__title"><h2>Kassa</h2></section>
+<div class="mainCheckout__steps">1. DIN KUNDVAGN</div>
+<section class="mainCheckout__info">
+  <a>Produkt</a> Pris Antal Summa
+</section>
+<section class="mainCheckout__productContainer" id="checkoutProductContainer"></section>
+<div class="mainCheckout__priceContainer">
+<div class="mainCheckout__priceContainer__totalPrice">
+  <p>Summa artiklar:</p>
+  <p>Fraktavgift: </p>
+  <b>Total inkl.moms: </b>
+</div>
+<div class="mainCheckout__priceContainer__totalPrice__number" id="totalPrice"> </div>
+</div>
+<article class="billingParent">
+<section class="billingParent__billingInfo">
+  <div class="mainCheckout__steps">2. LEVERANSADRESS</div>
 
-    <section class="categoryInfo">
-      <h3 class="categoryInfo__text" id="category-text-1"></h3>
-      <p class="categoryInfo__text" id="category-text-2"></p>
-    </section>
+  <div class="billingParent__tbxContainer">
+  <label>Förnamn</label> <input class="billingParent__billingInfo__input" required> </input>
+  </div>
 
-    <!-- <section class="text-container container">
-      <p class="text">En solitärring är en diamantring som ofta används som förlovningsring eller vigselring. 
-        Vårt flexibla sortiment tillåter möjligheten att infatta majoriteten av våra diamantringar 
-        med alla olika former av diamant. Välj en förvald diamant som handplockats av en expert, 
-        eller sök efter diamanter i vår unika databas.
-      </p>
-    </section> -->
+  <div class="billingParent__tbxContainer"> 
+    <label>Efternamn</label> <input class="billingParent__billingInfo__input" required> </input>
+  </div>
 
-    <section class="product-wrapper container">
-      <div class="product-container" id="product-container">
-        <!--Dynamic Product cards are created in ts -->
-      </div>
-    </section>
+  <div class="billingParent__tbxContainer__wide"> 
+  <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
 
-    <button class="load-more-btn" id="load-btn">
-      Visa mer
-    </button>
+  <div class="billingParent__tbxContainer"> 
+  <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
 
-    <footer class="footer">
-      <section class="footer__container">
+  <div class="billingParent__tbxContainer"> 
+  <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
+  </div>
+
+  </div>
+
+</section>
+<section class="billingParent__billingInfo">
+  <div class="mainCheckout__steps">3. FAKTURAADRESS</div>
+
+  <div class="billingParent__tbxContainer">
+    <label>Förnamn</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+      <label>Efternamn</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer__wide"> 
+    <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+    <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+  
+    <div class="billingParent__tbxContainer"> 
+    <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
+    </div>
+
+</section>
+ </article>
+
+ <section class="mainCheckout__button">
+  <a href="./orderdone.html"><button id="purchaseBtn">SLUTFÖR KÖP</button></a>
+
+ </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <section class="footer__container">
         <span class="footer__description">
-          <a href="#"><div class="footer-logo"></div></a>
-          <p>
-            Vår stora passion är smycken av gediget hantverk och service med
-            stort utbud för förlovning & vigsel. Hos oss går kvalitet hand i
-            hand med ansvar för hållbarhet och vi erbjuder diamantexpertis samt
-            kvalificerad service och reparationer.
-          </p>
+            <a href="#"><div class="footer-logo"></div></a>
+            <p>Vår stora passion är smycken av gediget hantverk och service med stort utbud för förlovning & vigsel. Hos oss går kvalitet hand i hand med ansvar för hållbarhet och vi erbjuder diamantexpertis samt kvalificerad service och reparationer.</p>
         </span>
         <span class="footer__info">
-          <h3>Information</h3>
-          <p><a href="#">Förlovningsringar</a></p>
-          <p><a href="#">Vigselringar</a></p>
-          <p><a href="#">Om oss</a></p>
-          <p><a href="#">Frakt & Retur</a></p>
-          <p><a href="#">Garanti</a></p>
-          <p><a href="#">Betalning</a></p>
+            <h3>Information</h3>
+            <p><a href="#">Förlovningsringar</a></p>
+            <p><a href="#">Vigselringar</a></p>
+            <p><a href="#">Om oss</a></p>
+            <p><a href="#">Frakt & Retur</a></p>
+            <p><a href="#">Garanti</a></p>
+            <p><a href="#">Betalning</a></p>
         </span>
         <span class="footer__contact">
-          <h3>Kontakt</h3>
-          <div class="footer__cont">
-            <i class="bi bi-geo-alt"></i>
-            <p class="adress">
-              Diamonds For You Ankeborgssgatan 55 123 45 Stockholm
-            </p>
-          </div>
-          <div>
-            <i class="bi bi-geo-alt"></i>
-            <p class="adress">Diamonds For You Stora Nygatan 53 123 45 Malmö</p>
-          </div>
-          <div>
-            <i class="bi bi-telephone"></i>
-            <p>010-10 10 10</p>
+            <h3>Kontakt</h3>
+            <div class="footer__cont">
+              <i class="bi bi-geo-alt"></i>
+              <p class="adress">Diamonds For You
+                  Ankeborgssgatan 55
+                  123 45 Stockholm</p>
+            </div>
+            <div>
+              <i class="bi bi-geo-alt"></i>
+              <p class="adress">Diamonds For You
+                  Stora Nygatan 53
+                  123 45 Malmö</p>
+            </div>
+            <div>
+              <i class="bi bi-telephone"></i>
+              <p>010-10 10 10</p>
           </div>
           <div>
             <i class="bi bi-envelope"></i>
-            <p>
-              <a href="https://www.google.com/intl/sv/gmail/about/"
-                >info@diamondsofyou.se</a
-              >
-            </p>
+            <p><a href="https://www.google.com/intl/sv/gmail/about/">info@diamondsofyou.se</a></p>
           </div>
-          <p>Org nr: 551010-2010</p>
+            <p>Org nr: 551010-2010</p>
         </span>
         <span class="footer__social">
-          <h3>Följ oss</h3>
-          <div>
-            <a href="https://www.facebook.com/"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a href="https://www.instagram.com/"
-              ><i class="bi bi-instagram"></i
-            ></a>
-            <a href="https://se.linkedin.com/"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <a href="https://se.linkedin.com/"><i class="bi bi-tiktok"></i></a>
-          </div>
+            <h3>Följ oss</h3>
+            <div>
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://se.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://se.linkedin.com/"><i class="bi bi-tiktok"></i></a>
+            </div>
         </span>
-      </section>
-    </footer>
-  </body>
+    </section>
+  </footer>
+</body>
 </html>

@@ -1,5 +1,5 @@
-import { allRings, ringCategories } from "./module/productData";
-import { Ring } from "./module/ring";
+import { allRings, ringCategories } from "./models/productData";
+import { Ring } from "./models/ring";
 
 let filteredItems = new Array<Ring>(); 
 
@@ -123,7 +123,7 @@ function renderProducts(ring: Ring[]){
 
             const productLink = document.createElement('a');
             productLink.setAttribute('id', String(ring.id));
-            productLink.setAttribute('href', String("/productPage.html"));
+            productLink.setAttribute('href', String("/pages/productPage.html"));
             productLink.setAttribute('data-ringname', ring.name);
             productLink.classList.add("product-link");
             productLink.addEventListener('click', (event)=> {
