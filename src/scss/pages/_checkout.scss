@@ -72,7 +72,7 @@
 
     &__newProduct{ 
         width: 100%; 
-        background-color: white;
+        background-color: a.$white-color;
         height: 25vw; 
         border: a.$border; 
         box-sizing: border-box; 
@@ -150,10 +150,10 @@
             } 
 
             &__add{ 
-                background-color: white; 
+                background-color: a.$white-color; 
                 height: 100%; 
                 width: 33.3%; 
-                border: 2px solid black; 
+                border: a.$border2px; 
                 box-sizing: border-box; 
                 text-align: center; 
                 border-radius: 3px; 
@@ -161,10 +161,10 @@
             } 
 
             &__sub{ 
-                background-color: white; 
+                background-color: a.$white-color; 
                 height: 100%; 
                 width: 33.3%; 
-                border: 2px solid black; 
+                border: a.$border2px; 
                box-sizing: border-box; 
                 text-align: center; 
                 border-radius: 3px; 
