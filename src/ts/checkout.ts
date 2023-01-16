@@ -1,5 +1,9 @@
-import { allRings, ringCategories } from "./module/productData";
+import { allRings } from "./module/productData";
 import { Ring } from "./module/ring";
+import { Cart } from "./module/cart";
+import { getRingId } from "./productPage";
+
+let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || []; 
 
 let prodContainer: HTMLTableSectionElement = document.getElementById("checkoutProductContainer") as HTMLTableSectionElement;
 let totalPrice: HTMLDivElement = document.getElementById("totalPrice") as HTMLDivElement;
