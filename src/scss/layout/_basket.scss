@@ -39,9 +39,19 @@
                     margin-right: 5px;
                 }
 
-                .dash-icon-container,
+                .dash-icon-container{
+                    cursor: pointer; 
+
+                    .bi-dash-square{
+                        pointer-events: none;
+                    }
+                }
                 .plus-icon-container{
-                    cursor: pointer;
+                    cursor: pointer;   
+                    
+                    .bi-plus-square{
+                        pointer-events: none;
+                    }
                 }
             }
         }

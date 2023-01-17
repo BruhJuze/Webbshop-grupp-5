@@ -32,6 +32,10 @@ const productDescTextInner = document.querySelector('.product-desc__text__inner'
 const productImages = document.querySelector('.product-images');
 let selectDiamond = document.getElementById('diamond') as HTMLSelectElement;
 let selectCarat = document.getElementById('carat') as HTMLSelectElement;
+//let totalSum = document.getElementById('total-sum');
+let totalSum: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
+let cartTotalPrice = document.querySelector('.cart__totalPrice');
+let totalSumAmount : number = 0;
 
 let thisProductPrice: number; 
 
@@ -120,6 +124,8 @@ let cartItemCounter: number;
 
 addToCartButton?.addEventListener('click', ()=> {
 
+    console.log("funkar");
+
     for (let product of allRings){
 
             if(getRingId == product.id){
@@ -153,10 +159,10 @@ productInfoReadMe?.addEventListener('click', ()=> {
 });
 
 const cartContainer = document.getElementById('cart-container') as HTMLElement;
-
 const cartButton = document.querySelector('.cart-button');
-
 cartButton?.addEventListener('click', renderCartItems);
+
+//let cartQuantity: HTMLDivElement; 
 
 export function renderCartItems(){
 
@@ -198,22 +204,37 @@ export function renderCartItems(){
                     dashIconContainer.classList.add("dash-icon-container");
                     dashIconContainer.innerHTML = `<i class="bi bi-dash-square"></i>`;
                     dashIconContainer.addEventListener('click', ()=> {
-                        let search = cart.find( (x) => x.id === cartItem.id);
+                        // let search = cart.find( (x) => x.id === cartItem.id);
+                        // let searchItem = search?.item;
+                        // //searchItem = searchItem++ || 0;
+                        console.log("subtrahera");
 
-                        let searchItem = search?.item;
-
-                        //searchItem = searchItem++ || 0;
+                        if(cartItem.item >=2){
+                            cartItem.item -= 1;
+                            localStorage.setItem("data", JSON.stringify(cart));
+                            renderCartItemQuantity();
+                            renderTotalCartPrice();
+                        } else{
+                            dashIconContainer.style.filter = "brightness(85%)";
+                        }
                     });
                     cartContentLeftAddRemove.appendChild(dashIconContainer);
-                    const cartQuantity = document.createElement('div');
+                    let cartQuantity = document.createElement('div');
                     cartQuantity.classList.add("cart-quantity");
+                    //cartQuantity.innerHTML = String(cartItem.item);
                     cartQuantity.innerHTML = String(cartItem.item);
+                    //let integercartQuantity = parseInt(cartQuantity.innerHTML);
                     cartContentLeftAddRemove.appendChild(cartQuantity);
                     const plusIconContainer = document.createElement('div');
                     plusIconContainer.classList.add("plus-icon-container");
                     plusIconContainer.innerHTML = `<i class="bi bi-plus-square"></i>`;
                     plusIconContainer.addEventListener('click', ()=> {
-                        //incrementCartItem(cartItem.id);
+                        console.log("addera");
+
+                        cartItem.item += 1;
+                        localStorage.setItem("data", JSON.stringify(cart));
+                        renderCartItemQuantity();
+                        renderTotalCartPrice();
                     });
     
                     cartContentLeftAddRemove.appendChild(plusIconContainer);
@@ -231,6 +252,11 @@ export function renderCartItems(){
 
                     cartContentRight.appendChild(deleteProductBtn);
 
+                    function renderCartItemQuantity(){
+                        cartQuantity.innerHTML = String(cartItem.item);
+                        console.log("funkar att rendera");
+                    }
+
                     const cartContentPrice = document.createElement('div');
                     cartContentPrice.classList.add("cart-content__price");
 
@@ -238,13 +264,29 @@ export function renderCartItems(){
                     let selectCarat = document.getElementById('carat') as HTMLSelectElement;
                     //let sumCarat: number;
 
+                    function renderTotalCartPrice(){
+
+                        totalSumAmount += cartItem.price * cartItem.item;
+
+                        totalSum.innerHTML = totalSumAmount + " kr";
+
+                        totalSumAmount = 0;
+
+                        cartTotalPrice?.appendChild(totalSum);
+                    }
+
+                    renderTotalCartPrice();
                // };
+
+
+
 
                }
             //}
         }
 
     } 
+
 
     // function incrementCartItem(id: number){
 

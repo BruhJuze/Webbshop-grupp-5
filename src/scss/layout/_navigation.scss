@@ -347,6 +347,16 @@ nav{
         border-bottom: 1px solid rgba(112, 112, 112, 0.5);
         padding-bottom: 10px;
     }
+
+    &__totalPrice{
+        margin: 30px auto;
+        width: 80%;
+        display: flex;
+
+        &__label{
+            margin-right: 10px;
+        }
+    }
 }
 
 .close-button{

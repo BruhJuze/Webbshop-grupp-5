@@ -1,30 +1,16 @@
 import { allRings, ringCategories } from "./module/productData";
 import { Ring } from "./module/ring";
 import { Cart } from "./module/cart";
-import { getRingId } from "./productPage";
+import { getRing, getRingId } from "./productPage";
 
-let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || [];
-
-const addToCartButton = document.querySelector('.addToCart-btn');
 const presentURL = new URL(window.location.href);
 const dashIconContainer = document.querySelector('.dash-icon-container');
 
-//let cart: Array<{ id: string, item: number, price: number, totalPrice: number}> = JSON.parse(localStorage.getItem("data")!) || [];
-//let searchItem: number;  
+let cart: Array<{ id: number, name: string, item: number, price: number, totalPrice: number}> = JSON.parse(localStorage.getItem("data")!) || []; 
 
 const ringID = getRingId;
 
-//console.log(ringID);
-
-addToCartButton?.addEventListener('click', () => {
-
-    //addToCart(ringID);
-
-    //console.log(ringID);
-});
-
 dashIconContainer?.addEventListener('click', () => {
-   // removeFromCart(getRingId);
    console.log("funkar minus");
 })
 
@@ -34,16 +20,14 @@ function  removeFromCart(id: number) {
         localStorage.setItem("data", JSON.stringify(cart));
 }
 
-// function update(id: string){
-//     let search = cart.find((x)=> x.id === id) !;
-//     addAllGoods();
-// }
+function update(id: number){
+    let search = cart.find((x)=> x.id === id) !;
+    addAllGoods();
+}
 
 function addAllGoods() {
     let cartQuantity = document.getElementById('cart-quantity');
     cartQuantity = 0 || null;
-    //cartQuantity.innerHTML = cart.map((x)=>x.item).reduce((x,y) => x + y , 0).toString();  //look why cartQuantity is possible null
-    //onsole.log(cart.map((x)=>x.item).reduce((x,y) => x + y , 0));
 }
 
 const cartContainer = document.getElementById('cart-container') as HTMLElement;
@@ -60,7 +44,7 @@ function renderCartItems(){
         cartContainer.innerHTML = "";
 
         for (let product of cart){
-            //console.log(product.id);
+            console.log(getRingId);
 
             //for(let ring of allRings){
             for(let ring = 0; ring < allRings.length; ring++){
@@ -140,29 +124,6 @@ function renderCartItems(){
                     });
                 };
 
-                // cartButton?.addEventListener('click', ()=>{
-
-                //     selectCarat.addEventListener('change', ()=> {
-
-                //         let valueCarat = selectCarat.value;
-                //         let newValueCarat: number = +valueCarat;  
-                //         thisCaratPrice = allRings[ring].price;
-                        
-                //     let totalSumCarat = newValueCarat * thisCaratPrice;
-
-                //     console.log(totalSumCarat +"new totalPrice");
-
-                //     allRings[ring].totalPrice = totalSumCarat;
-
-                //     console.log(allRings[ring].totalPrice  +"new ring price");              
-                //     //cartContentPrice.innerHTML = thisCaratPrice.toString() + " " + "kr";
-                //     cartContentPrice.innerHTML = allRings[ring].totalPrice.toString() + " " + "kr";
-                //     cartContentRight.appendChild(cartContentPrice);              
-
-                //     });
-
-                // });
-
                }
             }
         }
@@ -174,49 +135,6 @@ function renderCartItems(){
     }
 }
 
-function addToCart(getRingId: string){    
-
-    let ring = getRingId; 
- 
-    for (let ring of allRings) {
-        if(getRingId == ring.name) {
-
-            let search = cart.find( (x) => x.name === ring.name);
-       
-            if(search === undefined){
-                cart.push({
-                    name: ring.name,
-                    price: ring.price,
-                    carat: ring.name,
-                    item: 1
-                });
-            } else {
-                search.item += 1;
-            }
-        };
-    }
-    localStorage.setItem("data", JSON.stringify(cart));
-    update(getRingId);
-    renderCartItems();
-}
-
 renderCartItems();
 
 
-//set price 
-// let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
-// let selectCarat = document.getElementById('carat') as HTMLSelectElement;
-
-// let thisProductPrice: number; 
-
-// selectCarat.addEventListener('change', ()=> {
-
-//     let valueCarat = selectCarat.value;
-//     let newValueCarat: number = +valueCarat;                
-//     let totalSumCarat = newValueCarat * thisProductPrice;
-//     let sumCarat = totalSumCarat;
-
-//     productPrice.innerHTML = sumCarat + " " + "kr";                
-//     console.log(sumCarat);
-//     return sumCarat;
-// });
