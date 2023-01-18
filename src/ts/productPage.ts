@@ -1,6 +1,6 @@
-import { allRings } from "./module/productData";
-import { Ring } from "./module/ring";
-import { Cart } from "./module/cart";
+import { allRings } from "./models/productData";
+import { Ring } from "./models/ring";
+import { Cart } from "./models/cart";
 
 
 let filteredItems = new Array<Ring>(); 
@@ -314,9 +314,6 @@ function addItemToCartIcon(){
         addedItemToCart.remove()
     }
 }
-
-
-renderCarouselImages(getRing);
 
 
 function renderCarouselImages(id: string){

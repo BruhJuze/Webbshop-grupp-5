@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="scss/main.scss" rel="stylesheet" />
-    <script src="ts/main.ts" defer type="module"></script>
-    <script src="ts/productPage.ts" defer type="module"></script>
-    <script src="ts/checkout.ts" defer type="module"></script>
+    <link href="./../scss/main.scss" rel="stylesheet" />
+    <script src="./../ts/main.ts" defer type="module"></script>
+    <!-- <script src="ts/productPage.ts" defer type="module"></script> -->
 
     <title>Diamonds for U</title>
     <link
@@ -22,8 +21,8 @@
       <nav>
         <div class="container">
           <div class="navbar">
-            <a href="index.html" class="logo">
-              <img class="logo-png" src="assets/Logo/logo.png" alt="logo" />
+            <a href="../index.html" class="logo">
+              <img class="logo-png" src="../assets/Logo/logo.png" alt="logo" />
             </a>
             <div class="desktop-menu">
               <ul class="menu__ul">
@@ -194,131 +193,142 @@
       </div>
     </aside>
 
-  <main class="mainCheckout">
-<section class="mainCheckout__title"><h2>Kassa</h2></section>
-<div class="mainCheckout__steps">1. DIN KUNDVAGN</div>
-<section class="mainCheckout__info">
-  <a>Produkt</a> Pris Antal Summa
-</section>
-<section class="mainCheckout__productContainer" id="checkoutProductContainer"></section>
-<div class="mainCheckout__priceContainer">
-<div class="mainCheckout__priceContainer__totalPrice">
-  <p>Summa artiklar:</p>
-  <p>Fraktavgift: </p>
-  <b>Total inkl.moms: </b>
-</div>
-<div class="mainCheckout__priceContainer__totalPrice__number" id="totalPrice"> </div>
-</div>
-<article class="billingParent">
-<section class="billingParent__billingInfo">
-  <div class="mainCheckout__steps">2. LEVERANSADRESS</div>
+    <header>
+        <section class="aboutHeader">
+            <h1 class="aboutHeader__title">Om oss</h1>
+        </section>
+    </header>
 
-  <div class="billingParent__tbxContainer">
-  <label>Förnamn</label> <input class="billingParent__billingInfo__input" required> </input>
-  </div>
+    <main class="about">
+      <section class="history">
+        <span class="history__text">
+          <h3>Vår historia</h3>
+          <p>
+            Dimonds for you är ett företag bildat 2016. Vi säljer uteslutande
+            våra egna kollektioner av hållbara diamantringar med målsättning att
+            kunna erbjuda högsta kvalitet till bästa möjliga pris. Alla våra
+            ringar tillverkas i Sverige av hantverkare med stor yrkesskicklighet
+            och med återvunnet guld. Tack vare lång branscherfarenhet och
+            väletablerade nätverk kan vi erbjuda ett brett utbud av prisvärda
+            diamanter och ädelstenar och vi har även stor vana av att
+            förverkliga kunders egna designidéer.
+          </p>
+          <p>
+            Teamet bakom Dimonds for you har växt sig större och vi arbetar
+            ständigt för att utvecklas tillsammans med våra kunder. Vi känner
+            stolthet i vår genuina hantverkshistoria, vår lokala tillverkning
+            och höga kvalitet. Vår målsättning är att erbjuda varje kund ett
+            personligt bemötande och en så bra och trygg köpupplevelse som
+            möjligt.
+          </p>
+        </span>
+        <div class="history__picture">
+          <div class="img"></div>
+        </div>
+      </section>
+      <section class="story">
+        <span class="story__text">
+          <h3>Arbetet med hållbarhet</h3>
+          <p>
+            Vi vill bidra till medvetna val som känns rätt inte bara i stunden
+            utan även i framtiden. En ring från Dimonds for you har en design
+            och kvalitet som håller genom hela livet och ärvs i bästa fall från
+            generation till generation. Det är hållbarhet för oss.
+          </p>
+          <p>
+            Våra ringar är aldrig massproducerade utan tillverkas exklusivt
+            efter kundens beställning av våra skickliga guldsmeder. En
+            kombination av traditionella hantverksmetoder och den allra senaste
+            teknologin inom branschen ger oss stora möjligheter att möta varje
+            kunds önskemål. Vi använder enbart återvunnet guld och bidrar på så
+            sätt till att minska den globala efterfrågan på nybrutet guld och de
+            påfrestningar detta innebär för miljön. Vi är också stolta att kunna
+            erbjuda labbodlade diamanter som alternativ till stenar som brutits
+            ur jordskorpan.
+          </p>
+          <p>
+            Vi har valt att inte använda oss av återförsäljare utan säljer våra
+            ringar direkt till dig i vår webbutik, detta kapar onödiga
+            mellanhänder och gör att vi kan erbjuda hög kvalitet till mycket
+            fördelaktiga priser. Om du vill se våra ringar live finns samtliga
+            modeller som visningskollektion hos vår butik i Stockholm och Malmö.
+            Eftersom vi även skickar ut våra visningsringar till kunder som vill
+            prova hemma är det alltid säkrast att stämma av med oss först om det
+            är någon särskild modell du vill prova på plats i butiken, så att
+            den säkert finns där just den dagen. Om du önskar kan du även
+            beställa din ring på plats och/eller välja att hämta ut din leverans
+            i butiken.
+          </p>
+        </span>
+        <div class="story__picture">
+          <div class="img"></div>
+        </div>
+      </section>
+    </main>
 
-  <div class="billingParent__tbxContainer"> 
-    <label>Efternamn</label> <input class="billingParent__billingInfo__input" required> </input>
-  </div>
-
-  <div class="billingParent__tbxContainer__wide"> 
-  <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
-  </div>
-
-  <div class="billingParent__tbxContainer"> 
-  <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
-  </div>
-
-  <div class="billingParent__tbxContainer"> 
-  <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
-  </div>
-
-  </div>
-
-</section>
-<section class="billingParent__billingInfo">
-  <div class="mainCheckout__steps">3. FAKTURAADRESS</div>
-
-  <div class="billingParent__tbxContainer">
-    <label>Förnamn</label> <input class="billingParent__billingInfo__input"> </input>
-    </div>
-  
-    <div class="billingParent__tbxContainer"> 
-      <label>Efternamn</label> <input class="billingParent__billingInfo__input"> </input>
-    </div>
-  
-    <div class="billingParent__tbxContainer__wide"> 
-    <label>Adress</label> <input class="billingParent__billingInfo__input"> </input>
-    </div>
-  
-    <div class="billingParent__tbxContainer"> 
-    <label>Postnummer</label> <input class="billingParent__billingInfo__input"> </input>
-    </div>
-  
-    <div class="billingParent__tbxContainer"> 
-    <label>Ort</label> <input class="billingParent__billingInfo__input"> </input>
-    </div>
-
-</section>
- </article>
-
- <section class="mainCheckout__button">
-  <a href="./orderdone.html"><button id="purchaseBtn">SLUTFÖR KÖP</button></a>
-
- </section>
-
-
-  </main>
-
-  <footer class="footer">
-    <section class="footer__container">
+    <footer class="footer">
+      <section class="footer__container">
         <span class="footer__description">
-            <a href="#"><div class="footer-logo"></div></a>
-            <p>Vår stora passion är smycken av gediget hantverk och service med stort utbud för förlovning & vigsel. Hos oss går kvalitet hand i hand med ansvar för hållbarhet och vi erbjuder diamantexpertis samt kvalificerad service och reparationer.</p>
+          <a href="#"><div class="footer-logo"></div></a>
+          <p>
+            Vår stora passion är smycken av gediget hantverk och service med
+            stort utbud för förlovning & vigsel. Hos oss går kvalitet hand i
+            hand med ansvar för hållbarhet och vi erbjuder diamantexpertis samt
+            kvalificerad service och reparationer.
+          </p>
         </span>
         <span class="footer__info">
-            <h3>Information</h3>
-            <p><a href="#">Förlovningsringar</a></p>
-            <p><a href="#">Vigselringar</a></p>
-            <p><a href="#">Om oss</a></p>
-            <p><a href="#">Frakt & Retur</a></p>
-            <p><a href="#">Garanti</a></p>
-            <p><a href="#">Betalning</a></p>
+          <h3>Information</h3>
+          <p><a href="#">Förlovningsringar</a></p>
+          <p><a href="#">Vigselringar</a></p>
+          <p><a href="about.html">Om oss</a></p>
+          <p><a href="contact.html">Kontakta oss</a></p>
+          <p><a href="#">Frakt & Retur</a></p>
+          <p><a href="#">Garanti</a></p>
+          <p><a href="#">Betalning</a></p>
         </span>
         <span class="footer__contact">
-            <h3>Kontakt</h3>
-            <div class="footer__cont">
-              <i class="bi bi-geo-alt"></i>
-              <p class="adress">Diamonds For You
-                  Ankeborgssgatan 55
-                  123 45 Stockholm</p>
-            </div>
-            <div>
-              <i class="bi bi-geo-alt"></i>
-              <p class="adress">Diamonds For You
-                  Stora Nygatan 53
-                  123 45 Malmö</p>
-            </div>
-            <div>
-              <i class="bi bi-telephone"></i>
-              <p>010-10 10 10</p>
+          <h3>Kontakt</h3>
+          <div class="footer__cont">
+            <i class="bi bi-geo-alt"></i>
+            <p class="adress">
+              Diamonds For You Ankeborgssgatan 55 123 45 Stockholm
+            </p>
+          </div>
+          <div>
+            <i class="bi bi-geo-alt"></i>
+            <p class="adress">Diamonds For You Stora Nygatan 53 123 45 Malmö</p>
+          </div>
+          <div>
+            <i class="bi bi-telephone"></i>
+            <p>010-10 10 10</p>
           </div>
           <div>
             <i class="bi bi-envelope"></i>
-            <p><a href="https://www.google.com/intl/sv/gmail/about/">info@diamondsofyou.se</a></p>
+            <p>
+              <a href="https://www.google.com/intl/sv/gmail/about/"
+                >info@diamondsofyou.se</a
+              >
+            </p>
           </div>
-            <p>Org nr: 551010-2010</p>
+          <p>Org nr: 551010-2010</p>
         </span>
         <span class="footer__social">
-            <h3>Följ oss</h3>
-            <div>
-                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-                <a href="https://se.linkedin.com/"><i class="bi bi-linkedin"></i></a>
-                <a href="https://se.linkedin.com/"><i class="bi bi-tiktok"></i></a>
-            </div>
+          <h3>Följ oss</h3>
+          <div>
+            <a href="https://www.facebook.com/"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="https://se.linkedin.com/"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="https://se.linkedin.com/"><i class="bi bi-tiktok"></i></a>
+          </div>
         </span>
-    </section>
-  </footer>
-</body>
+      </section>
+    </footer>
+  </body>
 </html>

@@ -1,5 +1,5 @@
-import { allRings, ringCategories } from "./module/productData";
-import { Ring } from "./module/ring";
+import { allRings, ringCategories } from "./models/productData";
+import { Ring } from "./models/ring";
 
 
 const addToCartButton = document.querySelector('.addToCart-btn');

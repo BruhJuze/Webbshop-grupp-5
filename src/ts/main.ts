@@ -1,6 +1,6 @@
-import { Ring } from './module/ring';
-import { allRings } from './module/productData';
-import { ringCategories } from './module/productData';
+import { Ring } from './models/ring';
+import { allRings } from './models/productData';
+import { ringCategories } from './models/productData';
 
 /**************  nav-menu js  **************/
 

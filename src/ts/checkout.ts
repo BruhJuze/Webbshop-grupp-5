@@ -1,6 +1,6 @@
-import { allRings } from "./module/productData";
-import { Ring } from "./module/ring";
-import { Cart } from "./module/cart";
+import { allRings } from "./models/productData";
+import { Ring } from "./models/ring";
+import { Cart } from "./models/cart";
 import { getRingId } from "./productPage";
 
 let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || []; 
