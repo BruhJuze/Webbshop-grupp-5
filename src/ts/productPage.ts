@@ -35,7 +35,7 @@ let selectCarat = document.getElementById('carat') as HTMLSelectElement;
 //let totalSum = document.getElementById('total-sum');
 let totalSum: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
 let cartTotalPrice = document.querySelector('.cart__totalPrice');
-let totalSumAmount : number = 0;
+let totalSumAmount : number;
 
 let thisProductPrice: number; 
 
@@ -213,7 +213,8 @@ export function renderCartItems(){
                             cartItem.item -= 1;
                             localStorage.setItem("data", JSON.stringify(cart));
                             renderCartItemQuantity();
-                            renderTotalCartPrice();
+                            //renderTotalCartPrice();
+                            updateTotalCartPrice();
                         } else{
                             dashIconContainer.style.filter = "brightness(85%)";
                         }
@@ -234,7 +235,9 @@ export function renderCartItems(){
                         cartItem.item += 1;
                         localStorage.setItem("data", JSON.stringify(cart));
                         renderCartItemQuantity();
-                        renderTotalCartPrice();
+                        //renderTotalCartPrice();
+                        updateTotalCartPrice();
+
                     });
     
                     cartContentLeftAddRemove.appendChild(plusIconContainer);
@@ -264,18 +267,32 @@ export function renderCartItems(){
                     let selectCarat = document.getElementById('carat') as HTMLSelectElement;
                     //let sumCarat: number;
 
+                    const cartItemPrice = document.createElement('div');
+                    cartItemPrice.classList.add('cart-item-price');
+                    cartItemPrice.innerHTML = String(cartItem.price);
+                    cartContentRight.appendChild(cartItemPrice);
+
+
                     function renderTotalCartPrice(){
+                        // totalSumAmount += cartItem.price * cartItem.item;
+                        // totalSum.innerHTML = totalSumAmount + " kr";
+                        // totalSumAmount = 0;
+                        // cartTotalPrice?.appendChild(totalSum);
+                    }
 
-                        totalSumAmount += cartItem.price * cartItem.item;
-
+                    function updateTotalCartPrice(){
+                        let totalSumAmount : number = 0;
+                        for (let cartItem of cart){
+                            let cartItemPrice = cartItem.price;
+                            let cartItemQuantity = cartItem.item;
+                            totalSumAmount = totalSumAmount + (cartItemPrice * cartItemQuantity);
+                            console.log(totalSumAmount);
+                        }
                         totalSum.innerHTML = totalSumAmount + " kr";
-
-                        totalSumAmount = 0;
-
                         cartTotalPrice?.appendChild(totalSum);
                     }
 
-                    renderTotalCartPrice();
+                    updateTotalCartPrice();
                // };
 
 
