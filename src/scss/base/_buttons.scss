@@ -1,0 +1,21 @@
+@use '../abstract' as a;
+
+@mixin clear-btn {
+    border: 1px solid a.$white-color;
+    padding: 0.7rem 1rem;
+    color: a.$white-color;
+    background-color: a.$btn-clear-color;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+@mixin gold-btn {
+    border: 1px solid a.$gold-btn-rgba;
+    padding: 0.7rem 1rem;
+    color: a.$white-color;
+    background-color: a.$gold-btn-rgba;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
