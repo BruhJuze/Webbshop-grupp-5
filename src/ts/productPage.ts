@@ -1,5 +1,4 @@
 import { allRings } from "./models/productData";
-import { Ring } from "./models/ring";
 import { Cart } from "./models/cart";
 
 const presentURL = window.location.href;

@@ -18,11 +18,9 @@ let intAddress1: HTMLInputElement = document.getElementById("intAddress1") as HT
 let intZIP1: HTMLInputElement = document.getElementById("intZIP1") as HTMLInputElement;
 let intResidentalArea1: HTMLInputElement = document.getElementById("intResidentalArea1") as HTMLInputElement;
 let completeBtn: HTMLButtonElement = document.getElementById("purchaseBtn") as HTMLButtonElement; 
-let errorText: HTMLSpanElement = document.getElementById("errorText") as HTMLSpanElement;
 let sumPrice: number = 0;
 let sumofRing: number = 0;
 let psuedoI: number = 0;
-//href="./orderdone.html"
 
 completeBtn.addEventListener('click', (e) => {
     if(intFirstName.value === '' || intFirstName.value == null){
@@ -140,18 +138,14 @@ completeBtn.addEventListener('click', (e) => {
 
 if (intFirstName.value !== '' && intFirstName.value != null && intLastName.value !== '' && intLastName.value != null && intAddress.value !== '' && intAddress.value != null && intAddress.value !== '' && intAddress.value != null && intZIP.value !== '' && intZIP.value != null && intResidentalArea.value !== '' && intResidentalArea.value != null && intFirstName1.value !== '' && intFirstName1.value != null && intLastName1.value !== '' && intLastName1.value != null && intAddress1.value !== '' && intAddress1.value != null && intAddress1.value !== '' && intAddress1.value != null && intZIP1.value !== '' && intZIP1.value != null && intResidentalArea1.value !== '' && intResidentalArea1.value != null && cart.length != 0){
     location.href = "./orderdone.html";
-    //console.log(selectedItem);
     localStorage.removeItem("data");  
 }
 else if(intFirstName.value === '' || intFirstName.value == null || intLastName.value === '' || intLastName.value == null || intAddress.value === '' || intAddress.value == null || intAddress.value === '' || intAddress.value == null || intZIP.value === '' || intZIP.value == null || intResidentalArea.value === '' || intResidentalArea.value == null || intFirstName1.value === '' || intFirstName1.value == null || intLastName1.value === '' || intLastName1.value == null || intAddress1.value === '' || intAddress1.value == null || intAddress1.value === '' || intAddress1.value == null || intZIP1.value === '' || intZIP1.value == null || intResidentalArea1.value === '' || intResidentalArea1.value == null && cart.length != 0)
 {
     alert("Snälla fyll i alla rutor");
 }
-
-    
     
 })
-
 
 export function renderCheckoutContent(){
 
@@ -165,8 +159,7 @@ export function renderCheckoutContent(){
             psuedoI +=1;
             if(2 > psuedoI){
                 sumPrice = 0;
-            }
-            
+            }    
 
             let newProduct: HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let title:HTMLElement = document.createElement("section") as HTMLElement;
@@ -209,8 +202,7 @@ export function renderCheckoutContent(){
                 checkoutItem.item += 1;
                 localStorage.setItem("data", JSON.stringify(cart));
                 psuedoI = 0;
-            })
-            
+            })    
 
             amountAdd.addEventListener('click', renderCheckoutContent);
 
@@ -225,7 +217,6 @@ export function renderCheckoutContent(){
         else{
             amountSub.style.filter = "brightness(85%)";
         }
-
 
             sumPrice += checkoutItem.price * checkoutItem.item;
             sumofRing = checkoutItem.price * checkoutItem.item;
@@ -264,8 +255,6 @@ export function renderCheckoutContent(){
 
      }
  }
-
-    
 
 renderCheckoutContent();
 
