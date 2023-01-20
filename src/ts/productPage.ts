@@ -259,7 +259,9 @@ export function renderCartItems(){
         }
     }
     else{
-        console.log("tom");
+        cartContainer.innerHTML = "";
+        totalSum.innerHTML = "";
+        //console.log("tom");
         //renderCartItems();
     }
 } 
