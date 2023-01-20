@@ -1,7 +1,4 @@
-import { allRings } from "./models/productData";
-import { Ring } from "./models/ring";
 import { Cart } from "./models/cart";
-import { getRingId } from "./productPage";
 
 let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || []; 
 
@@ -36,7 +33,6 @@ export function renderCheckoutContent(){
             let leftContainer:HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let leftChildContainer:HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let pricePerThing:HTMLElement = document.createElement("section") as HTMLElement;
-            let priceContainer:HTMLDivElement = document.getElementById("mainCheckout__priceContainer") as HTMLDivElement;
             let amountContainer:HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let sum:HTMLElement = document.createElement("section") as HTMLElement;
             let removeBtn:HTMLElement = document.createElement("i") as HTMLElement;
@@ -133,7 +129,6 @@ renderCheckoutContent();
 
 function removeCheckoutItem(id: number){
     let selectedItem = id;
-    //console.log(selectedItem);
     cart = cart.filter( (x) =>  x.id != selectedItem);
     localStorage.setItem("data", JSON.stringify(cart));
     sumPrice = 0;

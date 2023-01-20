@@ -2,7 +2,6 @@ import { allRings } from "./models/productData";
 import { Ring } from "./models/ring";
 import { Cart } from "./models/cart";
 
-let filteredItems = new Array<Ring>(); 
 const presentURL = window.location.href;
 const ringURL = new URLSearchParams(presentURL);
 let ringTypeKey: string = "";
@@ -14,10 +13,6 @@ for (const key of ringURL.keys()){
 export const getRing: string = ringURL.get(ringTypeKey)|| '{}';
 export let getRingId: number;
 
-const productContainer = document.getElementById('product-container');
-let testValue: number; 
-
-const productImageContainer = document.querySelector('.product-image-container');
 const mainImage = document.querySelector('.main-img');
 const productImgSmallGroup = document.querySelector('.small-group');
 const productInfo = document.querySelector('.product-info');
@@ -25,14 +20,10 @@ const productInfoTitle = document.querySelector('.product-info__title');
 const productInfoText = document.querySelector('.product-info__text');
 const productDescTextInner = document.querySelector('.product-desc__text__inner');
 const productImages = document.querySelector('.product-images');
-let selectDiamond = document.getElementById('diamond') as HTMLSelectElement;
-let selectCarat = document.getElementById('carat') as HTMLSelectElement;
 let totalSum: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
 let cartTotalPrice = document.querySelector('.cart__totalPrice');
-let totalSumAmount : number;
 
 let thisProductPrice: number; 
-let sumCarat; 
 
 function renderProductContent(product: string){
 
@@ -103,8 +94,6 @@ renderProductContent(getRing);
 const addToCartButton = document.querySelector('.addToCart-btn');
 
 let cart: Cart[] = JSON.parse(localStorage.getItem("data")!) || []; 
-
-let cartItemCounter: number;
 
 addToCartButton?.addEventListener('click', ()=> {
 
@@ -235,9 +224,6 @@ export function renderCartItems(){
             const cartContentPrice = document.createElement('div');
             cartContentPrice.classList.add("cart-content__price");
 
-            let productPrice = document.querySelector('.total-sum-price') as HTMLParagraphElement;
-            let selectCarat = document.getElementById('carat') as HTMLSelectElement;
-
             const cartItemPrice = document.createElement('div');
             cartItemPrice.classList.add('cart-item-price');
             cartItemPrice.innerHTML = String(cartItem.price);
@@ -261,14 +247,8 @@ export function renderCartItems(){
     else{
         cartContainer.innerHTML = "";
         totalSum.innerHTML = "";
-        //console.log("tom");
-        //renderCartItems();
     }
 } 
-
-    function decrementCartItem(id: number){
-        console.log(id + "decrement");
-    }
 
     function removeItem(id: number){
         let selectedItem = id;
@@ -312,3 +292,53 @@ function renderCarouselImages(id: string){
 }
 
 renderCarouselImages(getRing);
+
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.getElementById('next-button');
+const productImagesAll = document.getElementsByClassName('large-image');
+let count = 0;
+const width: number = productImages?.clientWidth || 0;
+let currentPosition = 0;
+
+if ( window.innerWidth < 600){ // set max width of image carousel
+
+(productImages as HTMLInputElement).style.transform = 'translateX(' + (-width * count) + 'px)';
+
+prevButton?.addEventListener('click', () => {
+    if (count <= 0) return;
+    currentPosition = -width * count;
+    (productImages as HTMLInputElement).style.transition = 'transform 300ms ease-in-out';
+    count--;
+    (productImages as HTMLInputElement).style.transform = 'translateX(' + (-width * count) + 'px)';
+});
+
+nextButton?.addEventListener('click', ()=> {
+    if (count >= (productImagesAll.length -2))
+    return; 
+    currentPosition = -width * count;
+    (productImages as HTMLInputElement).style.transition = 'transform 300ms ease-in-out';
+    count++;
+    (productImages as HTMLInputElement).style.transform = 'translateX(' + (-width * count) + 'px)';
+});
+
+};
+
+const navigationDots = document.querySelectorAll('.navigation-dots label');
+
+navigationDots.forEach((dot) => {
+    dot.addEventListener('click', (event)=> {
+        console.log(event.target);
+
+    });
+});
+
+const mainImg = document.getElementById('mainImg') as HTMLImageElement;
+const smallImages = document.querySelectorAll('.small-group__img');
+
+smallImages.forEach((smallImg) => {
+    smallImg.addEventListener('click', (event)=> {
+        console.log("funka");
+        let imgTag = event.target as HTMLImageElement;
+        mainImg.src = imgTag.src;
+    });
+});

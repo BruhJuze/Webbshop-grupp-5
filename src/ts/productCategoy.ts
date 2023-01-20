@@ -2,11 +2,8 @@ import { allRings, ringCategories } from "./models/productData";
 import { Ring } from "./models/ring";
 
 let filteredItems = new Array<Ring>(); 
-
 const presentURL = window.location.href;
-
 const ringURL = new URLSearchParams(presentURL);
-
 let ringTypeKey: string = "";
 
 for (const key of ringURL.keys()){
@@ -107,6 +104,7 @@ function renderCategoryText(ringType: string){
     categoryTextFirst.innerHTML = contentTitle;
     categoryTextSec.innerHTML = contentText;
 }
+
 renderCategoryText(getRing);
 
 
@@ -119,7 +117,6 @@ function renderProducts(ring: Ring[]){
     for (let ring of allRings){
 
         if (getRing == ring.ringType){
-            const result = allRings.filter(res=>res.ringType);
 
             const productLink = document.createElement('a');
             productLink.setAttribute('id', String(ring.id));
@@ -132,14 +129,9 @@ function renderProducts(ring: Ring[]){
                 let currentItem = event.target as HTMLAnchorElement; 
                 let currentHref= productLink.getAttribute('href') || "";
 
-                console.log(currentHref);
-
                 const dataAttributeRingName = currentItem.getAttribute("data-ringname") || '{}';
 
-                console.log(dataAttributeRingName);
                 const dataAttributeHref = currentHref + "?";
-
-                console.log(dataAttributeHref);
 
                 ringNameURL.searchParams.set("name", dataAttributeRingName);
                 
@@ -148,15 +140,12 @@ function renderProducts(ring: Ring[]){
                 history.pushState(null, "", newQuery); 
 
                 getRingName =  ringNameURL.searchParams.get("name") || '{}';
-                const getRingEntries =  ringNameURL.searchParams.entries();
 
                 let ringNameKey: string = "";
 
                 for (const key of ringNameURL.searchParams.keys()){
                     ringNameKey = key; 
                 }
-
-                console.log(ringNameKey);
                 
                 window.location.href = dataAttributeHref + ringNameKey +"=" +dataAttributeRingName;
             });
@@ -194,19 +183,11 @@ function renderProducts(ring: Ring[]){
     };
 };
 
-
-let getRingName: string = ""; 
-
-let ringNameURL = new URL(window.location.href);
-
-let productLinks = document.querySelectorAll('.product__title');
-
 renderProducts(filteredItems);
 
 renderPageTitle(getRing);
 
 // Alert för visa mer knapp
-
 const loadMore = document.getElementById("load-btn");
 loadMore?.addEventListener("click", ()=> {
         alert("Det finns inte några fler produkter att visa!")
